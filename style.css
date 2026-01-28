@@ -242,19 +242,6 @@ footer {
     padding-bottom: 15px;
 }
 
-/* Thin blue underline */
-.about-title::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    /* Linea fina */
-    background-color: blue;
-    /* Blue as requested */
-}
-
 .about-content {
     font-family: Arial, sans-serif;
     font-size: 1.1rem;
