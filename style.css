@@ -128,9 +128,8 @@ main {
 
 .carousel-control i {
     color: #222;
-    width: 30px;
-    height: 30px;
-    stroke-width: 1px;
+    font-size: 30px;
+    /* Adjusted for Font Awesome */
 }
 
 /* Footer */
@@ -146,12 +145,7 @@ footer {
 
 /* Footer Logo Image */
 .footer-logo-img {
-<<<<<<< HEAD
-    height: 80px;
-=======
     height: 45px;
->>>>>>> e3050b69801e8663f7cb983316ceb1834e2308cf
-    /* Aumentado conforme solicitado */
     width: auto;
     object-fit: contain;
 }
@@ -162,12 +156,11 @@ footer {
 }
 
 .social-icons i {
-    width: 20px;
-    height: 20px;
-    color: #000000;
-    /* Preto */
-    stroke-width: 1.5;
+    font-size: 1.3rem;
+    /* Tamanho visual padronizado */
+    color: #32302F;
     transition: opacity 0.2s;
+    /* Remove properties specific to Lucide/SVG if not needed for FA */
 }
 
 .social-icons i:hover {
@@ -462,8 +455,4 @@ nav a.active {
 
 .submit-btn:hover {
     background-color: #333;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> e3050b69801e8663f7cb983316ceb1834e2308cf
