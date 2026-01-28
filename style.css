@@ -462,7 +462,7 @@ nav a.active {
     background-color: #333;
 }
 
-/* --- NEW PROJECTS PAGE STRCTURE --- */
+/* --- NEW PROJECTS PAGE STRUCTURE (Zig-Zag) --- */
 
 .projects-page-wrapper {
     padding: 6rem 5%;
@@ -470,15 +470,57 @@ nav a.active {
     margin: 0 auto;
 }
 
-.section-title {
+.feature-section {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 8rem;
+    /* Space between major sections */
+}
+
+/* Invert functionality */
+.feature-section.inverted {
+    flex-direction: row-reverse;
+}
+
+.feature-text-col {
+    flex: 1;
+}
+
+.feature-img-col {
+    flex: 1;
+    width: 100%;
+}
+
+.feature-title {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #32302F;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+.feature-desc {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.05rem;
+    color: #32302F;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.feature-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/10;
+    object-fit: cover;
+    border-radius: 8px;
+    /* Optional aesthetics */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* --- NEW PROJECTS PAGE STRCTURE --- */
 
 .projects-category-section {
     margin-bottom: 6rem;
@@ -555,6 +597,7 @@ nav a.active {
 .testimonials-section {
     padding-top: 4rem;
     border-top: 1px solid #eaeaea;
+    margin-top: 4rem;
 }
 
 .testimonials-grid {
@@ -584,4 +627,32 @@ nav a.active {
     font-weight: 700;
     color: #32302F;
     text-align: right;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+
+    .feature-section,
+    .feature-section.inverted {
+        flex-direction: column-reverse;
+        /* Text bottom, Image top as requested? No wait. */
+        /* User said: "no celular, esses itens fiquem empilhados (imagem em cima, texto embaixo)" */
+        /* If we use column-reverse on normal: text is 1st child -> bottom, img is 2nd -> top. */
+        /* Let's be explicit with order property if needed, or structured html. */
+        gap: 2rem;
+        margin-bottom: 5rem;
+    }
+
+    /* Re-enforce image on top for mobile */
+    .feature-img-col {
+        order: -1;
+    }
+
+    .feature-text-col {
+        order: 1;
+    }
+
+    .feature-title {
+        font-size: 1.6rem;
+    }
 }
