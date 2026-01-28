@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos | GABRIELLY SIERRA</title>
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -26,30 +27,88 @@
     </header>
 
     <main>
-        <section class="projects-section">
-            <div class="projects-grid">
-                <!-- Projeto 1 -->
-                <a href="#" class="project-card">
-                    <img src="projeto1.jpg" alt="Capa do Projeto 1" class="project-cover">
-                    <h3 class="project-title">Mediação em Escolas</h3>
-                </a>
-                <!-- Projeto 2 -->
-                <a href="#" class="project-card">
-                    <img src="projeto2.jpg" alt="Capa do Projeto 2" class="project-cover">
-                    <h3 class="project-title">Clube do Livro</h3>
-                </a>
-                <!-- Projeto 3 -->
-                <a href="#" class="project-card">
-                    <img src="projeto3.jpg" alt="Capa do Projeto 3" class="project-cover">
-                    <h3 class="project-title">Oficinas Criativas</h3>
-                </a>
-                <!-- Projeto 4 -->
-                <a href="#" class="project-card">
-                    <img src="projeto4.jpg" alt="Capa do Projeto 4" class="project-cover">
-                    <h3 class="project-title">Curadoria Literária</h3>
-                </a>
-            </div>
-        </section>
+        <div class="projects-page-wrapper">
+
+            <!-- SEÇÃO 1: PROJETOS DE LEITURA -->
+            <section class="projects-category-section">
+                <h2 class="section-title">Projetos de Leitura</h2>
+                <div class="projects-grid-new">
+                    <!-- Item 1 -->
+                    <div class="project-item">
+                        <div class="project-img-container">
+                            <img src="projeto1.jpg" alt="Projeto de Leitura 1">
+                        </div>
+                        <p class="project-desc">
+                            Mediação de leitura em espaços públicos, promovendo o acesso democratizado à literatura
+                            infantil e juvenil com foco na formação de novos leitores.
+                        </p>
+                        <a href="contato.html" class="learn-more-btn">saiba mais</a>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="project-item">
+                        <div class="project-img-container">
+                            <img src="projeto2.jpg" alt="Projeto de Leitura 2">
+                        </div>
+                        <p class="project-desc">
+                            Clube do livro itinerante que circula por escolas e centros comunitários, fomentando debates
+                            e a troca de experiências literárias.
+                        </p>
+                        <a href="contato.html" class="learn-more-btn">saiba mais</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 2: FORMAÇÃO -->
+            <section class="projects-category-section">
+                <h2 class="section-title">Formação</h2>
+                <div class="projects-grid-new">
+                    <!-- Item 1 -->
+                    <div class="project-item">
+                        <div class="project-img-container">
+                            <img src="projeto3.jpg" alt="Formação 1">
+                        </div>
+                        <p class="project-desc">
+                            Oficinas para professores e educadores sobre técnicas de contação de histórias e mediação de
+                            leitura em sala de aula.
+                        </p>
+                        <a href="contato.html" class="learn-more-btn">saiba mais</a>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="project-item">
+                        <div class="project-img-container">
+                            <img src="projeto4.jpg" alt="Formação 2">
+                        </div>
+                        <p class="project-desc">
+                            Curso de extensão em literatura infantil: curadoria, critérios de seleção e práticas
+                            pedagógicas para o ensino fundamental.
+                        </p>
+                        <a href="contato.html" class="learn-more-btn">saiba mais</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 3: DEPOIMENTOS -->
+            <section class="testimonials-section">
+                <h2 class="section-title">Depoimentos</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-item">
+                        <p class="testimonial-text">
+                            "A sensibilidade da Gabrielly na escolha dos livros transformou a relação dos meus alunos
+                            com a leitura. Foi um divisor de águas na nossa escola."
+                        </p>
+                        <p class="testimonial-author">— Maria Silva, Coordenadora Pedagógica</p>
+                    </div>
+                    <div class="testimonial-item">
+                        <p class="testimonial-text">
+                            "As formações são práticas, envolventes e cheias de afeto. Saí de lá com outra visão sobre o
+                            que é mediar leitura para crianças."
+                        </p>
+                        <p class="testimonial-author">— João Pereira, Bibliotecário</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
     </main>
 
     <footer>
@@ -66,6 +125,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
