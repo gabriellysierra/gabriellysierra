@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GABRIELLY SIERRA</title>
-    <!-- Ícones Lucide para setas e redes sociais (Carregados via CDN para funcionar sem instalação) -->
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">GABRIELLY SIERRA</div>
+        <!-- Logo Image -->
+        <a href="#" class="logo-link">
+            <img src="logo.png" alt="Gabrielly Sierra" class="main-logo">
+        </a>
+        
         <nav>
             <ul>
                 <li><a href="#sobre">sobre</a></li>
@@ -24,24 +28,24 @@
 
     <main>
         <div class="carousel-container">
-            <!-- Imagens de Exemplo (Substitua pelos seus arquivos reais) -->
-            <div class="carousel-slide active" style="background-image: url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=2000');"></div>
-            <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=2000');"></div>
-            <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=2000');"></div>
+            <!-- Imagens Locais do Carrossel -->
+            <div class="carousel-slide active" style="background-image: url('foto1.jpg');"></div>
+            <div class="carousel-slide" style="background-image: url('foto2.jpg');"></div>
+            <div class="carousel-slide" style="background-image: url('foto3.jpg');"></div>
 
             <button class="carousel-control prev"><i data-lucide="chevron-left"></i></button>
             <button class="carousel-control next"><i data-lucide="chevron-right"></i></button>
         </div>
     </main>
     
-    <!-- Espaçador para manter o footer distante, conforme o layout clean -->
-    <div style="height: 100px;"></div>
+    <!-- Espaçamento visual -->
+    <div style="height: 120px;"></div>
 
     <footer>
         <div class="footer-logo">GABRIELLY SIERRA</div>
         <div class="social-icons">
             <a href="#"><i data-lucide="instagram"></i></a>
-            <a href="#"><i data-lucide="music-2"></i></a> <!-- Ícone TikTok (Nota Musical) -->
+            <a href="#"><i data-lucide="music-2"></i></a>
             <a href="#"><i data-lucide="youtube"></i></a>
             <a href="#"><i data-lucide="linkedin"></i></a>
         </div>
@@ -49,7 +53,6 @@
 
     <script src="script.js"></script>
     <script>
-        // Inicializa os ícones
         lucide.createIcons();
     </script>
 </body>
