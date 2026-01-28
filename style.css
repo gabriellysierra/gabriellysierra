@@ -787,7 +787,7 @@ nav a.active {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* 3 columns -> 2 rows for 6 items */
-    gap: 1.5rem;
+    gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 5%;
@@ -796,7 +796,7 @@ nav a.active {
 
 .gallery-img {
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 4/3;
     /* Square images or 4/3 */
     object-fit: cover;
     border-radius: 4px;
