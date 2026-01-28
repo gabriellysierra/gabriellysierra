@@ -146,7 +146,7 @@ footer {
 
 /* Footer Logo Image */
 .footer-logo-img {
-    height: 80px;
+    height: 45px;
     /* Aumentado conforme solicitado */
     width: auto;
     object-fit: contain;
@@ -228,6 +228,8 @@ footer {
 
 .about-image-col img {
     width: 100%;
+    max-width: 100%;
+    /* Safety for production */
     height: auto;
     display: block;
     /* Manter proporção original, sem filtros artificiais se não solicitado, mas prompt diz 'fidelidade ao print' que era B&W? O texto diz 'perfil.jpg manter proporções'. Vou assumir grayscale pois é a identidade até agora. */
@@ -435,5 +437,3 @@ nav a.active {
     font-family: Arial, sans-serif;
     font-size: 1rem;
     background: #fafafa;
-    transition: border 0.2s;
-}
