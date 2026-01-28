@@ -134,30 +134,30 @@ footer {
     margin-top: 0; 
 }
 
-/* Imagem do Logo no Rodapé */
+/* Footer Logo Image */
 .footer-logo-img {
-    height: 85px; /* Maior destaque */
+    height: 45px; /* Ajuste fino para equilíbrio */
     width: auto;
     object-fit: contain;
 }
 
 .social-icons {
     display: flex;
-    gap: 1.5rem;
+    gap: 25px; /* Espaçamento elegante de 25px */
+    align-items: center; /* Centralização vertical */
 }
 
-/* IMPORTANTE: Estilizando o SVG, pois a biblioteca substitui a tag <i> */
-.social-icons svg {
-    width: 20px;
-    height: 20px;
-    color: #000000;
-    stroke: #000000;
-    stroke-width: 1.2px; /* Traço bem fino */
-    transition: opacity 0.2s;
+/* Estilo Ícones Font Awesome */
+.social-icons i {
+    font-size: 18px; /* Tamanho discreto */
+    color: #000000; /* Preto puro */
+    opacity: 0.8; /* Sofisticação visual */
+    transition: opacity 0.2s ease;
 }
 
-.social-icons svg:hover {
-    opacity: 0.6;
+.social-icons i:hover {
+    opacity: 1; /* Destaque no hover */
+}
 }
 
 @media (max-width: 768px) {
