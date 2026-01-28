@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slides[currentSlide].classList.add('active');
     }
 
-    // Iniciar Autoplay
+    // Inicia Autoplay
     slideInterval = setInterval(nextSlide, intervalTime);
 
     // Controles Manuais
@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Reinicia o temporizador ao interagir manualmente
     function resetInterval() {
         clearInterval(slideInterval);
         slideInterval = setInterval(nextSlide, intervalTime);
