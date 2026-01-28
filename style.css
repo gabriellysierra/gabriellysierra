@@ -146,7 +146,7 @@ footer {
 
 /* Footer Logo Image */
 .footer-logo-img {
-    height: 45px;
+    height: 80px;
     /* Aumentado conforme solicitado */
     width: auto;
     object-fit: contain;
@@ -222,8 +222,8 @@ footer {
 .about-image-col {
     flex: 0 0 350px;
     /* Largura controlada para equilíbrio */
-    margin-top: 5px;
-    /* Ajuste fino ótico para alinhar com o topo da fonte do título */
+    margin-top: 0;
+    /* Removing top margin to align strictly with container, title alignment handled by line-height usually */
 }
 
 .about-image-col img {
@@ -239,16 +239,21 @@ footer {
     flex: 1;
     color: #32302F;
     /* Mandatório */
+    max-width: 600px;
+    /* Limite de leitura confortável */
 }
 
 .about-title {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 2rem;
+    font-size: 26px;
+    /* Reduzido para 24-28px */
     font-weight: 700;
     color: #32302F;
     margin-bottom: 2rem;
     line-height: 1.2;
     /* Limpo: Sem bordas, sem sublinhado */
+    margin-top: -6px;
+    /* Compensação visual para alinhar o topo da fonte (cap-height) com o topo da imagem */
     text-decoration: none;
     border: none;
     padding: 0;
@@ -256,7 +261,8 @@ footer {
 
 .about-text-content p {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 1.1rem;
+    font-size: 16px;
+    /* Reduzido para 15-16px */
     line-height: 1.6;
     /* Leitura acadêmica fluida */
     color: #32302F;
