@@ -146,7 +146,7 @@ footer {
 
 /* Footer Logo Image */
 .footer-logo-img {
-    height: 80px;
+    height: 45px;
     /* Aumentado conforme solicitado */
     width: auto;
     object-fit: contain;
@@ -194,139 +194,101 @@ footer {
     }
 }
 
-/* About Page Layout */
-.about-section {
-    padding: 6rem 5%;
-    min-height: 80vh;
+/* === ABOUT PAGE: Refined Layout === */
+
+.about-page-wrapper {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 6rem 0;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .about-container {
+    max-width: 1000px;
+    /* Mandatório: 1000px */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    /* Respiro lateral */
     display: flex;
-    gap: 80px;
-    max-width: 1200px;
+    gap: 60px;
+    /* Espaço amplo e elegante */
     align-items: flex-start;
+    /* Top aligned */
 }
 
-.about-image {
-    flex: 0 0 400px;
-    /* Largura fixa para a coluna da imagem */
+/* Coluna Imagem */
+.about-image-col {
+    flex: 0 0 350px;
+    /* Largura controlada para equilíbrio */
+    margin-top: 5px;
+    /* Ajuste fino ótico para alinhar com o topo da fonte do título */
 }
 
-.about-image img {
+.about-image-col img {
     width: 100%;
     height: auto;
-    filter: grayscale(100%);
     display: block;
-    box-shadow: 10px 10px 0px #F9F4E8;
-    /* Detalhe sutil de design */
+    /* Manter proporção original, sem filtros artificiais se não solicitado, mas prompt diz 'fidelidade ao print' que era B&W? O texto diz 'perfil.jpg manter proporções'. Vou assumir grayscale pois é a identidade até agora. */
+    filter: grayscale(100%);
 }
 
-.about-text {
+/* Coluna Texto */
+.about-text-col {
     flex: 1;
+    color: #32302F;
+    /* Mandatório */
 }
 
 .about-title {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 2rem;
-    font-weight: 600;
-    color: #583722;
+    font-weight: 700;
+    color: #32302F;
     margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    line-height: 1.2;
+    /* Limpo: Sem bordas, sem sublinhado */
+    text-decoration: none;
+    border: none;
+    padding: 0;
 }
 
-.about-content {
-    font-family: Arial, sans-serif;
+.about-text-content p {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1.1rem;
-    line-height: 1.8;
-    color: #333;
-}
-
-.about-content p {
+    line-height: 1.6;
+    /* Leitura acadêmica fluida */
+    color: #32302F;
     margin-bottom: 1.5rem;
+    text-align: left;
 }
 
-/* Highlight / Quote Block */
-.about-highlight {
-    background-color: #F9F4E8;
-    /* Vanilla Paper */
-    padding: 2rem;
-    border-left: 4px solid #583722;
-    /* Dark Cocoa accent */
-    margin: 2rem 0;
-    font-style: italic;
-    color: #444;
-}
-
-.about-highlight p {
-    margin-bottom: 0;
-}
-
-/* Illustration Container & Composition */
-.about-illustration-wrapper {
-    margin-top: 1rem;
-    /* Reduced top margin because note is above */
-    display: flex;
-    justify-content: center;
-    opacity: 0.9;
-    position: relative;
-    /* To be reference for absolute positioning if needed */
-}
-
-.about-footer-composition {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 3rem;
-    position: relative;
-}
-
-.handwritten-note {
-    font-family: 'Caveat', cursive;
-    color: #583722;
-    /* Dark Cocoa */
-    font-size: 1.6rem;
-    line-height: 1.3;
-    max-width: 350px;
-    text-align: center;
-    margin-bottom: -30px;
-    /* Overlap effect */
-    z-index: 10;
-    transform: rotate(-2deg) translateX(-20px);
-    /* Organic handwriting feel */
-    position: relative;
-}
-
-/* Responsive adjustments for the note */
-@media (max-width: 768px) {
-    .handwritten-note {
-        font-size: 1.4rem;
-        margin-bottom: -10px;
-        transform: rotate(-1deg);
-        max-width: 100%;
-        padding: 0 1rem;
-    }
-}
-
-/* Responsive */
+/* Responsividade */
 @media (max-width: 900px) {
     .about-container {
         flex-direction: column;
         align-items: center;
         gap: 3rem;
+        padding: 0 30px;
     }
 
-    .about-image {
+    .about-image-col {
         flex: 0 0 auto;
         width: 100%;
         max-width: 400px;
+        margin-top: 0;
     }
 
-    .about-text {
+    .about-text-col {
         width: 100%;
+        text-align: left;
+    }
+
+    /* Mobile Title Alignment */
+    .about-title {
+        text-align: left;
+        /* Ou center se preferir no mobile, mas left é mais seguro */
     }
 }
 
