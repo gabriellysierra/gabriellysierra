@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Open+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caramel&family=Josefin+Sans:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap');
 
 * {
     box-sizing: border-box;
@@ -8,9 +8,30 @@
 
 body {
     background-color: #FFFFFF;
-    font-family: 'Open Sans', sans-serif;
-    color: #333333;
+    font-family: 'Source Sans Pro', sans-serif;
+    /* Body Text */
+    font-weight: 400;
+    color: #32302F;
     overflow-x: hidden;
+}
+
+/* Typography Helpers - Handwritten Note */
+.nota-manual {
+    font-family: 'Caramel', cursive;
+    color: #32302F;
+}
+
+/* Headings Configuration */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Josefin Sans', sans-serif;
+    /* Titles */
+    font-weight: 700;
+    color: #32302F;
 }
 
 /* Header */
@@ -48,8 +69,10 @@ nav ul {
 nav a {
     text-decoration: none;
     color: #32302F;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 400;
+    font-family: 'Josefin Sans', sans-serif;
+    /* Navigation Font */
+    font-weight: 600;
+    /* Semi-Bold for Nav */
     font-size: 1.05rem;
     text-transform: lowercase;
     letter-spacing: 0.5px;
@@ -493,7 +516,8 @@ nav a.active {
 }
 
 .feature-title {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    /* Title Font */
     font-size: 2rem;
     font-weight: 700;
     color: #32302F;
@@ -503,7 +527,7 @@ nav a.active {
 }
 
 .feature-desc {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 0.95rem;
     /* Reduced size */
     color: #32302F;
@@ -560,7 +584,7 @@ nav a.active {
 }
 
 .project-desc {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 0.95rem;
     color: #32302F;
     line-height: 1.6;
@@ -570,7 +594,8 @@ nav a.active {
 /* Saiba Mais Button - CORRECTED STYLE */
 .learn-more-btn {
     display: inline-block;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    /* Button Font */
     font-size: 0.9rem;
     font-weight: 400;
     /* Normal weight */
@@ -625,7 +650,7 @@ nav a.active {
 }
 
 .testimonial-text {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 0.95rem;
     font-style: italic;
     /* Italic */
@@ -635,7 +660,7 @@ nav a.active {
 }
 
 .testimonial-author {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 0.9rem;
     font-weight: 700;
     /* Bold */
