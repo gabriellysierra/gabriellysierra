@@ -146,7 +146,7 @@ footer {
 
 /* Footer Logo Image */
 .footer-logo-img {
-    height: 45px;
+    height: 80px;
     /* Aumentado conforme solicitado */
     width: auto;
     object-fit: contain;
