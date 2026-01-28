@@ -1,4 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Caramel&family=Josefin+Sans:wght@400;600;700&family=Source+Sans+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Reenie+Beanie&family=Source+Sans+Pro:wght@400;600&display=swap');
+
+:root {
+    --bg-body: #FFFFFF;
+    --text-main: #32302F;
+    --color-titles: #583722;
+    /* Dark Cocoa */
+    --color-accent: #C58C71;
+    /* Warm Clay */
+    --bg-section-special: #BDD7DE;
+    /* Powder Blue */
+}
 
 * {
     box-sizing: border-box;
@@ -7,18 +18,25 @@
 }
 
 body {
-    background-color: #FFFFFF;
+    background-color: var(--bg-body);
     font-family: 'Source Sans Pro', sans-serif;
-    /* Body Text */
     font-weight: 400;
-    color: #32302F;
+    color: var(--text-main);
     overflow-x: hidden;
 }
 
-/* Typography Helpers - Handwritten Note */
+/* Typography Helpers */
+.handwritten {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 36px;
+    color: var(--color-titles);
+}
+
 .nota-manual {
-    font-family: 'Caramel', cursive;
-    color: #32302F;
+    /* Alias for backward compatibility if used */
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 36px;
+    color: var(--color-titles);
 }
 
 /* Headings Configuration */
@@ -29,9 +47,8 @@ h4,
 h5,
 h6 {
     font-family: 'Josefin Sans', sans-serif;
-    /* Titles */
     font-weight: 400;
-    color: #32302F;
+    color: var(--color-titles);
 }
 
 /* Header */
@@ -68,16 +85,13 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #32302F;
+    color: var(--color-titles);
     font-family: 'Josefin Sans', sans-serif;
-    /* Navigation Font */
     font-weight: 400;
-    /* Regular for Nav */
     font-size: 1.05rem;
     text-transform: lowercase;
     letter-spacing: 0.5px;
     transition: color 0.2s;
-    /* Transition color instead of opacity */
 }
 
 nav a:hover {
@@ -491,8 +505,7 @@ nav a.active {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.8rem;
     font-weight: 400;
-    /* Regular */
-    color: #32302F;
+    color: var(--color-titles);
     margin-bottom: 3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -531,7 +544,7 @@ nav a.active {
     /* Title Font */
     font-size: 2rem;
     font-weight: 400;
-    color: #32302F;
+    color: var(--color-titles);
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -606,37 +619,29 @@ nav a.active {
 .learn-more-btn {
     display: inline-block;
     font-family: 'Source Sans Pro', sans-serif;
-    /* Button Font */
     font-size: 0.9rem;
-    font-weight: 400;
-    /* Normal weight */
-    color: #32302F;
+    font-weight: 600;
+    color: #FFFFFF;
     text-decoration: none;
-    background-color: #C0D5F2;
-    /* New background */
+    background-color: var(--color-accent);
     border: none;
-    border-radius: 10px;
-    /* Rounded corners */
+    border-radius: 8px;
     padding: 0.8rem 2rem;
     align-self: flex-start;
     transition: all 0.3s ease;
 }
 
 .learn-more-btn:hover {
-    background-color: #DBDBDB;
-    /* Hover background */
-    color: #32302F;
-    text-decoration: none;
-    font-weight: 400;
+    background-color: #583722;
+    /* Dark Cocoa Hover */
+    color: #FFFFFF;
 }
 
 /* Testimonials Section */
 /* Testimonials Section */
 .testimonials-section {
-    background-color: #F9F4E8;
-    /* Vanilla Paper background */
+    background-color: var(--bg-section-special);
     padding: 6rem 0;
-    /* Vertical padding */
     margin-top: 4rem;
 }
 
