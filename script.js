@@ -50,4 +50,38 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(slideInterval);
         slideInterval = setInterval(nextSlide, intervalTime);
     }
+
+    /* --- LIGHTBOX FUNCTIONALITY --- */
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox-modal';
+    lightbox.innerHTML = `
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" src="" alt="Ampliada">
+    `;
+    document.body.appendChild(lightbox);
+
+    const galleryImages = document.querySelectorAll('.gallery-img');
+    const lightboxImg = lightbox.querySelector('.lightbox-content');
+    const closeBtn = lightbox.querySelector('.close-lightbox');
+
+    galleryImages.forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            setTimeout(() => lightbox.classList.add('active'), 10);
+            lightboxImg.src = img.src;
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+        setTimeout(() => lightbox.style.display = 'none', 300);
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('active');
+            setTimeout(() => lightbox.style.display = 'none', 300);
+        }
+    });
+
 });
