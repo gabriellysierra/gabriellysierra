@@ -144,26 +144,27 @@ footer {
     /* Colado no main */
 }
 
-/* Footer Logo Image */
+/* Footer Logo - O meio termo que você pediu */
 .footer-logo-img {
-    height: 50px;
-    /* Aumentado conforme solicitado */
+    height: 45px; 
     width: auto;
     object-fit: contain;
 }
 
+/* Ícones Sociais Padronizados */
 .social-icons {
     display: flex;
     gap: 1.5rem;
 }
 
 .social-icons i {
-    width: 20px;
-    height: 20px;
-    color: #000000;
-    /* Preto */
-    stroke-width: 1.5;
+    font-size: 18px; /* Tamanho discreto */
+    color: #000000; /* Preto puro */
     transition: opacity 0.2s;
+}
+
+.social-icons a {
+    text-decoration: none;
 }
 
 .social-icons i:hover {
