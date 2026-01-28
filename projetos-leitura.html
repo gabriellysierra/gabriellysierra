@@ -19,7 +19,7 @@
         <nav>
             <ul>
                 <li><a href="about.html">sobre</a></li>
-                <li><a href="projetos.html" class="active">projetos</a></li> <!-- Active for context -->
+                <li><a href="projetos.html" class="active">projetos</a></li>
                 <li><a href="textos.html">textos</a></li>
                 <li><a href="contato.html">contato</a></li>
             </ul>
@@ -28,126 +28,94 @@
 
     <main>
 
-        <!-- PROJETO 1: Leitura e processos de criação -->
-        <section class="dark-content-block">
-            <div class="dark-block-container">
-                <div class="dark-block-text">
-                    <span class="formation-tag">PROJETO 1</span>
-                    <h2 class="formation-title">Leitura e processos de criação</h2>
+        <!-- SEÇÃO 1: HERO VIDEO BANNER (Pontes Narrativas) -->
+        <section class="hero-video-banner">
+            <div class="video-wrapper" id="videoWrapper">
+                <!-- Capa e Overlay -->
+                <div class="video-cover" onclick="playVideo()">
+                    <div class="video-overlay">
+                        <div class="overlay-content">
+                            <i class="fa-solid fa-play play-btn-icon"></i>
+                            <h1 class="overlay-title">Pontes Narrativas</h1>
+                            <p class="overlay-desc">
+                                Projeto de mediação literária realizado em biblioteca escolar comunitária com estudantes
+                                dos Anos Iniciais do Ensino Fundamental. Desenvolvendo experiências estéticas de
+                                leitura.<br>
+                                <strong>Público-alvo:</strong> crianças a partir dos 11 anos.
+                            </p>
+                            <a href="https://gabriellysierra.my.canva.site/pontes-narrativas-2025" target="_blank"
+                                class="learn-more-btn" onclick="event.stopPropagation()">Saiba mais</a>
+
+                            <!-- Logos Area -->
+                            <div class="logo-area">
+                                <!-- Placeholders for Govt/Support Logos -->
+                                <img src="logo.png" alt="Apoio 1" class="partner-logo">
+                                <!-- Using main logo as placeholder for now -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="dark-block-text">
-                    <p class="formation-desc">
-                        O projeto propõe um percurso formativo, unindo mediação literária e práticas experimentais de
-                        criação artística, a partir de obras literárias ilustradas. Visando incentivar a leitura e a
-                        criatividade, tem como objetivo valorizar os processos criativos e atuar na difusão da leitura,
-                        do livro e da literatura infantojuvenil brasileira.
-                    </p>
-                    <span class="target-audience"><strong>Público-alvo:</strong> infâncias a partir de 7 anos</span>
-                    <a href="https://sites.google.com/view/projeto-rogermello" target="_blank"
-                        class="learn-more-btn">Saiba mais</a>
-                </div>
+                <!-- YouTube Iframe (Initially hidden or loaded on click logic) -->
+                <!-- We will inject the autoplay iframe on click to ensure smooth UX -->
+                <div id="videoContainer" style="height:100%; width:100%;"></div>
             </div>
         </section>
 
-        <!-- VISUAL 1 -->
-        <section class="visual-block">
-            <div class="visual-block-container">
-                <img src="projeto1-img.jpg" alt="Leitura e Processos de Criação" class="visual-media-large">
+        <!-- SEÇÃO 2: Leitura e processos... (DARK | IMG LEFT) -->
+        <section class="project-row dark">
+            <div class="project-col-img">
+                <img src="projeto1-img.jpg" alt="Leitura e processos de criação" class="project-bg-img">
+            </div>
+            <div class="project-col-text">
+                <span class="formation-tag">PROJETO 1</span>
+                <h2 class="formation-title">Leitura e processos de criação</h2>
+                <p class="formation-desc">
+                    O projeto propõe um percurso formativo, unindo mediação literária e práticas experimentais de
+                    criação artística, a partir de obras literárias ilustradas. Visando incentivar a leitura e a
+                    criatividade, tem como objetivo valorizar os processos criativos e atuar na difusão da leitura, do
+                    livro e da literatura infantojuvenil brasileira.
+                </p>
+                <span class="target-audience"><strong>Público-alvo:</strong> infâncias a partir de 7 anos</span>
+                <a href="https://sites.google.com/view/projeto-rogermello" target="_blank" class="learn-more-btn">Saiba
+                    mais</a>
             </div>
         </section>
 
-        <!-- PROJETO 2: Literatura, tempo e memória -->
-        <section class="dark-content-block">
-            <div class="dark-block-container">
-                <div class="dark-block-text">
-                    <span class="formation-tag">PROJETO 2</span>
-                    <h2 class="formation-title">Literatura, tempo e memória</h2>
-                </div>
-                <div class="dark-block-text">
-                    <p class="formation-desc">
-                        O projeto propõe a realização de oficinas de mediação literária para pessoas idosas, buscando
-                        incentivar o contato com a leitura como forma de estimular a cognição, promover a socialização e
-                        a participação ativa em espaços públicos, além de fortalecer o direito à literatura como um bem
-                        cultural e um meio de inclusão social. Após a leitura compartilhada de livros ilustrados,
-                        discutimos sobre as narrativas e realizamos atividades de criação artística com diferentes
-                        materiais.
-                    </p>
-                    <span class="target-audience"><strong>Público-alvo:</strong> 60+</span>
-                    <!-- Pending: galeria-memoria.html creation later -->
-                    <a href="galeria-memoria.html" class="learn-more-btn">Ver galeria das edições</a>
-                </div>
+        <!-- SEÇÃO 3: Literatura, tempo e memória (LIGHT | IMG RIGHT -> REVERSE) -->
+        <section class="project-row light reverse">
+            <div class="project-col-img">
+                <img src="projeto2-img.jpg" alt="Literatura, tempo e memória" class="project-bg-img">
+            </div>
+            <div class="project-col-text">
+                <span class="formation-tag" style="color: var(--color-titles);">PROJETO 2</span>
+                <h2 class="formation-title">Literatura, tempo e memória</h2>
+                <p class="formation-desc">
+                    O projeto propõe a realização de oficinas de mediação literária para pessoas idosas, buscando
+                    incentivar o contato com a leitura como forma de estimular a cognição, promover a socialização e a
+                    participação ativa em espaços públicos. Após a leitura compartilhada, discutimos sobre as narrativas
+                    e realizamos atividades de criação artística.
+                </p>
+                <span class="target-audience"><strong>Público-alvo:</strong> 60+</span>
+                <a href="galeria-memoria.html" class="learn-more-btn">Ver galeria das edições</a>
             </div>
         </section>
 
-        <!-- VISUAL 2 -->
-        <section class="visual-block">
-            <div class="visual-block-container">
-                <img src="projeto2-img.jpg" alt="Literatura, Tempo e Memória" class="visual-media-large">
+        <!-- SEÇÃO 4: Clube de leitura (DARK | IMG LEFT) -->
+        <section class="project-row dark">
+            <div class="project-col-img">
+                <img src="projeto3-img.jpg" alt="Clube de leitura" class="project-bg-img">
             </div>
-        </section>
-
-        <!-- PROJETO 3: Clube de leitura -->
-        <section class="dark-content-block">
-            <div class="dark-block-container">
-                <div class="dark-block-text">
-                    <span class="formation-tag">PROJETO 3</span>
-                    <h2 class="formation-title">Clube de leitura</h2>
-                </div>
-                <div class="dark-block-text">
-                    <p class="formation-desc">
-                        O clube de leitura reúne adultos interessados em pensar a infância e os temas sensíveis que
-                        atravessam a literatura com o desejo de construir comunidades leitoras e democratizar o acesso à
-                        literatura com qualidade estética e literária. Os encontros têm como propósito ampliar o
-                        repertório cultural e linguístico dos participantes, valorizar a literatura para as infâncias e
-                        incentivar o diálogo sobre temas considerados tabus no âmbito da literatura destinada às
-                        crianças. Em 2025, foi realizado junto dos professores dos Centros Municipais de Educação
-                        Infantil de São Carlos em parceria com o Sistema Integrado de Bibliotecas do Município de São
-                        Carlos (SIBiSC).
-                    </p>
-                    <span class="target-audience"><strong>Público-alvo:</strong> professores, famílias e demais
-                        interessados em literatura para as infâncias</span>
-                    <a href="mailto:contato@gabriellysierra.com.br" class="learn-more-btn">Tenho interesse</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- VISUAL 3 -->
-        <section class="visual-block">
-            <div class="visual-block-container">
-                <img src="projeto3-img.jpg" alt="Clube de Leitura" class="visual-media-large">
-            </div>
-        </section>
-
-        <!-- PROJETO 4: Pontes Narrativas -->
-        <section class="dark-content-block">
-            <div class="dark-block-container">
-                <div class="dark-block-text">
-                    <span class="formation-tag">PROJETO 4</span>
-                    <h2 class="formation-title">Pontes Narrativas</h2>
-                </div>
-                <div class="dark-block-text">
-                    <p class="formation-desc">
-                        Projeto de mediação literária realizado em biblioteca escolar comunitária com estudantes dos
-                        Anos Iniciais do Ensino Fundamental, o projeto teve como objetivo desenvolver experiências
-                        estéticas de leitura. Este projeto foi realizado com recursos do Governo Federal através da
-                        Política Nacional Aldir Blanc de Fomento à Cultura (PNAB).
-                    </p>
-                    <span class="target-audience"><strong>Público-alvo:</strong> crianças a partir dos 11 anos</span>
-                    <a href="https://gabriellysierra.my.canva.site/pontes-narrativas-2025" target="_blank"
-                        class="learn-more-btn">Saiba mais</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- VISUAL 4 (VIDEO) -->
-        <section class="visual-block">
-            <div class="visual-block-container">
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TzQrT2k7wY4"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
+            <div class="project-col-text">
+                <span class="formation-tag">PROJETO 3</span>
+                <h2 class="formation-title">Clube de leitura</h2>
+                <p class="formation-desc">
+                    O clube de leitura reúne adultos interessados em pensar a infância e os temas sensíveis que
+                    atravessam a literatura com o desejo de construir comunidades leitoras e democratizar o acesso à
+                    literatura com qualidade estética e literária. Os encontros têm como propósito ampliar o repertório
+                    cultural e linguístico dos participantes.
+                </p>
+                <span class="target-audience"><strong>Público-alvo:</strong> professores, famílias e interessados</span>
+                <a href="mailto:contato@gabriellysierra.com.br" class="learn-more-btn">Tenho interesse</a>
             </div>
         </section>
 
@@ -168,6 +136,19 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Hero Video Control
+        function playVideo() {
+            var wrapper = document.getElementById('videoWrapper');
+            var container = document.getElementById('videoContainer');
+
+            // Add class to hide cover
+            wrapper.classList.add('active');
+
+            // Inject iframe with autoplay
+            container.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/TzQrT2k7wY4?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+        }
+    </script>
 </body>
 
 </html>
