@@ -1,27 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.carousel-slide');
-    const intervalTime = 3000; // Troca a cada 3 segundos
+    const nextBtn = document.querySelector('.next');
+    const prevBtn = document.querySelector('.prev');
+    const intervalTime = 3000; // 3 segundos
     let currentSlide = 0;
+    let slideInterval;
 
     function nextSlide() {
-        // Remove classe ativa do slide atual
         slides[currentSlide].classList.remove('active');
-        
-        // Calcula o índice do próximo slide
         currentSlide = (currentSlide + 1) % slides.length;
-        
-        // Adiciona classe ativa ao novo slide
         slides[currentSlide].classList.add('active');
     }
 
-    // Inicia o intervalo automático
-    const slideInterval = setInterval(nextSlide, intervalTime);
+    function prevSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
 
-    // Opcional: Pausar quando passar o mouse por cima
-    const carouselContainer = document.querySelector('.hero-image-container');
-    if(carouselContainer) {
-        carouselContainer.addEventListener('mouseenter', () => {
-            clearInterval(slideInterval);
+    // Iniciar Autoplay
+    slideInterval = setInterval(nextSlide, intervalTime);
+
+    // Controles Manuais
+    if(nextBtn && prevBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetInterval();
         });
+
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetInterval();
+        });
+    }
+
+    // Reinicia o temporizador ao interagir manualmente
+    function resetInterval() {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(nextSlide, intervalTime);
     }
 });
