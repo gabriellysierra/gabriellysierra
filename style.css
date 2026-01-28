@@ -1122,3 +1122,191 @@ nav a.active {
     height: 100%;
     border: none;
 }
+
+/* --- CONTACT PAGE STYLES --- */
+
+/* Split Screen Layout */
+.contact-split-section {
+    display: flex;
+    min-height: 100vh;
+    /* Full viewport height */
+    width: 100%;
+}
+
+.contact-visual-col {
+    flex: 1;
+    position: relative;
+    background-color: #f0f0f0;
+}
+
+.contact-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.contact-form-col {
+    flex: 1;
+    padding: 6rem 8%;
+    /* Generous padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
+
+/* Typography & Content */
+.contact-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3rem;
+    color: var(--color-titles);
+    /* Dark Cocoa */
+    margin-bottom: 1.5rem;
+}
+
+.contact-intro {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    color: #32302F;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.contact-info-block {
+    margin-bottom: 3rem;
+}
+
+.contact-link-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    width: fit-content;
+}
+
+.contact-link {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+    color: var(--color-titles);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.location-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Handwritten Note Arrow */
+.handwritten-arrow {
+    font-family: 'Reenie Beanie', cursive;
+    color: var(--color-titles);
+    font-size: 1.8rem;
+    position: absolute;
+    right: -140px;
+    top: -5px;
+    transform: rotate(-10deg);
+}
+
+.handwritten-arrow i {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+/* Minimalist Form Styles */
+.minimal-form {
+    max-width: 500px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.minimal-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #583722;
+    /* Dark Cocoa Border */
+    background: transparent;
+    padding: 0.5rem 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: #32302F;
+    outline: none;
+    transition: border-color 0.3s;
+    border-radius: 0;
+    /* Reset for some browsers */
+}
+
+.minimal-input:focus {
+    border-bottom-color: #C58C71;
+    /* Warm Clay on Focus */
+}
+
+.minimal-input::placeholder {
+    color: #999;
+    opacity: 0.7;
+}
+
+.minimal-label {
+    display: block;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #583722;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+/* Submit Button Override */
+.submit-btn {
+    background-color: #C58C71;
+    /* Warm Clay */
+    color: #FFFFFF;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #583722;
+    /* Dark Cocoa */
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contact-split-section {
+        flex-direction: column;
+    }
+
+    .contact-visual-col {
+        height: 40vh;
+        /* Image on top */
+        flex: none;
+    }
+
+    .contact-form-col {
+        padding: 4rem 5%;
+    }
+
+    .handwritten-arrow {
+        display: none;
+        /* Hide on mobile to avoid overflow */
+    }
+}
