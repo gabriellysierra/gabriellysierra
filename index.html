@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GABRIELLY SIERRA</title>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- Logo Image as requested to replace text -->
+        <a href="#" class="logo-link">
+            <img src="logo.png" alt="Gabrielly Sierra" class="main-logo">
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="about.html">sobre</a></li>
+                <li><a href="#projetos">projetos</a></li>
+                <li><a href="#textos">textos</a></li>
+                <li><a href="#contato">contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="carousel-container">
+            <!-- Local images for carousel -->
+            <div class="carousel-slide active" style="background-image: url('foto1.jpg');"></div>
+            <div class="carousel-slide" style="background-image: url('foto2.jpg');"></div>
+            <div class="carousel-slide" style="background-image: url('foto3.jpg');"></div>
+
+            <button class="carousel-control prev"><i data-lucide="chevron-left"></i></button>
+            <button class="carousel-control next"><i data-lucide="chevron-right"></i></button>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Logo no Rodapé (Link para o topo) -->
+        <a href="#" class="logo-link">
+            <img src="logo.png" alt="Gabrielly Sierra" class="footer-logo-img">
+        </a>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/gabriellysierra/?hl=pt" target="_blank" rel="noopener noreferrer"><i
+                    data-lucide="instagram"></i></a>
+            <a href="https://www.tiktok.com/@gabrielly.sierra" target="_blank" rel="noopener noreferrer"><i
+                    data-lucide="music-2"></i></a>
+            <a href="https://www.youtube.com/@gabriellysierra" target="_blank" rel="noopener noreferrer"><i
+                    data-lucide="youtube"></i></a>
+            <a href="https://www.linkedin.com/in/gabriellysierra/" target="_blank" rel="noopener noreferrer"><i
+                    data-lucide="linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Configuração para ícones finos e minimalistas
+        lucide.createIcons({
+            attrs: {
+                'stroke-width': 1.2 // Garante a espessura fina via JS também
+            }
+        });
+    </script>
+</body>
+
+</html>

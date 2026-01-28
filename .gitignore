@@ -1,0 +1,17 @@
+
+# System
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+
+# Node
+node_modules/
+dist/
+.env
+
+# Editor
+.vscode/
+.idea/
