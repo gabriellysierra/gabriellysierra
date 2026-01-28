@@ -504,7 +504,8 @@ nav a.active {
 
 .feature-desc {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
+    /* Reduced size */
     color: #32302F;
     line-height: 1.8;
     margin-bottom: 2rem;
@@ -516,7 +517,7 @@ nav a.active {
     aspect-ratio: 16/10;
     object-fit: cover;
     border-radius: 8px;
-    /* Optional aesthetics */
+    /* Subtler corners */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
