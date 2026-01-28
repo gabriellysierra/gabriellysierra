@@ -265,12 +265,50 @@ footer {
     margin-bottom: 0;
 }
 
-/* Illustration Container */
+/* Illustration Container & Composition */
 .about-illustration-wrapper {
-    margin-top: 3rem;
+    margin-top: 1rem;
+    /* Reduced top margin because note is above */
     display: flex;
     justify-content: center;
     opacity: 0.9;
+    position: relative;
+    /* To be reference for absolute positioning if needed */
+}
+
+.about-footer-composition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.handwritten-note {
+    font-family: 'Caveat', cursive;
+    color: #583722;
+    /* Dark Cocoa */
+    font-size: 1.6rem;
+    line-height: 1.3;
+    max-width: 350px;
+    text-align: center;
+    margin-bottom: -30px;
+    /* Overlap effect */
+    z-index: 10;
+    transform: rotate(-2deg) translateX(-20px);
+    /* Organic handwriting feel */
+    position: relative;
+}
+
+/* Responsive adjustments for the note */
+@media (max-width: 768px) {
+    .handwritten-note {
+        font-size: 1.4rem;
+        margin-bottom: -10px;
+        transform: rotate(-1deg);
+        max-width: 100%;
+        padding: 0 1rem;
+    }
 }
 
 /* Responsive */
