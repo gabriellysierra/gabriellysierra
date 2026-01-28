@@ -30,7 +30,7 @@ h5,
 h6 {
     font-family: 'Josefin Sans', sans-serif;
     /* Titles */
-    font-weight: 700;
+    font-weight: 400;
     color: #32302F;
 }
 
@@ -71,8 +71,8 @@ nav a {
     color: #32302F;
     font-family: 'Josefin Sans', sans-serif;
     /* Navigation Font */
-    font-weight: 600;
-    /* Semi-Bold for Nav */
+    font-weight: 400;
+    /* Regular for Nav */
     font-size: 1.05rem;
     text-transform: lowercase;
     letter-spacing: 0.5px;
@@ -487,6 +487,17 @@ nav a.active {
 
 /* --- NEW PROJECTS PAGE STRUCTURE (Zig-Zag) --- */
 
+.section-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    /* Regular */
+    color: #32302F;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .projects-page-wrapper {
     padding: 6rem 5%;
     max-width: 1200px;
@@ -519,7 +530,7 @@ nav a.active {
     font-family: 'Josefin Sans', sans-serif;
     /* Title Font */
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 400;
     color: #32302F;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
