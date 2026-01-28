@@ -129,14 +129,14 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 4rem 5%;
+    padding: 4rem 40px; /* 40px exatos nas laterais */
     background-color: #FFFFFF;
-    margin-top: 0; /* Colado no main */
+    margin-top: 0; 
 }
 
-/* Footer Logo Image */
+/* Imagem do Logo no Rodapé */
 .footer-logo-img {
-    height: 80px; /* Aumentado conforme solicitado */
+    height: 85px; /* Maior destaque */
     width: auto;
     object-fit: contain;
 }
@@ -146,15 +146,17 @@ footer {
     gap: 1.5rem;
 }
 
-.social-icons i {
+/* IMPORTANTE: Estilizando o SVG, pois a biblioteca substitui a tag <i> */
+.social-icons svg {
     width: 20px;
     height: 20px;
-    color: #000000; /* Preto */
-    stroke-width: 1.5;
+    color: #000000;
+    stroke: #000000;
+    stroke-width: 1.2px; /* Traço bem fino */
     transition: opacity 0.2s;
 }
 
-.social-icons i:hover {
+.social-icons svg:hover {
     opacity: 0.6;
 }
 
