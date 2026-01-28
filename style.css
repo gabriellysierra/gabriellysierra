@@ -146,7 +146,7 @@ footer {
 
 /* Footer Logo Image */
 .footer-logo-img {
-    height: 45px;
+    height: 80px;
     /* Aumentado conforme solicitado */
     width: auto;
     object-fit: contain;
@@ -213,7 +213,7 @@ footer {
     /* Respiro lateral */
     display: flex;
     gap: 60px;
-    /* Espaço amplo e elegante */
+    /* Espaço amplo solicitado (entre 50px e 60px) */
     align-items: flex-start;
     /* Top aligned */
 }
@@ -247,15 +247,13 @@ footer {
 
 .about-title {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 26px;
-    /* Reduzido para 24-28px */
+    font-size: 1.1rem;
+    /* Ajuste final: 1.1rem */
     font-weight: 700;
     color: #32302F;
     margin-bottom: 2rem;
     line-height: 1.2;
-    /* Limpo: Sem bordas, sem sublinhado */
     margin-top: -6px;
-    /* Compensação visual para alinhar o topo da fonte (cap-height) com o topo da imagem */
     text-decoration: none;
     border: none;
     padding: 0;
@@ -263,10 +261,9 @@ footer {
 
 .about-text-content p {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    /* Reduzido para 15-16px */
+    font-size: 0.85rem;
+    /* Ajuste final: 0.85rem */
     line-height: 1.6;
-    /* Leitura acadêmica fluida */
     color: #32302F;
     margin-bottom: 1.5rem;
     text-align: left;
@@ -437,3 +434,28 @@ nav a.active {
     font-family: Arial, sans-serif;
     font-size: 1rem;
     background: #fafafa;
+    transition: border 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #000;
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background 0.2s;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+}
