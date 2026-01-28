@@ -404,8 +404,9 @@
         // Automatic Carousel Logic
         document.addEventListener('DOMContentLoaded', () => {
             const slides = document.querySelectorAll('.carousel-slide');
-            const intervalTime = 3000; // 3 seconds
+            const intervalTime = 2000; // 2 seconds
             let currentSlide = 0;
+            let slideInterval; // Define variable correctly scope
 
             function nextSlide() {
                 // Remove active class from current
@@ -419,21 +420,20 @@
             }
 
             // Start Autoplay
-            const slideInterval = setInterval(nextSlide, intervalTime);
+            slideInterval = setInterval(nextSlide, intervalTime);
 
             // Optional: Pause on hover (improves accessibility)
             const carouselContainer = document.querySelector('.hero-image-container');
-            carouselContainer.addEventListener('mouseenter', () => {
-                clearInterval(slideInterval);
-            });
+            if (carouselContainer) {
+                carouselContainer.addEventListener('mouseenter', () => {
+                    clearInterval(slideInterval);
+                });
 
-            // Note: Since we cleared it, we'd need logic to restart it, 
-            // but for simplicity/request scope we'll keep it simple or just let it run.
-            // Re-enabling restart on mouseleave for completeness:
-            carouselContainer.addEventListener('mouseleave', () => {
-                // re-assign to variable if we wanted to support multiple stops/starts
-                // setInterval(nextSlide, intervalTime); 
-            });
+                carouselContainer.addEventListener('mouseleave', () => {
+                    clearInterval(slideInterval); // Ensure clean slate
+                    slideInterval = setInterval(nextSlide, intervalTime);
+                });
+            }
         });
     </script>
 
