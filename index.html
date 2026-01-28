@@ -56,7 +56,12 @@
 
     <script src="script.js"></script>
     <script>
-        lucide.createIcons();
+        // Configuração forçada para ícones finos
+        lucide.createIcons({
+            attrs: {
+                'stroke-width': 1.2
+            }
+        });
     </script>
 </body>
 </html>
