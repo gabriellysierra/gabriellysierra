@@ -47,17 +47,21 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #333333;
-    font-family: 'Open Sans', sans-serif;
+    color: #32302F;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 400;
     font-size: 1.05rem;
     text-transform: lowercase;
     letter-spacing: 0.5px;
-    transition: opacity 0.2s;
+    transition: color 0.2s;
+    /* Transition color instead of opacity */
 }
 
 nav a:hover {
-    opacity: 0.6;
+    color: #DBDBDB;
+    text-decoration: none;
+    opacity: 1;
+    /* Reset opacity change */
 }
 
 /* Main Content Area */
@@ -297,9 +301,9 @@ footer {
 /* Active Menu Item Style */
 nav a.active {
     font-weight: 700;
-    opacity: 1;
-    border-bottom: 2px solid #000;
-    /* Solido preto conforme design minimalista */
+    color: #DBDBDB;
+    border-bottom: none;
+    text-decoration: none;
 }
 
 /* --- Projects Page (Grid) --- */

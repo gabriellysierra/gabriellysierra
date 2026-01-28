@@ -88,27 +88,24 @@
 
         nav a {
             text-decoration: none;
-            color: var(--color-text);
+            color: #32302F;
+            /* Updated to requested color */
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            /* Updated font */
             font-weight: 600;
             font-size: 0.95rem;
             position: relative;
+            transition: color 0.2s;
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 3px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--color-btn);
-            transition: width 0.3s ease;
-            border-radius: 2px;
+        nav a:hover {
+            color: #DBDBDB;
+            /* Updated hover color */
+            text-decoration: none;
         }
 
-        nav a:hover::after {
-            width: 100%;
-        }
+        /* Removed underlines logic */
+
 
         /* Hero Section */
         .hero {
