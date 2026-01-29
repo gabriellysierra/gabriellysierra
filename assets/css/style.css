@@ -441,13 +441,23 @@ nav a.active {
     background-color: #BDD7DE;
 }
 
-/* Text Colors */
-.text-white {
+/* Text Colors - Enforced on Children */
+.text-white,
+.text-white .texto-title,
+.text-white .texto-tag {
     color: #FFFFFF;
 }
 
-.text-graphite {
+.text-graphite,
+.text-graphite .texto-title,
+.text-graphite .texto-tag {
     color: #32302F;
+}
+
+.text-dark-cocoa,
+.text-dark-cocoa .texto-title,
+.text-dark-cocoa .texto-tag {
+    color: #583722;
 }
 
 /* Typography */
