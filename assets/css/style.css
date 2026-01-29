@@ -334,6 +334,58 @@ footer {
         text-align: left;
         /* Ou center se preferir no mobile, mas left é mais seguro */
     }
+
+    /* Stack signature on mobile */
+    .visual-signature-container {
+        float: none;
+        margin: 2rem auto 0;
+        text-align: center;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .signature-note {
+        position: static;
+        margin-bottom: 1rem;
+        display: block;
+        transform: rotate(-2deg);
+    }
+}
+
+/* --- Signature Visual (Desktop) --- */
+.visual-signature-container {
+    float: right;
+    width: 320px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    position: relative;
+    clear: right;
+    /* Ensure no overlap if other floats exist */
+}
+
+.signature-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    /* Optional slight rounding */
+}
+
+.signature-note {
+    position: absolute;
+    top: -25px;
+    left: -40px;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 1.8rem;
+    color: #583722;
+    /* Dark Cocoa */
+    transform: rotate(-7deg);
+    line-height: 1;
+    z-index: 10;
+    width: 250px;
+    /* Limit width to induce wrapping if needed, though short phrase likely fits */
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
+    /* Legibility boost over image elements if overlapping */
 }
 
 /* Active Menu Item Style */
