@@ -298,12 +298,13 @@ footer {
 }
 
 .about-text-content p {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 0.85rem;
-    /* Ajuste final: 0.85rem */
-    line-height: 1.6;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    /* Matched to .formation-desc */
+    line-height: 1.8;
+    /* Matched to .formation-desc */
     color: #32302F;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     text-align: left;
 }
 
