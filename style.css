@@ -1521,3 +1521,41 @@ nav a.active {
         transform: none;
     }
 }
+
+/* --- GRID HIERARCHY & TAGS --- */
+.col-span-2 {
+    grid-column: span 2;
+}
+
+@media (max-width: 1024px) {
+    .col-span-2 {
+        grid-column: span 1;
+        /* Reset on smaller screens */
+    }
+}
+
+.text-tag {
+    display: inline-block;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 8px;
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Subtle dark bg */
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+
+.art-block.text-white .text-tag {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Subtle light bg */
+    color: #FFFFFF;
+}
+
+.art-block:not(.text-white) .text-tag {
+    color: currentColor;
+    /* Inherit form text color */
+}
