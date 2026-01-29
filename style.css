@@ -1522,17 +1522,8 @@ nav a.active {
     }
 }
 
-/* --- GRID HIERARCHY & TAGS --- */
-.col-span-2 {
-    grid-column: span 2;
-}
-
-@media (max-width: 1024px) {
-    .col-span-2 {
-        grid-column: span 1;
-        /* Reset on smaller screens */
-    }
-}
+/* --- GRID TAGS --- */
+/* Simple grid re-established, span classes removed */
 
 .text-tag {
     display: inline-block;
