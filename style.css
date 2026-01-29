@@ -1397,3 +1397,127 @@ nav a.active {
 .dark-content-block .formation-title {
     color: #FFFFFF !important;
 }
+
+/* --- TEXTOS PAGE: ARTISTIC GRID (MOSAIC) --- */
+.texts-page-wrapper {
+    padding: 0;
+    max-width: 1400px;
+    margin: 4rem auto;
+    padding: 0 5%;
+}
+
+.text-art-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, minmax(300px, auto));
+    gap: 0;
+    width: 100%;
+}
+
+.art-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    min-height: 350px;
+}
+
+/* Color Utilities */
+.bg-white {
+    background-color: #FFFFFF;
+}
+
+.bg-cocoa {
+    background-color: #583722;
+}
+
+.bg-clay {
+    background-color: #C58C71;
+}
+
+.bg-powder {
+    background-color: #BDD7DE;
+}
+
+.bg-graphite {
+    background-color: #32302F;
+}
+
+/* Text Utilities */
+.text-white {
+    color: #FFFFFF !important;
+}
+
+.text-dark {
+    color: #583722 !important;
+}
+
+.text-graphite {
+    color: #32302F !important;
+}
+
+/* Interactive Text Blocks */
+.art-block.text-block {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.art-block.text-block:hover {
+    transform: scale(1.02);
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.art-text-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.art-text-desc {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.read-more-link {
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-top: auto;
+    display: inline-block;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 3px;
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+    .text-art-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .text-art-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .texts-page-wrapper {
+        padding: 0 5%;
+        margin: 2rem auto;
+    }
+
+    .art-block:hover {
+        transform: none;
+    }
+}
