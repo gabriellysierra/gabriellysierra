@@ -1409,7 +1409,8 @@ nav a.active {
 .text-art-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, minmax(300px, auto));
+    grid-auto-rows: minmax(350px, auto);
+    /* Uniform rows for all content */
     gap: 0;
     width: 100%;
 }
