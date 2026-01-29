@@ -400,6 +400,8 @@ nav a.active {
     grid-template-rows: repeat(2, 1fr);
     width: 100%;
     max-width: 1200px;
+    gap: 0;
+    /* Zero gap between blocks */
     margin: 0 auto;
 }
 
