@@ -973,14 +973,20 @@ nav a.active {
     gap: 2rem;
     justify-content: center;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Light background for visibility */
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .partner-logo {
-    height: 50px;
+    height: 40px;
+    /* Slightly smaller to fit */
     width: auto;
-    opacity: 0.9;
-    filter: brightness(0) invert(1);
-    /* Ensure white logos if colored */
+    opacity: 1;
+    filter: none;
+    /* Show original colors */
 }
 
 /* YouTube Iframe Full Cover */
