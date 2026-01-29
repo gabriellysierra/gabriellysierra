@@ -926,6 +926,11 @@ nav a.active {
     align-items: center;
     text-align: center;
     padding: 0 5%;
+    padding: 0 5%;
+    display: grid;
+    /* Senior Dev: Robust centering */
+    place-items: center;
+    text-align: center;
     transition: opacity 0.5s ease;
 }
 
@@ -951,6 +956,8 @@ nav a.active {
 .overlay-content {
     max-width: 800px;
     color: #FFFFFF;
+    margin-top: 5vh;
+    /* Senior Dev: Visual hierarchy adjustment (push down) */
 }
 
 .overlay-title {
@@ -973,11 +980,7 @@ nav a.active {
     gap: 2rem;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    /* Light background for visibility */
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Senior Dev: Removed background/shadow for cleaner look */
 }
 
 .partner-logo {
@@ -1012,6 +1015,13 @@ nav a.active {
     flex: 1;
     position: relative;
     min-height: 400px;
+    display: flex;
+    /* Ensure image container behaves */
+    align-items: center;
+    /* Center image vertically if needed */
+    justify-content: center;
+    overflow: hidden;
+    /* contain the aspect ratio */
 }
 
 .project-bg-img {
@@ -1019,6 +1029,8 @@ nav a.active {
     height: 100%;
     object-fit: cover;
     display: block;
+    aspect-ratio: 4 / 3;
+    /* Senior Dev: Standardized visual rhythm */
 }
 
 .project-col-text {
