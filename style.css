@@ -386,45 +386,107 @@ nav a.active {
     text-align: left;
 }
 
-/* --- Texts Page (Reading Layout) --- */
-.texts-section {
+/* --- Texts Page (Grid Layout 4x2) --- */
+.texts-page-wrapper {
     padding: 6rem 5%;
     display: flex;
     justify-content: center;
-    min-height: 80vh;
+    background-color: #FFFFFF;
 }
 
-.texts-container {
-    max-width: 800px;
+.textos-grid-4x2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.text-item {
-    margin-bottom: 4rem;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 2rem;
+/* Aspect Ratio Enforcement for Uniform Squares */
+.texto-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    aspect-ratio: 1 / 1;
+    padding: 2.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.text-title {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 2rem;
+.texto-block:hover {
+    filter: brightness(1.1);
+    /* Leve clareamento */
+}
+
+/* Color Palette Utilities */
+.bg-graphite {
+    background-color: #32302F;
+}
+
+.bg-dark-cocoa {
+    background-color: #583722;
+}
+
+.bg-warm-clay {
+    background-color: #C58C71;
+}
+
+.bg-powder-blue {
+    background-color: #BDD7DE;
+}
+
+/* Text Colors */
+.text-white {
+    color: #FFFFFF;
+}
+
+.text-graphite {
+    color: #32302F;
+}
+
+/* Typography */
+.texto-tag {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
     margin-bottom: 1rem;
-    color: #000;
+    display: block;
+    opacity: 0.9;
 }
 
-.text-excerpt {
-    font-family: Arial, sans-serif;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+.texto-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.4rem;
+    /* Adjusted for square fit */
+    font-weight: 400;
+    line-height: 1.3;
+    margin-top: auto;
+    /* Push title to bottom if space permits, or top aligns naturally */
+    margin-bottom: 0;
 }
 
-.text-link {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #000;
-    text-decoration: underline;
-    font-size: 0.9rem;
-    font-weight: 500;
+/* Force specific colors based on background pairings if needed, 
+   but classes text-white/text-graphite handle it directly in HTML */
+
+/* Responsiveness: Mobile 2x4 */
+@media (max-width: 768px) {
+    .textos-grid-4x2 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .texto-block {
+        padding: 1.5rem;
+    }
+
+    .texto-title {
+        font-size: 1.1rem;
+    }
 }
 
 /* --- Contact Page (Minimal Form) --- */
