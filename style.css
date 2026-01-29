@@ -1420,10 +1420,14 @@ nav a.active {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2.5rem;
+    padding: 2rem;
+    /* Adjusted padding */
     transition: all 0.3s ease;
     overflow: hidden;
-    min-height: 350px;
+    min-height: 0;
+    /* Let aspect ratio consume height */
+    aspect-ratio: 1 / 1;
+    /* Square blocks as requested */
 }
 
 /* Color Utilities */
