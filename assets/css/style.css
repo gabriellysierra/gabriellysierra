@@ -1816,3 +1816,14 @@ nav a.active {
     align-items: center;
     justify-content: center;
 }
+
+/* Projects Page Divider Icon (Salsichinha) */
+.projects-divider-icon {
+    display: block;
+    width: 180px;
+    /* Entre 150-180px */
+    height: auto;
+    margin: 80px auto;
+    /* Centralizado, margins top/bottom 80px */
+    object-fit: contain;
+}
