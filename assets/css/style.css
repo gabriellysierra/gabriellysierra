@@ -1373,8 +1373,8 @@ nav a.active {
 
 .minimal-input::placeholder {
     color: #32302F;
-    opacity: 0.6;
-    /* Slightly lighter graphite for placeholder */
+    opacity: 1;
+    /* Full Graphite */
 }
 
 .minimal-label {
