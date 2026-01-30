@@ -1709,7 +1709,8 @@ nav a.active {
 .signature-block {
     position: relative;
     width: 65%;
-    margin-top: 100px;
+    margin-top: 50px !important;
+    /* Ajuste solicitado */
     margin-left: auto;
     /* Alinha todo o bloco à direita */
     margin-right: 0;
@@ -1728,21 +1729,21 @@ nav a.active {
 
 .handwritten-note {
     position: absolute;
-    top: -110px;
-    /* Ajustado para comportar 3 linhas */
+    top: -75px;
+    /* Ajuste proporcional ao tamanho menor */
     left: 0;
     width: 100%;
     text-align: center;
     /* Centraliza o texto horizontalmente SOBRE a imagem */
     font-family: 'Reenie Beanie', cursive;
-    font-size: 1.8rem;
-    /* Reduzido para 1.8rem */
+    font-size: 1.5rem;
+    /* Reduzido para 1.5rem */
     color: #583722;
     /* Dark Cocoa */
     transform: rotate(-5deg);
     /* Sentido anti-horário */
     z-index: 10;
-    line-height: 1.1;
+    line-height: 0.9;
     pointer-events: none;
     padding: 0;
 }
