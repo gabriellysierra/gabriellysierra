@@ -1827,3 +1827,65 @@ nav a.active {
     /* Reduzido de 80px para 50px */
     object-fit: contain;
 }
+
+/* 404 Error Page Styles */
+.error-page-wrapper {
+    min-height: 60vh;
+    /* Garante que o footer fique lá embaixo em telas grandes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background-color: #FFFFFF;
+}
+
+.error-content {
+    text-align: center;
+    max-width: 600px;
+}
+
+.error-mascot {
+    display: block;
+    width: 200px;
+    /* Tamanho de destaque */
+    height: auto;
+    margin: 0 auto 20px auto;
+    object-fit: contain;
+}
+
+.error-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 5rem;
+    /* Bem grande */
+    color: #583722;
+    /* Dark Cocoa */
+    margin: 0 0 10px 0;
+    line-height: 1;
+}
+
+.error-message {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 2.2rem;
+    /* Legível e estilo bilhete */
+    color: #583722;
+    margin: 0 0 40px 0;
+    transform: rotate(-2deg);
+    /* Leve inclinação para charme */
+}
+
+.error-btn-link {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #C58C71;
+    /* Warm Clay */
+    color: #FFFFFF;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.error-btn-link:hover {
+    background-color: #a06e57;
+}
