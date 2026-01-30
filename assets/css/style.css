@@ -2003,4 +2003,36 @@ nav a.active {
 /* --- LETTER PAGE SPACING --- */
 .letter-content p {
     margin-bottom: 1.5rem;
+
+}
+
+/* --- KOMBI ANIMATION --- */
+.kombi-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 4rem 0 0 0;
+    /* Space above */
+    position: relative;
+    height: 120px;
+    /* Adjust based on image aspect ratio */
+}
+
+.kombi-img {
+    height: 100px;
+    /* Adjust size */
+    width: auto;
+    position: absolute;
+    left: -200px;
+    /* Start off-screen */
+    animation: driveKombi 25s linear infinite;
+}
+
+@keyframes driveKombi {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
 }
