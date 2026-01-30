@@ -353,6 +353,22 @@ footer {
 }
 
 /* --- Signature Visual (Desktop Only) --- */
+/* --- Signature Visual (Global & Desktop) --- */
+
+/* GLOBAL RESET: Ensure no white box/shadow anywhere */
+.visual-signature-container {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+/* Ensure note color is enforced globally */
+.signature-note {
+    color: #583722 !important;
+    /* Dark Cocoa forced */
+}
+
 @media (min-width: 901px) {
     .visual-signature-container {
         float: none;
@@ -366,11 +382,6 @@ footer {
         margin-right: 0;
         position: relative;
         clear: both;
-        /* Clean Reset */
-        border: none !important;
-        box-shadow: none !important;
-        background: transparent !important;
-        padding: 0 !important;
     }
 
     .signature-note {
@@ -386,8 +397,6 @@ footer {
         text-align: right;
         font-family: 'Reenie Beanie', cursive;
         font-size: 1.8rem;
-        color: #583722;
-        /* Dark Cocoa */
         transform: rotate(-3deg);
         /* Slight manual tilt */
         line-height: 1.1;
@@ -401,8 +410,9 @@ footer {
     width: 100%;
     height: auto;
     display: block;
+    mix-blend-mode: multiply;
+    /* FAILSAFE: If image has white bg, this makes it transparent */
     filter: none;
-    /* No blend mode needed for transparent PNG */
 }
 
 /* Active Menu Item Style */
