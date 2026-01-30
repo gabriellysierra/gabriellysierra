@@ -1767,3 +1767,18 @@ nav a.active {
         /* Reset bottom */
     }
 }
+
+/* Projects Page Header Icon (Bibliomóvel) */
+.projects-header-icon {
+    display: block;
+    width: 200px;
+    /* Entre 180-200px */
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+    /* Centralizado, bottom 20px */
+    height: auto;
+    object-fit: contain;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
