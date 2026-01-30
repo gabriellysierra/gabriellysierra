@@ -1767,11 +1767,21 @@ nav a.active {
     }
 }
 
+/* Projects Page Layout */
+.projects-page-wrapper {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 6rem 0;
+    /* Alinha com about-page-wrapper */
+}
+
 /* Projects Page Header Banner */
 .projects-banner {
     width: 100%;
     text-align: center;
     margin-bottom: 50px;
+    margin-top: -210px;
+    /* Puxa mais agressivamente para alinhar títulos (Y) */
 }
 
 /* Projects Page Header Icon (Bibliomóvel) */
