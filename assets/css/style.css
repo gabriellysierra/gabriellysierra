@@ -1728,15 +1728,15 @@ nav a.active {
 
 .handwritten-note {
     position: absolute;
-    top: -50px;
-    /* Aproximado da imagem (era -80px) */
+    top: -110px;
+    /* Ajustado para comportar 3 linhas */
     left: 0;
     width: 100%;
     text-align: center;
     /* Centraliza o texto horizontalmente SOBRE a imagem */
     font-family: 'Reenie Beanie', cursive;
-    font-size: 2rem;
-    /* Reduzido para 2rem */
+    font-size: 1.8rem;
+    /* Reduzido para 1.8rem */
     color: #583722;
     /* Dark Cocoa */
     transform: rotate(-5deg);
