@@ -1886,6 +1886,50 @@ nav a.active {
     transition: background-color 0.3s;
 }
 
+
+
 .error-btn-link:hover {
     background-color: #a06e57;
+}
+
+/* Contact Page Refactor (Centered Layout) */
+.contact-centered-wrapper {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #FFFFFF;
+}
+
+.contact-content {
+    width: 100%;
+    max-width: 700px;
+    /* 600-700px requested */
+    margin: 0 auto;
+}
+
+.contact-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.5rem;
+    color: #583722;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.contact-intro {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    color: #32302F;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.narrative-illustration {
+    display: block;
+    margin: 40px auto 0 auto;
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
 }
