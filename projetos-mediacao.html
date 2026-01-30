@@ -82,6 +82,11 @@
         .media-item img {
             width: 100%;
             height: auto;
+            aspect-ratio: 16/10;
+            /* Match projects.html */
+            object-fit: cover;
+            object-position: top;
+            /* Better for vertical cropped images */
             display: block;
             transition: transform 0.3s;
         }
