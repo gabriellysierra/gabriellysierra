@@ -278,15 +278,13 @@ footer {
 .about-text-col {
     flex: 1;
     color: #32302F;
-    /* Mandatório */
-    max-width: 600px;
-    /* Limite de leitura confortável */
+    /* Removed max-width: 600px to allow inner content (image) to expand if needed, 
+       text width is now controlled on p tags */
 }
 
 .about-title {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 1.1rem;
-    /* Ajuste final: 1.1rem */
     font-weight: 700;
     color: #32302F;
     margin-bottom: 2rem;
@@ -300,12 +298,12 @@ footer {
 .about-text-content p {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1rem;
-    /* Matched to .formation-desc */
     line-height: 1.8;
-    /* Matched to .formation-desc */
     color: #32302F;
     margin-bottom: 2rem;
     text-align: left;
+    max-width: 600px;
+    /* Mantém a leitura confortável */
 }
 
 /* Responsividade */
@@ -1710,8 +1708,9 @@ nav a.active {
 /* Assinatura Visual (Poltrona) */
 .about-signature-img {
     display: block;
-    width: 60%;
-    max-width: 750px;
+    width: 65%;
+    max-width: none;
+    /* Garante que não haja limite */
     margin-top: 100px;
     margin-left: auto;
     /* Alinha à direita */
