@@ -144,7 +144,36 @@
             .mediation-title {
                 font-size: 2.5rem;
             }
-        }
+
+            /* Footer Kombi Animation */
+            .kombi-container {
+                width: 100%;
+                overflow: hidden;
+                margin: 2rem 0;
+                position: relative;
+                height: 100px;
+                /* Adjust based on image aspect ratio */
+            }
+
+            .kombi-img {
+                height: 80px;
+                /* Adjust size */
+                width: auto;
+                position: absolute;
+                left: -150px;
+                /* Start off-screen */
+                animation: driveKombi 20s linear infinite;
+            }
+
+            @keyframes driveKombi {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(100vw);
+                }
+            }
     </style>
 </head>
 
@@ -211,6 +240,10 @@
             </div>
         </div>
 
+        <!-- Animated Kombi Section -->
+        <div class="kombi-container">
+            <img src="assets/img/kombi-books.png" alt="Kombi Literária" class="kombi-img">
+        </div>
 
         <div class="footer-nav">
             <a href="projetos.html" class="btn-back">Voltar para Projetos</a>
