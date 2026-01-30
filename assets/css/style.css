@@ -372,7 +372,8 @@ footer {
     width: 100%;
     height: auto;
     display: block;
-    /* mix-blend-mode removed */
+    mix-blend-mode: multiply;
+    /* Failsafe: Forces white pixels transparent */
     filter: none;
 }
 
