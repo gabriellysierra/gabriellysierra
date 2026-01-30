@@ -1952,18 +1952,17 @@ nav a.active {
 
 /* Center the form container */
 .contact-centered-wrapper .minimal-form {
-    text-align: left;
-    /* Keep inputs readable */
+    text-align: center;
+    /* Center everything inside form */
     display: block;
     width: 100%;
     margin: 0 auto;
-    /* Center the form block */
 }
 
-/* Ensure labels and inputs stay left aligned for UX, even if form is centered */
+/* Force center alignment for UX as requested */
 .contact-centered-wrapper .minimal-label,
 .contact-centered-wrapper .minimal-input {
-    text-align: left;
+    text-align: center;
 }
 
 /* Center the contact info icons/text */
