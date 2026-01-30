@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fliaraxá 2025 | Mediação de Leitura</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Page Specific Styles based on requirements */
+        .mediation-hero {
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+            /* Minimalist left alignment */
+        }
+
+        .mediation-title {
+            font-family: 'Josefin Sans', sans-serif;
+            color: var(--color-titles);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            /* Animation start */
+            animation: fadeIn 1s forwards;
+        }
+
+        .mediation-subtitle {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1.5rem;
+            color: var(--text-main);
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeIn 1s forwards 0.3s;
+        }
+
+        .participants-list {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: var(--text-main);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeIn 1s forwards 0.6s;
+        }
+
+        .participants-list strong {
+            color: var(--color-titles);
+        }
+
+        /* Handwritten Note */
+        .handwritten-note-section {
+            font-family: 'Reenie Beanie', cursive;
+            font-size: 1.8rem;
+            color: var(--color-titles);
+            transform: rotate(-2deg);
+            margin: 2rem 0;
+            display: inline-block;
+        }
+
+        /* Media Grid */
+        .media-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* 2 columns */
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto 4rem auto;
+            padding: 0 5%;
+        }
+
+        .media-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            background: #f9f9f9;
+        }
+
+        .media-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .media-item:hover img {
+            transform: scale(1.02);
+        }
+
+        .video-container {
+            grid-column: 1 / -1;
+            /* Fill width */
+            aspect-ratio: 16 / 9;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            border-radius: 10px;
+        }
+
+        /* Footer Navigation */
+        .footer-nav {
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .btn-back {
+            display: inline-block;
+            background-color: var(--color-accent);
+            /* Warm Clay */
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            /* 8px rounded */
+            font-family: 'Josefin Sans', sans-serif;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .btn-back:hover {
+            background-color: var(--color-btn-hover);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mediation-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="assets/img/logo.png" alt="Gabrielly Sierra" class="main-logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="about.html">sobre</a></li>
+                <li><a href="projetos.html" class="active">projetos</a></li>
+                <li><a href="textos.html">textos</a></li>
+                <li><a href="contato.html">contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="mediation-hero">
+            <h1 class="mediation-title">fliaraxá 2025</h1>
+            <p class="mediation-subtitle">mediadora da mesa 'pontes narrativas na literatura infantil'</p>
+
+            <div class="participants-list">
+                <p>Participantes da mesa:</p>
+                <p><strong>Ina Arefieva, Laura Gouveia, Luciana Olivier e Dilse Aparecida Rosa</strong></p>
+            </div>
+
+            <div class="handwritten-note-section">
+                Um encontro memorável!
+            </div>
+        </section>
+
+        <section class="media-grid">
+            <!-- Vertical Highlight Image -->
+            <div class="media-item">
+                <img src="assets/img/placeholder-vertical.jpg" alt="Destaque da mediação Fliaraxá">
+            </div>
+
+            <!-- Official Event Card -->
+            <div class="media-item">
+                <img src="assets/img/placeholder-card.jpg" alt="Card Oficial do Evento">
+            </div>
+
+            <!-- Video Section -->
+            <div class="video-container media-item">
+                <!-- Embed placeholder or iframe -->
+                <div style="text-align: center;">
+                    <i class="fa-solid fa-play" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                    <p>Registro da Mesa (Vídeo)</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer-nav">
+            <a href="projetos.html" class="btn-back">Voltar para Projetos</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/gabriellysierra/?hl=pt" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@gabrielly.sierra" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@gabriellysierra" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/in/gabriellysierra/" target="_blank"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
