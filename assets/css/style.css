@@ -1728,28 +1728,23 @@ nav a.active {
 
 .handwritten-note {
     position: absolute;
-    top: -60px;
-    /* Posiciona no topo, aproveitando o margin-top do container */
+    top: -80px;
+    /* Ajuste para cima para acomodar duas linhas e a leve rotação */
     left: 0;
-    /* Alinhado ao início da imagem da poltrona */
-    right: auto;
-    bottom: auto;
+    width: 100%;
+    text-align: center;
+    /* Centraliza o texto horizontalmente SOBRE a imagem */
     font-family: 'Reenie Beanie', cursive;
-    font-size: 2.2rem;
+    font-size: 2.8rem;
+    /* Tamanho exato solicitado */
     color: #583722;
     /* Dark Cocoa */
     transform: rotate(-5deg);
     /* Sentido anti-horário */
     z-index: 10;
-    width: 100%;
-    /* Ocupa a largura total do container para facilitar alinhamento */
-    text-align: left;
-    /* Alinha o texto à esquerda do container da imagem */
-    padding-left: 20px;
-    /* Pequeno ajuste para não ficar cravado na borda */
-    line-height: 1.1;
+    line-height: 1.0;
     pointer-events: none;
-    /* Garante que não atrapalhe cliques se houver */
+    padding: 0;
 }
 
 @media (max-width: 900px) {
