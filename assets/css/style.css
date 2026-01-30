@@ -353,14 +353,13 @@ footer {
 }
 
 /* --- Signature Visual (Desktop) --- */
-/* --- Signature Visual (Desktop) --- */
 .visual-signature-container {
     float: none;
     width: 100%;
-    max-width: 700px;
-    /* STRICT: 700px */
-    margin: 80px auto 0;
-    /* STRICT: 80px top margin */
+    max-width: 750px;
+    /* Increased to 750px */
+    margin: 100px auto 0;
+    /* 100px top margin */
     position: relative;
     clear: both;
     border: none;
@@ -372,32 +371,32 @@ footer {
     width: 100%;
     height: auto;
     display: block;
-    mix-blend-mode: multiply;
-    /* STRICT: Multiply blend */
-    filter: contrast(1.1);
+    /* mix-blend-mode removed */
+    filter: none;
 }
 
 .signature-note {
     position: absolute;
-    top: -60px;
-    /* Adjusted for larger scale */
-    left: 0;
-    right: 0;
-    /* Center horizontally */
-    margin: 0 auto;
+    bottom: 20px;
+    /* Bottom positioning */
+    right: 40px;
+    /* Right positioning */
+    left: auto;
+    top: auto;
+    width: auto;
     font-family: 'Reenie Beanie', cursive;
-    font-size: 2.5rem;
-    /* STRICT: 2.5rem */
+    font-size: 2.2rem;
+    /* 2.2rem size */
     color: #583722;
-    /* STRICT: Dark Cocoa */
-    transform: rotate(-4deg);
-    /* STRICT: -4deg */
+    /* Dark Cocoa */
+    transform: rotate(5deg);
+    /* 5deg rotation */
     line-height: 1;
     z-index: 10;
-    width: 500px;
-    /* Enhanced width */
     text-shadow: none;
-    text-align: center;
+    text-align: right;
+    white-space: nowrap;
+    margin: 0;
 }
 
 /* Active Menu Item Style */
