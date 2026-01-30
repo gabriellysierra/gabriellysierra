@@ -1824,11 +1824,12 @@ nav a.active {
 /* Projects Page Divider Icon (Salsichinha) */
 .projects-divider-icon {
     display: block;
-    width: 180px;
-    /* Entre 150-180px */
+    margin: 4rem auto;
+    max-width: 600px;
+    /* Greatly increased based on user feedback */
+    width: 100%;
+    /* Ensure it can scale down on mobile but take full space */
     height: auto;
-    margin: 50px auto;
-    /* Reduzido de 80px para 50px */
     object-fit: contain;
 }
 
