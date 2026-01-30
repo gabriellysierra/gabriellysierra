@@ -1515,7 +1515,7 @@ nav a.active {
     width: 100%;
 }
 
-.art-block {
+.texto-block {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1565,18 +1565,18 @@ nav a.active {
 }
 
 /* Interactive Text Blocks */
-.art-block.text-block {
+.texto-block {
     text-decoration: none;
     cursor: pointer;
 }
 
-.art-block.text-block:hover {
+.texto-block:hover {
     transform: scale(1.02);
     z-index: 2;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.art-text-title {
+.texto-title {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 2rem;
     line-height: 1.1;
@@ -1624,13 +1624,13 @@ nav a.active {
         margin: 2rem auto;
     }
 
-    .art-block {
+    .texto-block {
         padding: 1rem;
         /* Reduced padding */
         min-height: 0;
     }
 
-    .art-text-title {
+    .texto-title {
         font-size: 1.25rem;
         /* Smaller title */
         margin-bottom: 0.5rem;
@@ -1659,13 +1659,13 @@ nav a.active {
     }
 
     /* Touch Interaction */
-    .art-block:hover {
+    .texto-block:hover {
         transform: none;
         /* Disable hover scale */
         box-shadow: none;
     }
 
-    .art-block:active {
+    .texto-block:active {
         opacity: 0.8;
         /* Visual feedback on press */
         transform: scale(0.98);
@@ -1684,7 +1684,7 @@ nav a.active {
     }
 }
 
-.text-tag {
+.texto-tag {
     display: inline-block;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 0.75rem;
