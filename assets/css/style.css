@@ -1350,7 +1350,7 @@ nav a.active {
     width: 100%;
     border: none;
     /* Optional: border: 1px solid #BDD7DE; to be very subtle */
-    background-color: #BDD7DE;
+    background-color: #BDD7DE !important;
     /* Powder Blue */
     padding: 12px 15px;
     /* Comfortable padding */
