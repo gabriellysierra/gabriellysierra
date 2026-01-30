@@ -1939,14 +1939,25 @@ nav a.active {
     object-fit: contain;
 }
 
-/* Force centering for children of centered layout */
+/* Center the container text generally (title, intro, info) */
 .contact-centered-wrapper .contact-title,
 .contact-centered-wrapper .contact-intro,
-.contact-centered-wrapper .contact-info-block,
-.contact-centered-wrapper .minimal-form,
-.contact-centered-wrapper .minimal-input,
-.contact-centered-wrapper .minimal-label {
+.contact-centered-wrapper .contact-info-block {
     text-align: center;
+}
+
+/* BUT keep form labels and inputs left-aligned for better UX */
+.contact-centered-wrapper .minimal-form {
+    text-align: left;
+    /* Reset alignment for form children */
+    display: inline-block;
+    /* Or block with max-width */
+    width: 100%;
+}
+
+.contact-centered-wrapper .minimal-label,
+.contact-centered-wrapper .minimal-input {
+    text-align: left;
 }
 
 .contact-centered-wrapper .contact-link-wrapper,
