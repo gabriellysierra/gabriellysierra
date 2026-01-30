@@ -356,8 +356,8 @@ footer {
 .visual-signature-container {
     float: none;
     width: 100%;
-    max-width: 750px;
-    /* Increased to 750px */
+    max-width: 950px;
+    /* Considerable increase to 950px */
     margin: 100px auto 0;
     /* 100px top margin */
     position: relative;
