@@ -1349,27 +1349,32 @@ nav a.active {
 .minimal-input {
     width: 100%;
     border: none;
-    border-bottom: 1px solid #583722;
-    /* Dark Cocoa Border */
-    background: transparent;
-    padding: 0.5rem 0;
+    /* Optional: border: 1px solid #BDD7DE; to be very subtle */
+    background-color: #BDD7DE;
+    /* Powder Blue */
+    padding: 12px 15px;
+    /* Comfortable padding */
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1rem;
     color: #32302F;
+    /* Graphite Text */
     outline: none;
-    transition: border-color 0.3s;
-    border-radius: 0;
-    /* Reset for some browsers */
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    /* Soft rounded corners */
 }
 
 .minimal-input:focus {
-    border-bottom-color: #C58C71;
-    /* Warm Clay on Focus */
+    box-shadow: 0 0 0 2px rgba(50, 48, 47, 0.1);
+    /* Subtle focus ring */
+    transform: scale(1.01);
+    /* Tiny lift */
 }
 
 .minimal-input::placeholder {
-    color: #999;
-    opacity: 0.7;
+    color: #32302F;
+    opacity: 0.6;
+    /* Slightly lighter graphite for placeholder */
 }
 
 .minimal-label {
