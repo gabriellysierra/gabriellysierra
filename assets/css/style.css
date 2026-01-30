@@ -1499,18 +1499,18 @@ nav a.active {
 }
 
 /* --- TEXTOS PAGE: ARTISTIC GRID (MOSAIC) --- */
+/* --- TEXTOS PAGE: ARTISTIC GRID (MOSAIC) --- */
 .texts-page-wrapper {
     padding: 0;
-    max-width: 1400px;
+    max-width: 100%;
+    /* Full bleed */
     margin: 4rem auto;
-    padding: 0 5%;
 }
 
 .text-art-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: minmax(350px, auto);
-    /* Uniform rows for all content */
+    /* grid-auto-rows removed to let aspect-ratio dictate height and avoid gaps */
     gap: 0;
     width: 100%;
 }
@@ -1521,13 +1521,11 @@ nav a.active {
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
-    /* Adjusted padding */
     transition: all 0.3s ease;
     overflow: hidden;
     min-height: 0;
-    /* Let aspect ratio consume height */
     aspect-ratio: 1 / 1;
-    /* Square blocks as requested */
+    /* Keep square */
 }
 
 /* Color Utilities */
@@ -1578,8 +1576,9 @@ nav a.active {
 
 .texto-title {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 2rem;
-    line-height: 1.1;
+    font-size: 1.3rem;
+    /* Reduced from 2rem to match previous visual size */
+    line-height: 1.2;
     margin-bottom: 1rem;
     font-weight: 400;
 }
