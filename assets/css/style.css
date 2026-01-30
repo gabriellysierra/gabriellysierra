@@ -1728,16 +1728,21 @@ nav a.active {
 }
 
 .handwritten-note {
-    position: absolute;
-    top: -75px;
-    /* Ajuste proporcional ao tamanho menor */
-    left: 0;
+    position: relative;
+    /* Alterado de absolute para relative/normal flow */
+    top: auto;
+    left: auto;
+    display: block;
+    margin-top: 40px;
+    /* Descolar da bio */
+    margin-bottom: 20px;
+    /* Espaço para a poltrona */
+
     width: 100%;
     text-align: center;
-    /* Centraliza o texto horizontalmente SOBRE a imagem */
+    /* Centraliza o texto horizontalmente */
     font-family: 'Reenie Beanie', cursive;
     font-size: 1.5rem;
-    /* Reduzido para 1.5rem */
     color: #583722;
     /* Dark Cocoa */
     transform: rotate(-5deg);

@@ -10,26 +10,28 @@
         rel="stylesheet">
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=12">
+    <link rel="stylesheet" href="assets/css/style.css?v=13">
     <style>
         /* CSS Crítico Injetado para Forçar Atualização */
         .handwritten-note {
             font-family: 'Reenie Beanie', cursive !important;
             font-size: 1.5rem !important;
-            /* Reduzido para 1.5rem */
             color: #583722 !important;
             transform: rotate(-5deg) !important;
             text-align: center !important;
             width: 100% !important;
-            left: 0 !important;
-            top: -75px !important;
-            /* Ajustado para 3 linhas compactas */
-            position: absolute !important;
+            position: relative !important;
+            /* Alterado para relative/normal flow */
+            left: auto !important;
+            top: auto !important;
+            margin-top: 40px !important;
+            /* Descolar da bio */
+            margin-bottom: 20px !important;
+            /* Espaço para a poltrona */
             z-index: 10 !important;
             line-height: 0.9 !important;
-            /* Bem juntinho */
-            margin-bottom: 0 !important;
             padding: 0 !important;
+            display: block !important;
         }
 
         .signature-block {
