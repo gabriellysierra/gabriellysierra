@@ -1825,8 +1825,8 @@ nav a.active {
 .projects-divider-icon {
     display: block;
     margin: 4rem auto;
-    max-width: 600px;
-    /* Greatly increased based on user feedback */
+    max-width: 200px;
+    /* Matched size of image in textos.html */
     width: 100%;
     /* Ensure it can scale down on mobile but take full space */
     height: auto;
