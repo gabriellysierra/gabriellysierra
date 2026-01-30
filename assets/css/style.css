@@ -353,16 +353,18 @@ footer {
 }
 
 /* --- Signature Visual (Desktop) --- */
-/* --- Signature Visual (Desktop) --- */
 .visual-signature-container {
     float: none;
     width: 100%;
-    max-width: 600px;
-    /* Considerable increase */
-    margin: 40px auto 0;
-    /* Centered */
+    max-width: 650px;
+    /* Increased to 650px */
+    margin: 60px auto 0;
+    /* 60px top margin */
     position: relative;
     clear: both;
+    border: none;
+    box-shadow: none;
+    background: transparent;
 }
 
 .signature-photo {
@@ -372,24 +374,28 @@ footer {
     mix-blend-mode: multiply;
     /* Removes white background */
     filter: contrast(1.1);
-    /* Slight contrast boost */
 }
 
 .signature-note {
     position: absolute;
-    top: -40px;
-    left: 0;
+    top: -50px;
+    /* Positioned above */
+    left: 20px;
+    /* Slightly offset */
     font-family: 'Reenie Beanie', cursive;
-    font-size: 2.2rem;
-    /* Increased size to match scale */
+    font-size: 2.4rem;
+    /* Proportional size */
     color: #583722;
     /* Dark Cocoa */
-    transform: rotate(-7deg);
+    transform: rotate(-5deg);
+    /* -5deg rotation */
     line-height: 1;
     z-index: 10;
-    width: 300px;
+    width: 400px;
+    /* Wider to avoid wrapping */
     text-shadow: none;
-    /* Removed as requested for "note on page" feel */
+    text-align: center;
+    /* Centering the text itself */
 }
 
 /* Active Menu Item Style */
