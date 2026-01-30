@@ -96,8 +96,7 @@
         }
 
         .video-container {
-            grid-column: 1 / -1;
-            /* Fill width */
+            /* grid-column: 1 / -1;  REMOVED to keep it in one column */
             aspect-ratio: 16 / 9;
             background: #000;
             display: flex;
@@ -105,6 +104,13 @@
             justify-content: center;
             color: #fff;
             border-radius: 10px;
+        }
+
+        .quote-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
         }
 
         /* Footer Navigation */
@@ -174,10 +180,7 @@
                 <p><strong>Ina Arefieva, Laura Gouveia, Luciana Olivier e Dilse Aparecida Rosa</strong></p>
             </div>
 
-            <div class="handwritten-note-section">
-                Como diz João Guimarães Rosa: “o real não está na saída nem na chegada: ele se dispõe para a gente é no
-                meio da travessia.” (Grande Sertão: Veredas, p. 62)
-            </div>
+
         </section>
 
         <section class="media-grid">
@@ -198,6 +201,15 @@
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen style="border-radius: 8px;"></iframe>
+            </div>
+
+            <!-- Quote Section (Moved here) -->
+            <div class="quote-container">
+                <div class="handwritten-note-section" style="margin: 0; text-align: center;">
+                    Como diz João Guimarães Rosa: “o real não está na saída nem na chegada: ele se dispõe para a gente é
+                    no
+                    meio da travessia.” (Grande Sertão: Veredas, p. 62)
+                </div>
             </div>
         </section>
 
