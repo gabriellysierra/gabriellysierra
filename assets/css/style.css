@@ -1942,7 +1942,8 @@ nav a.active {
 .contact-centered-wrapper .contact-title,
 .contact-centered-wrapper .contact-intro,
 .contact-centered-wrapper .contact-info-block {
-    text-align: center;
+    text-align: left;
+    /* User requested left alignment */
 }
 
 /* BUT keep form labels and inputs left-aligned for better UX */
@@ -1962,9 +1963,9 @@ nav a.active {
 .contact-centered-wrapper .contact-link-wrapper,
 .contact-centered-wrapper .location-text {
     width: 100%;
-    /* Force full width so justify-content works */
-    justify-content: center;
+    /* Force full width */
+    justify-content: flex-start;
+    /* Left align content */
     display: flex;
-    /* Ensure flex is active for justify-content */
     align-items: center;
 }
