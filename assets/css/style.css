@@ -1977,6 +1977,12 @@ nav a.active {
     margin: 0 auto;
 }
 
+.about-title {
+    color: #583722;
+    /* Dark Cocoa */
+    /* Ensure other properties match if needed, but color is the request */
+}
+
 .about-container {
     display: flex;
     gap: 4rem;
