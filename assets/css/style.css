@@ -335,85 +335,11 @@ footer {
         /* Ou center se preferir no mobile, mas left é mais seguro */
     }
 
-    /* Stack signature on mobile */
-    .visual-signature-container {
-        float: none;
-        margin: 2rem auto 0;
-        text-align: center;
-        width: 100%;
-        max-width: 320px;
-    }
 
-    .signature-note {
-        position: static;
-        margin-bottom: 1rem;
-        display: block;
-        transform: rotate(-2deg);
-    }
 }
 
 /* --- Signature Visual (Desktop Only) --- */
-/* --- Signature Visual (Global & Desktop) --- */
 
-/* GLOBAL RESET: Ensure no white box/shadow anywhere */
-.visual-signature-container {
-    border: none !important;
-    box-shadow: none !important;
-    background: transparent !important;
-    padding: 0 !important;
-}
-
-/* Ensure note color is enforced globally */
-.signature-note {
-    color: #583722 !important;
-    /* Dark Cocoa forced */
-}
-
-@media (min-width: 901px) {
-    .visual-signature-container {
-        float: none;
-        display: block;
-        width: 58%;
-        /* Hierarchy: ~50-60% of text container */
-        margin-top: 80px;
-        /* Generous spacing */
-        margin-left: auto;
-        /* Align right */
-        margin-right: 0;
-        position: relative;
-        clear: both;
-    }
-
-    .signature-note {
-        position: absolute;
-        bottom: 5px;
-        /* Aligned with base */
-        right: 100%;
-        /* Positioned to the left of the chair */
-        margin-right: 20px;
-        /* Spacing */
-        width: max-content;
-        max-width: 250px;
-        text-align: right;
-        font-family: 'Reenie Beanie', cursive;
-        font-size: 1.8rem;
-        transform: rotate(-3deg);
-        /* Slight manual tilt */
-        line-height: 1.1;
-        z-index: 10;
-        text-shadow: none;
-        white-space: normal;
-    }
-}
-
-.signature-photo {
-    width: 100%;
-    height: auto;
-    display: block;
-    mix-blend-mode: multiply;
-    /* FAILSAFE: If image has white bg, this makes it transparent */
-    filter: none;
-}
 
 /* Active Menu Item Style */
 nav a.active {
