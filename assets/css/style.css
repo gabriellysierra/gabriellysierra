@@ -1942,7 +1942,9 @@ nav a.active {
 /* Force centering for children of centered layout */
 .contact-centered-wrapper .contact-title,
 .contact-centered-wrapper .contact-intro,
-.contact-centered-wrapper .contact-info-block {
+.contact-centered-wrapper .contact-info-block,
+.contact-centered-wrapper .minimal-form,
+.contact-centered-wrapper .minimal-input {
     text-align: center;
 }
 
