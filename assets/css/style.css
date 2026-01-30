@@ -362,9 +362,10 @@ footer {
     /* 100px top margin */
     position: relative;
     clear: both;
-    border: none;
-    box-shadow: none;
-    background: transparent;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding: 0 !important;
 }
 
 .signature-photo {
