@@ -1933,3 +1933,18 @@ nav a.active {
     height: auto;
     object-fit: contain;
 }
+
+/* Force centering for children of centered layout */
+.contact-centered-wrapper .contact-title,
+.contact-centered-wrapper .contact-intro,
+.contact-centered-wrapper .contact-info-block {
+    text-align: center;
+}
+
+.contact-centered-wrapper .contact-link-wrapper,
+.contact-centered-wrapper .location-text {
+    justify-content: center;
+    display: flex;
+    /* Ensure flex is active for justify-content */
+    align-items: center;
+}
