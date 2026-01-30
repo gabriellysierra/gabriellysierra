@@ -1823,7 +1823,7 @@ nav a.active {
     width: 180px;
     /* Entre 150-180px */
     height: auto;
-    margin: 80px auto;
-    /* Centralizado, margins top/bottom 80px */
+    margin: 50px auto;
+    /* Reduzido de 80px para 50px */
     object-fit: contain;
 }
