@@ -1999,7 +1999,147 @@ nav a.active {
     }
 }
 
-/* --- LETTER PAGE SPACING --- */
+
+/* --- ATELIÊ PAGE STYLES --- */
+.atelie-page-wrapper {
+    padding: 6rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 80vh;
+}
+
+.atelie-header {
+    text-align: center;
+    margin-bottom: 5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.atelie-header h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--color-titles);
+    /* Dark Cocoa */
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.atelie-subtitle {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    color: #32302F;
+    /* Graphite */
+    line-height: 1.6;
+}
+
+.atelie-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: stretch;
+}
+
+.atelie-card {
+    padding: 3rem;
+    border: 1px solid #BDD7DE;
+    /* Powder Blue Border */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease;
+}
+
+.atelie-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    /* Subtle lift */
+}
+
+.atelie-card-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.8rem;
+    color: var(--color-titles);
+    margin-bottom: 0.5rem;
+}
+
+.atelie-card-subtitle {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #C58C71;
+    /* Warm Clay as secondary highlight or keep Dark Cocoa? User said titles Dark Cocoa. Let's use Dark Cocoa but maybe lighter/italic? Or strict Graphite? "Subtítulo (em destaque menor)". Let's use Graphite bold. */
+    color: #32302F;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.atelie-card-desc {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: #32302F;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.atelie-target {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: #32302F;
+    margin-bottom: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed #BDD7DE;
+    /* Powder Blue separator */
+}
+
+.handwritten-highlight {
+    font-family: 'Reenie Beanie', cursive;
+    color: var(--color-titles);
+    font-size: 1.6rem;
+    margin-right: 0.5rem;
+    transform: rotate(-2deg);
+    display: inline-block;
+}
+
+.atelie-btn {
+    display: inline-block;
+    background-color: #C58C71;
+    /* Warm Clay */
+    color: #FFFFFF;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 4px;
+    /* Slight roundness */
+    transition: background-color 0.3s, transform 0.2s;
+    align-self: flex-start;
+}
+
+.atelie-btn:hover {
+    background-color: #583722;
+    /* Dark Cocoa */
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    .atelie-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .atelie-header h1 {
+        font-size: 2rem;
+    }
+
+    .atelie-card {
+        padding: 2rem;
+    }
+}
+
 .letter-content p {
     margin-bottom: 1.5rem;
 
