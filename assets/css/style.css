@@ -1824,7 +1824,7 @@ nav a.active {
 /* Projects Page Divider Icon (Salsichinha - Large) */
 .projects-divider-large {
     display: block;
-    margin: 4rem auto;
+    margin: 4rem auto 1rem;
     max-width: 200px;
     width: 100%;
     height: auto;
