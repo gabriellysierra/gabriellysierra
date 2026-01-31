@@ -1825,7 +1825,7 @@ nav a.active {
 .projects-divider-large {
     display: block;
     margin: 4rem auto;
-    max-width: 800px;
+    max-width: 200px;
     width: 100%;
     height: auto;
     object-fit: contain;
