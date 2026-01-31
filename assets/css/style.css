@@ -1821,14 +1821,12 @@ nav a.active {
     justify-content: center;
 }
 
-/* Projects Page Divider Icon (Salsichinha) */
-.projects-divider-icon {
+/* Projects Page Divider Icon (Salsichinha - Large) */
+.projects-divider-large {
     display: block;
     margin: 4rem auto;
-    max-width: 200px;
-    /* Matched size of image in textos.html */
+    max-width: 800px;
     width: 100%;
-    /* Ensure it can scale down on mobile but take full space */
     height: auto;
     object-fit: contain;
 }
@@ -2005,35 +2003,4 @@ nav a.active {
 .letter-content p {
     margin-bottom: 1.5rem;
 
-}
-
-/* --- KOMBI ANIMATION --- */
-.kombi-container {
-    width: 100%;
-    overflow: hidden;
-    margin: 4rem 0 0 0;
-    /* Space above */
-    position: relative;
-    height: 120px;
-    /* Adjust based on image aspect ratio */
-}
-
-.kombi-img {
-    height: 100px;
-    /* Adjust size */
-    width: auto;
-    position: absolute;
-    left: -200px;
-    /* Start off-screen */
-    animation: driveKombi 25s linear infinite;
-}
-
-@keyframes driveKombi {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(100vw);
-    }
 }
