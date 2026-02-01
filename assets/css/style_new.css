@@ -2174,6 +2174,7 @@ nav a.active {
     margin-bottom: 1.5rem;
 
 }
+
 /* --- PROPOSTA PAGE (Hidden Landing Page) --- */
 
 .proposta-body {
@@ -2393,9 +2394,11 @@ nav a.active {
 
     /* Ensure links display URL if needed, but normally for this doc clean is better. 
        Let's keep it clean. */
+    /* Ensure links display URL if needed */
     a {
-        text-decoration: none;
-        color: #000;
+        text-decoration: underline !important;
+        color: #0000EE !important;
+        /* Standard link blue for clarity */
     }
 
     /* Reveal simple header for context */
