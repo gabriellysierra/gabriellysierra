@@ -2433,6 +2433,7 @@ nav a.active {
         print-color-adjust: exact;
     }
 }
+
 /* --- NEW PROPOSTA FOOTER STYLES --- */
 .proposta-footer-links {
     display: flex;
@@ -2532,8 +2533,9 @@ nav a.active {
 /* Position: Centralized above title '3. Formação de Professores' */
 .mascot-formacao {
     max-width: 150px;
-    margin: 0 auto 1.5rem auto; /* Center + bottom spacing */
-    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+    margin: 0 auto 1.5rem auto;
+    /* Center + bottom spacing */
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
 
 /* 2. Mascot Option B (salsicha-odisseia) */
@@ -2549,7 +2551,8 @@ nav a.active {
 }
 
 .option-mascot {
-    flex: 0 0 160px; /* Fixed width for image container */
+    flex: 0 0 160px;
+    /* Fixed width for image container */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2557,17 +2560,18 @@ nav a.active {
 
 .mascot-narrativas {
     max-width: 100%;
-    transform: rotate(2deg); /* Relaxed vibe */
+    transform: rotate(2deg);
+    /* Relaxed vibe */
 }
 
 /* Responsive Option B */
 @media (max-width: 768px) {
     .option-content-wrapper {
-        flex-direction: column-reverse; 
+        flex-direction: column-reverse;
         align-items: center;
         gap: 1.5rem;
     }
-    
+
     .option-mascot {
         flex: 0 0 auto;
         width: 150px;
@@ -2577,7 +2581,7 @@ nav a.active {
 /* 3. Mascot Footer (03.png) */
 /* Position: Near 'Vamos desenhar um projeto juntos?' */
 .proposta-footer-message {
-    position: relative; 
+    position: relative;
 }
 
 .footer-mascot-container {
@@ -2597,11 +2601,119 @@ nav a.active {
     transform: translateY(0);
 }
 
+/* --- PRINT OPTIMIZATION (A4 PDF) --- */
 @media print {
+    @page {
+        size: A4;
+        margin: 15mm;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        background-color: #FFFFFF !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Hide Web Elements */
+    .whatsapp-float,
+    .scroll-to-top,
+    /* Assuming these exist or might exist */
+    .carousel-control {
+        display: none !important;
+    }
+
+    /* Layout Protection (No Breaks) */
+    .proposta-section,
+    .content-block,
+    .item-block,
+    .sub-option,
+    .temas-box,
+    .formatos-box,
+    .diferenciais-box,
+    .tema-item,
+    .option-content-wrapper {
+        break-inside: avoid !important;
+        page-break-inside: avoid !important;
+        display: block;
+        /* Flex containers sometimes break pagination */
+    }
+
+    /* Flex adjustments for print safety */
+    .option-content-wrapper {
+        display: flex !important;
+        /* Keep flex for side-by-side if it fits */
+        align-items: flex-start !important;
+        /* Better alignment for print */
+    }
+
+    /* Mascots */
     .mascot-img {
         display: block !important;
+        max-width: 100% !important;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+        break-inside: avoid;
+    }
+
+    .mascot-formacao {
+        max-width: 120px !important;
+        /* Slightly smaller to save space if needed */
+        margin-bottom: 10px !important;
+    }
+
+    .mascot-footer {
+        max-width: 100px !important;
+    }
+
+    /* Links cleanliness */
+    a {
+        text-decoration: none !important;
+        color: var(--color-titles) !important;
+    }
+
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8rem;
+        color: #666;
+        display: none;
+        /* User asked for clean aesthetic, usually visible URL is ugly. Let's hide it unless crucial. */
+    }
+
+    /* Link Aesthetic */
+    .cta-btn {
+        border: 1px solid var(--color-titles) !important;
+        background: none !important;
+        color: var(--color-titles) !important;
+    }
+
+    /* Footer for Print */
+    .proposta-footer-links {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        gap: 2rem !important;
+        flex-wrap: wrap !important;
+    }
+
+    .footer-link-item span {
+        text-decoration: none !important;
+        color: #333 !important;
+    }
+
+    /* Ensure no cuts */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        break-after: avoid !important;
+        page-break-after: avoid !important;
+    }
+
+    img {
+        max-width: 100% !important;
+        height: auto !important;
     }
 }
-
