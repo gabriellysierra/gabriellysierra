@@ -2519,3 +2519,89 @@ nav a.active {
         /* Visual boundary for print */
     }
 }
+
+/* --- Proposta Page Mascots --- */
+
+.mascot-img {
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* 1. Mascot Formacao (06.png) */
+/* Position: Centralized above title '3. Formação de Professores' */
+.mascot-formacao {
+    max-width: 150px;
+    margin: 0 auto 1.5rem auto; /* Center + bottom spacing */
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+/* 2. Mascot Option B (salsicha-odisseia) */
+/* Position: Beside description */
+.option-content-wrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.option-text {
+    flex: 1;
+}
+
+.option-mascot {
+    flex: 0 0 160px; /* Fixed width for image container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mascot-narrativas {
+    max-width: 100%;
+    transform: rotate(2deg); /* Relaxed vibe */
+}
+
+/* Responsive Option B */
+@media (max-width: 768px) {
+    .option-content-wrapper {
+        flex-direction: column-reverse; 
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .option-mascot {
+        flex: 0 0 auto;
+        width: 150px;
+    }
+}
+
+/* 3. Mascot Footer (03.png) */
+/* Position: Near 'Vamos desenhar um projeto juntos?' */
+.proposta-footer-message {
+    position: relative; 
+}
+
+.footer-mascot-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.mascot-footer {
+    max-width: 140px;
+    /* Animation entry? */
+    transform: translateY(10px);
+    transition: transform 0.3s ease;
+}
+
+.mascot-footer:hover {
+    transform: translateY(0);
+}
+
+@media print {
+    .mascot-img {
+        display: block !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
