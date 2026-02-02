@@ -2717,3 +2717,32 @@ nav a.active {
         height: auto !important;
     }
 }
+/* --- Additional Mascots --- */
+
+/* 4. Mascot Intervencao (04.png) */
+/* Position: Floating right of text */
+.mascot-intervencao {
+    float: right;
+    width: 140px;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    shape-outside: circle(50%); /* Subtle text wrap */
+}
+
+@media (max-width: 600px) {
+    .mascot-intervencao {
+        float: none;
+        margin: 0 auto 1.5rem auto;
+        display: block;
+        max-width: 140px;
+    }
+}
+
+/* 5. Mascot Residencia A (09.png) */
+/* Position: Beside text (reusing Option B structure) */
+.mascot-residencia-a {
+    max-width: 100%;
+    transform: rotate(-3deg); /* Slight counter-rotation for variety */
+}
+
