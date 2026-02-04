@@ -2717,6 +2717,7 @@ nav a.active {
         height: auto !important;
     }
 }
+
 /* --- Additional Mascots --- */
 
 /* 4. Mascot Intervencao (04.png) */
@@ -2727,7 +2728,8 @@ nav a.active {
     margin-left: 2rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
-    shape-outside: circle(50%); /* Subtle text wrap */
+    shape-outside: circle(50%);
+    /* Subtle text wrap */
 }
 
 @media (max-width: 600px) {
@@ -2743,119 +2745,6 @@ nav a.active {
 /* Position: Beside text (reusing Option B structure) */
 .mascot-residencia-a {
     max-width: 100%;
-    transform: rotate(-3deg); /* Slight counter-rotation for variety */
+    transform: rotate(-3deg);
+    /* Slight counter-rotation for variety */
 }
-
-
-/* --- PRINT OPTIMIZATION (INFINITE SCROLL / DIGITAL PDF) - OVERRIDE --- */
-@media print {
-    @page {
-        size: 210mm 1500mm; /* Giant height to prevent page breaks */
-        margin: 0;
-    }
-
-    body {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-        background-color: #FFFFFF !important;
-        width: 210mm; 
-        margin: 0 auto !important;
-        padding: 15mm !important;
-        font-size: 11pt !important; /* Slightly reduced for better fit */
-        color: #333 !important;
-    }
-
-    /* Hide Web Elements */
-    .whatsapp-float,
-    .scroll-to-top,
-    .carousel-control {
-        display: none !important;
-    }
-
-    /* Layout Protection */
-    .proposta-section,
-    .content-block,
-    .item-block,
-    .sub-option {
-        break-inside: avoid !important;
-        page-break-inside: avoid !important;
-        margin-bottom: 2rem !important; /* Clear spacing between sections */
-        display: block;
-    }
-
-    /* Typography Compactness */
-    h1 { font-size: 22pt !important; margin-bottom: 10px !important; }
-    h2 { font-size: 18pt !important; margin-bottom: 10px !important; }
-    h3 { font-size: 14pt !important; margin-bottom: 8px !important; }
-    p { margin-bottom: 10px !important; line-height: 1.5 !important; }
-    
-    /* Flex adjustments for print safety */
-    .option-content-wrapper {
-        display: flex !important;
-        align-items: flex-start !important;
-        gap: 1.5rem !important;
-    }
-
-    /* Mascots - Prevent Distortion */
-    .mascot-img {
-        display: block !important;
-        height: auto !important; /* CRITICAL: Maintains aspect ratio */
-        object-fit: contain !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
-
-    .mascot-formacao {
-        max-width: 100px !important;
-        margin: 0 auto 10px auto !important;
-    }
-
-    .mascot-footer {
-        max-width: 90px !important;
-    }
-    
-    .mascot-intervencao {
-        width: 120px !important;
-        height: auto !important;
-        float: right !important;
-        margin-left: 20px !important;
-    }
-    
-    .mascot-residencia-a {
-        max-width: 140px !important;
-        height: auto !important;
-    }
-
-    /* Links cleanliness */
-    a {
-        text-decoration: none !important;
-        color: var(--color-titles) !important;
-    }
-    
-    a[href^='http']:after {
-        display: none !important;
-    }
-
-    /* Link Aesthetic */
-    .cta-btn {
-        border: 1px solid var(--color-titles) !important;
-        background: none !important;
-        color: var(--color-titles) !important;
-        padding: 8px 16px !important;
-        display: inline-block !important;
-    }
-
-    /* Footer for Print */
-    .proposta-footer-links {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: center !important;
-        gap: 2rem !important;
-    }
-    
-    img {
-        max-width: 100% !important;
-        height: auto !important; /* Global fix for distortion */
-    }
-}
-
