@@ -257,6 +257,32 @@
             background-color: rgba(197, 140, 113, 0.05);
         }
 
+        /* New Footer Elements */
+        .footer-mascot {
+            width: 80px;
+            margin: 40px auto 20px;
+            display: block;
+            opacity: 0.9;
+        }
+
+        .footer-social {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .social-link {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            color: var(--accent);
+        }
+
         /* Responsive */
         @media (max-width: 480px) {
             body {
@@ -344,9 +370,26 @@
             <a href="https://wa.me/55NUMEROAQUI" target="_blank" class="cta-link">
                 Consultar Disponibilidade &rarr;
             </a>
+
+            <!-- Mascot & Contacts -->
+            <img src="assets/img/03.png" alt="Mascote" class="footer-mascot">
+
+            <div class="footer-social">
+                <a href="https://instagram.com/seuperfil" target="_blank" class="social-link" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:contato@gabriellysierra.com.br" class="social-link" title="Email">
+                    <i class="far fa-envelope"></i>
+                </a>
+                <a href="index.html" class="social-link" title="Visitar Site">
+                    <i class="fas fa-globe"></i>
+                </a>
+            </div>
         </footer>
     </div>
 
+    <!-- Load FontAwesome late to ensure icons render -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </body>
 
 </html>
