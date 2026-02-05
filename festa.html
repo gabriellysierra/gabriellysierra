@@ -4,27 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Livro é uma Festa | Gabrielly Sierra</title>
-
+    <title>O Livro é uma Festa | Ateliê da Gabi</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Reenie+Beanie&family=Source+Sans+Pro:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Reenie+Beanie&family=Source+Sans+Pro:wght@300;400&display=swap"
         rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <style>
+        /* CSS Variables */
         :root {
-            --bg-header: #BDD7DE;
+            --bg-page: #FAF9F6;
+            --bg-card: #FFFFFF;
             --text-primary: #583722;
-            --text-body: #32302F;
+            /* Dark Cocoa */
+            --text-secondary: #32302F;
+            /* Graphite */
             --accent: #C58C71;
-            --bg-body: #FFFFFF;
+            /* Warm Clay */
+            --detail: #BDD7DE;
+            /* Powder Blue */
         }
 
+        /* Reset & Base */
         * {
             margin: 0;
             padding: 0;
@@ -32,232 +34,248 @@
         }
 
         body {
+            background-color: var(--bg-page);
             font-family: 'Source Sans Pro', sans-serif;
-            color: var(--text-body);
-            background-color: var(--bg-body);
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
         }
 
-        /* Typography Utilities */
+        /* Main Container - Digital Invitation Card */
+        .card-container {
+            background-color: var(--bg-card);
+            width: 100%;
+            max-width: 600px;
+            padding: 60px 40px;
+            box-shadow: 0 15px 40px rgba(88, 55, 34, 0.05);
+            text-align: center;
+            position: relative;
+        }
+
+        /* Typography */
         h1,
         h2,
-        h3 {
+        h3,
+        .btn-text {
             font-family: 'Josefin Sans', sans-serif;
             color: var(--text-primary);
         }
 
         .handwritten {
             font-family: 'Reenie Beanie', cursive;
+            color: var(--accent);
         }
 
-        /* Main Wrapper - Mobile Centered */
-        .page-wrapper {
-            max-width: 480px;
-            margin: 0 auto;
-            background: #fff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.03);
-        }
-
-        /* HEADER */
+        /* Header */
         header {
-            background-color: var(--bg-header);
-            padding: 60px 20px 40px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            margin-bottom: 50px;
         }
 
-        .profile-frame {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            border: 6px solid #FFFFFF;
-            overflow: hidden;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(88, 55, 34, 0.1);
+        .profile-wrapper {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
         }
 
         .profile-img {
             width: 100%;
             height: 100%;
+            border-radius: 50%;
             object-fit: cover;
+            border: 1px solid var(--detail);
+            padding: 4px;
+            /* Space for border */
+            background: #fff;
         }
 
-        .greeting {
-            font-size: 2.2rem;
-            color: var(--text-primary);
-            transform: rotate(-2deg);
-            margin-top: 5px;
-            line-height: 1;
-        }
-
-        /* BODY CONTENT */
-        main {
-            padding: 50px 25px;
-            text-align: center;
-            flex: 1;
-        }
-
-        h1.main-title {
-            font-size: 2.4rem;
-            font-weight: 700;
+        .brand-name {
+            font-size: 0.9rem;
             text-transform: uppercase;
-            line-height: 1.1;
+            letter-spacing: 3px;
             margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .brand-role {
+            font-size: 1.8rem;
+            transform: rotate(-2deg);
+            display: inline-block;
+        }
+
+        /* Hero */
+        .hero {
+            margin-bottom: 60px;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 10px;
         }
 
         .subtitle {
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 0.9rem;
-            color: var(--accent);
+            font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 4px;
+            color: var(--accent);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .subtitle::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 1px;
+            background-color: var(--accent);
+        }
+
+        /* Image Frame */
+        .image-frame {
+            margin: 40px auto;
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 4/5;
+        }
+
+        .feature-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Offset Border Effect */
+        .image-frame::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 100%;
+            height: 100%;
+            border: 1px solid var(--accent);
+            z-index: 1;
+        }
+
+        /* Narrative Body */
+        .narrative {
+            text-align: left;
+            max-width: 480px;
+            margin: 0 auto 60px;
+        }
+
+        .narrative p {
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+        }
+
+        /* Stylized List */
+        .method-list {
+            list-style: none;
+            margin-top: 40px;
+        }
+
+        .method-item {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 20px;
+        }
+
+        .method-num {
+            font-family: 'Josefin Sans', sans-serif;
+            color: var(--accent);
+            font-size: 0.9rem;
             font-weight: 600;
+            margin-right: 15px;
+            min-width: 25px;
+        }
+
+        .method-text strong {
+            font-family: 'Josefin Sans', sans-serif;
+            color: var(--text-primary);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+            font-size: 1.1rem;
+        }
+
+        .method-text span {
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            padding-top: 40px;
+        }
+
+        .price-tag {
+            font-size: 2rem;
+            color: var(--text-primary);
+            font-family: 'Josefin Sans', sans-serif;
+            margin-bottom: 5px;
+        }
+
+        .price-details {
+            font-size: 0.9rem;
+            color: #888;
             margin-bottom: 35px;
             display: block;
         }
 
-        .highlight-image-container {
-            width: 100%;
-            max-width: 380px;
-            margin: 0 auto 35px;
-            /* Aspect ratio handling */
-            aspect-ratio: 4/5;
-            border-radius: 20px;
-            overflow: hidden;
-            background-color: #f0f0f0;
-            position: relative;
-        }
-
-        .highlight-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Placeholder style if image missing */
-        .img-placeholder {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            color: #ccc;
-            background: #fafafa;
-            border: 2px dashed #e0e0e0;
-        }
-
-        .sales-text {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 40px;
-            font-family: 'Josefin Sans', sans-serif;
-        }
-
-        .features-list {
-            list-style: none;
-            text-align: left;
-            max-width: 300px;
-            margin: 0 auto;
-        }
-
-        .features-list li {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .features-list li::before {
-            content: '•';
-            color: var(--accent);
-            font-size: 2rem;
-            line-height: 0;
-            margin-right: 15px;
-            position: relative;
-            top: 2px;
-        }
-
-        /* FOOTER */
-        footer {
-            background-color: #fff;
-            border-top: 1px solid var(--accent);
-            padding: 40px 25px 50px;
-            text-align: center;
-            margin-top: auto;
-        }
-
-        .price-display {
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            line-height: 1;
-            margin-bottom: 10px;
-        }
-
-        .price-subtext {
-            color: #888;
-            font-size: 0.95rem;
-            margin-bottom: 30px;
-            display: block;
-        }
-
-        .cta-button {
-            display: block;
-            width: 100%;
-            background-color: var(--accent);
-            color: #fff;
+        .cta-link {
+            display: inline-block;
             text-decoration: none;
-            padding: 20px;
+            color: var(--text-primary);
+            border: 1px solid var(--detail);
+            padding: 12px 30px;
             border-radius: 50px;
-            /* Pill shape */
             font-family: 'Josefin Sans', sans-serif;
-            font-weight: 700;
+            font-size: 0.9rem;
             text-transform: uppercase;
-            font-size: 1.1rem;
             letter-spacing: 1px;
-            box-shadow: 0 10px 25px rgba(197, 140, 113, 0.4);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: all 0.3s ease;
         }
 
-        .cta-button:active {
-            transform: scale(0.98);
-            box-shadow: 0 5px 15px rgba(197, 140, 113, 0.3);
+        .cta-link:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background-color: rgba(197, 140, 113, 0.05);
         }
 
-        /* Fade In Animation */
-        .fade-in {
-            animation: fadeInUp 0.8s ease backwards;
-        }
-
-        .delay-1 {
-            animation-delay: 0.1s;
-        }
-
-        .delay-2 {
-            animation-delay: 0.2s;
-        }
-
-        .delay-3 {
-            animation-delay: 0.3s;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
+        /* Responsive */
+        @media (max-width: 480px) {
+            body {
+                padding: 0;
+                background-color: #fff;
             }
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            .card-container {
+                box-shadow: none;
+                padding: 40px 20px;
+            }
+
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .image-frame::after {
+                top: 10px;
+                left: 10px;
             }
         }
     </style>
@@ -265,65 +283,66 @@
 
 <body>
 
-    <div class="page-wrapper">
+    <div class="card-container">
         <header>
-            <div class="profile-frame fade-in">
+            <div class="profile-wrapper">
                 <img src="assets/img/perfil.jpg" alt="Gabrielly Sierra" class="profile-img">
             </div>
-            <p class="greeting handwritten fade-in delay-1">Oi, aqui é a Gabi!</p>
+            <div class="brand-name">Gabi Sierra</div>
+            <div class="brand-role handwritten">Educadora & Mediadora</div>
         </header>
 
-        <main>
-            <h1 class="main-title fade-in delay-2">Ateliê itinerante</h1>
-            <span class="subtitle fade-in delay-2">O LIVRO É UMA FESTA!</span>
+        <div class="hero">
+            <h1 class="main-title">O LIVRO É UMA FESTA</h1>
+            <div class="subtitle">Ateliê Itinerante</div>
 
-            <div class="highlight-image-container fade-in delay-3">
-                <!-- Use actual image or placeholder if not found -->
-                <img src="assets/img/oficina.jpg" alt="Oficina de Arte" class="highlight-image"
-                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="img-placeholder" style="display:none;">
-                    <span>Inserir: oficina.jpg</span>
-                </div>
+            <div class="image-frame">
+                <img src="assets/img/oficina.jpg" alt="Crianças criando arte" class="feature-img"
+                    onerror="this.src='https://via.placeholder.com/400x500/F0F0F0/CCCCCC?text=oficina.jpg'">
             </div>
+        </div>
 
-            <ul class="features-list fade-in delay-3">
-                <li>Mediação Literária</li>
-                <li>Oficina de Arte (Investigação de materiais, sem telas).</li>
-                <li>Lembrança com Significado (A produção é levada para casa).</li>
+        <div class="narrative">
+            <p>Acredito que celebrar é também um ato de criar memórias. O "O Livro é uma Festa" não é sobre
+                entretenimento passageiro, mas sobre conexão e significado.</p>
+
+            <p>Levo até o seu evento um ateliê de arte completo e uma curadoria literária pensada com afeto, criando um
+                espaço onde as crianças podem desacelerar e imaginar.</p>
+
+            <ul class="method-list">
+                <li class="method-item">
+                    <span class="method-num">01</span>
+                    <div class="method-text">
+                        <strong>Mediação Literária</strong>
+                        <span>Uma sessão de contação de histórias que desperta a escuta e o encantamento, selecionada
+                            especialmente para o aniversariante.</span>
+                    </div>
+                </li>
+                <li class="method-item">
+                    <span class="method-num">02</span>
+                    <div class="method-text">
+                        <strong>Ateliê Criativo</strong>
+                        <span>Uma oficina de arte com materiais profissionais e naturais. Sem telas, apenas a
+                            investigação livre de texturas e cores.</span>
+                    </div>
+                </li>
+                <li class="method-item">
+                    <span class="method-num">03</span>
+                    <div class="method-text">
+                        <strong>Memória Física</strong>
+                        <span>O que é produzido na oficina se torna uma lembrança cheia de significado que cada criança
+                            leva para casa.</span>
+                    </div>
+                </li>
             </ul>
-
-            <div class="fade-in delay-3"
-                style="margin-top: 30px; text-align: left; max-width: 400px; margin-left: auto; margin-right: auto; line-height: 1.6;">
-                <p style="margin-bottom: 20px;">
-                    O 'O Livro é uma Festa' funciona assim: eu levo toda a estrutura de mediação de leitura e os
-                    materiais de arte profissionais. As crianças ouvem uma história incrível e depois criam a própria
-                    lembrancinha na oficina.
-                </p>
-                <p style="margin-bottom: 20px;">
-                    A proposta não é recreação tradicional. É levar um <strong>Ateliê Itinerante</strong> para dentro da
-                    festa:
-                </p>
-                <p style="margin-bottom: 20px;">
-                    📚 <strong>O que fazemos:</strong> Uma sessão de contação de histórias seguida de uma oficina de
-                    arte onde as crianças realmente criam e investigam materiais.
-                </p>
-                <p style="margin-bottom: 20px;">
-                    <strong>O pacote inclui:</strong><br>
-                    ✅ Curadoria literária personalizada.<br>
-                    ✅ Oficina de arte completa (materiais inclusos).<br>
-                    ✅ Duração de 1h30.<br>
-                    ✅ Até 12 crianças (para eu dar atenção vip).
-                </p>
-            </div>
-        </main>
+        </div>
 
         <footer>
-            <div class="price-display">R$ 850,00</div>
-            <span class="price-subtext">Até 12 crianças • Duração 1h30</span>
+            <div class="price-tag">R$ 850</div>
+            <span class="price-details">Todo material incluso • Curadoria Personalizada • 1h30 de duração</span>
 
-            <!-- Link to WhatsApp API -->
-            <a href="https://wa.me/55NUMEROAQUI" target="_blank" class="cta-button">
-                RESERVAR DATA
+            <a href="https://wa.me/55NUMEROAQUI" target="_blank" class="cta-link">
+                Consultar Disponibilidade &rarr;
             </a>
         </footer>
     </div>
