@@ -220,11 +220,10 @@
         /* Footer */
         footer {
             border-top: none;
-            padding: 40px;
-            background-color: var(--detail);
-            margin-left: -40px;
-            margin-right: -40px;
-            margin-bottom: -60px;
+            padding-top: 40px;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
         }
 
         .price-tag {
@@ -262,9 +261,18 @@
         }
 
         /* New Footer Elements */
+        .footer-bottom {
+            background-color: var(--detail);
+            padding: 40px;
+            margin-left: -40px;
+            margin-right: -40px;
+            margin-bottom: -60px;
+            margin-top: 60px;
+        }
+
         .footer-mascot {
             width: 80px;
-            margin: 40px auto 20px;
+            margin: 0 auto 20px;
             display: block;
             opacity: 0.9;
         }
@@ -307,6 +315,12 @@
                 top: 10px;
                 left: 10px;
             }
+
+            .footer-bottom {
+                margin-left: -20px;
+                margin-right: -20px;
+                margin-bottom: -40px;
+            }
         }
     </style>
 </head>
@@ -337,9 +351,8 @@
 
         <div class="narrative">
             <p style="text-align: center;">Levo até o seu evento um Ateliê de Leitura e Criação pensado a partir de uma
-                curadoria literária que
-                contempla qualidade estética e literária, criando um espaço onde as pessoas possam desacelerar e
-                imaginar.</p>
+                curadoria afetiva que contempla qualidade estética e literária, criando um espaço onde as pessoas possam
+                desacelerar e imaginar.</p>
 
             <ul class="method-list">
                 <li class="method-item">
@@ -378,22 +391,25 @@
             </a>
 
             <!-- Mascot & Contacts -->
-            <img src="assets/img/03.png" alt="Mascote" class="footer-mascot">
+            <div class="footer-bottom">
+                <img src="assets/img/03.png" alt="Mascote" class="footer-mascot">
 
-            <div class="footer-social">
-                <a href="https://www.instagram.com/gabriellysierra/?hl=pt" target="_blank" class="social-link"
-                    title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.tiktok.com/@gabrielly.sierra" target="_blank" class="social-link" title="TikTok">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="mailto:contato@gabriellysierra.com.br" class="social-link" title="Email">
-                    <i class="far fa-envelope"></i>
-                </a>
-                <a href="index.html" class="social-link" title="Visitar Site">
-                    <i class="fas fa-globe"></i>
-                </a>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/gabriellysierra/?hl=pt" target="_blank" class="social-link"
+                        title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@gabrielly.sierra" target="_blank" class="social-link"
+                        title="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="mailto:contato@gabriellysierra.com.br" class="social-link" title="Email">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                    <a href="index.html" class="social-link" title="Visitar Site">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
             </div>
         </footer>
     </div>
