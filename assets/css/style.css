@@ -2701,3 +2701,14 @@ nav a.active {
     object-fit: contain;
 }
 
+
+
+/* Utility: Adjust Object Position */
+.img-pos-top {
+    object-position: top !important;
+}
+
+.img-pos-top-right {
+    object-position: top right !important;
+}
+
