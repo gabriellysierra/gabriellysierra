@@ -2174,3 +2174,306 @@ nav a.active {
     margin-bottom: 1.5rem;
 
 }
+
+/* --- EVENTS & WORKSHOPS PAGE (Dynamic Grid) --- */
+
+.events-page-wrapper {
+    padding: 4rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.events-header {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+
+.events-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3.5rem;
+    color: var(--color-titles); /* Dark Cocoa */
+    margin-bottom: 0.5rem;
+}
+
+.events-subtitle {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5rem;
+    color: var(--text-main); /* Graphite */
+    font-weight: 300;
+}
+
+/* Grid Layout */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 Columns Desktop */
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Event Card */
+.event-card {
+    background: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.event-image-container {
+    width: 100%;
+    aspect-ratio: 4/3; /* Standardize */
+    overflow: hidden;
+    position: relative;
+    background-color: #f0f0f0;
+}
+
+.event-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.event-card:hover .event-image {
+    transform: scale(1.05);
+}
+
+/* Tags */
+.event-tag {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tag-oficina {
+    background-color: var(--color-accent); /* Warm Clay */
+    color: #FFFFFF;
+}
+
+.tag-festival {
+    background-color: var(--bg-section-special); /* Powder Blue */
+    color: var(--color-titles); /* Dark Cocoa */
+}
+
+.tag-palestra {
+    background-color: #32302F; /* Graphite */
+    color: #FFFFFF;
+}
+
+.tag-mesa {
+    background-color: #583722; /* Dark Cocoa */
+    color: #FFFFFF;
+}
+
+/* Content */
+.event-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.event-card-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.4rem;
+    color: var(--color-titles);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.event-meta {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-details {
+    margin-top: auto; /* Push to bottom */
+    display: inline-block;
+    padding: 0.5rem 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--color-accent);
+    font-weight: 600;
+    text-decoration: none;
+    align-self: flex-start;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-details:hover {
+    color: var(--color-titles);
+    border-bottom-color: var(--color-titles);
+}
+
+/* --- MODAL (Lightbox) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 48, 47, 0.9); /* Dark overlay */
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 1rem;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content-wrapper {
+    background: #FFFFFF;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden; /* Scroll inside body of modal */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content-wrapper {
+    transform: translateY(0); // Slide up effect
+}
+
+.modal-header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.modal-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+    color: var(--color-titles);
+    margin: 0;
+}
+
+.modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal-close-btn:hover {
+    color: var(--color-titles);
+}
+
+.modal-body {
+    padding: 2rem;
+    overflow-y: auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.modal-gallery img {
+    width: 100%;
+    border-radius: 6px;
+    height: 150px;
+    object-fit: cover;
+    cursor: zoom-in;
+    transition: transform 0.2s;
+}
+
+.modal-gallery img:hover {
+    transform: scale(1.02);
+}
+
+.modal-desc {
+    margin-bottom: 2rem;
+    white-space: pre-wrap; /* Preserve paragraphs */
+}
+
+.modal-cta-container {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.modal-cta-btn {
+    display: inline-block;
+    background-color: var(--color-titles); /* Dark Cocoa */
+    color: #FFFFFF;
+    padding: 0.8rem 2.5rem;
+    border-radius: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.modal-cta-btn:hover {
+    background-color: var(--color-accent); /* Warm Clay */
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .events-grid {
+        grid-template-columns: 1fr; /* 1 col mobile */
+    }
+
+    .events-title {
+        font-size: 2.5rem;
+    }
+}
+

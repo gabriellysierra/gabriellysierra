@@ -4,150 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fliaraxá 2025 | Mediação de Leitura</title>
+    <title>Mediação e Encontros | Gabrielly Sierra</title>
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        /* Page Specific Styles based on requirements */
-        .mediation-hero {
-            padding: 4rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: left;
-            /* Minimalist left alignment */
-        }
-
-        .mediation-title {
-            font-family: 'Josefin Sans', sans-serif;
-            color: var(--color-titles);
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .mediation-subtitle {
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 1.5rem;
-            color: var(--text-main);
-            font-weight: 300;
-            margin-bottom: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .participants-list {
-            font-family: 'Source Sans Pro', sans-serif;
-            color: var(--text-main);
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .participants-list strong {
-            color: var(--color-titles);
-        }
-
-        /* Handwritten Note */
-        .handwritten-note-section {
-            font-family: 'Reenie Beanie', cursive;
-            font-size: 1.8rem;
-            color: var(--color-titles);
-            transform: rotate(-0.5deg);
-            /* Less inclined as requested */
-            margin: 2rem 0;
-            display: inline-block;
-        }
-
-        /* Media Grid */
-        .media-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            /* 2 columns */
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto 4rem auto;
-            padding: 0 5%;
-        }
-
-        .media-item {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            background: #f9f9f9;
-        }
-
-        .media-item img {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 16/10;
-            /* Match projects.html */
-            object-fit: cover;
-            object-position: top;
-            /* Better for vertical cropped images */
-            display: block;
-            transition: transform 0.3s;
-        }
-
-        .media-item:hover img {
-            transform: scale(1.02);
-        }
-
-        .video-container {
-            /* grid-column: 1 / -1;  REMOVED to keep it in one column */
-            aspect-ratio: 16 / 9;
-            background: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            border-radius: 10px;
-        }
-
-        .quote-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-        }
-
-        /* Footer Navigation */
-        .footer-nav {
-            text-align: center;
-            margin: 4rem 0;
-        }
-
-        .btn-back {
-            display: inline-block;
-            background-color: var(--color-accent);
-            /* Warm Clay */
-            color: #fff;
-            padding: 0.8rem 2rem;
-            border-radius: 8px;
-            /* 8px rounded */
-            font-family: 'Josefin Sans', sans-serif;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-
-        .btn-back:hover {
-            background-color: #583722;
-            /* Dark Cocoa */
-            color: #ffffff;
-        }
-
-
-
-        @media (max-width: 768px) {
-            .media-grid-custom {
-                flex-direction: column;
-            }
-
-            .mediation-title {
-                font-size: 2.5rem;
-            }
-
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css?v=3">
 </head>
 
 <body>
@@ -168,56 +28,93 @@
     </header>
 
     <main>
-        <section class="mediation-hero">
-            <h1 class="mediation-title">FliAraxá 2025</h1>
-            <p class="mediation-subtitle">Mediadora da mesa 'Pontes Narrativas na Literatura Infantil'</p>
+        <div class="events-page-wrapper">
 
-            <div class="participants-list">
-                <p>Participantes da mesa:</p>
-                <p><strong>Ina Arefieva, Laura Gouveia, Luciana Olivier e Dilse Aparecida Rosa</strong></p>
+            <div class="events-header">
+                <h1 class="events-title">Mediação e Encontros Literários</h1>
+                <p class="events-subtitle">Palestras, oficinas e participações em festivais e bibliotecas.</p>
             </div>
 
+            <div class="events-grid">
 
-        </section>
+                <!-- Item 1: FliAraxá -->
+                <div class="event-card">
+                    <div class="event-tag tag-festival">Festival</div>
+                    <div class="event-image-container">
+                        <img src="assets/img/lfliaraxa2.jpeg" alt="FliAraxá 2025" class="event-image">
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-card-title">FliAraxá 2025</h3>
+                        <div class="event-meta">
+                            <i class="fa-solid fa-location-dot"></i> Araxá, MG
+                        </div>
+                        <button class="btn-details" data-title="FliAraxá 2025"
+                            data-desc="Mediadora da mesa **'Pontes Narrativas na Literatura Infantil'**.
 
-        <section class="media-grid-custom"
-            style="display: flex; gap: 2rem; max-width: 1200px; margin: 0 auto; padding: 0 5%;">
-            <!-- Left Column: Vertical Image -->
-            <div class="media-column-left" style="flex: 1;">
-                <div class="media-item" style="height: 100%;">
-                    <img src="assets/img/lfliaraxa2.jpeg" alt="Gabrielly Sierra no Fliaraxá"
-                        style="width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 8px;">
+Participantes da mesa: **Ina Arefieva, Laura Gouveia, Luciana Olivier e Dilse Aparecida Rosa**.
+
+Um encontro potente sobre as conexões que a literatura cria entre as infâncias e o mundo, discutindo a importância da mediação na formação de novos leitores."
+                            data-images='["assets/img/lfliaraxa2.jpeg", "assets/img/fliaraxa1.jpeg"]'
+                            data-cta-text="Ver mais no Instagram"
+                            data-cta-link="https://www.instagram.com/gabriellysierra/?hl=pt">
+                            Ver Detalhes
+                        </button>
+                    </div>
                 </div>
+
+                <!-- Item 2: Oficina Mediação -->
+                <div class="event-card">
+                    <div class="event-tag tag-oficina">Oficina</div>
+                    <div class="event-image-container">
+                        <img src="assets/img/mediacao.jpg" alt="Oficina Mediação e Criação" class="event-image">
+                    </div>
+                    <div class="event-content">
+                        <h3 class="event-card-title">Oficina "Mediação e Criação"</h3>
+                        <div class="event-meta">
+                            <i class="fa-regular fa-calendar"></i> Fev/2026 | <i class="fa-solid fa-location-dot"></i>
+                            Biblioteca Euclides da Cunha
+                        </div>
+                        <button class="btn-details" data-title="Oficina: Mediação e Criação" data-desc="Uma oficina teórico-prática voltada para educadores, bibliotecários e mediadores de leitura. 
+                            
+Exploramos:
+• Técnicas de contação de histórias
+• Como selecionar acervo de qualidade
+• A criação de vínculo através da leitura em voz alta.
+
+**Projeto realizado via Lei Aldir Blanc.**" data-images='["assets/img/mediacao.jpg"]'
+                            data-cta-text="Leve este projeto para sua instituição" data-cta-link="contato.html">
+                            Ver Detalhes
+                        </button>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Right Column: Horizontal Image + Video -->
-            <div class="media-column-right" style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
-                <div class="media-item">
-                    <img src="assets/img/fliaraxa1.jpeg" alt="Mesa oficial Fliaraxá 2025"
-                        style="width: 100%; height: auto; border-radius: 8px;">
-                </div>
-                <!-- Video below horizontal photo -->
-                <div class="video-container media-item" style="aspect-ratio: 16/9; width: 100%;">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/yuZiW8OovgI"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen style="border-radius: 8px;"></iframe>
-                </div>
+            <div class="footer-nav">
+                <a href="projetos.html" class="btn-back">Voltar para Projetos</a>
             </div>
-        </section>
 
-        <!-- Centered Quote Section Below Grid -->
-        <div class="quote-container" style="max-width: 800px; margin: 3rem auto; text-align: center; padding: 0 1rem;">
-            <div class="handwritten-note-section" style="margin: 0; font-size: 1.5rem;">
-                Como diz João Guimarães Rosa: “o real não está na saída nem na chegada: ele se dispõe para a gente é no
-                meio da travessia.” (Grande Sertão: Veredas, p. 62)
-            </div>
         </div>
 
-
-
-        <div class="footer-nav">
-            <a href="projetos.html" class="btn-back">Voltar para Projetos</a>
+        <!-- Shared Modal -->
+        <div class="modal-overlay" id="project-modal">
+            <div class="modal-content-wrapper">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="modal-title-text">Título do Evento</h3>
+                    <button class="modal-close-btn" id="modal-close">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-gallery" id="modal-gallery-container">
+                        <!-- Dynamic Images -->
+                    </div>
+                    <div class="modal-desc" id="modal-description">
+                        <!-- Dynamic Text -->
+                    </div>
+                    <div class="modal-cta-container">
+                        <a href="#" class="modal-cta-btn" id="modal-cta-btn" target="_blank">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main>
@@ -232,6 +129,72 @@
                     class="fa-brands fa-linkedin-in"></i></a>
         </div>
     </footer>
+
+    <!-- Modal Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('project-modal');
+            const closeBtn = document.getElementById('modal-close');
+            const modalTitle = document.getElementById('modal-title-text');
+            const modalDesc = document.getElementById('modal-description');
+            const modalGallery = document.getElementById('modal-gallery-container');
+            const modalCtaBtn = document.getElementById('modal-cta-btn');
+            const detailButtons = document.querySelectorAll('.btn-details');
+
+            detailButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Get Data
+                    const title = btn.getAttribute('data-title');
+                    const desc = btn.getAttribute('data-desc');
+                    const images = JSON.parse(btn.getAttribute('data-images') || '[]');
+                    const ctaText = btn.getAttribute('data-cta-text');
+                    const ctaLink = btn.getAttribute('data-cta-link');
+
+                    // Populate Modal
+                    modalTitle.textContent = title;
+
+                    // Convert simple markdown-like bold to html bold
+                    let formattedDesc = desc.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                    modalDesc.innerHTML = formattedDesc;
+
+                    modalCtaBtn.textContent = ctaText;
+                    modalCtaBtn.href = ctaLink;
+
+                    // Populate Gallery
+                    modalGallery.innerHTML = '';
+                    images.forEach(imgSrc => {
+                        const img = document.createElement('img');
+                        img.src = imgSrc;
+                        img.alt = title;
+                        modalGallery.appendChild(img);
+                    });
+
+                    // Show Modal
+                    modal.classList.add('active');
+                });
+            });
+
+            // Close Actions
+            const closeModal = () => {
+                modal.classList.remove('active');
+            };
+
+            closeBtn.addEventListener('click', closeModal);
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
 
 </body>
 
