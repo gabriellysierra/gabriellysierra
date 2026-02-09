@@ -7,7 +7,7 @@
     <title>Mediação e Encontros | Gabrielly Sierra</title>
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=3">
+    <link rel="stylesheet" href="assets/css/style.css?v=4">
 </head>
 
 <body>
@@ -49,14 +49,15 @@
                             <i class="fa-solid fa-location-dot"></i> Araxá, MG
                         </div>
                         <button class="btn-details" data-title="FliAraxá 2025"
-                            data-desc="Mediadora da mesa **'Pontes Narrativas na Literatura Infantil'**.
+                            data-desc="<h3>Mediadora da mesa 'Pontes Narrativas na Literatura Infantil'</h3>
 
 Participantes da mesa: **Ina Arefieva, Laura Gouveia, Luciana Olivier e Dilse Aparecida Rosa**.
 
-Um encontro potente sobre as conexões que a literatura cria entre as infâncias e o mundo, discutindo a importância da mediação na formação de novos leitores."
-                            data-images='["assets/img/lfliaraxa2.jpeg", "assets/img/fliaraxa1.jpeg"]'
-                            data-cta-text="Ver mais no Instagram"
-                            data-cta-link="https://www.instagram.com/gabriellysierra/?hl=pt">
+A mesa discutiu sobre as relações entre literatura, infância e processos de criação, refletindo sobre a importância da leitura e da literatura na formação de novos leitores."
+                            data-images='["assets/img/lfliaraxa2.jpeg", "assets/img/fliaraxa1.jpeg"]' data-actions='[
+                                {"text": "Assistir Mesa Completa", "link": "https://www.youtube.com/watch?v=frF3zWfSeis", "icon": "fa-brands fa-youtube", "class": "btn-youtube"},
+                                {"text": "Ler Matéria Oficial", "link": "https://fliaraxa.com.br/pontes-narrativas-na-literatura-infantil/", "icon": "fa-regular fa-file-lines", "class": "btn-article"}
+                            ]'>
                             Ver Detalhes
                         </button>
                     </div>
@@ -81,8 +82,9 @@ Exploramos:
 • Como selecionar acervo de qualidade
 • A criação de vínculo através da leitura em voz alta.
 
-**Projeto realizado via Lei Aldir Blanc.**" data-images='["assets/img/mediacao.jpg"]'
-                            data-cta-text="Leve este projeto para sua instituição" data-cta-link="contato.html">
+**Projeto realizado via Lei Aldir Blanc.**" data-images='["assets/img/mediacao.jpg"]' data-actions='[
+                                {"text": "Leve este projeto para sua instituição", "link": "contato.html", "icon": "fa-regular fa-envelope", "class": "btn-generic"}
+                            ]'>
                             Ver Detalhes
                         </button>
                     </div>
@@ -110,8 +112,9 @@ Exploramos:
                     <div class="modal-desc" id="modal-description">
                         <!-- Dynamic Text -->
                     </div>
-                    <div class="modal-cta-container">
-                        <a href="#" class="modal-cta-btn" id="modal-cta-btn" target="_blank">Saiba Mais</a>
+                    <!-- Actions Container replaces simple CTA -->
+                    <div class="modal-actions" id="modal-actions-container">
+                        <!-- Dynamic Buttons -->
                     </div>
                 </div>
             </div>
@@ -138,7 +141,7 @@ Exploramos:
             const modalTitle = document.getElementById('modal-title-text');
             const modalDesc = document.getElementById('modal-description');
             const modalGallery = document.getElementById('modal-gallery-container');
-            const modalCtaBtn = document.getElementById('modal-cta-btn');
+            const modalActions = document.getElementById('modal-actions-container');
             const detailButtons = document.querySelectorAll('.btn-details');
 
             detailButtons.forEach(btn => {
@@ -147,18 +150,26 @@ Exploramos:
                     const title = btn.getAttribute('data-title');
                     const desc = btn.getAttribute('data-desc');
                     const images = JSON.parse(btn.getAttribute('data-images') || '[]');
-                    const ctaText = btn.getAttribute('data-cta-text');
-                    const ctaLink = btn.getAttribute('data-cta-link');
+
+                    // Helper to safely parse props that might be empty or valid JSON
+                    let actions = [];
+                    const actionsAttr = btn.getAttribute('data-actions');
+                    if (actionsAttr) {
+                        try {
+                            actions = JSON.parse(actionsAttr);
+                        } catch (e) {
+                            console.error("Error parsing actions JSON", e);
+                        }
+                    }
 
                     // Populate Modal
                     modalTitle.textContent = title;
 
-                    // Convert simple markdown-like bold to html bold
-                    let formattedDesc = desc.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                    // Text Formatting (Handle Markdown-ish basic syntax)
+                    let formattedDesc = desc
+                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Bold
+                        .replace(/\n/g, '<br>'); // Line breaks
                     modalDesc.innerHTML = formattedDesc;
-
-                    modalCtaBtn.textContent = ctaText;
-                    modalCtaBtn.href = ctaLink;
 
                     // Populate Gallery
                     modalGallery.innerHTML = '';
@@ -168,6 +179,22 @@ Exploramos:
                         img.alt = title;
                         modalGallery.appendChild(img);
                     });
+
+                    // Populate Actions
+                    modalActions.innerHTML = '';
+                    if (actions.length > 0) {
+                        actions.forEach(action => {
+                            const a = document.createElement('a');
+                            a.href = action.link;
+                            a.className = `btn-action ${action.class || 'btn-generic'}`;
+                            a.target = '_blank';
+                            a.innerHTML = `<i class="${action.icon}"></i> ${action.text}`;
+                            modalActions.appendChild(a);
+                        });
+                        modalActions.style.display = 'flex';
+                    } else {
+                        modalActions.style.display = 'none';
+                    }
 
                     // Show Modal
                     modal.classList.add('active');

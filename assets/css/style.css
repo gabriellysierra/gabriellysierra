@@ -2477,3 +2477,84 @@ nav a.active {
     }
 }
 
+
+
+/* --- MODAL UPDATES (Image Sizing & Action Buttons) --- */
+
+.modal-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Larger base */
+}
+
+.modal-gallery img {
+    height: 250px; /* Fixed height as requested */
+    object-fit: cover; /* Maintain aspect ratio */
+    width: 100%;
+}
+
+/* Modal Content Typography */
+.modal-desc h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--color-accent); /* Warm Clay */
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Action Buttons Container */
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+}
+
+.btn-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s;
+    font-size: 0.95rem;
+}
+
+.btn-action i {
+    font-size: 1.1rem;
+}
+
+/* Specific Button Styles */
+.btn-youtube {
+    background-color: #FF0000;
+    color: #FFFFFF;
+}
+
+.btn-youtube:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+}
+
+.btn-article {
+    background-color: #32302F; /* Graphite */
+    color: #FFFFFF;
+}
+
+.btn-article:hover {
+    background-color: #000000;
+    transform: translateY(-2px);
+}
+
+.btn-generic {
+    background-color: var(--color-titles);
+    color: #FFFFFF;
+}
+
+.btn-generic:hover {
+    background-color: var(--color-accent);
+}
+
