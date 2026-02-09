@@ -7,7 +7,7 @@
     <title>Mediação e Encontros | Gabrielly Sierra</title>
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=4">
+    <link rel="stylesheet" href="assets/css/style.css?v=5">
 </head>
 
 <body>
@@ -54,16 +54,17 @@
 Participantes da mesa: **Ina Arefieva, Laura Gouveia, Luciana Olivier e Dilse Aparecida Rosa**.
 
 A mesa discutiu sobre as relações entre literatura, infância e processos de criação, refletindo sobre a importância da leitura e da literatura na formação de novos leitores."
-                            data-images='["assets/img/lfliaraxa2.jpeg", "assets/img/fliaraxa1.jpeg"]' data-actions='[
-                                {"text": "Assistir Mesa Completa", "link": "https://www.youtube.com/watch?v=frF3zWfSeis", "icon": "fa-brands fa-youtube", "class": "btn-youtube"},
-                                {"text": "Ler Matéria Oficial", "link": "https://fliaraxa.com.br/pontes-narrativas-na-literatura-infantil/", "icon": "fa-regular fa-file-lines", "class": "btn-article"}
+                            data-images='["assets/img/lfliaraxa2.jpeg", "assets/img/fliaraxa1.jpeg"]'
+                            data-item-mode="standard" data-actions='[
+                                {"type": "youtube", "url": "https://www.youtube.com/embed/frF3zWfSeis"},
+                                {"type": "card", "url": "https://fliaraxa.com.br/pontes-narrativas-na-literatura-infantil/", "title": "Ler Matéria Oficial no site do FliAraxá", "img": "assets/img/fliaraxa1.jpeg"}
                             ]'>
                             Ver Detalhes
                         </button>
                     </div>
                 </div>
 
-                <!-- Item 2: Oficina Mediação -->
+                <!-- Item 2: Oficina Mediação (Updated to Flyer Mode) -->
                 <div class="event-card">
                     <div class="event-tag tag-oficina">Oficina</div>
                     <div class="event-image-container">
@@ -75,16 +76,11 @@ A mesa discutiu sobre as relações entre literatura, infância e processos de c
                             <i class="fa-regular fa-calendar"></i> Fev/2026 | <i class="fa-solid fa-location-dot"></i>
                             Biblioteca Euclides da Cunha
                         </div>
-                        <button class="btn-details" data-title="Oficina: Mediação e Criação" data-desc="Uma oficina teórico-prática voltada para educadores, bibliotecários e mediadores de leitura. 
-                            
-Exploramos:
-• Técnicas de contação de histórias
-• Como selecionar acervo de qualidade
-• A criação de vínculo através da leitura em voz alta.
+                        <button class="btn-details" data-title="Oficina: Mediação e Criação"
+                            data-desc="<h3>Oficina teórico-prática ministrada na Biblioteca Pública Euclides da Cunha - São Carlos</h3>
 
-**Projeto realizado via Lei Aldir Blanc.**" data-images='["assets/img/mediacao.jpg"]' data-actions='[
-                                {"text": "Leve este projeto para sua instituição", "link": "contato.html", "icon": "fa-regular fa-envelope", "class": "btn-generic"}
-                            ]'>
+A oficina propôs aos participantes um percurso de investigação sobre a materialidade do livro ilustrado e as estratégias de mediação para a infância, fomentando a formação de novos leitores."
+                            data-images='["assets/img/mediacao.jpg"]' data-item-mode="flyer" data-actions='[]'>
                             Ver Detalhes
                         </button>
                     </div>
@@ -106,18 +102,29 @@ Exploramos:
                     <button class="modal-close-btn" id="modal-close">&times;</button>
                 </div>
                 <div class="modal-body">
+
+                    <!-- Gallery Container -->
                     <div class="modal-gallery" id="modal-gallery-container">
                         <!-- Dynamic Images -->
                     </div>
+
+                    <!-- Description -->
                     <div class="modal-desc" id="modal-description">
                         <!-- Dynamic Text -->
                     </div>
-                    <!-- Actions Container replaces simple CTA -->
-                    <div class="modal-actions" id="modal-actions-container">
-                        <!-- Dynamic Buttons -->
+
+                    <!-- New Visual Embeds Container (Replaces old Actions) -->
+                    <div class="modal-embeds-grid" id="modal-embeds-container" style="display: none;">
+                        <!-- Dynamic Embeds -->
                     </div>
+
                 </div>
             </div>
+        </div>
+
+        <!-- Lightbox Overlay for Zoom -->
+        <div class="lightbox-overlay" id="lightbox-zoom">
+            <img src="" alt="Zoom" class="lightbox-img" id="lightbox-img-element">
         </div>
 
     </main>
@@ -141,8 +148,44 @@ Exploramos:
             const modalTitle = document.getElementById('modal-title-text');
             const modalDesc = document.getElementById('modal-description');
             const modalGallery = document.getElementById('modal-gallery-container');
-            const modalActions = document.getElementById('modal-actions-container');
+            const modalEmbeds = document.getElementById('modal-embeds-container');
             const detailButtons = document.querySelectorAll('.btn-details');
+
+            // Lightbox Elements
+            const lightbox = document.getElementById('lightbox-zoom');
+            const lightboxImg = document.getElementById('lightbox-img-element');
+
+            // Actions Helper
+            const createEmbeds = (actions) => {
+                modalEmbeds.innerHTML = '';
+                if (!actions || actions.length === 0) {
+                    modalEmbeds.style.display = 'none';
+                    return;
+                }
+
+                modalEmbeds.style.display = 'grid';
+                actions.forEach(action => {
+                    if (action.type === 'youtube') {
+                        const container = document.createElement('div');
+                        container.className = 'video-embed-container';
+                        container.innerHTML = `<iframe src="${action.url}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+                        modalEmbeds.appendChild(container); // Append as HTML node
+                    } else if (action.type === 'card') {
+                        const linkCard = document.createElement('a');
+                        linkCard.href = action.url;
+                        linkCard.className = 'link-card';
+                        linkCard.target = '_blank';
+                        linkCard.innerHTML = `
+                             <img src="${action.img}" class="link-card-img" alt="Link Preview">
+                             <div class="link-card-content">
+                                <h4 class="link-card-title">${action.title}</h4>
+                                <span class="link-card-meta"><i class="fa-solid fa-arrow-up-right-from-square"></i> Acessar Link Externo</span>
+                             </div>
+                         `;
+                        modalEmbeds.appendChild(linkCard);
+                    }
+                });
+            }
 
             detailButtons.forEach(btn => {
                 btn.addEventListener('click', () => {
@@ -150,8 +193,8 @@ Exploramos:
                     const title = btn.getAttribute('data-title');
                     const desc = btn.getAttribute('data-desc');
                     const images = JSON.parse(btn.getAttribute('data-images') || '[]');
+                    const mode = btn.getAttribute('data-item-mode') || 'standard';
 
-                    // Helper to safely parse props that might be empty or valid JSON
                     let actions = [];
                     const actionsAttr = btn.getAttribute('data-actions');
                     if (actionsAttr) {
@@ -162,14 +205,19 @@ Exploramos:
                         }
                     }
 
-                    // Populate Modal
+                    // Populate Modal Title & Desc
                     modalTitle.textContent = title;
 
-                    // Text Formatting (Handle Markdown-ish basic syntax)
                     let formattedDesc = desc
-                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Bold
-                        .replace(/\n/g, '<br>'); // Line breaks
+                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                        .replace(/\n/g, '<br>');
                     modalDesc.innerHTML = formattedDesc;
+
+                    // Reset Gallery Classes
+                    modalGallery.className = 'modal-gallery';
+                    if (mode === 'flyer') {
+                        modalGallery.classList.add('flyer-mode');
+                    }
 
                     // Populate Gallery
                     modalGallery.innerHTML = '';
@@ -177,24 +225,16 @@ Exploramos:
                         const img = document.createElement('img');
                         img.src = imgSrc;
                         img.alt = title;
+                        // Add click to zoom
+                        img.addEventListener('click', () => {
+                            lightboxImg.src = imgSrc;
+                            lightbox.classList.add('active');
+                        });
                         modalGallery.appendChild(img);
                     });
 
-                    // Populate Actions
-                    modalActions.innerHTML = '';
-                    if (actions.length > 0) {
-                        actions.forEach(action => {
-                            const a = document.createElement('a');
-                            a.href = action.link;
-                            a.className = `btn-action ${action.class || 'btn-generic'}`;
-                            a.target = '_blank';
-                            a.innerHTML = `<i class="${action.icon}"></i> ${action.text}`;
-                            modalActions.appendChild(a);
-                        });
-                        modalActions.style.display = 'flex';
-                    } else {
-                        modalActions.style.display = 'none';
-                    }
+                    // Populate Embeds
+                    createEmbeds(actions);
 
                     // Show Modal
                     modal.classList.add('active');
@@ -204,6 +244,15 @@ Exploramos:
             // Close Actions
             const closeModal = () => {
                 modal.classList.remove('active');
+                // Stop videos when closing
+                setTimeout(() => {
+                    const iframes = modalEmbeds.querySelectorAll('iframe');
+                    iframes.forEach(iframe => {
+                        const src = iframe.src;
+                        iframe.src = '';
+                        iframe.src = src; // Reset source to stop audio/video
+                    });
+                }, 300);
             };
 
             closeBtn.addEventListener('click', closeModal);
@@ -214,10 +263,19 @@ Exploramos:
                 }
             });
 
+            // Close Lightbox
+            lightbox.addEventListener('click', () => {
+                lightbox.classList.remove('active');
+            });
+
             // Escape key
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && modal.classList.contains('active')) {
-                    closeModal();
+                if (e.key === 'Escape') {
+                    if (lightbox.classList.contains('active')) {
+                        lightbox.classList.remove('active');
+                    } else if (modal.classList.contains('active')) {
+                        closeModal();
+                    }
                 }
             });
         });
