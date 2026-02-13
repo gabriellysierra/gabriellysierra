@@ -2163,6 +2163,51 @@ nav a.active {
     }
 }
 
+/* --- ABOUT PAGE REDESIGN (Block 1 - Shinto Style) --- */
+
+.about-image-col {
+    flex: 0 0 55%;
+    /* Wider image column */
+    max-width: 55%;
+}
+
+.about-image-col img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.about-text-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-title {
+    margin-top: 0;
+    /* Align with top of image */
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.about-text-content {
+    margin-top: 15rem;
+    /* Push text down significantly */
+}
+
+@media (max-width: 900px) {
+    .about-image-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about-text-content {
+        margin-top: 2rem;
+        /* Reset on mobile */
+    }
+}
+
 
 /* --- ATELIÊ PAGE STYLES --- */
 .atelie-page-wrapper {
