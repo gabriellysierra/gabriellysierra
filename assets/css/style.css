@@ -3092,17 +3092,6 @@ nav a.active {
     transform: none !important;
 }
 
-/* Link Styling (Reference Style) */
-.project-row.white-theme .learn-more-btn {
-    text-decoration: underline;
-    font-weight: 700;
-    text-transform: none;
-    /* or Uppercase? Reference usually simple */
-    letter-spacing: 0;
-    margin-top: 1rem;
-    display: inline-block;
-}
-
 /* Mobile Reset */
 @media (max-width: 900px) {
     .project-row.white-theme {
@@ -3131,18 +3120,14 @@ nav a.active {
 .project-row.white-theme h2,
 .project-row.white-theme h3,
 .project-row.white-theme .formation-tag {
-    color: #32302F !important;
-    /* Reference is usually black/dark grey */
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    /* Cleaner font? Or keep Josefin? Keeping Josefin for brand consistency */
+    color: #583722 !important;
+    /* Dark Cocoa Title & Tags */
     margin-bottom: 0.5rem;
 }
 
 .project-row.white-theme .formation-desc,
 .project-row.white-theme p {
     color: #32302F !important;
-    font-size: 0.95rem;
-    line-height: 1.5;
 }
 
 /* Spacing Adjustments */
