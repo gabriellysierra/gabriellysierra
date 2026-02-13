@@ -2194,8 +2194,8 @@ nav a.active {
 }
 
 .about-text-content {
-    margin-top: 0;
-    /* Restored position */
+    margin-top: 15rem;
+    /* Restored "Shinto" offset */
 }
 
 @media (max-width: 900px) {
