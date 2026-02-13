@@ -3044,8 +3044,6 @@ nav a.active {
     /* Adjusted spacing */
     align-items: flex-start !important;
     padding-top: 4rem;
-    border-top: 1px solid #eee;
-    /* Subtle separator like reference? Optional */
 }
 
 /* First item no border */
