@@ -2189,6 +2189,8 @@ nav a.active {
     /* Align with top of image */
     line-height: 1.1;
     margin-bottom: 2rem;
+    font-size: 3.5rem;
+    /* Increased size requested */
 }
 
 .about-text-content {
