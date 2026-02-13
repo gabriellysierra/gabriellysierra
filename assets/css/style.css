@@ -2385,6 +2385,28 @@ nav a.active {
     .atelie-services {
         gap: 5rem;
     }
+
+    .atelie-text-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* --- ATELIÊ TEXT COLUMNS REFACTOR --- */
+.atelie-text-columns {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    /* Space between columns */
+    align-items: flex-start;
+    margin-bottom: 4rem;
+}
+
+.atelie-col {
+    flex: 1;
+    max-width: 500px;
+    /* Limit width for readability */
+    /* Optional: Add background or border if desired, but clean is requested */
 }
 
 .letter-content p {
