@@ -3011,3 +3011,34 @@ nav a.active {
         margin-top: 3rem;
     }
 }
+
+/* --- Projects Page White Theme & Spacing Override --- */
+.project-row.white-theme {
+    background-color: #FFFFFF !important;
+    color: #32302F !important;
+    /* Graphite Text */
+}
+
+.project-row.white-theme .formation-title,
+.project-row.white-theme h2,
+.project-row.white-theme h3,
+.project-row.white-theme .formation-tag {
+    color: #583722 !important;
+    /* Dark Cocoa Title & Tags */
+}
+
+.project-row.white-theme .formation-desc,
+.project-row.white-theme p {
+    color: #32302F !important;
+}
+
+/* Spacing Adjustments */
+.projects-simple-header {
+    margin-bottom: 8rem !important;
+    /* Increased top spacing */
+}
+
+.testimonials-section {
+    margin-top: 10rem !important;
+    /* Increased bottom spacing */
+}
