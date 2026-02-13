@@ -2909,6 +2909,10 @@ nav a.active {
     object-position: top right !important;
 }
 
+.img-pos-bottom {
+    object-position: bottom !important;
+}
+
 /* --- FIX: Force Dark Content Block Background --- */
 .dark-content-block {
     background-color: #583722 !important;
