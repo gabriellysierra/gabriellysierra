@@ -798,22 +798,182 @@ nav a.active {
         /* User said: "no celular, esses itens fiquem empilhados (imagem em cima, texto embaixo)" */
         /* If we use column-reverse on normal: text is 1st child -> bottom, img is 2nd -> top. */
         /* Let's be explicit with order property if needed, or structured html. */
-        gap: 2rem;
-        margin-bottom: 5rem;
+    }
+}
+
+/* --- GALERIA MEMÓRIA (Split Screen) --- */
+
+.split-screen-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    /* Full viewport height */
+}
+
+/* Left Column: Masonry Grid */
+.split-col-left {
+    width: 50%;
+    background-color: #FFFFFF;
+    padding: 2rem;
+    overflow-y: auto;
+    /* Allow independent scrolling if content is long, though design says "flutuar" text so maybe sticky? */
+}
+
+.masonry-grid {
+    column-count: 2;
+    column-gap: 1.5rem;
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.masonry-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.masonry-item:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+
+/* Right Column: Text */
+.split-col-right {
+    width: 50%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    /* Make it fill screen so centering works */
+}
+
+.gallery-title-text {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--color-titles);
+    text-align: center;
+    line-height: 1.4;
+    max-width: 80%;
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    /* White overlay per "identidade limpa"? Or dark? Usually dark. Let's go dark based on standard helpfulness unless specified. User said "Lightbox (tela cheia)". Let's stick to dark overlay for photos. */
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 2000;
+    display: none;
+    /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: #FFFFFF;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.lightbox-close:hover {
+    color: var(--color-accent);
+}
+
+/* Mobile Responsiveness for Gallery */
+@media (max-width: 900px) {
+    .split-screen-container {
+        flex-direction: column-reverse;
+        /* Stack: Text (Right originally) on TOP? User said: "Primeiro aparece o Texto... Logo abaixo, o Grid" */
+        /* If Text is Right and Grid is Left:
+           Row-reverse? No.
+           Column: Left on top.
+           Column-reverse: Right on top.
+           YES.
+        */
+        height: auto;
+        min-height: auto;
     }
 
-    /* Re-enforce image on top for mobile */
-    .feature-img-col {
-        order: -1;
+    .split-col-right {
+        width: 100%;
+        height: auto;
+        position: static;
+        padding: 4rem 2rem 2rem 2rem;
+        /* Top padding for spacing */
     }
 
-    .feature-text-col {
-        order: 1;
+    .gallery-title-text {
+        font-size: 1.8rem;
     }
 
-    .feature-title {
-        font-size: 1.6rem;
+    .split-col-left {
+        width: 100%;
+        padding: 2rem;
+        padding-top: 0;
     }
+
+    .masonry-grid {
+        column-count: 2;
+        /* "grid de 2 colunas, o que ficar mais harmônico" - 2 is good. */
+    }
+}
+
+@media (max-width: 480px) {
+    .masonry-grid {
+        column-count: 1;
+        /* "uma abaixo da outra" option for very small screens */
+    }
+}
+
+gap: 2rem;
+margin-bottom: 5rem;
+}
+
+/* Re-enforce image on top for mobile */
+.feature-img-col {
+    order: -1;
+}
+
+.feature-text-col {
+    order: 1;
+}
+
+.feature-title {
+    font-size: 1.6rem;
+}
 }
 
 /* --- FORMACOES PAGE STYLES --- */
@@ -2191,21 +2351,24 @@ nav a.active {
 .events-title {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 3.5rem;
-    color: var(--color-titles); /* Dark Cocoa */
+    color: var(--color-titles);
+    /* Dark Cocoa */
     margin-bottom: 0.5rem;
 }
 
 .events-subtitle {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.5rem;
-    color: var(--text-main); /* Graphite */
+    color: var(--text-main);
+    /* Graphite */
     font-weight: 300;
 }
 
 /* Grid Layout */
 .events-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 Columns Desktop */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 Columns Desktop */
     gap: 2rem;
     margin-bottom: 4rem;
 }
@@ -2215,7 +2378,7 @@ nav a.active {
     background: #FFFFFF;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -2226,12 +2389,13 @@ nav a.active {
 
 .event-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .event-image-container {
     width: 100%;
-    aspect-ratio: 4/3; /* Standardize */
+    aspect-ratio: 4/3;
+    /* Standardize */
     overflow: hidden;
     position: relative;
     background-color: #f0f0f0;
@@ -2261,26 +2425,31 @@ nav a.active {
     text-transform: uppercase;
     letter-spacing: 1px;
     z-index: 2;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .tag-oficina {
-    background-color: var(--color-accent); /* Warm Clay */
+    background-color: var(--color-accent);
+    /* Warm Clay */
     color: #FFFFFF;
 }
 
 .tag-festival {
-    background-color: var(--bg-section-special); /* Powder Blue */
-    color: var(--color-titles); /* Dark Cocoa */
+    background-color: var(--bg-section-special);
+    /* Powder Blue */
+    color: var(--color-titles);
+    /* Dark Cocoa */
 }
 
 .tag-palestra {
-    background-color: #32302F; /* Graphite */
+    background-color: #32302F;
+    /* Graphite */
     color: #FFFFFF;
 }
 
 .tag-mesa {
-    background-color: #583722; /* Dark Cocoa */
+    background-color: #583722;
+    /* Dark Cocoa */
     color: #FFFFFF;
 }
 
@@ -2311,7 +2480,8 @@ nav a.active {
 }
 
 .btn-details {
-    margin-top: auto; /* Push to bottom */
+    margin-top: auto;
+    /* Push to bottom */
     display: inline-block;
     padding: 0.5rem 0;
     font-family: 'Source Sans Pro', sans-serif;
@@ -2339,7 +2509,8 @@ nav a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(50, 48, 47, 0.9); /* Dark overlay */
+    background-color: rgba(50, 48, 47, 0.9);
+    /* Dark overlay */
     z-index: 2000;
     display: flex;
     align-items: center;
@@ -2362,10 +2533,11 @@ nav a.active {
     max-height: 90vh;
     border-radius: 12px;
     position: relative;
-    overflow: hidden; /* Scroll inside body of modal */
+    overflow: hidden;
+    /* Scroll inside body of modal */
     display: flex;
     flex-direction: column;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     transform: translateY(20px);
     transition: transform 0.3s ease;
 }
@@ -2434,7 +2606,8 @@ nav a.active {
 
 .modal-desc {
     margin-bottom: 2rem;
-    white-space: pre-wrap; /* Preserve paragraphs */
+    white-space: pre-wrap;
+    /* Preserve paragraphs */
 }
 
 .modal-cta-container {
@@ -2446,7 +2619,8 @@ nav a.active {
 
 .modal-cta-btn {
     display: inline-block;
-    background-color: var(--color-titles); /* Dark Cocoa */
+    background-color: var(--color-titles);
+    /* Dark Cocoa */
     color: #FFFFFF;
     padding: 0.8rem 2.5rem;
     border-radius: 30px;
@@ -2457,7 +2631,8 @@ nav a.active {
 }
 
 .modal-cta-btn:hover {
-    background-color: var(--color-accent); /* Warm Clay */
+    background-color: var(--color-accent);
+    /* Warm Clay */
 }
 
 /* Responsiveness */
@@ -2469,7 +2644,8 @@ nav a.active {
 
 @media (max-width: 600px) {
     .events-grid {
-        grid-template-columns: 1fr; /* 1 col mobile */
+        grid-template-columns: 1fr;
+        /* 1 col mobile */
     }
 
     .events-title {
@@ -2482,19 +2658,23 @@ nav a.active {
 /* --- MODAL UPDATES (Image Sizing & Action Buttons) --- */
 
 .modal-gallery {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Larger base */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Larger base */
 }
 
 .modal-gallery img {
-    height: 250px; /* Fixed height as requested */
-    object-fit: cover; /* Maintain aspect ratio */
+    height: 250px;
+    /* Fixed height as requested */
+    object-fit: cover;
+    /* Maintain aspect ratio */
     width: 100%;
 }
 
 /* Modal Content Typography */
 .modal-desc h3 {
     font-family: 'Josefin Sans', sans-serif;
-    color: var(--color-accent); /* Warm Clay */
+    color: var(--color-accent);
+    /* Warm Clay */
     font-size: 1.3rem;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
@@ -2540,7 +2720,8 @@ nav a.active {
 }
 
 .btn-article {
-    background-color: #32302F; /* Graphite */
+    background-color: #32302F;
+    /* Graphite */
     color: #FFFFFF;
 }
 
@@ -2564,7 +2745,8 @@ nav a.active {
 
 /* 1. Spacing Adjustment */
 .modal-desc h3 {
-    margin-bottom: 0.2rem !important; /* Force tighter spacing */
+    margin-bottom: 0.2rem !important;
+    /* Force tighter spacing */
 }
 
 /* 2. Lightbox Zoom for Header Images */
@@ -2579,7 +2761,7 @@ nav a.active {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.95);
+    background: rgba(0, 0, 0, 0.95);
     z-index: 3000;
     display: none;
     align-items: center;
@@ -2595,13 +2777,18 @@ nav a.active {
 .lightbox-img {
     max-width: 90%;
     max-height: 90vh;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* 3. Embeds Container (Grid) */
@@ -2623,7 +2810,8 @@ nav a.active {
 /* Video Embed */
 .video-embed-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%;
+    /* 16:9 */
     height: 0;
     overflow: hidden;
     border-radius: 8px;
@@ -2654,7 +2842,7 @@ nav a.active {
 
 .link-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .link-card-img {
@@ -2689,15 +2877,20 @@ nav a.active {
 
 /* 4. Flyer Mode (Vertical Image) */
 .modal-gallery.flyer-mode {
-    grid-template-columns: 1fr; /* Single column */
-    max-width: 600px; /* Limit width */
+    grid-template-columns: 1fr;
+    /* Single column */
+    max-width: 600px;
+    /* Limit width */
     margin: 0 auto 2rem auto;
 }
 
 .modal-gallery.flyer-mode img {
-    height: auto !important; /* Allow layout to define height */
-    aspect-ratio: auto; /* Remove crop */
-    max-height: 80vh; /* Don't overflow screen vertically */
+    height: auto !important;
+    /* Allow layout to define height */
+    aspect-ratio: auto;
+    /* Remove crop */
+    max-height: 80vh;
+    /* Don't overflow screen vertically */
     object-fit: contain;
 }
 
@@ -2711,4 +2904,3 @@ nav a.active {
 .img-pos-top-right {
     object-position: top right !important;
 }
-

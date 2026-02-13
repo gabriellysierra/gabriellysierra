@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria: Literatura, tempo e memória | GABRIELLY SIERRA</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="assets/img/logo.png" alt="Gabrielly Sierra" class="main-logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="about.html">sobre</a></li>
+                <li><a href="projetos.html" class="active">projetos</a></li>
+                <li><a href="atelie.html">ateliê</a></li>
+                <li><a href="textos.html">textos</a></li>
+                <li><a href="contato.html">contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="split-screen-container">
+            <!-- Left Column: Masonry Grid -->
+            <div class="split-col-left">
+                <div class="masonry-grid">
+                    <div class="masonry-item" onclick="openLightbox('assets/img/galeria-memoria-1.jpg')">
+                        <img src="assets/img/galeria-memoria-1.jpg" alt="Literatura, tempo e memória - Foto 1">
+                    </div>
+                    <div class="masonry-item" onclick="openLightbox('assets/img/galeria-memoria-2.jpg')">
+                        <img src="assets/img/galeria-memoria-2.jpg" alt="Literatura, tempo e memória - Foto 2">
+                    </div>
+                    <div class="masonry-item" onclick="openLightbox('assets/img/galeria-memoria-3.jpg')">
+                        <img src="assets/img/galeria-memoria-3.jpg" alt="Literatura, tempo e memória - Foto 3">
+                    </div>
+                    <div class="masonry-item" onclick="openLightbox('assets/img/galeria-memoria-4.jpg')">
+                        <img src="assets/img/galeria-memoria-4.jpg" alt="Literatura, tempo e memória - Foto 4">
+                    </div>
+                    <div class="masonry-item" onclick="openLightbox('assets/img/galeria-memoria-5.jpg')">
+                        <img src="assets/img/galeria-memoria-5.jpg" alt="Literatura, tempo e memória - Foto 5">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Text -->
+            <div class="split-col-right">
+                <h1 class="gallery-title-text">Curso de Férias no Centro Cultural da USP | 2026</h1>
+            </div>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <i class="fa-solid fa-times lightbox-close" onclick="closeLightbox(event)"></i>
+        <img id="lightbox-img" src="" alt="Imagem em tela cheia">
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/gabriellysierra/?hl=pt" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@gabrielly.sierra" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@gabriellysierra" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/in/gabriellysierra/" target="_blank"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        // Lightbox Logic
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeLightbox(event) {
+            // Close if clicked on overlay or close button, but not if clicked on image itself (optional, but standard behavior usually allows clicking anywhere outside image)
+            if (event.target !== document.getElementById('lightbox-img')) {
+                const lightbox = document.getElementById('lightbox');
+                lightbox.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+            }
+        }
+    </script>
+</body>
+
+</html>
