@@ -2966,3 +2966,43 @@ nav a.active {
     background-color: #583722 !important;
     color: #FFFFFF;
 }
+
+/* --- Signature Block (About Page) --- */
+.signature-block {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* Align right to match reference */
+    padding-right: 2rem;
+    /* Slight offset from edge */
+}
+
+.handwritten-note {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 1.8rem;
+    color: var(--color-accent);
+    /* Warm Clay */
+    transform: rotate(-5deg);
+    margin-bottom: -1rem;
+    /* Overlap slightly with image */
+    margin-right: 2rem;
+    /* Center relative to image */
+    line-height: 1.2;
+    text-align: center;
+}
+
+.about-signature-img {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .signature-block {
+        align-items: center;
+        /* Center on mobile */
+        padding-right: 0;
+        margin-top: 3rem;
+    }
+}
