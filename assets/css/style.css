@@ -692,15 +692,20 @@ nav a.active {
     border-radius: 8px;
 }
 
-.project-img-container img {
+.project-img-container .project-bg-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    /* Added filter transition */
+    filter: grayscale(100%);
+    /* Default to Black & White */
 }
 
-.project-item:hover .project-img-container img {
-    transform: scale(1.03);
+.project-row:hover .project-bg-img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+    /* Restore color on hover */
 }
 
 .project-desc {
