@@ -958,22 +958,26 @@ nav a.active {
     }
 }
 
-gap: 2rem;
-margin-bottom: 5rem;
-}
+/* Mobile Responsiveness for Feature Section (Standard) */
+@media (max-width: 900px) {
+    .feature-section {
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 5rem;
+    }
 
-/* Re-enforce image on top for mobile */
-.feature-img-col {
-    order: -1;
-}
+    /* Re-enforce image on top for mobile */
+    .feature-img-col {
+        order: -1;
+    }
 
-.feature-text-col {
-    order: 1;
-}
+    .feature-text-col {
+        order: 1;
+    }
 
-.feature-title {
-    font-size: 1.6rem;
-}
+    .feature-title {
+        font-size: 1.6rem;
+    }
 }
 
 /* --- FORMACOES PAGE STYLES --- */
@@ -2903,4 +2907,10 @@ margin-bottom: 5rem;
 
 .img-pos-top-right {
     object-position: top right !important;
+}
+
+/* --- FIX: Force Dark Content Block Background --- */
+.dark-content-block {
+    background-color: #583722 !important;
+    color: #FFFFFF;
 }

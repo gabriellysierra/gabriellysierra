@@ -28,40 +28,81 @@
     </header>
 
     <main>
-        <div class="split-screen-container">
-            <!-- Left Column: Masonry Grid -->
-            <div class="split-col-left">
-                <div class="masonry-grid">
-                    <div class="masonry-item" onclick="openLightbox('assets/img/galeria-memoria-1.jpg')">
-                        <img src="assets/img/galeria-memoria-1.jpg" alt="Literatura, tempo e memória - Foto 1">
-                    </div>
-                    <div class="masonry-item" onclick="openLightbox('assets/img/galeria-memoria-2.jpg')">
-                        <img src="assets/img/galeria-memoria-2.jpg" alt="Literatura, tempo e memória - Foto 2">
-                    </div>
-                    <div class="masonry-item" onclick="openLightbox('assets/img/galeria-memoria-3.jpg')">
-                        <img src="assets/img/galeria-memoria-3.jpg" alt="Literatura, tempo e memória - Foto 3">
-                    </div>
-                    <div class="masonry-item" onclick="openLightbox('assets/img/galeria-memoria-4.jpg')">
-                        <img src="assets/img/galeria-memoria-4.jpg" alt="Literatura, tempo e memória - Foto 4">
-                    </div>
-                    <div class="masonry-item" onclick="openLightbox('assets/img/galeria-memoria-5.jpg')">
-                        <img src="assets/img/galeria-memoria-5.jpg" alt="Literatura, tempo e memória - Foto 5">
-                    </div>
+
+        <!-- BLOCO 1: TÍTULO -->
+        <section class="dark-content-block">
+            <div class="dark-block-container" style="justify-content: center; text-align: center;">
+                <div class="dark-block-text" style="flex: none; width: 100%; max-width: 900px;">
+                    <span class="formation-tag">GALERIA</span>
+                    <h2 class="formation-title">Curso de Férias no Centro Cultural da USP | 2026</h2>
                 </div>
             </div>
+        </section>
 
-            <!-- Right Column: Text -->
-            <div class="split-col-right">
-                <h1 class="gallery-title-text">Curso de Férias no Centro Cultural da USP | 2026</h1>
+        <!-- GALERIA (Grid 3x3 approx) -->
+        <section class="gallery-section">
+            <div class="gallery-grid">
+                <!-- Using images from 'assets/img/galeria-novas/' -->
+                <img src="assets/img/galeria-novas/GabiCentroCulturalUSP-001.jpg" alt="Centro Cultural USP - Foto 1"
+                    class="gallery-img" onclick="openLightbox(this.src)">
+                <img src="assets/img/galeria-novas/GabiCentroCulturalUSP-012.jpg" alt="Centro Cultural USP - Foto 2"
+                    class="gallery-img" onclick="openLightbox(this.src)">
+                <img src="assets/img/galeria-novas/GabiCentroCulturalUSP-038.jpg" alt="Centro Cultural USP - Foto 3"
+                    class="gallery-img" onclick="openLightbox(this.src)">
+                <img src="assets/img/galeria-novas/GabiCentroCulturalUSP-048.jpg" alt="Centro Cultural USP - Foto 4"
+                    class="gallery-img" onclick="openLightbox(this.src)">
+                <img src="assets/img/galeria-novas/GabiCentroCulturalUSP-056.jpg" alt="Centro Cultural USP - Foto 5"
+                    class="gallery-img" onclick="openLightbox(this.src)">
+                <img src="assets/img/galeria-novas/GabiCentroCulturalUSP-064 (1).jpg" alt="Centro Cultural USP - Foto 6"
+                    class="gallery-img" onclick="openLightbox(this.src)">
+                <img src="assets/img/galeria-novas/GabiCentroCulturalUSP-081.jpg" alt="Centro Cultural USP - Foto 7"
+                    class="gallery-img" onclick="openLightbox(this.src)">
+                <img src="assets/img/galeria-novas/GabiCentroCulturalUSP-088.jpg" alt="Centro Cultural USP - Foto 8"
+                    class="gallery-img" onclick="openLightbox(this.src)">
+                <img src="assets/img/galeria-novas/GabiCentroCulturalUSP-101 (1).jpg" alt="Centro Cultural USP - Foto 9"
+                    class="gallery-img" onclick="openLightbox(this.src)">
+                <img src="assets/img/galeria-novas/GabiCentroCulturalUSP-105.jpg" alt="Centro Cultural USP - Foto 10"
+                    class="gallery-img" onclick="openLightbox(this.src)">
             </div>
-        </div>
+
+            <!-- Optional Caption or decorative element -->
+            <p class="gallery-caption handwritten">
+                Registros do curso de férias "Literatura, tempo e memória".
+            </p>
+        </section>
+
     </main>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
-        <i class="fa-solid fa-times lightbox-close" onclick="closeLightbox(event)"></i>
-        <img id="lightbox-img" src="" alt="Imagem em tela cheia">
+    <!-- Lightbox Modal (Reusing existing structure if present in CSS, otherwise adding inline or script support) -->
+    <!-- Note: formacoes.html uses a class .lightbox-modal. Let's ensure we match that structure. -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
     </div>
+
+    <!-- Script to handle lightbox (if not already global) -->
+    <script>
+        const modal = document.getElementById("lightbox-modal");
+        const modalImg = document.getElementById("lightbox-img");
+
+        function openLightbox(src) {
+            modal.style.display = "flex";
+            modalImg.src = src;
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeLightbox() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Close on click outside
+        modal.onclick = function (e) {
+            if (e.target === modal) {
+                closeLightbox();
+            }
+        }
+    </script>
 
     <footer>
         <div class="social-icons">
@@ -75,25 +116,6 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
-    <script>
-        // Lightbox Logic
-        function openLightbox(src) {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            lightboxImg.src = src;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
-        }
-
-        function closeLightbox(event) {
-            // Close if clicked on overlay or close button, but not if clicked on image itself (optional, but standard behavior usually allows clicking anywhere outside image)
-            if (event.target !== document.getElementById('lightbox-img')) {
-                const lightbox = document.getElementById('lightbox');
-                lightbox.classList.remove('active');
-                document.body.style.overflow = ''; // Restore scrolling
-            }
-        }
-    </script>
 </body>
 
 </html>
