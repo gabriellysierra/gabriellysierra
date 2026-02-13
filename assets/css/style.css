@@ -2622,7 +2622,8 @@ nav a.active {
 }
 
 .modal-overlay.active .modal-content-wrapper {
-    transform: translateY(0); // Slide up effect
+    transform: translateY(0);
+    /* Slide up effect */
 }
 
 .modal-header {
@@ -3035,48 +3036,79 @@ nav a.active {
 }
 
 /* --- Projects Page White Theme & Spacing Override --- */
-/* --- Projects Page White Theme (Shinto Style) --- */
+/* --- Projects Page White Theme (Reference Style - Vitsoe) --- */
 .project-row.white-theme {
     background-color: #FFFFFF !important;
     color: #32302F !important;
-    margin-bottom: 12rem !important;
+    margin-bottom: 8rem !important;
+    /* Adjusted spacing */
     align-items: flex-start !important;
+    padding-top: 4rem;
+    border-top: 1px solid #eee;
+    /* Subtle separator like reference? Optional */
 }
 
-/* Image Column: 55% Width */
-.project-row.white-theme .project-col-img {
-    flex: 0 0 55%;
-    max-width: 55%;
+/* First item no border */
+.project-row.white-theme:first-of-type {
+    border-top: none;
+    padding-top: 0;
 }
 
-/* Text Column: 45% Width + Top Offset */
+/* Text Column: 35% Width + Formatting */
 .project-row.white-theme .project-col-text {
-    flex: 0 0 45%;
-    max-width: 45%;
-    padding: 0 5%;
-    margin-top: 10rem;
-    /* Shinto offset */
+    flex: 0 0 35%;
+    max-width: 35%;
+    padding-right: 4rem;
+    /* Gap between text and image */
+    margin-top: 0;
+    /* REMOVED Shinto offset */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-/* Images: Normal Color & Static */
+/* Image Column: Remaining Space (~60%) */
+.project-row.white-theme .project-col-img {
+    flex: 1;
+    max-width: 65%;
+    /* Cap it */
+}
+
+/* Images: Wide, Sharp, Static */
 .project-row.white-theme .project-bg-img {
     filter: none !important;
     transition: none !important;
     height: auto;
-    aspect-ratio: auto;
+    aspect-ratio: 21/9;
+    /* Wide cinematic ratio */
     width: 100%;
     display: block;
+    object-fit: cover;
+    border-radius: 0 !important;
+    /* Sharp corners as requested */
 }
 
 .project-row.white-theme:hover .project-bg-img {
     transform: none !important;
 }
 
+/* Link Styling (Reference Style) */
+.project-row.white-theme .learn-more-btn {
+    text-decoration: underline;
+    font-weight: 700;
+    text-transform: none;
+    /* or Uppercase? Reference usually simple */
+    letter-spacing: 0;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
 /* Mobile Reset */
 @media (max-width: 900px) {
+    .project-row.white-theme {
+        flex-direction: column;
+        /* Stack Text then Image */
+    }
 
     .project-row.white-theme .project-col-img,
     .project-row.white-theme .project-col-text {
@@ -3085,8 +3117,13 @@ nav a.active {
     }
 
     .project-row.white-theme .project-col-text {
-        margin-top: 2rem;
-        padding: 2rem 5%;
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .project-row.white-theme .project-bg-img {
+        aspect-ratio: 16/9;
+        /* Slightly taller on mobile */
     }
 }
 
@@ -3094,19 +3131,23 @@ nav a.active {
 .project-row.white-theme h2,
 .project-row.white-theme h3,
 .project-row.white-theme .formation-tag {
-    color: #583722 !important;
-    /* Dark Cocoa Title & Tags */
+    color: #32302F !important;
+    /* Reference is usually black/dark grey */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Cleaner font? Or keep Josefin? Keeping Josefin for brand consistency */
+    margin-bottom: 0.5rem;
 }
 
 .project-row.white-theme .formation-desc,
 .project-row.white-theme p {
     color: #32302F !important;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 /* Spacing Adjustments */
 .projects-simple-header {
     margin-bottom: 8rem !important;
-    /* Increased top spacing */
 }
 
 .testimonials-section {
