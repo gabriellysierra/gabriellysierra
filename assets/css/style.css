@@ -2189,8 +2189,9 @@ nav a.active {
     /* Align with top of image */
     line-height: 1.1;
     margin-bottom: 2rem;
-    font-size: 2.5rem;
-    /* Reverted to 2.5rem as requested */
+    font-size: 1.6rem;
+    /* Small editorial size */
+    color: #583722;
 }
 
 .about-text-content {
