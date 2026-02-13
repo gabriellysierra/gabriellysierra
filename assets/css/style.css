@@ -3016,6 +3016,8 @@ nav a.active {
 .project-row.white-theme {
     background-color: #FFFFFF !important;
     color: #32302F !important;
+    margin-bottom: 10rem !important;
+    /* Added separate between axes */
     /* Graphite Text */
 }
 
