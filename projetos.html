@@ -28,71 +28,92 @@
     </header>
 
     <main>
-        <div class="projects-page-wrapper">
 
-            <!-- Banner Section (Bibliomóvel Icon) -->
-            <div class="projects-banner">
-                <img src="assets/img/bibliomovel.png" alt="Ícone Bibliomóvel" class="projects-header-icon">
+        <!-- SEÇÃO 1: HERO BANNER (Static Image) -->
+        <section class="hero-video-banner">
+            <div class="video-wrapper">
+                <!-- Capa e Overlay -->
+                <!-- Reuse video-cover class for styling, but no click/video logic needed here strictly, 
+                     or we can use it just for the look. 
+                     We'll use a static background image from assets. -->
+                <div class="video-cover"
+                    style="background-image: url('assets/img/home-carousel-1.jpg'); cursor: default;">
+                    <div class="video-overlay" style="background-color: rgba(88, 55, 34, 0.7);">
+                        <div class="overlay-content">
+                            <!-- Icon instead of Play Button -->
+                            <img src="assets/img/bibliomovel.png" alt="Ícone Bibliomóvel"
+                                style="width: 120px; height: auto; margin-bottom: 1.5rem; opacity: 0.9;">
+
+                            <h1 class="overlay-title">Projetos</h1>
+                            <p class="overlay-desc">
+                                Conheça as iniciativas que unem literatura, mediação e arte para diferentes públicos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <!-- SEÇÃO 1: PROJETOS DE LEITURA (Texto Esquerda, Imagem Direita) -->
-            <section class="feature-section">
-                <div class="feature-text-col">
-                    <h2 class="feature-title">Projetos de Leitura</h2>
-                    <p class="feature-desc">
-                        Projetos que unem a mediação literária a práticas experimentais de criação artística. O objetivo
-                        é incentivar a leitura e a criatividade, valorizando os processos individuais e coletivos na
-                        difusão do livro e da literatura para as infâncias.
-                    </p>
-                    <a href="projetos-leitura.html" class="learn-more-btn">saiba mais</a>
-                </div>
-                <div class="feature-img-col">
-                    <img src="assets/img/projeto1.png" alt="Projetos de Leitura" class="feature-img">
-                </div>
-            </section>
+        <!-- SEÇÃO 2: PROJETOS DE LEITURA (DARK | IMG LEFT) -->
+        <section class="project-row dark">
+            <div class="project-col-img">
+                <img src="assets/img/projeto1.png" alt="Projetos de Leitura" class="project-bg-img">
+            </div>
+            <div class="project-col-text">
+                <span class="formation-tag">EIXO 1</span>
+                <h2 class="formation-title">Projetos de Leitura</h2>
+                <p class="formation-desc">
+                    Projetos que unem a mediação literária a práticas experimentais de criação artística. O objetivo
+                    é incentivar a leitura e a criatividade, valorizando os processos individuais e coletivos na
+                    difusão do livro e da literatura para as infâncias.
+                </p>
+                <a href="projetos-leitura.html" class="learn-more-btn">saiba mais</a>
+            </div>
+        </section>
 
-            <!-- SEÇÃO 2: FORMAÇÃO (Imagem Esquerda, Texto Direita - Inverted) -->
-            <section class="feature-section inverted">
-                <div class="feature-text-col">
-                    <h2 class="feature-title">Formação</h2>
-                    <p class="feature-desc">
-                        Percursos formativos dedicados a educadores, mediadores e bibliotecários que buscam aprofundar o
-                        olhar sobre a literatura na primeira infância e as potências do livro ilustrado. <br><br>
-                        A partir de uma perspectiva interdisciplinar, as formações propõem o cruzamento entre a
-                        investigação teórica e práticas experimentais de mediação, visando o fortalecimento de
-                        comunidades leitoras.
-                    </p>
-                    <a href="formacoes.html" class="learn-more-btn">saiba mais</a>
-                </div>
-                <div class="feature-img-col">
-                    <img src="assets/img/formacao-nova.jpg" alt="Formação" class="feature-img">
-                </div>
-            </section>
+        <!-- SEÇÃO 3: FORMAÇÃO (LIGHT | IMG RIGHT -> REVERSE) -->
+        <section class="project-row light reverse">
+            <div class="project-col-img">
+                <img src="assets/img/formacao-nova.jpg" alt="Formação" class="project-bg-img">
+            </div>
+            <div class="project-col-text">
+                <span class="formation-tag" style="color: var(--color-titles);">EIXO 2</span>
+                <h2 class="formation-title">Formação</h2>
+                <p class="formation-desc">
+                    Percursos formativos dedicados a educadores, mediadores e bibliotecários que buscam aprofundar o
+                    olhar sobre a literatura na primeira infância e as potências do livro ilustrado. <br><br>
+                    A partir de uma perspectiva interdisciplinar, as formações propõem o cruzamento entre a
+                    investigação teórica e práticas experimentais de mediação, visando o fortalecimento de
+                    comunidades leitoras.
+                </p>
+                <a href="formacoes.html" class="learn-more-btn">saiba mais</a>
+            </div>
+        </section>
 
-            <!-- SEÇÃO 3: MEDIAÇÃO E ENCONTROS LITERÁRIOS (Texto Esquerda, Imagem Direita) -->
-            <section class="feature-section">
-                <div class="feature-text-col">
-                    <h2 class="feature-title">MEDIAÇÃO E ENCONTROS LITERÁRIOS</h2>
-                    <p class="feature-desc">
-                        Atuação em festivais, feiras e eventos culturais, promovendo diálogos sobre a literatura para as
-                        infâncias, a formação de leitores e as pontes possíveis entre o livro e o público.
-                    </p>
-                    <a href="projetos-mediacao.html" class="learn-more-btn">saiba mais</a>
-                </div>
-                <div class="feature-img-col">
-                    <img src="assets/img/mediacao.jpg" alt="Mediação e Encontros Literários" class="feature-img">
-                </div>
-            </section>
+        <!-- SEÇÃO 4: MEDIAÇÃO E ENCONTROS LITERÁRIOS (DARK | IMG LEFT) -->
+        <section class="project-row dark">
+            <div class="project-col-img">
+                <img src="assets/img/mediacao.jpg" alt="Mediação e Encontros Literários" class="project-bg-img">
+            </div>
+            <div class="project-col-text">
+                <span class="formation-tag">EIXO 3</span>
+                <h2 class="formation-title">Mediação e Encontros Literários</h2>
+                <p class="formation-desc">
+                    Atuação em festivais, feiras e eventos culturais, promovendo diálogos sobre a literatura para as
+                    infâncias, a formação de leitores e as pontes possíveis entre o livro e o público.
+                </p>
+                <a href="projetos-mediacao.html" class="learn-more-btn">saiba mais</a>
+            </div>
+        </section>
 
-            <!-- Divider Icon (Salsichinha) -->
-
-            <!-- Divider Icon (Salsichinha) -->
+        <!-- Divider Icon (Salsichinha) -->
+        <div style="text-align: center; margin: 60px 0;">
             <img src="assets/img/sobre-tentando-subir.png" alt="Divisor Poltrona e Salsichinha"
-                class="projects-divider-large">
+                class="projects-divider-large" style="max-width: 250px; height: auto;">
+            <!-- Added inline style to ensure size control if class isn't sufficient in this context -->
+        </div>
 
-        </div> <!-- End of standard wrapper -->
-
-        <!-- SEÇÃO 3: DEPOIMENTOS (Full Width Background) -->
+        <!-- SEÇÃO 5: DEPOIMENTOS (Full Width Background) -->
         <section class="testimonials-section">
             <div class="testimonials-container">
                 <h2 class="section-title">DEPOIMENTOS</h2>
