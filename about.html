@@ -10,7 +10,7 @@
         rel="stylesheet">
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=13">
+    <link rel="stylesheet" href="assets/css/style.css?v=14">
     <style>
         /* CSS Crítico Injetado para Forçar Atualização */
         .handwritten-note {
@@ -58,76 +58,92 @@
         </nav>
     </header>
 
-    <main class="editorial-wrapper">
-        <div class="editorial-container">
+    <main class="organic-wrapper">
+        <div class="organic-container">
 
-            <!-- 1. Título Gigante (Hero) -->
-            <h1 class="editorial-title">EDUCADORA E MEDIADORA</h1>
+            <!-- BLOCO 1: RAÍZES (Foto + Início Bio) -->
+            <section class="collage-section row-roots">
+                <div class="collage-col-img">
+                    <div class="photo-stack rotated-left">
+                        <img src="assets/img/perfil.jpg" alt="Gabrielly Sierra" class="main-photo">
+                        <span class="handwritten-caption">Minhas raízes...</span>
+                    </div>
+                </div>
+                <div class="collage-col-text">
+                    <h1 class="handwritten-title">Educadora & Mediadora</h1>
+                    <p>
+                        Leitora desde o início dos meus dias graças à minha mãe e ao meu avô, que deviam “supor que
+                        escola fosse o mundo inteiro, a vida inteira [...]”, como escreve Bartolomeu Campos de Queirós.
+                    </p>
+                </div>
+            </section>
 
-            <!-- 2. Imagem de Destaque -->
-            <div class="editorial-image-container">
-                <img src="assets/img/perfil.jpg" alt="Gabrielly Sierra - Educadora e Mediadora" class="editorial-image">
-            </div>
-
-            <!-- 3. Corpo do Texto Diagramado -->
-            <div class="editorial-content">
-                <p>
-                    Leitora desde o início dos meus dias graças à minha mãe e ao meu avô, que deviam “supor que
-                    escola fosse o mundo inteiro, a vida inteira [...]”, como escreve Bartolomeu Campos de Queirós.
-                </p>
-
-                <!-- Pull Quote -->
-                <blockquote class="editorial-pull-quote">
+            <!-- BLOCO 2: CITAÇÃO (Destaque Manuscrito) -->
+            <section class="collage-section row-quote">
+                <blockquote class="handwritten-quote rotated-right">
                     Se a mim perguntassem “o que você quer ser quando crescer?”, eu tranquilamente responderia:
                     quero ser leitora. Nasci para ser leitora.
                 </blockquote>
+            </section>
 
-                <p>
-                    Construtora de sentidos. Arquiteta de palavras.
-                    Professora aprendiz das funções da linguagem. Representante e defensora dos direitos do leitor,
-                    que incluem largar um livro chato pela metade ou pedir a um adulto para que, por favor, leia
-                    essa história de novo mesmo que seja a vigésima quinta vez…
-                </p>
-                <p>
-                    Sou licenciada em Ciências da Educação pela Universidade de Coimbra, mestre em Educação e
-                    Formação pela Universidade de Lisboa e especialista em Literatura Infantil e Juvenil pela
-                    Universidade de Caxias do Sul.
-                </p>
-                <p>
-                    Participei e coordenei projetos educativos e culturais, formações e mediações literárias em
-                    escolas, bibliotecas públicas e eventos culturais, atuando junto a crianças, jovens, adultos e
-                    idosos. Levo a literatura a pessoas de 0 a 100+ anos.
-                </p>
-                <p>
-                    Pegue um café, puxe uma cadeira e fique à vontade. Este é o meu canto para compartilhar o que
-                    mais me move: o encontro entre livros e leitores.
-                </p>
+            <!-- BLOCO 3: IDENTIDADE E LIVROS (Texto misturado com capas) -->
+            <section class="collage-section row-mixed">
+                <!-- Texto Principal -->
+                <div class="mixed-content">
+                    <p>
+                        Construtora de sentidos. Arquiteta de palavras.
+                        Professora aprendiz das funções da linguagem. Representante e defensora dos direitos do leitor,
+                        que incluem largar um livro chato pela metade ou pedir a um adulto para que, por favor, leia
+                        essa história de novo mesmo que seja a vigésima quinta vez…
+                    </p>
 
-                <div class="signature-block">
-                    <p class="handwritten-note">Levo a literatura <br> para pessoas de <br> 0 a (100+) sempre!</p>
-                    <img src="assets/img/sobre-final.png" alt="Poltrona ilustrada com livros e café"
-                        class="about-signature-img">
+                    <!-- Sticker Livro 1 -->
+                    <div class="book-sticker right rotated-right">
+                        <div class="book-placeholder">Capa 1</div>
+                        <span class="sticker-note">Essencial!</span>
+                    </div>
+
+                    <p>
+                        Sou licenciada em Ciências da Educação pela Universidade de Coimbra, mestre em Educação e
+                        Formação pela Universidade de Lisboa e especialista em Literatura Infantil e Juvenil pela
+                        Universidade de Caxias do Sul.
+                    </p>
+
+                    <!-- Sticker Livro 2 -->
+                    <div class="book-sticker left rotated-left">
+                        <div class="book-placeholder">Capa 2</div>
+                        <span class="sticker-note">Amor antigo</span>
+                    </div>
+
+                    <p>
+                        Participei e coordenei projetos educativos e culturais, formações e mediações literárias em
+                        escolas, bibliotecas públicas e eventos culturais, atuando junto a crianças, jovens, adultos e
+                        idosos. Levo a literatura a pessoas de 0 a 100+ anos.
+                    </p>
+
+                    <!-- Sticker Livro 3 & 4 (Agrupados) -->
+                    <div class="book-group">
+                        <div class="book-sticker rotated-right">
+                            <div class="book-placeholder">Capa 3</div>
+                        </div>
+                        <div class="book-sticker rotated-left">
+                            <div class="book-placeholder">Capa 4</div>
+                            <span class="sticker-note">Inspirações</span>
+                        </div>
+                    </div>
+
+                    <p>
+                        Pegue um café, puxe uma cadeira e fique à vontade. Este é o meu canto para compartilhar o que
+                        mais me move: o encontro entre livros e leitores.
+                    </p>
                 </div>
-            </div>
+            </section>
 
-            <!-- 4. Seção "Gabi em Livros" -->
-            <div class="books-section">
-                <h2 class="books-title">Gabi em Livros</h2>
-                <div class="books-grid">
-                    <!-- Placeholders for books -->
-                    <div class="book-item">
-                        <div class="book-cover-placeholder"></div>
-                    </div>
-                    <div class="book-item">
-                        <div class="book-cover-placeholder"></div>
-                    </div>
-                    <div class="book-item">
-                        <div class="book-cover-placeholder"></div>
-                    </div>
-                    <div class="book-item">
-                        <div class="book-cover-placeholder"></div>
-                    </div>
-                </div>
+            <!-- ASSINATURA -->
+            <div class="signature-block">
+                <p class="handwritten-note">Levo a literatura <br> para pessoas de <br> 0 a (100+) sempre!</p>
+                <img src="assets/img/sobre-final.png" alt="Poltrona ilustrada com livros e café"
+                    class="about-signature-img">
             </div>
 
         </div>

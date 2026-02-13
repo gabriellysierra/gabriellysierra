@@ -3071,3 +3071,208 @@ nav a.active {
         /* 2x2 on mobile */
     }
 }
+
+/* --- ABOUT PAGE: ORGANIC COLLAGE REDESIGN --- */
+
+.organic-wrapper {
+    background-color: #FFFFFF;
+    /* Paper background */
+    padding: 6rem 0;
+    width: 100%;
+    overflow-x: hidden;
+    /* Prevent rotation overflow */
+}
+
+.organic-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    /* Large gaps between sections */
+}
+
+/* Utilities for Rotation */
+.rotated-left {
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease;
+}
+
+.rotated-right {
+    transform: rotate(2deg);
+    transition: transform 0.3s ease;
+}
+
+.rotated-left:hover,
+.rotated-right:hover {
+    transform: rotate(0deg);
+    /* Straighten on hover */
+    z-index: 10;
+}
+
+/* Typography Overrides */
+.handwritten-title {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 4rem;
+    color: var(--color-titles);
+    line-height: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.handwritten-caption {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 1.5rem;
+    color: var(--color-titles);
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.handwritten-quote {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 2.5rem;
+    color: var(--color-titles);
+    text-align: center;
+    line-height: 1.2;
+    padding: 2rem;
+    background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+    /* Dotted paper feel */
+    background-size: 20px 20px;
+}
+
+/* Bloco 1: Raízes */
+.row-roots {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.collage-col-img {
+    flex: 0 0 320px;
+}
+
+.photo-stack {
+    background: #fff;
+    padding: 10px 10px 30px 10px;
+    /* Polaroid style */
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.main-photo {
+    width: 100%;
+    height: auto;
+    filter: sepia(20%) contrast(1.1);
+    /* Vintage feel */
+}
+
+.collage-col-text {
+    padding-top: 2rem;
+}
+
+/* Bloco 3: Mixed Content */
+.mixed-content {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.mixed-content p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+/* Book Stickers */
+.book-sticker {
+    background: #fff;
+    padding: 8px;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.15);
+    width: 140px;
+    /* Small sticker size */
+    z-index: 5;
+    position: relative;
+    /* Fallback */
+}
+
+/* Floating positioning for desktop */
+@media (min-width: 900px) {
+    .book-sticker.right {
+        float: right;
+        margin: 5px 0 15px 25px;
+    }
+
+    .book-sticker.left {
+        float: left;
+        margin: 5px 25px 15px -40px;
+        /* Pull into margin */
+    }
+}
+
+.book-placeholder {
+    width: 100%;
+    aspect-ratio: 2/3;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: #999;
+    border: 1px dashed #ccc;
+}
+
+.sticker-note {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 1.2rem;
+    color: var(--color-titles);
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    line-height: 1;
+}
+
+.book-group {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .row-roots {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .collage-col-img {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .photo-stack {
+        transform: rotate(-2deg);
+        /* Default rotation on mobile */
+    }
+
+    .handwritten-title {
+        font-size: 3rem;
+    }
+
+    .handwritten-quote {
+        font-size: 2rem;
+    }
+
+    /* Disable floating on mobile, stack instead */
+    .book-sticker.right,
+    .book-sticker.left {
+        float: none;
+        margin: 2rem auto;
+        transform: rotate(2deg);
+        /* Randomize slightly */
+    }
+}
