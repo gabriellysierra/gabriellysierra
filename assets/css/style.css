@@ -3013,12 +3013,59 @@ nav a.active {
 }
 
 /* --- Projects Page White Theme & Spacing Override --- */
+/* --- Projects Page White Theme (Shinto Style) --- */
 .project-row.white-theme {
     background-color: #FFFFFF !important;
     color: #32302F !important;
-    margin-bottom: 10rem !important;
-    /* Added separate between axes */
-    /* Graphite Text */
+    margin-bottom: 12rem !important;
+    align-items: flex-start !important;
+}
+
+/* Image Column: 55% Width */
+.project-row.white-theme .project-col-img {
+    flex: 0 0 55%;
+    max-width: 55%;
+}
+
+/* Text Column: 45% Width + Top Offset */
+.project-row.white-theme .project-col-text {
+    flex: 0 0 45%;
+    max-width: 45%;
+    padding: 0 5%;
+    margin-top: 10rem;
+    /* Shinto offset */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Images: Normal Color & Static */
+.project-row.white-theme .project-bg-img {
+    filter: none !important;
+    transition: none !important;
+    height: auto;
+    aspect-ratio: auto;
+    width: 100%;
+    display: block;
+}
+
+.project-row.white-theme:hover .project-bg-img {
+    transform: none !important;
+}
+
+/* Mobile Reset */
+@media (max-width: 900px) {
+
+    .project-row.white-theme .project-col-img,
+    .project-row.white-theme .project-col-text {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .project-row.white-theme .project-col-text {
+        margin-top: 2rem;
+        padding: 2rem 5%;
+    }
 }
 
 .project-row.white-theme .formation-title,
