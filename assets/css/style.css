@@ -747,10 +747,10 @@ nav a.active {
 }
 
 .testimonials-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 0 5%;
-    /* Align with other content */
+    padding: 0 40px;
+    /* Alinhado com about e project container */
 }
 
 .testimonials-grid {
@@ -3040,8 +3040,8 @@ nav a.active {
 .project-row.white-theme {
     background-color: #FFFFFF !important;
     color: #32302F !important;
-    margin-bottom: 8rem !important;
-    /* Adjusted spacing */
+    margin-bottom: 5rem !important;
+    /* Espaço reduzido entre seções de 8rem para 5rem */
     padding-top: 4rem;
     width: 100%;
 }
@@ -3138,6 +3138,7 @@ nav a.active {
 }
 
 .testimonials-section {
-    margin-top: 10rem !important;
+    margin-top: 6rem !important;
+    /* Espaço reduzido de 10rem para 6rem */
     /* Increased bottom spacing */
 }
