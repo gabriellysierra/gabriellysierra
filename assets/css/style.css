@@ -3091,144 +3091,76 @@ nav a.active {
 
 /* Row Alternation (Zig-Zag) */
 .project-row.white-theme:nth-of-type(even) .project-col-text,
-.project-row.white-theme.force-card-right .project-col-text {
-    left: auto;
-    right: 40px;
-}
-
-.project-row.white-theme.force-card-left .project-col-text {
-    right: auto;
-    left: 40px;
-}
-
-.project-row.white-theme .project-col-text:hover {
-    transform: translateY(-52%);
-    background: rgba(255, 255, 255, 0.98);
-}
-
-/* Full Bleed Image Column */
-/* Full Bleed Image Column (Hero Version) */
-.project-row.white-theme:not(.layout-split) .project-col-img {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    height: 600px;
-    overflow: hidden;
-}
-
-/* Shared Background Image Style */
-.project-bg-img {
-    filter: none !important;
-    transition: none !important;
-    height: 100%;
-    width: 100%;
-    display: block;
-    object-fit: cover;
-    border-radius: 0 !important;
-}
-
-/* Hybrid Split Layout (Asymmetric 40/60) */
-.project-row.layout-split {
-    display: flex;
-    height: 600px;
+/* Standard Projects Page Layout (Symmetric 50/50) */
+.project-row {
     background-color: #FFFFFF !important;
-    margin-bottom: 0 !important;
-    overflow: hidden;
-    width: 100%;
+    padding: 4rem 0;
+    /* Add vertical breathing room between rows */
+    margin: 0 !important;
 }
 
-.layout-split .project-col-img {
-    flex: 0 0 40%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.layout-split .project-col-text {
-    flex: 0 0 60%;
+.project-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
     display: flex;
     align-items: center;
-    padding: 0;
-    position: relative;
-    /* Reset overlay absolute pos */
-    height: 100%;
-    background-color: #FFFFFF !important;
+    gap: 60px;
 }
 
-/* Align text within the 1000px site gutter */
-.split-text-content {
-    max-width: 600px;
-    padding: 60px;
+.project-col-img,
+.project-col-text {
+    flex: 1;
+    /* Symmetric 50/50 */
+    width: 50%;
 }
 
-.layout-split.img-left .project-col-text {
-    justify-content: flex-start;
+.project-col-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 0;
 }
 
-.layout-split.img-right .project-col-text {
-    justify-content: flex-end;
-    order: -1;
-    /* Text Left, Image Right */
+/* Use flex-direction: row-reverse for the zig-zag effect */
+.project-row.reverse-layout .project-container {
+    flex-direction: row-reverse;
 }
 
-.layout-split.img-right .split-text-content {
-    text-align: right;
-}
-
-/* Image Position Modifiers for Split Layout */
-.layout-split .img-shift-right {
-    object-position: right center;
-}
-
-.layout-split .img-shift-left {
-    object-position: left center;
-}
-
-/* Identity Colors for White Background */
-.layout-split .formation-title {
+/* Text styles for centered, proportional layout */
+.project-row .formation-title {
     color: #583722 !important;
     /* Dark Cocoa */
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    text-transform: none;
+    letter-spacing: normal;
 }
 
-.layout-split .formation-desc {
+.project-row .formation-desc {
     color: #32302F !important;
     /* Graphite */
-    font-size: 1.05rem;
-    line-height: 1.7;
+    font-size: 1rem;
+    line-height: 1.8;
     margin-bottom: 2rem;
 }
 
-/* Mobile Responsiveness for Split Layout */
-@media (max-width: 991px) {
-    .project-row.layout-split {
-        flex-direction: column;
-        height: auto;
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .project-row {
+        padding: 3rem 0;
     }
 
-    .layout-split .project-col-img {
-        flex: 0 0 auto;
+    .project-container {
+        flex-direction: column !important;
+        gap: 2.5rem;
+    }
+
+    .project-col-img,
+    .project-col-text {
         width: 100%;
-        height: 400px;
-    }
-
-    .layout-split .project-col-text {
-        flex: 0 0 auto;
-        width: 100%;
-        padding: 3rem 1.5rem;
-        justify-content: center !important;
-    }
-
-    .layout-split.img-right .project-col-text {
-        order: 1;
-        /* Image Top, Text Bottom */
-    }
-
-    .split-text-content {
-        max-width: 100%;
-        padding: 0;
-        text-align: left !important;
     }
 }
 
