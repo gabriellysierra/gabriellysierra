@@ -3091,9 +3091,15 @@ nav a.active {
 }
 
 /* Row Alternation (Zig-Zag) */
-.project-row.white-theme:nth-of-type(even) .project-col-text {
+.project-row.white-theme:nth-of-type(even) .project-col-text,
+.project-row.white-theme.force-card-right .project-col-text {
     left: auto;
     right: 40px;
+}
+
+.project-row.white-theme.force-card-left .project-col-text {
+    right: auto;
+    left: 40px;
 }
 
 .project-row.white-theme .project-col-text:hover {
