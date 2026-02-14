@@ -3127,6 +3127,15 @@ nav a.active {
     border-radius: 0 !important;
 }
 
+/* Image Position Modifiers */
+.project-row.white-theme .img-shift-left {
+    object-position: left center;
+}
+
+.project-row.white-theme .img-shift-right {
+    object-position: right center;
+}
+
 .project-row.white-theme:hover .project-bg-img {
     transform: none !important;
 }
