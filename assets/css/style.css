@@ -3037,14 +3037,16 @@ nav a.active {
 
 /* --- Projects Page White Theme & Spacing Override --- */
 /* --- Projects Page White Theme (Reference Style - Vitsoe) --- */
-/* --- Projects Page Overlay Style (Floating Card) --- */
+/* --- Projects Page: Full-Bleed Zig-Zag (Hero Style) --- */
 .project-row.white-theme {
     background-color: #FFFFFF !important;
     color: #32302F !important;
-    margin-bottom: 5rem !important;
-    /* Slightly more space for overlays */
-    padding-top: 4rem;
+    margin-bottom: 0 !important;
+    /* Continuous flow */
+    padding: 0;
     width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .project-row.white-theme .project-container {
@@ -3052,8 +3054,15 @@ nav a.active {
     width: 100%;
     margin: 0 auto;
     padding: 0 40px;
-    position: relative;
-    /* Base for floating cards */
+    position: absolute;
+    /* Float card over full-bleed image */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    height: 100%;
+    pointer-events: none;
+    /* Let clicks pass to image if needed */
 }
 
 /* First item no border */
@@ -3062,84 +3071,88 @@ nav a.active {
     padding-top: 0;
 }
 
-/* Floating Card Layout */
+/* Zig-Zag Floating Cards */
 .project-row.white-theme .project-col-text {
     position: absolute;
     left: 40px;
-    /* Same as container padding */
+    /* Aligned with container gutter */
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
     max-width: 420px;
     padding: 3rem;
-    background: rgba(255, 255, 255, 0.85);
-    /* Semi-transparent */
-    backdrop-filter: blur(12px);
-    /* Glassmorphism */
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    /* Soft lift */
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     transition: all 0.4s ease;
+    pointer-events: auto;
+    /* Enable interaction back */
+}
+
+/* Row Alternation (Zig-Zag) */
+.project-row.white-theme:nth-of-type(even) .project-col-text {
+    left: auto;
+    right: 40px;
 }
 
 .project-row.white-theme .project-col-text:hover {
     transform: translateY(-52%);
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    background: rgba(255, 255, 255, 0.98);
 }
 
-/* Alternate positioning? For now keep left for regularity */
-
-/* Full Width Image Column */
+/* Full Bleed Image Column */
 .project-row.white-theme .project-col-img {
-    width: 100%;
-    max-width: 100%;
-    flex: none;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    height: 600px;
+    /* Fixed height for hero impact */
+    overflow: hidden;
 }
 
-/* Images: Wide, Sharp, Static */
+/* Full Bleed Images */
 .project-row.white-theme .project-bg-img {
     filter: none !important;
     transition: none !important;
-    height: auto;
-    aspect-ratio: 21/9;
-    /* Retorno ao visual panorâmico */
+    height: 100%;
     width: 100%;
     display: block;
     object-fit: cover;
     border-radius: 0 !important;
-    /* Sharp corners as requested */
 }
 
 .project-row.white-theme:hover .project-bg-img {
     transform: none !important;
 }
 
-/* Mobile Reset */
+/* Mobile Reset: Hero Stack */
 @media (max-width: 900px) {
     .project-row.white-theme .project-container {
         padding: 0 20px;
+        position: static;
+        transform: none;
+        height: auto;
+    }
+
+    .project-row.white-theme .project-col-img {
+        height: 400px;
+        /* Compact for mobile */
     }
 
     .project-row.white-theme .project-col-text {
         position: static;
         transform: none;
         max-width: 100%;
-        padding: 2.5rem 1.5rem;
+        padding: 2.5rem 20px;
         background: #FFFFFF;
         backdrop-filter: none;
         box-shadow: none;
-        margin-top: -2rem;
-        /* Slight overlap on mobile? Optional */
-        position: relative;
+        margin-top: 0;
     }
 
-    .project-row.white-theme .project-col-text:hover {
-        transform: none;
-    }
-
-    .project-row.white-theme .project-bg-img {
-        aspect-ratio: 16/9;
+    .project-row.white-theme:nth-of-type(even) .project-col-text {
+        right: auto;
     }
 }
 
