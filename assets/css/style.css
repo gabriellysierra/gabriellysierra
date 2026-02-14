@@ -3040,8 +3040,8 @@ nav a.active {
 .project-row.white-theme {
     background-color: #FFFFFF !important;
     color: #32302F !important;
-    margin-bottom: 5rem !important;
-    /* Espaço reduzido entre seções de 8rem para 5rem */
+    margin-bottom: 3rem !important;
+    /* Espaço reduzido para 3rem */
     padding-top: 4rem;
     width: 100%;
 }
@@ -3072,10 +3072,10 @@ nav a.active {
     justify-content: flex-start;
 }
 
-/* Image Column: Balanced Hierarchy */
+/* Image Column: Balanced Hierarchy (stretched slightly right) */
 .project-row.white-theme .project-col-img {
-    flex: 0 0 52%;
-    max-width: 52%;
+    flex: 0 0 55%;
+    max-width: 55%;
 }
 
 /* Images: Wide, Sharp, Static */
@@ -3083,8 +3083,8 @@ nav a.active {
     filter: none !important;
     transition: none !important;
     height: auto;
-    aspect-ratio: 16/9;
-    /* Alinhado com a altura do texto */
+    aspect-ratio: 21/9;
+    /* Retorno ao visual panorâmico */
     width: 100%;
     display: block;
     object-fit: cover;
@@ -3139,7 +3139,7 @@ nav a.active {
 }
 
 .testimonials-section {
-    margin-top: 6rem !important;
-    /* Espaço reduzido de 10rem para 6rem */
+    margin-top: 3rem !important;
+    /* Reduzido para 3rem */
     /* Increased bottom spacing */
 }
