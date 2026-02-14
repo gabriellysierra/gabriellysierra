@@ -3164,37 +3164,132 @@ nav a.active {
     }
 }
 
-.project-row.white-theme:hover .project-bg-img {
-    transform: none !important;
+/* --- TEST: ARCHITECTURAL GRID (OPTION B) --- */
+.arch-test-section {
+    padding: 6rem 0;
+    overflow: hidden;
+    background-color: #FFFFFF !important;
 }
 
-/* Mobile Reset: Hero Stack */
+.arch-test-container {
+    max-width: 1100px;
+    /* Slightly wider for the 12-col grid */
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    position: relative;
+    align-items: center;
+}
+
+/* Background Numbers */
+.arch-number {
+    position: absolute;
+    top: -2rem;
+    left: 40px;
+    font-size: 8rem;
+    font-weight: 700;
+    color: #F5F5F5;
+    z-index: 1;
+    pointer-events: none;
+    line-height: 1;
+}
+
+.arch-test-container>* {
+    z-index: 2;
+    /* Sit above numbers */
+}
+
+/* Section specific offsets for sophisticated imbalance */
+/* 01: Leitura (Text Cols 2-6 | Image Cols 8-12) */
+.arch-sec-01 .arch-text {
+    grid-column: 2 / span 5;
+}
+
+.arch-sec-01 .arch-img {
+    grid-column: 8 / span 5;
+}
+
+/* 02: Formação (Image Cols 1-5 | Text Cols 7-11) */
+.arch-sec-02 .arch-img {
+    grid-column: 1 / span 5;
+}
+
+.arch-sec-02 .arch-text {
+    grid-column: 7 / span 5;
+}
+
+.arch-sec-02 .arch-number {
+    left: auto;
+    right: 40px;
+}
+
+/* 03: Mediação (Text Cols 3-8 | Image Cols 9-12) */
+.arch-sec-03 .arch-text {
+    grid-column: 3 / span 6;
+}
+
+.arch-sec-03 .arch-img {
+    grid-column: 10 / span 3;
+}
+
+/* Styles */
+.arch-test-section .formation-title {
+    color: #583722 !important;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.arch-test-section .formation-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 40px;
+    height: 1px;
+    background-color: #C58C71;
+    /* Warm Clay Divider */
+}
+
+.arch-test-section .formation-desc {
+    color: #32302F !important;
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+.arch-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 20px 20px 0px #F9F9F9;
+    /* Architectural shadow */
+}
+
+/* Global dividers for the page */
+.arch-divider {
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 1px;
+    background-color: #F0F0F0;
+}
+
+/* Mobile Adaptive Grid */
 @media (max-width: 900px) {
-    .project-row.white-theme .project-container {
-        padding: 0 20px;
-        position: static;
-        transform: none;
-        height: auto;
+    .arch-test-container {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
     }
 
-    .project-row.white-theme .project-col-img {
-        height: 400px;
-        /* Compact for mobile */
+    .arch-number {
+        font-size: 5rem;
+        top: -1rem;
     }
 
-    .project-row.white-theme .project-col-text {
-        position: static;
-        transform: none;
-        max-width: 100%;
-        padding: 2.5rem 20px;
-        background: #FFFFFF;
-        backdrop-filter: none;
-        box-shadow: none;
-        margin-top: 0;
-    }
-
-    .project-row.white-theme:nth-of-type(even) .project-col-text {
-        right: auto;
+    .arch-img img {
+        box-shadow: 10px 10px 0px #F9F9F9;
     }
 }
 
