@@ -739,11 +739,11 @@ nav a.active {
 }
 
 /* Testimonials Section */
-/* Testimonials Section */
 .testimonials-section {
     background-color: var(--bg-section-special);
     padding: 6rem 0;
-    margin-top: 4rem;
+    margin-top: 2rem;
+    /* Replicated 2rem spacing */
 }
 
 .testimonials-container {
@@ -3041,8 +3041,8 @@ nav a.active {
 .project-row.white-theme {
     background-color: #FFFFFF !important;
     color: #32302F !important;
-    margin-bottom: 0 !important;
-    /* Continuous flow */
+    margin-bottom: 2rem !important;
+    /* Standardized spacing to 2rem */
     padding: 0;
     width: 100%;
     position: relative;
