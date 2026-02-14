@@ -3052,7 +3052,8 @@ nav a.active {
     margin: 0 auto;
     padding: 0 40px;
     display: flex;
-    gap: 60px;
+    gap: 40px;
+    /* Reduzido de 60px para 40px */
     align-items: flex-start;
 }
 
@@ -3071,10 +3072,10 @@ nav a.active {
     justify-content: flex-start;
 }
 
-/* Image Column: Larger focus */
+/* Image Column: Balanced Hierarchy */
 .project-row.white-theme .project-col-img {
-    flex: 0 0 550px;
-    max-width: 550px;
+    flex: 0 0 52%;
+    max-width: 52%;
 }
 
 /* Images: Wide, Sharp, Static */
@@ -3082,8 +3083,8 @@ nav a.active {
     filter: none !important;
     transition: none !important;
     height: auto;
-    aspect-ratio: 21/9;
-    /* Wide cinematic ratio */
+    aspect-ratio: 16/9;
+    /* Alinhado com a altura do texto */
     width: 100%;
     display: block;
     object-fit: cover;
