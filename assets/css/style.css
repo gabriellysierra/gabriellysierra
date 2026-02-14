@@ -3037,11 +3037,12 @@ nav a.active {
 
 /* --- Projects Page White Theme & Spacing Override --- */
 /* --- Projects Page White Theme (Reference Style - Vitsoe) --- */
+/* --- Projects Page Overlay Style (Floating Card) --- */
 .project-row.white-theme {
     background-color: #FFFFFF !important;
     color: #32302F !important;
-    margin-bottom: 3rem !important;
-    /* Espaço reduzido para 3rem */
+    margin-bottom: 5rem !important;
+    /* Slightly more space for overlays */
     padding-top: 4rem;
     width: 100%;
 }
@@ -3051,10 +3052,8 @@ nav a.active {
     width: 100%;
     margin: 0 auto;
     padding: 0 40px;
-    display: flex;
-    gap: 40px;
-    /* Reduzido de 60px para 40px */
-    align-items: flex-start;
+    position: relative;
+    /* Base for floating cards */
 }
 
 /* First item no border */
@@ -3063,19 +3062,39 @@ nav a.active {
     padding-top: 0;
 }
 
-/* Text Column: Balanced Width */
+/* Floating Card Layout */
 .project-row.white-theme .project-col-text {
-    flex: 1;
-    margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    position: absolute;
+    left: 40px;
+    /* Same as container padding */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    max-width: 420px;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.85);
+    /* Semi-transparent */
+    backdrop-filter: blur(12px);
+    /* Glassmorphism */
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    /* Soft lift */
+    transition: all 0.4s ease;
 }
 
-/* Image Column: Balanced Hierarchy (stretched slightly right) */
+.project-row.white-theme .project-col-text:hover {
+    transform: translateY(-52%);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Alternate positioning? For now keep left for regularity */
+
+/* Full Width Image Column */
 .project-row.white-theme .project-col-img {
-    flex: 0 0 55%;
-    max-width: 55%;
+    width: 100%;
+    max-width: 100%;
+    flex: none;
 }
 
 /* Images: Wide, Sharp, Static */
@@ -3099,19 +3118,24 @@ nav a.active {
 /* Mobile Reset */
 @media (max-width: 900px) {
     .project-row.white-theme .project-container {
-        flex-direction: column;
         padding: 0 20px;
-        gap: 2rem;
     }
 
-    .project-row.white-theme .project-col-img,
     .project-row.white-theme .project-col-text {
-        flex: 0 0 100%;
+        position: static;
+        transform: none;
         max-width: 100%;
+        padding: 2.5rem 1.5rem;
+        background: #FFFFFF;
+        backdrop-filter: none;
+        box-shadow: none;
+        margin-top: -2rem;
+        /* Slight overlap on mobile? Optional */
+        position: relative;
     }
 
-    .project-row.white-theme .project-col-text {
-        margin-bottom: 2rem;
+    .project-row.white-theme .project-col-text:hover {
+        transform: none;
     }
 
     .project-row.white-theme .project-bg-img {
