@@ -3175,6 +3175,15 @@ nav a.active {
     text-align: right;
 }
 
+/* Image Position Modifiers for Split Layout */
+.layout-split .img-shift-right {
+    object-position: right center;
+}
+
+.layout-split .img-shift-left {
+    object-position: left center;
+}
+
 /* Identity Colors for White Background */
 .layout-split .formation-title {
     color: #583722 !important;
