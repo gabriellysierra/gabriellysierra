@@ -3181,8 +3181,8 @@ nav a.active {
 /* --- ABOUT PAGE REDESIGN (Editorial Revision) --- */
 
 .about-page-wrapper {
-    padding: 12rem 12% 0;
-    /* Margem editorial ajustada para 12% */
+    padding: 12rem 5% 0;
+    /* Margem editorial ajustada para 5% conforme solicitado */
     max-width: 100%;
     margin: 0;
     min-height: auto;
@@ -3222,7 +3222,8 @@ nav a.active {
 
 .about-image-col {
     flex: 1;
-    margin-top: 10rem;
+    margin-top: 15rem;
+    /* Assimetria chique: Foto começa bem abaixo do título */
 }
 
 .about-image-col img {
@@ -3235,31 +3236,20 @@ nav a.active {
 
 .handwritten-note {
     font-family: 'Reenie Beanie', cursive;
-    font-size: 2.2rem;
+    font-size: 28px;
+    /* Destaque visual aumentado */
     color: #9c7b65;
     line-height: 1.1;
     transform: rotate(-3deg);
-    margin-top: 2rem;
-    margin-left: 10%;
+    margin-top: 40px;
+    /* Respiro do texto principal */
+    margin-left: 0;
+    /* Alinhado à esquerda seguindo a bio */
     display: block;
     width: fit-content;
 }
 
-.about-footer-illustration {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 8rem 0 12rem;
-}
-
-.about-signature-img {
-    width: 300px;
-    height: auto;
-    object-fit: contain;
-    border: none;
-    box-shadow: none;
-}
-
+/* Responsividade Mobile */
 @media (max-width: 900px) {
     .about-page-wrapper {
         padding: 8rem 24px 0;
@@ -3297,6 +3287,8 @@ nav a.active {
     }
 }
 
+/* --- PROJECTS PAGE: Editorial Header & Slider (Final Studio Revision) --- */
+
 .projects-editorial-wrapper {
     background-color: #FFFFFF;
     width: 100%;
@@ -3304,8 +3296,8 @@ nav a.active {
 
 .projects-editorial-header,
 .testimonials-slider-section {
-    padding: 0 12%;
-    /* Simetria total: 12% em cada lado */
+    padding: 0 5%;
+    /* Simetria de 5% global */
     width: 100%;
 }
 
@@ -3385,6 +3377,8 @@ nav a.active {
 
 .testimonials-slider-container {
     max-width: 600px;
+    margin: 0 auto;
+    /* Centralizado conforme solicitado */
 }
 
 .testimonials-label {
