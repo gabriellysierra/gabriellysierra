@@ -3121,7 +3121,6 @@ nav a.active {
 .projects-editorial-wrapper {
     background-color: #FFFFFF;
     width: 100%;
-    min-height: 100vh;
 }
 
 .projects-editorial-header,
@@ -3134,17 +3133,21 @@ nav a.active {
 .projects-editorial-header {
     padding-top: 15rem;
     /* Respiro superior generoso */
-    padding-bottom: 4rem;
+    padding-bottom: 8rem;
 }
 
 .projects-header-container {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    flex-direction: row;
+    /* Lado a lado */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
 }
 
 .projects-intro-col {
-    max-width: 600px;
+    max-width: 500px;
+    /* Reduzido levemente para caber o menu ao lado */
 }
 
 .projects-main-title {
@@ -3166,15 +3169,18 @@ nav a.active {
 
 .projects-nav-col {
     display: flex;
-    justify-content: flex-end;
-    /* Alinhado à direita no desktop */
-    gap: 2.5rem;
-    padding-top: 2rem;
+    flex-direction: column;
+    /* Lista vertical para o índice */
+    align-items: flex-end;
+    /* Alinhado à direita da coluna */
+    gap: 1.5rem;
+    padding-top: 3.5rem;
+    /* Alinha horizontalmente com o início do texto */
 }
 
 .projects-nav-item {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -3183,6 +3189,7 @@ nav a.active {
     border-bottom: 1px solid transparent;
     transition: all 0.3s ease;
     padding-bottom: 2px;
+    white-space: nowrap;
 }
 
 .projects-nav-item:hover {
@@ -3193,7 +3200,7 @@ nav a.active {
 /* --- TESTIMONIALS SLIDER --- */
 .testimonials-slider-section {
     padding-top: 8rem;
-    padding-bottom: 10rem;
+    padding-bottom: 15rem;
 }
 
 .testimonials-slider-container {
@@ -3201,9 +3208,21 @@ nav a.active {
     /* Alinhado com a intro */
 }
 
+.testimonials-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #999;
+    /* Cor mais discreta conforme solicitado */
+    margin-bottom: 3rem;
+    display: block;
+}
+
 .testimonials-slider {
     position: relative;
-    min-height: 200px;
+    min-height: 150px;
     margin-top: 3rem;
 }
 
@@ -3225,27 +3244,28 @@ nav a.active {
 
 .testimonial-text {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-main);
     font-style: italic;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .testimonial-author {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--color-titles);
 }
 
-/* Slider Controls (Setas Finas) */
+/* Slider Controls (Setas Finas e Menores) */
 .slider-controls {
     display: flex;
-    gap: 2rem;
-    margin-top: 4rem;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    /* Mais próximo do texto */
 }
 
 .slider-arrow {
@@ -3265,6 +3285,8 @@ nav a.active {
 
 .slider-arrow svg {
     display: block;
+    width: 30px;
+    /* Reduzido de 40px */
 }
 
 /* Divider Footer */
@@ -3287,20 +3309,23 @@ nav a.active {
     }
 
     .projects-header-container {
+        flex-direction: column;
+        /* Empilhamento natural */
         gap: 3rem;
     }
 
     .projects-nav-col {
-        justify-content: flex-start;
-        /* Empilhado naturalmente */
+        align-items: flex-start;
         flex-wrap: wrap;
+        flex-direction: row;
+        /* Links lado a lado no mobile */
         gap: 1.5rem;
         padding-top: 0;
     }
 
     .testimonials-slider-section {
         padding-top: 4rem;
-        padding-bottom: 6rem;
+        padding-bottom: 8rem;
     }
 
     .testimonials-slider-container {
