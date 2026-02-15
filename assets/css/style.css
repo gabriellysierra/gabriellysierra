@@ -3116,7 +3116,7 @@ nav a.active {
     color: #32302F !important;
 }
 
-/* --- PROJECTS PAGE: Editorial Header & Slider (Refined Layout) --- */
+/* --- PROJECTS PAGE: Editorial Header & Slider (Final Studio Revision) --- */
 
 .projects-editorial-wrapper {
     background-color: #FFFFFF;
@@ -3132,22 +3132,21 @@ nav a.active {
 
 .projects-editorial-header {
     padding-top: 15rem;
-    /* Respiro superior generoso */
-    padding-bottom: 8rem;
+    padding-bottom: 5rem;
 }
 
 .projects-header-container {
     display: flex;
     flex-direction: row;
-    /* Lado a lado */
+    /* Texto e Links lado a lado */
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
+    /* Links alinhados com a base do parágrafo */
     gap: 4rem;
 }
 
 .projects-intro-col {
     max-width: 500px;
-    /* Reduzido levemente para caber o menu ao lado */
 }
 
 .projects-main-title {
@@ -3157,7 +3156,7 @@ nav a.active {
     letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--color-titles);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .projects-intro-text {
@@ -3169,27 +3168,26 @@ nav a.active {
 
 .projects-nav-col {
     display: flex;
-    flex-direction: column;
-    /* Lista vertical para o índice */
-    align-items: flex-end;
-    /* Alinhado à direita da coluna */
-    gap: 1.5rem;
-    padding-top: 3.5rem;
-    /* Alinha horizontalmente com o início do texto */
+    flex-direction: row;
+    /* Horizontal como na referência */
+    gap: 3rem;
+    padding-bottom: 0.5rem;
+    /* Ajuste fino de base */
 }
 
 .projects-nav-item {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 11px;
+    /* Menor e discreto */
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
     color: var(--text-main);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid #EEEEEE;
+    /* Sublinhado fino e claro */
     transition: all 0.3s ease;
-    padding-bottom: 2px;
-    white-space: nowrap;
+    padding-bottom: 4px;
 }
 
 .projects-nav-item:hover {
@@ -3199,31 +3197,30 @@ nav a.active {
 
 /* --- TESTIMONIALS SLIDER --- */
 .testimonials-slider-section {
-    padding-top: 8rem;
+    padding-top: 5rem;
     padding-bottom: 15rem;
 }
 
 .testimonials-slider-container {
     max-width: 600px;
-    /* Alinhado com a intro */
 }
 
 .testimonials-label {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 12px;
+    font-size: 11px;
+    /* Rótulo técnico e discreto */
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #999;
-    /* Cor mais discreta conforme solicitado */
-    margin-bottom: 3rem;
+    color: #9c7b65;
+    /* Cocoa suave */
+    margin-bottom: 3.5rem;
     display: block;
 }
 
 .testimonials-slider {
     position: relative;
-    min-height: 150px;
-    margin-top: 3rem;
+    min-height: 120px;
 }
 
 .testimonial-slide {
@@ -3260,12 +3257,12 @@ nav a.active {
     color: var(--color-titles);
 }
 
-/* Slider Controls (Setas Finas e Menores) */
+/* Slider Controls (Setas Menores e Próximas) */
 .slider-controls {
     display: flex;
     gap: 1.5rem;
-    margin-top: 2rem;
-    /* Mais próximo do texto */
+    margin-top: 1.5rem;
+    /* Mais "grudado" ao texto */
 }
 
 .slider-arrow {
@@ -3276,7 +3273,7 @@ nav a.active {
     padding: 0;
     display: flex;
     align-items: center;
-    transition: color 0.3s ease, opacity 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .slider-arrow:hover {
@@ -3285,8 +3282,9 @@ nav a.active {
 
 .slider-arrow svg {
     display: block;
-    width: 30px;
-    /* Reduzido de 40px */
+    width: 32px;
+    /* Reduzido */
+    height: auto;
 }
 
 /* Divider Footer */
@@ -3301,7 +3299,6 @@ nav a.active {
     .projects-editorial-header,
     .testimonials-slider-section {
         padding: 0 24px;
-        /* Margem mobile 24px */
     }
 
     .projects-editorial-header {
@@ -3311,16 +3308,14 @@ nav a.active {
     .projects-header-container {
         flex-direction: column;
         /* Empilhamento natural */
-        gap: 3rem;
+        align-items: flex-start;
+        gap: 3.5rem;
     }
 
     .projects-nav-col {
-        align-items: flex-start;
         flex-wrap: wrap;
-        flex-direction: row;
-        /* Links lado a lado no mobile */
         gap: 1.5rem;
-        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .testimonials-slider-section {
