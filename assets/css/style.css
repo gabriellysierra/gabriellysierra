@@ -3162,17 +3162,12 @@ nav a.active {
 
 .projects-nav-col {
     width: 100%;
-    max-width: 600px;
-    /* Alinhado com a largura do texto para manter o bloco coeso */
     display: flex;
     justify-content: flex-end;
-    /* Conteúdo interno à direita */
-    align-self: flex-end;
-    /* Garante que o bloco todo se mova para a direita se houver espaço */
+    /* Empurra os links para a extremidade direita */
     gap: 2.5rem;
-    padding-top: 2rem;
-    margin-left: auto;
-    /* Força o empurrão para a direita no layout flex */
+    padding-top: 4rem;
+    /* Um pouco mais de espaço vertical para separar do texto */
 }
 
 .projects-nav-item {
