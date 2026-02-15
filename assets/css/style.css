@@ -312,7 +312,7 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 3rem;
-        padding: 0 30px;
+        padding: 0 40px;
     }
 
     .about-image-col {
@@ -805,160 +805,98 @@ nav a.active {
     }
 }
 
-/* --- GALERIA MEMÓRIA (Split Screen) --- */
+/* --- GALERIA MEMÓRIA (Reorganized Split-Screen) --- */
 
-.split-screen-container {
-    display: flex;
-    width: 100%;
+.gallery-page-wrapper {
+    background-color: #F2F0ED;
+    /* Cor areia claro da referência */
     min-height: 100vh;
-    /* Full viewport height */
-}
-
-/* Left Column: Masonry Grid */
-.split-col-left {
-    width: 50%;
-    background-color: #FFFFFF;
-    padding: 2rem;
-    overflow-y: auto;
-    /* Allow independent scrolling if content is long, though design says "flutuar" text so maybe sticky? */
-}
-
-.masonry-grid {
-    column-count: 2;
-    column-gap: 1.5rem;
-}
-
-.masonry-item {
-    break-inside: avoid;
-    margin-bottom: 1.5rem;
-    cursor: pointer;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.masonry-item img {
+    padding: 6rem 0;
     width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 4px;
 }
 
-.masonry-item:hover {
-    transform: scale(1.02);
-    filter: brightness(1.1);
-}
-
-/* Right Column: Text */
-.split-col-right {
-    width: 50%;
-    background-color: #FFFFFF;
+.gallery-split-container {
+    max-width: 1100px;
+    /* Um pouco mais largo para acomodar o grid editorial */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem;
+    gap: 80px;
+    /* Espaço amplo entre texto e foto */
+    align-items: flex-start;
+}
+
+.gallery-info-col {
+    flex: 0 0 300px;
+    /* Coluna de texto mais estreita e fixa */
     position: sticky;
-    top: 0;
-    height: 100vh;
-    /* Make it fill screen so centering works */
+    top: 150px;
+    /* Flutua enquanto scrolla o grid */
 }
 
-.gallery-title-text {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 400;
-    color: var(--color-titles);
-    text-align: center;
-    line-height: 1.4;
-    max-width: 80%;
-}
-
-/* Lightbox */
-.lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    /* White overlay per "identidade limpa"? Or dark? Usually dark. Let's go dark based on standard helpfulness unless specified. User said "Lightbox (tela cheia)". Let's stick to dark overlay for photos. */
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 2000;
-    display: none;
-    /* Hidden by default */
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.lightbox.active {
-    display: flex;
-    opacity: 1;
-}
-
-.lightbox img {
-    max-width: 90%;
-    max-height: 90vh;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    border-radius: 4px;
-}
-
-.lightbox-close {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    color: #FFFFFF;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.lightbox-close:hover {
+.gallery-info-col .formation-tag {
     color: var(--color-accent);
+    margin-bottom: 0.5rem;
+}
+
+.gallery-info-col .formation-title {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: var(--color-titles);
+}
+
+.gallery-info-col .gallery-caption {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: #32302F;
+    text-align: left;
+    margin: 0;
+}
+
+.gallery-photos-col {
+    flex: 1;
+}
+
+.gallery-grid-new {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 colunas como na referência */
+    gap: 15px;
+    /* Espaçamento fino e geométrico */
+}
+
+.gallery-grid-new img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    /* Formato vertical editorial */
+    object-fit: cover;
+    display: block;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid-new img:hover {
+    transform: scale(1.02);
 }
 
 /* Mobile Responsiveness for Gallery */
 @media (max-width: 900px) {
-    .split-screen-container {
-        flex-direction: column-reverse;
-        /* Stack: Text (Right originally) on TOP? User said: "Primeiro aparece o Texto... Logo abaixo, o Grid" */
-        /* If Text is Right and Grid is Left:
-           Row-reverse? No.
-           Column: Left on top.
-           Column-reverse: Right on top.
-           YES.
-        */
-        height: auto;
-        min-height: auto;
+    .gallery-split-container {
+        flex-direction: column;
+        gap: 3rem;
     }
 
-    .split-col-right {
-        width: 100%;
-        height: auto;
+    .gallery-info-col {
         position: static;
-        padding: 4rem 2rem 2rem 2rem;
-        /* Top padding for spacing */
-    }
-
-    .gallery-title-text {
-        font-size: 1.8rem;
-    }
-
-    .split-col-left {
+        flex: none;
         width: 100%;
-        padding: 2rem;
-        padding-top: 0;
     }
 
-    .masonry-grid {
-        column-count: 2;
-        /* "grid de 2 colunas, o que ficar mais harmônico" - 2 is good. */
-    }
-}
-
-@media (max-width: 480px) {
-    .masonry-grid {
-        column-count: 1;
-        /* "uma abaixo da outra" option for very small screens */
+    .gallery-grid-new {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colunas no mobile */
     }
 }
 
