@@ -2079,77 +2079,139 @@ nav a.active {
     align-items: center;
 }
 
-/* --- ABOUT PAGE WRAPPER (Standardized) --- */
-.about-page-wrapper {
-    padding: 6rem 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+/* --- ABOUT PAGE REDESIGN (Editorial Revision) --- */
 
-.about-title {
-    color: #583722;
-    /* Dark Cocoa */
-    /* Ensure other properties match if needed, but color is the request */
+.about-page-wrapper {
+    padding: 12rem 20vw 0;
+    /* Margem editorial 20vw */
+    max-width: 100%;
+    /* Ocupa a largura total com padding */
+    margin: 0;
+    min-height: auto;
 }
 
 .about-container {
     display: flex;
-    gap: 4rem;
+    flex-direction: row;
+    gap: 8rem;
+    /* Espaçamento generoso entre colunas */
     align-items: flex-start;
 }
 
-@media (max-width: 900px) {
-    .about-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* --- ABOUT PAGE REDESIGN (Block 1 - Shinto Style) --- */
-
-.about-image-col {
-    flex: 0 0 55%;
-    /* Wider image column */
-    max-width: 55%;
-}
-
-.about-image-col img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
 .about-text-col {
-    flex: 1;
+    flex: 0 1 550px;
+    /* Largura limitada para leitura */
     display: flex;
     flex-direction: column;
 }
 
 .about-title {
-    margin-top: 0;
-    /* Align with top of image */
-    line-height: 1.1;
-    margin-bottom: 2rem;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 1.6rem;
-    /* Small editorial size */
-    color: #583722;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--color-titles);
+    margin-top: 0;
+    margin-bottom: 4rem;
+    letter-spacing: 1px;
 }
 
-.about-text-content {
-    margin-top: 15rem;
-    /* Restored "Shinto" offset */
+.about-text-content p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    /* Texto leve conforme solicitado */
+    color: var(--text-main);
+    margin-bottom: 2.5rem;
+    /* Mais espaço entre parágrafos */
 }
 
+/* Coluna da Direita (Foto) */
+.about-image-col {
+    flex: 1;
+    margin-top: 10rem;
+    /* Assimetria: Começa mais para baixo */
+}
+
+.about-image-col img {
+    width: 100%;
+    max-width: 450px;
+    /* Tamanho controlado */
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Elemento Manuscrito */
+.handwritten-note {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 2.2rem;
+    color: #9c7b65;
+    /* Cocoa suave */
+    line-height: 1.1;
+    transform: rotate(-3deg);
+    margin-top: 2rem;
+    margin-left: 10%;
+    /* Deslocado para parecer nota de margem */
+    display: block;
+    width: fit-content;
+}
+
+/* Fechamento Simpático (Poltrona) */
+.about-footer-illustration {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 8rem 0 12rem;
+}
+
+.about-signature-img {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    border: none;
+    box-shadow: none;
+}
+
+/* Responsividade Mobile */
 @media (max-width: 900px) {
-    .about-image-col {
-        flex: 0 0 100%;
+    .about-page-wrapper {
+        padding: 8rem 24px 0;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .about-text-col {
+        flex: 1;
         max-width: 100%;
     }
 
-    .about-text-content {
-        margin-top: 2rem;
-        /* Reset on mobile */
+    .about-image-col {
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-image-col img {
+        max-width: 100%;
+    }
+
+    .handwritten-note {
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .about-footer-illustration {
+        padding: 6rem 0 8rem;
+    }
+
+    .about-signature-img {
+        width: 200px;
     }
 }
 
