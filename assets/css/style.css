@@ -3178,7 +3178,124 @@ nav a.active {
     color: #32302F !important;
 }
 
-/* --- PROJECTS PAGE: Editorial Header & Slider (Final Studio Revision) --- */
+/* --- ABOUT PAGE REDESIGN (Editorial Revision) --- */
+
+.about-page-wrapper {
+    padding: 12rem 12% 0;
+    /* Margem editorial ajustada para 12% */
+    max-width: 100%;
+    margin: 0;
+    min-height: auto;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    gap: 8rem;
+    align-items: flex-start;
+}
+
+.about-text-col {
+    flex: 0 1 550px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--color-titles);
+    margin-top: 0;
+    margin-bottom: 4rem;
+    letter-spacing: 1px;
+}
+
+.about-text-content p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-main);
+    margin-bottom: 2.5rem;
+}
+
+.about-image-col {
+    flex: 1;
+    margin-top: 10rem;
+}
+
+.about-image-col img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.handwritten-note {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 2.2rem;
+    color: #9c7b65;
+    line-height: 1.1;
+    transform: rotate(-3deg);
+    margin-top: 2rem;
+    margin-left: 10%;
+    display: block;
+    width: fit-content;
+}
+
+.about-footer-illustration {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 8rem 0 12rem;
+}
+
+.about-signature-img {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    border: none;
+    box-shadow: none;
+}
+
+@media (max-width: 900px) {
+    .about-page-wrapper {
+        padding: 8rem 24px 0;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .about-text-col {
+        flex: 1;
+        max-width: 100%;
+    }
+
+    .about-image-col {
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .handwritten-note {
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .about-footer-illustration {
+        padding: 6rem 0 8rem;
+    }
+
+    .about-signature-img {
+        width: 200px;
+    }
+}
 
 .projects-editorial-wrapper {
     background-color: #FFFFFF;
@@ -3187,14 +3304,17 @@ nav a.active {
 
 .projects-editorial-header,
 .testimonials-slider-section {
-    padding: 0 20vw;
-    /* Simetria total: 20% em cada lado */
+    padding: 0 12%;
+    /* Simetria total: 12% em cada lado */
     width: 100%;
 }
 
 .projects-editorial-header {
     padding-top: 15rem;
     padding-bottom: 5rem;
+    position: relative;
+    /* Garante que não herde o sticky do header global */
+    z-index: 10;
 }
 
 .projects-header-container {
