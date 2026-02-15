@@ -3116,27 +3116,31 @@ nav a.active {
     color: #32302F !important;
 }
 
-/* --- PROJECTS PAGE: Editorial Header (Split Layout) --- */
+/* --- PROJECTS PAGE: Editorial Header (Refined Asymmetric Layout) --- */
 
 .projects-editorial-header {
     background-color: #FFFFFF;
-    padding: 6rem 0 4rem;
+    padding: 15rem 0 8rem;
+    /* Respiro superior generoso */
     width: 100%;
 }
 
 .projects-header-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 40px;
+    padding-left: 20vw;
+    /* Recuo lateral de 20% da tela */
+    padding-right: 40px;
+    max-width: 100%;
+    /* Ocupa largura total para o respiro à direita */
+    margin: 0;
     display: flex;
-    justify-content: space-between;
-    gap: 80px;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 6rem;
+    /* Espaço entre texto e links */
 }
 
 .projects-intro-col {
-    flex: 1;
-    max-width: 500px;
+    max-width: 600px;
+    /* Trava de largura para o texto */
 }
 
 .projects-main-title {
@@ -3144,7 +3148,6 @@ nav a.active {
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 4px;
-    /* Editorial feel */
     text-transform: uppercase;
     color: var(--color-titles);
     margin-bottom: 2rem;
@@ -3158,13 +3161,14 @@ nav a.active {
 }
 
 .projects-nav-col {
-    flex: 0 0 auto;
-    text-align: right;
+    width: 100%;
+    /* No max-width here to allow right alignment to the edge */
     display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    align-self: flex-end;
-    /* Align to the bottom of the intro text line like in reference */
+    justify-content: flex-end;
+    /* Links alinhados à direita do container */
+    gap: 2.5rem;
+    padding-right: 20vw;
+    /* Compensa o peso visual para não colar na borda direita */
 }
 
 .projects-nav-item {
@@ -3191,17 +3195,27 @@ nav a.active {
 }
 
 @media (max-width: 900px) {
+    .projects-editorial-header {
+        padding: 8rem 0 4rem;
+    }
+
     .projects-header-container {
-        flex-direction: column;
+        padding: 0 24px;
+        /* Margem mobile fixa de 24px */
+        max-width: 100%;
         gap: 3rem;
-        padding: 0 40px;
+    }
+
+    .projects-intro-col {
+        max-width: 100%;
     }
 
     .projects-nav-col {
-        text-align: left;
-        align-self: flex-start;
+        justify-content: flex-start;
+        /* Alinhado à esquerda no mobile */
         flex-wrap: wrap;
         gap: 1.5rem;
+        padding-right: 0;
     }
 }
 
