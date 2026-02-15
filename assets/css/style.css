@@ -3116,9 +3116,93 @@ nav a.active {
     color: #32302F !important;
 }
 
-/* Spacing Adjustments */
+/* --- PROJECTS PAGE: Editorial Header (Split Layout) --- */
+
+.projects-editorial-header {
+    background-color: #FFFFFF;
+    padding: 6rem 0 4rem;
+    width: 100%;
+}
+
+.projects-header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.projects-intro-col {
+    flex: 1;
+    max-width: 500px;
+}
+
+.projects-main-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    /* Editorial feel */
+    text-transform: uppercase;
+    color: var(--color-titles);
+    margin-bottom: 2rem;
+}
+
+.projects-intro-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-main);
+}
+
+.projects-nav-col {
+    flex: 0 0 auto;
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-self: flex-end;
+    /* Align to the bottom of the intro text line like in reference */
+}
+
+.projects-nav-item {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-main);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+    padding-bottom: 2px;
+}
+
+.projects-nav-item:hover {
+    color: var(--color-accent);
+    border-bottom: 1px solid var(--color-accent);
+}
+
+/* Specific Spacing for Projects Page */
 .projects-simple-header {
     margin-bottom: 8rem !important;
+}
+
+@media (max-width: 900px) {
+    .projects-header-container {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 0 40px;
+    }
+
+    .projects-nav-col {
+        text-align: left;
+        align-self: flex-start;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
 }
 
 .testimonials-section {
