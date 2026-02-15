@@ -3116,31 +3116,35 @@ nav a.active {
     color: #32302F !important;
 }
 
-/* --- PROJECTS PAGE: Editorial Header (Refined Asymmetric Layout) --- */
+/* --- PROJECTS PAGE: Editorial Header & Slider (Refined Layout) --- */
 
-.projects-editorial-header {
+.projects-editorial-wrapper {
     background-color: #FFFFFF;
-    padding: 15rem 0 8rem;
-    /* Respiro superior generoso */
+    width: 100%;
+    min-height: 100vh;
+}
+
+.projects-editorial-header,
+.testimonials-slider-section {
+    padding: 0 20vw;
+    /* Simetria total: 20% em cada lado */
     width: 100%;
 }
 
+.projects-editorial-header {
+    padding-top: 15rem;
+    /* Respiro superior generoso */
+    padding-bottom: 4rem;
+}
+
 .projects-header-container {
-    padding-left: 20vw;
-    /* Recuo lateral de 20% da tela */
-    padding-right: 40px;
-    max-width: 100%;
-    /* Ocupa largura total para o respiro à direita */
-    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 6rem;
-    /* Espaço entre texto e links */
+    gap: 2rem;
 }
 
 .projects-intro-col {
     max-width: 600px;
-    /* Trava de largura para o texto */
 }
 
 .projects-main-title {
@@ -3161,13 +3165,11 @@ nav a.active {
 }
 
 .projects-nav-col {
-    width: 100%;
     display: flex;
     justify-content: flex-end;
-    /* Empurra os links para a extremidade direita */
+    /* Alinhado à direita no desktop */
     gap: 2.5rem;
-    padding-top: 4rem;
-    /* Um pouco mais de espaço vertical para separar do texto */
+    padding-top: 2rem;
 }
 
 .projects-nav-item {
@@ -3188,38 +3190,120 @@ nav a.active {
     border-bottom: 1px solid var(--color-accent);
 }
 
-/* Specific Spacing for Projects Page */
-.projects-simple-header {
-    margin-bottom: 8rem !important;
+/* --- TESTIMONIALS SLIDER --- */
+.testimonials-slider-section {
+    padding-top: 8rem;
+    padding-bottom: 10rem;
 }
 
+.testimonials-slider-container {
+    max-width: 600px;
+    /* Alinhado com a intro */
+}
+
+.testimonials-slider {
+    position: relative;
+    min-height: 200px;
+    margin-top: 3rem;
+}
+
+.testimonial-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.testimonial-slide.active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+}
+
+.testimonial-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-main);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-titles);
+}
+
+/* Slider Controls (Setas Finas) */
+.slider-controls {
+    display: flex;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.slider-arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-main);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.slider-arrow:hover {
+    color: var(--color-accent);
+}
+
+.slider-arrow svg {
+    display: block;
+}
+
+/* Divider Footer */
+.projects-footer-divider {
+    text-align: center;
+    padding-bottom: 8rem;
+}
+
+/* --- RESPONSIVIDADE MOBILE --- */
 @media (max-width: 900px) {
+
+    .projects-editorial-header,
+    .testimonials-slider-section {
+        padding: 0 24px;
+        /* Margem mobile 24px */
+    }
+
     .projects-editorial-header {
-        padding: 8rem 0 4rem;
+        padding-top: 8rem;
     }
 
     .projects-header-container {
-        padding: 0 24px;
-        /* Margem mobile fixa de 24px */
-        max-width: 100%;
         gap: 3rem;
-    }
-
-    .projects-intro-col {
-        max-width: 100%;
     }
 
     .projects-nav-col {
         justify-content: flex-start;
-        /* Alinhado à esquerda no mobile */
+        /* Empilhado naturalmente */
         flex-wrap: wrap;
         gap: 1.5rem;
-        padding-right: 0;
+        padding-top: 0;
     }
-}
 
-.testimonials-section {
-    margin-top: 3rem !important;
-    /* Reduzido para 3rem */
-    /* Increased bottom spacing */
+    .testimonials-slider-section {
+        padding-top: 4rem;
+        padding-bottom: 6rem;
+    }
+
+    .testimonials-slider-container {
+        max-width: 100%;
+    }
 }

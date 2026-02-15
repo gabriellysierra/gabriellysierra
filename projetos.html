@@ -27,12 +27,11 @@
         </nav>
     </header>
 
-    <main>
-
-        <!-- NOVO CABEÇALHO EDITORIAL (Estilo Studio Diseños) -->
+    <main class="projects-editorial-wrapper">
+        <!-- CABEÇALHO EDITORIAL (Título, Texto e Menu) -->
         <header class="projects-editorial-header">
             <div class="projects-header-container">
-                <!-- Coluna Esquerda: Título e Intro -->
+                <!-- Conteúdo Intro -->
                 <div class="projects-intro-col">
                     <h1 class="projects-main-title">Projetos</h1>
                     <p class="projects-intro-text">
@@ -42,7 +41,7 @@
                     </p>
                 </div>
 
-                <!-- Coluna Direita: Navegação de Categorias -->
+                <!-- Menu de Navegação (Links) -->
                 <nav class="projects-nav-col">
                     <a href="projetos-leitura.html" class="projects-nav-item">leitura</a>
                     <a href="formacoes.html" class="projects-nav-item">formação</a>
@@ -52,16 +51,14 @@
             </div>
         </header>
 
+        <!-- SEÇÃO DE DEPOIMENTOS (Carrossel Minimalista) -->
+        <section class="testimonials-slider-section">
+            <div class="testimonials-slider-container">
+                <h2 class="projects-main-title">DEPOIMENTOS</h2>
 
-
-
-        <!-- SEÇÃO 5: DEPOIMENTOS (Full Width Background) -->
-        <section class="testimonials-section">
-            <div class="testimonials-container">
-                <h2 class="section-title">DEPOIMENTOS</h2>
-                <div class="testimonials-grid">
+                <div class="testimonials-slider">
                     <!-- Depoimento 1 -->
-                    <div class="testimonial-item">
+                    <div class="testimonial-slide active">
                         <p class="testimonial-text">
                             "Gabi, encontrar você com a equipe foi muito importante pra nós, além de conhecer melhor a
                             equipe do SIBiSC, conhecemos você e toda a dedicação em cada aula, sua paixão pelos livros,
@@ -70,7 +67,7 @@
                         <p class="testimonial-author">— Sônia, bibliotecária do SIBiSC</p>
                     </div>
                     <!-- Depoimento 2 -->
-                    <div class="testimonial-item">
+                    <div class="testimonial-slide">
                         <p class="testimonial-text">
                             "Gaby uma graça de pessoa, sabe como instigar as crianças em cada livro trabalhado.
                             Atividades como essas deveriam ser sempre proporcionadas aos alunos."
@@ -78,7 +75,7 @@
                         <p class="testimonial-author">— Carol, professora da rede municipal de educação</p>
                     </div>
                     <!-- Depoimento 3 -->
-                    <div class="testimonial-item">
+                    <div class="testimonial-slide">
                         <p class="testimonial-text">
                             "Esse curso foi uma grata surpresa, pois me mostrou o quanto cada mediação pode ser um
                             acontecimento feliz e especial para as crianças da biblioteca. Sempre achei que eu era uma
@@ -86,18 +83,34 @@
                             Sempre lancei mão da mediação. Mas também não imaginava o mundo de possibilidades que uma
                             mediação bem realizada poderia trazer."
                         </p>
-                        <p class="testimonial-author">— Carol, professora da rede municipal de educação</p>
+                        <p class="testimonial-author">— Carol, bibliotecária</p>
                     </div>
+                </div>
+
+                <!-- Navegação do Slider (Setas Finas) -->
+                <div class="slider-controls">
+                    <button class="slider-arrow prev" aria-label="Anterior">
+                        <svg width="40" height="20" viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 5L2 10L10 15" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2 10H38" stroke="currentColor" stroke-width="1" stroke-linecap="round" />
+                        </svg>
+                    </button>
+                    <button class="slider-arrow next" aria-label="Próximo">
+                        <svg width="40" height="20" viewBox="0 0 40 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 5L38 10L30 15" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M38 10H2" stroke="currentColor" stroke-width="1" stroke-linecap="round" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- Divider Icon (Salsichinha) - Moved after Testimonials -->
-        <div style="text-align: center; margin: 60px 0;">
-            <img src="assets/img/sobre-tentando-subir.png" alt="Divisor Poltrona e Salsichinha"
-                class="projects-divider-large" style="max-width: 250px; height: auto;">
+        <!-- Divider Icon (Salsichinha) -->
+        <div class="projects-footer-divider">
+            <img src="assets/img/sobre-tentando-subir.png" alt="Divisor" class="projects-divider-large">
         </div>
-
     </main>
 
 

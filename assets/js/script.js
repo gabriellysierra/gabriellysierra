@@ -84,4 +84,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    /* --- TESTIMONIALS SLIDER (Projects Page) --- */
+    const testimonialSlider = document.querySelector('.testimonials-slider');
+    if (testimonialSlider) {
+        const tSlides = testimonialSlider.querySelectorAll('.testimonial-slide');
+        const tPrevBtn = document.querySelector('.slider-arrow.prev');
+        const tNextBtn = document.querySelector('.slider-arrow.next');
+        let tCurrentSlide = 0;
+
+        function showTSlide(index) {
+            tSlides[tCurrentSlide].classList.remove('active');
+            tCurrentSlide = index;
+            if (tCurrentSlide >= tSlides.length) tCurrentSlide = 0;
+            if (tCurrentSlide < 0) tCurrentSlide = tSlides.length - 1;
+            tSlides[tCurrentSlide].classList.add('active');
+        }
+
+        if (tNextBtn) {
+            tNextBtn.addEventListener('click', () => {
+                showTSlide(tCurrentSlide + 1);
+            });
+        }
+
+        if (tPrevBtn) {
+            tPrevBtn.addEventListener('click', () => {
+                showTSlide(tCurrentSlide - 1);
+            });
+        }
+    }
 });
