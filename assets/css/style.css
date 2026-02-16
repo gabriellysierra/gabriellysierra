@@ -852,6 +852,7 @@ nav a.active {
 }
 
 .gallery-info-col .formation-tag {
+    color: #583722; font-family: 'Josefin Sans', sans-serif; font-size: 11px; letter-spacing: 2px; font-weight: 700; text-transform: uppercase;
     color: var(--color-accent);
     margin-bottom: 0.5rem;
 }
