@@ -2469,6 +2469,38 @@ nav a.active {
     /* Slide up effect */
 }
 
+.about-editorial-header {
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+    background-color: #F2F0ED;
+    padding-left: 5%;
+    position: relative !important;
+    /* Ensure it scrolls naturally like the Carta page */
+    top: auto !important;
+}
+
+.about-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+    max-width: 1400px;
+}
+
+.about-intro-col {
+    flex: 0 0 55%;
+}
+
+.about-editorial-header h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--color-titles);
+    margin: 0 0 4rem 0;
+}
+
 .modal-header {
     padding: 1.5rem 2rem;
     border-bottom: 1px solid #eee;
@@ -2660,9 +2692,8 @@ nav a.active {
 
 .btn-generic:hover {
     background-color: var(--color-accent);
+    /* Warm Clay */
 }
-
-
 
 /* --- MODAL UPDATES ROUND 2 --- */
 
@@ -3645,22 +3676,24 @@ nav a.active {
     padding-right: 5%;
 }
 
-.about-bio-text {
-    font-family: 'Source Sans Pro', sans-serif;
+.about-bio-text p {
+    font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
     font-size: 1.1rem;
-    line-height: 1.6;
-    color: #32302F;
-    margin-bottom: 1.5rem;
-    text-align: left;
+    line-height: 1.8;
+    color: var(--text-main);
+    margin-bottom: 2rem;
+    max-width: 700px;
+    /* Reading comfort column */
 }
 
 .about-signature {
+    display: block;
+    margin-top: 4rem;
     font-family: 'Reenie Beanie', cursive;
     font-size: 2rem;
-    color: #583722;
-    margin-top: 3rem;
-    display: block;
+    color: var(--color-accent);
     transform: rotate(-2deg);
+    transform-origin: left center;
 }
 
 /* Col 3: Photo (Asymmetric) */
@@ -3847,6 +3880,32 @@ nav a.active {
 
     .about-intro-col {
         width: 100%;
+    }
+}
+
+/* --- RESPONSIVIDADE MOBILE --- */
+@media (max-width: 900px) {
+    .about-photo-col {
+        order: -1;
+        width: 100%;
+
+        .about-editorial-header {
+            padding-top: 8rem;
+        }
+
+        .about-header-container {
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .about-intro-col {
+            width: 100%;
+        }
+
+        .about-signature {
+            transform: none;
+            margin-top: 3rem;
+        }
     }
 }
 
