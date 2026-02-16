@@ -4383,6 +4383,8 @@ nav a.active {
 .modal-content-wrapper {
     position: relative;
     /* Ensure close button is relative to this container */
+    border-radius: 0 !important;
+    /* Remove rounded corners */
 }
 
 #modal-close {
