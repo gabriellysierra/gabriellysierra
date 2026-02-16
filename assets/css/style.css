@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Reenie+Beanie&family=Source+Sans+Pro:wght@400;600&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Reenie+Beanie&family=Source+Sans+Pro:wght@400;600&display=swap');
 
 :root {
     --bg-body: #FFFFFF;
@@ -117,7 +117,7 @@ main {
     position: relative;
     overflow: hidden;
     margin-bottom: 0;
-    /* Colado no rodapé */
+    /* Colado no rodapÃ© */
 }
 
 .carousel-slide {
@@ -244,14 +244,14 @@ footer {
 
 .about-container {
     max-width: 1000px;
-    /* Mandatório: 1000px */
+    /* MandatÃ³rio: 1000px */
     width: 100%;
     margin: 0 auto;
     padding: 0 40px;
     /* Respiro lateral */
     display: flex;
     gap: 60px;
-    /* Espaço amplo solicitado (entre 50px e 60px) */
+    /* EspaÃ§o amplo solicitado (entre 50px e 60px) */
     align-items: flex-start;
     /* Top aligned */
 }
@@ -259,7 +259,7 @@ footer {
 /* Coluna Imagem */
 .about-image-col {
     flex: 0 0 350px;
-    /* Largura controlada para equilíbrio */
+    /* Largura controlada para equilÃ­brio */
     margin-top: 0;
     /* Removing top margin to align strictly with container, title alignment handled by line-height usually */
 }
@@ -270,7 +270,7 @@ footer {
     /* Safety for production */
     height: auto;
     display: block;
-    /* Manter proporção original, sem filtros artificiais se não solicitado, mas prompt diz 'fidelidade ao print' que era B&W? O texto diz 'perfil.jpg manter proporções'. Vou assumir grayscale pois é a identidade até agora. */
+    /* Manter proporÃ§Ã£o original, sem filtros artificiais se nÃ£o solicitado, mas prompt diz 'fidelidade ao print' que era B&W? O texto diz 'perfil.jpg manter proporÃ§Ãµes'. Vou assumir grayscale pois Ã© a identidade atÃ© agora. */
     filter: grayscale(100%);
 }
 
@@ -303,7 +303,7 @@ footer {
     margin-bottom: 2rem;
     text-align: left;
     max-width: 600px;
-    /* Mantém a leitura confortável */
+    /* MantÃ©m a leitura confortÃ¡vel */
 }
 
 /* Responsividade */
@@ -330,7 +330,7 @@ footer {
     /* Mobile Title Alignment */
     .about-title {
         text-align: left;
-        /* Ou center se preferir no mobile, mas left é mais seguro */
+        /* Ou center se preferir no mobile, mas left Ã© mais seguro */
     }
 
 
@@ -805,11 +805,11 @@ nav a.active {
     }
 }
 
-/* --- GALERIA MEMÓRIA (Reorganized Split-Screen) --- */
+/* --- GALERIA MEMÃ“RIA (Reorganized Split-Screen) --- */
 
 .gallery-page-wrapper {
     background-color: #F2F0ED;
-    /* Cor areia claro da referência */
+    /* Cor areia claro da referÃªncia */
     min-height: 100vh;
     padding: 6rem 0;
     width: 100%;
@@ -823,7 +823,7 @@ nav a.active {
     padding: 0 40px;
     display: flex;
     gap: 80px;
-    /* Espaço amplo entre texto e foto */
+    /* EspaÃ§o amplo entre texto e foto */
     align-items: flex-start;
 }
 
@@ -862,9 +862,9 @@ nav a.active {
 .gallery-grid-new {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* 4 colunas como na referência */
+    /* 4 colunas como na referÃªncia */
     gap: 15px;
-    /* Espaçamento fino e geométrico */
+    /* EspaÃ§amento fino e geomÃ©trico */
 }
 
 .gallery-grid-new img {
@@ -1822,14 +1822,14 @@ nav a.active {
     margin-top: 50px !important;
     /* Ajuste solicitado */
     margin-left: auto;
-    /* Alinha todo o bloco à direita */
+    /* Alinha todo o bloco Ã  direita */
     margin-right: 0;
 }
 
 .about-signature-img {
     display: block;
     width: 100%;
-    /* Ocupa 100% do bloco pai (que é 65%) */
+    /* Ocupa 100% do bloco pai (que Ã© 65%) */
     height: auto;
     /* Sem sombras, bordas ou fundo branco */
     box-shadow: none;
@@ -1846,7 +1846,7 @@ nav a.active {
     margin-top: 40px;
     /* Descolar da bio */
     margin-bottom: 20px;
-    /* Espaço para a poltrona */
+    /* EspaÃ§o para a poltrona */
 
     width: 100%;
     text-align: center;
@@ -1856,7 +1856,7 @@ nav a.active {
     color: #583722;
     /* Dark Cocoa */
     transform: rotate(-5deg);
-    /* Sentido anti-horário */
+    /* Sentido anti-horÃ¡rio */
     z-index: 10;
     line-height: 0.9;
     pointer-events: none;
@@ -1901,14 +1901,14 @@ nav a.active {
     /* Restaurado para zero (sem margem negativa) */
 }
 
-/* Projects Page Header Icon (Bibliomóvel) */
+/* Projects Page Header Icon (BibliomÃ³vel) */
 .projects-header-icon {
     display: block;
     width: 200px;
-    /* Mantém o tamanho (180-200px) */
+    /* MantÃ©m o tamanho (180-200px) */
     max-width: 100%;
     margin: 0 auto;
-    /* Centralização simples, margin-bottom controlada pelo container */
+    /* CentralizaÃ§Ã£o simples, margin-bottom controlada pelo container */
     height: auto;
     object-fit: contain;
     background: transparent;
@@ -1940,7 +1940,7 @@ nav a.active {
 /* 404 Error Page Styles */
 .error-page-wrapper {
     min-height: 60vh;
-    /* Garante que o footer fique lá embaixo em telas grandes */
+    /* Garante que o footer fique lÃ¡ embaixo em telas grandes */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1975,11 +1975,11 @@ nav a.active {
 .error-message {
     font-family: 'Reenie Beanie', cursive;
     font-size: 2.2rem;
-    /* Legível e estilo bilhete */
+    /* LegÃ­vel e estilo bilhete */
     color: #583722;
     margin: 0 0 40px 0;
     transform: rotate(-2deg);
-    /* Leve inclinação para charme */
+    /* Leve inclinaÃ§Ã£o para charme */
 }
 
 .error-btn-link {
@@ -2094,7 +2094,7 @@ nav a.active {
     display: flex;
     flex-direction: row;
     gap: 8rem;
-    /* Espaçamento generoso entre colunas */
+    /* EspaÃ§amento generoso entre colunas */
     align-items: flex-start;
 }
 
@@ -2123,14 +2123,14 @@ nav a.active {
     /* Texto leve conforme solicitado */
     color: var(--text-main);
     margin-bottom: 2.5rem;
-    /* Mais espaço entre parágrafos */
+    /* Mais espaÃ§o entre parÃ¡grafos */
 }
 
 /* Coluna da Direita (Foto) */
 .about-image-col {
     flex: 1;
     margin-top: 10rem;
-    /* Assimetria: Começa mais para baixo */
+    /* Assimetria: ComeÃ§a mais para baixo */
 }
 
 .about-image-col img {
@@ -2157,7 +2157,7 @@ nav a.active {
     width: fit-content;
 }
 
-/* Fechamento Simpático (Poltrona) */
+/* Fechamento SimpÃ¡tico (Poltrona) */
 .about-footer-illustration {
     width: 100%;
     display: flex;
@@ -2216,7 +2216,7 @@ nav a.active {
 }
 
 
-/* --- ATELIÊ PAGE STYLES --- */
+/* --- ATELIÃŠ PAGE STYLES --- */
 .atelie-page-wrapper {
     padding: 6rem 5%;
     max-width: 1200px;
@@ -2391,7 +2391,7 @@ nav a.active {
     }
 }
 
-/* --- ATELIÊ TEXT COLUMNS REFACTOR --- */
+/* --- ATELIÃŠ TEXT COLUMNS REFACTOR --- */
 .atelie-text-columns {
     display: flex;
     justify-content: center;
@@ -3194,7 +3194,7 @@ nav a.active {
     gap: 8rem;
     align-items: flex-start;
     width: 100%;
-    /* Consistência com projetos */
+    /* ConsistÃªncia com projetos */
 }
 
 .about-text-col {
@@ -3225,7 +3225,7 @@ nav a.active {
 .about-image-col {
     flex: 1;
     margin-top: 15rem;
-    /* Assimetria chique: Foto começa bem abaixo do título */
+    /* Assimetria chique: Foto comeÃ§a bem abaixo do tÃ­tulo */
 }
 
 .about-image-col img {
@@ -3246,7 +3246,7 @@ nav a.active {
     margin-top: 40px;
     /* Respiro do texto principal */
     margin-left: 0;
-    /* Alinhado à esquerda seguindo a bio */
+    /* Alinhado Ã  esquerda seguindo a bio */
     display: block;
     width: fit-content;
 }
@@ -3327,7 +3327,7 @@ nav a.active {
     align-items: flex-end;
     gap: 4rem;
     width: 100%;
-    /* Garante que ocupe todo o espaço entre as margens de 5% */
+    /* Garante que ocupe todo o espaÃ§o entre as margens de 5% */
 }
 
 .projects-intro-col {
@@ -3354,7 +3354,7 @@ nav a.active {
 .projects-nav-col {
     display: flex;
     flex-direction: row;
-    /* Horizontal como na referência */
+    /* Horizontal como na referÃªncia */
     gap: 3rem;
     padding-bottom: 0.5rem;
     /* Ajuste fino de base */
@@ -3384,7 +3384,7 @@ nav a.active {
 .testimonials-slider-section {
     padding-top: 5rem;
     padding-bottom: 5rem;
-    /* Padding equilibrado, centralização via flexbox */
+    /* Padding equilibrado, centralizaÃ§Ã£o via flexbox */
 }
 
 .testimonials-slider-container {
@@ -3396,7 +3396,7 @@ nav a.active {
 .testimonials-label {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 11px;
-    /* Rótulo técnico e discreto */
+    /* RÃ³tulo tÃ©cnico e discreto */
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -3445,12 +3445,12 @@ nav a.active {
     color: var(--color-titles);
 }
 
-/* Slider Controls (Setas Menores e Próximas) */
+/* Slider Controls (Setas Menores e PrÃ³ximas) */
 .slider-controls {
     display: flex;
     gap: 1.5rem;
     margin-top: 2rem;
-    /* Espaço aumentado conforme solicitado */
+    /* EspaÃ§o aumentado conforme solicitado */
     justify-content: center;
     /* Setas centralizadas */
 }
@@ -3519,7 +3519,7 @@ nav a.active {
 }/* Test write access */
 
 /* --- GOLDEN RULE: GLOBAL MARGIN STANDARDIZATION (FINAL OVERRIDE) --- */
-/* Padroniza��o: 15rem topo, 5% laterais para consist�ncia com Projetos/Sobre */
+/* Padronização: 15rem topo, 5% laterais para consistência com Projetos/Sobre */
 
 .texts-page-wrapper,
 .contact-centered-wrapper,
@@ -3548,114 +3548,185 @@ nav a.active {
     }
 }
 
-/* --- READING PROJECTS REDESIGN (Sticky Zig-Zag) --- */
+
+/* --- READING PROJECTS REDESIGN (Hybrid: Editorial & Minimalist) --- */
 
 .reading-projects-wrapper {
     background-color: #FFFFFF;
     width: 100%;
     margin: 0;
-    padding: 0; /* Margins handled by global rule where applicable, or inner containers */
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll from full-width elements */
 }
 
 .reading-header {
     text-align: center;
-    padding: 6rem 5% 4rem;
+    padding: 8rem 5% 6rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Reusing .projects-main-title for consistency, but ensuring specific overrides if needed */
 .reading-header .projects-main-title {
     margin-bottom: 0;
+    font-weight: 300; /* Lighter weight for elegance */
+    letter-spacing: 4px;
 }
 
+/* Hybrid Container: Full Width for rows */
 .reading-content-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 5% 8rem;
+    width: 100%;
+    max-width: none !important; /* Force override */
+    padding: 0 !important;      /* Force override */
     display: flex;
     flex-direction: column;
-    gap: 200px; /* Generous vertical spacing requested */
+    gap: 0; /* Removing gap, using padding in rows for continuous feel */
 }
 
 .reading-project-row {
     display: flex;
-    align-items: flex-start; /* Aligns top for sticky to work */
+    align-items: stretch; /* Stretch to allow sticky constraint */
     justify-content: space-between;
-    gap: 80px;
+    width: 100%;
+    min-height: 100vh; /* Each project claims full screen height importance */
     position: relative;
+    padding-bottom: 15rem; /* Space between projects */
 }
 
 .reading-project-row.reversed {
     flex-direction: row-reverse;
 }
 
+/* Image Column: Full Bleed (50% width, no padding) */
 .reading-col-img {
-    flex: 1;
-    position: sticky;
-    top: 120px; /* Sticky effect requested */
-    height: fit-content;
+    flex: 0 0 50%;
+    width: 50%;
+    position: relative; /* Context for sticky */
 }
 
+/* Sticky Image Logic */
 .reading-project-img {
     width: 100%;
-    height: auto;
+    height: 100vh; /* Full viewport height for impact */
+    object-fit: cover;
     display: block;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
 }
 
+/* Text Column: Constrained (50% width but with padding) */
 .reading-col-text {
-    flex: 1;
+    flex: 0 0 50%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 60vh; /* Ensures enough scroll for sticky effect */
+    padding: 10rem 8%; /* Generous internal padding */
+    box-sizing: border-box;
+    background-color: #FFFFFF;
 }
 
+/* Adjusting padding based on side to respect global visual axis */
+.reading-project-row:not(.reversed) .reading-col-text {
+    padding-right: 5%; /* Right margin constraint */
+    padding-left: 8%;
+}
+
+.reading-project-row.reversed .reading-col-text {
+    padding-left: 5%; /* Left margin constraint */
+    padding-right: 8%;
+}
+
+/* Typography Refinements */
 .reading-project-title {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 2rem;
-    color: var(--color-titles);
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
+    font-weight: 300; /* Light */
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .reading-project-desc {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     line-height: 1.8;
-    color: #32302F;
-    margin-bottom: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 4rem;
+    font-weight: 300;
+    max-width: 550px;
 }
 
+/* Technical Spec Style (Ficha Técnica) */
 .reading-target {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 0.95rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.85rem;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e5e5;
+    width: fit-content;
+}
+
+.reading-target strong {
+    font-weight: 600;
+    color: #000;
+}
+
+.learn-more-btn {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.learn-more-btn:hover {
     color: #666;
-    margin-bottom: 2rem;
-    display: block;
+    border-color: #666;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 900px) {
+    .reading-header {
+        padding: 6rem 5% 3rem;
+    }
+
     .reading-content-container {
-        gap: 100px;
+        padding: 0 !important;
     }
 
     .reading-project-row,
     .reading-project-row.reversed {
-        flex-direction: column; /* Stack: Image -> Text */
-        gap: 3rem;
+        flex-direction: column;
+        min-height: auto;
+        padding-bottom: 8rem;
     }
 
-    .reading-col-img {
-        position: static; /* Disable sticky */
+    .reading-col-img,
+    .reading-col-text {
+        flex: 0 0 100%;
         width: 100%;
+    }
+
+    .reading-project-img {
+        position: static;
+        height: 60vh; /* Smaller height on mobile */
     }
 
     .reading-col-text {
-        width: 100%;
-        min-height: auto;
+        padding: 4rem 5%;
     }
 }
 
