@@ -852,7 +852,12 @@ nav a.active {
 }
 
 .gallery-info-col .formation-tag {
-    color: #583722; font-family: 'Josefin Sans', sans-serif; font-size: 11px; letter-spacing: 2px; font-weight: 700; text-transform: uppercase;
+    color: #583722;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
     color: var(--color-accent);
     margin-bottom: 0.5rem;
 }
@@ -3318,6 +3323,8 @@ nav a.active {
     padding: 0 5%;
     /* Simetria de 5% global */
     width: 100%;
+    background-color: #F2F0ED;
+    /* Areia Background */
 }
 
 .testimonials-slider-section {
@@ -3334,6 +3341,8 @@ nav a.active {
     padding-bottom: 5rem;
     position: relative;
     z-index: 10;
+    background-color: #F2F0ED;
+    /* Force for safety */
 }
 
 .projects-header-container {
@@ -4202,6 +4211,7 @@ nav a.active {
     display: inline-block;
     margin-top: 2.2rem;
 }
+
 /* --- FORMATIONS MOSAIC REDESIGN --- */
 
 .formation-mosaic-wrapper {
@@ -4226,7 +4236,7 @@ nav a.active {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 6rem 8% 6rem 5%; 
+    padding: 6rem 8% 6rem 5%;
     box-sizing: border-box;
 }
 
@@ -4274,10 +4284,12 @@ nav a.active {
         flex-direction: column !important;
         min-height: auto;
     }
+
     .formation-mosaic-row.reversed {
         flex-direction: column !important;
     }
-    .formation-mosaic-content-col, 
+
+    .formation-mosaic-content-col,
     .formation-mosaic-gallery-col {
         flex: 0 0 100%;
         padding: 4rem 5% !important;
