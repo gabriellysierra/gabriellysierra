@@ -3193,6 +3193,8 @@ nav a.active {
     flex-direction: row;
     gap: 8rem;
     align-items: flex-start;
+    width: 100%;
+    /* Consistência com projetos */
 }
 
 .about-text-col {
@@ -3305,18 +3307,18 @@ nav a.active {
     padding-top: 15rem;
     padding-bottom: 5rem;
     position: relative;
-    /* Garante que não herde o sticky do header global */
     z-index: 10;
 }
 
 .projects-header-container {
     display: flex;
     flex-direction: row;
-    /* Texto e Links lado a lado */
     justify-content: space-between;
+    /* Empurra links para a extrema direita */
     align-items: flex-end;
-    /* Links alinhados com a base do parágrafo */
     gap: 4rem;
+    width: 100%;
+    /* Garante que ocupe todo o espaço entre as margens de 5% */
 }
 
 .projects-intro-col {
