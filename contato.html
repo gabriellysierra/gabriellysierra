@@ -7,7 +7,7 @@
     <title>Contato | GABRIELLY SIERRA</title>
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=26">
+    <link rel="stylesheet" href="assets/css/style.css?v=27">
 </head>
 
 <body class="body-contact">
@@ -26,62 +26,53 @@
         </nav>
     </header>
 
-    <main>
-        <div class="contact-centered-wrapper">
-            <div class="contact-content">
-                <h1 class="contact-title">Vamos conversar?</h1>
-                <p class="contact-intro"
-                    style="text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    Tem um projeto em mente ou quer levar uma formação para sua instituição? Preencha o formulário ou
-                    envie um e-mail.
+    <main class="contact-split-section">
+        <div class="contact-split-container">
+            <!-- Left Column: Info -->
+            <div class="contact-info-col">
+                <h1 class="projects-main-title">Vamos conversar?</h1>
+                <p class="projects-intro-text">
+                    Tem um projeto em mente ou quer levar uma formação para sua instituição?<br>
+                    Preencha o formulário ou envie um e-mail.
                 </p>
-
-                <div class="contact-info-block">
-                    <div class="contact-link-wrapper">
-                        <i class="fa-regular fa-envelope" style="color: var(--color-titles); font-size: 1.2rem;"></i>
-                        <a href="mailto:contato@gabriellysierra.com.br"
-                            class="contact-link">contato@gabriellysierra.com.br</a>
-                    </div>
+                <div class="contact-email-block">
+                    <a href="mailto:contato@gabriellysierra.com.br"
+                        class="contact-link-minimal">contato@gabriellysierra.com.br</a>
                 </div>
+            </div>
 
+            <!-- Right Column: Form -->
+            <div class="contact-form-col">
                 <form id="contactForm" action="https://formspree.io/f/mlgnaknn" method="POST" class="minimal-form">
-                    <!-- Redirect to custom Thank You page after submission handled by JS now -->
                     <input type="hidden" name="_next" value="https://gabriellysierra.com.br/obrigado.html">
 
                     <div class="form-group">
                         <label for="name" class="minimal-label">Nome</label>
-                        <input type="text" id="name" name="name" class="minimal-input"
-                            placeholder="Como prefere ser chamado?" required>
+                        <input type="text" id="name" name="name" class="minimal-input" required>
                     </div>
 
                     <div class="form-group">
                         <label for="email" class="minimal-label">E-mail</label>
-                        <input type="email" id="email" name="email" class="minimal-input"
-                            placeholder="seuemail@exemplo.com" required>
+                        <input type="email" id="email" name="email" class="minimal-input" required>
                     </div>
 
                     <div class="form-group">
                         <label for="subject" class="minimal-label">Assunto</label>
-                        <input type="text" id="subject" name="subject" class="minimal-input"
-                            placeholder="Sobre o que vamos falar?" required>
+                        <input type="text" id="subject" name="subject" class="minimal-input" required>
                     </div>
 
                     <div class="form-group">
                         <label for="message" class="minimal-label">Mensagem</label>
-                        <textarea id="message" name="message" rows="4" class="minimal-input"
-                            placeholder="Escreva sua mensagem aqui..." required></textarea>
+                        <textarea id="message" name="message" rows="4" class="minimal-input" required></textarea>
                     </div>
 
-                    <div style="text-align: center;">
-                        <button type="submit" class="submit-btn" style="width: 100%;">Enviar Mensagem</button>
-                    </div>
+                    <button type="submit" class="submit-btn">ENVIAR MENSAGEM</button>
                 </form>
-
-                <!-- Narrative Illustration: Dormindo -->
-                <img src="assets/img/narrativa/contato-dormindo.png" alt="Ilustração narrativa"
-                    class="narrative-illustration">
             </div>
         </div>
+
+        <!-- Narrative Illustration: Dormindo -->
+        <img src="assets/img/narrativa/contato-dormindo.png" alt="Ilustração narrativa" class="narrative-illustration">
     </main>
 
     <footer>

@@ -4564,43 +4564,60 @@ nav a.active {
     background-color: #FFFFFF;
 }
 
-/* Container */
-.contact-centered-wrapper {
-    display: flex;
-    justify-content: center;
-    padding: 4rem 5%;
+/* --- CONTACT SPLIT LAYOUT --- */
+.contact-split-section {
     width: 100%;
-    background-color: transparent !important;
+    max-width: 1200px;
+    margin: 4rem auto 2rem;
+    padding: 0 5%;
 }
 
-.contact-content {
-    width: 100%;
-    max-width: 600px;
-    /* Optimal reading width */
-    text-align: center;
-    background-color: transparent !important;
+.contact-split-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    margin-bottom: 4rem;
 }
 
-/* Titles & Text */
-.contact-title {
+.contact-info-col {
+    padding-right: 2rem;
+}
+
+.contact-email-block {
+    margin-top: 2rem;
+}
+
+.contact-link-minimal {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 300;
-    /* Light */
+    font-size: 1.1rem;
     color: #583722;
-    /* Dark Cocoa */
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
 }
 
-.contact-intro {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 1.1rem;
-    color: #32302F;
-    margin-bottom: 3rem;
-    line-height: 1.6;
+.contact-link-minimal:hover {
+    color: #C58C71;
 }
+
+.contact-form-col {
+    padding-left: 2rem;
+}
+
+@media (max-width: 900px) {
+    .contact-split-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contact-info-col,
+    .contact-form-col {
+        padding: 0;
+    }
+}
+
 
 /* Contact Link (Email) - Clean update */
 .contact-link-wrapper {
