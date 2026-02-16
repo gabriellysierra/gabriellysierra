@@ -3652,28 +3652,37 @@ nav a.active {
 
 
 
-.about-title {
-    font-family: 'Josefin Sans', sans-serif !important;
-    font-size: 1.2rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 4px !important;
-    text-transform: uppercase !important;
-    color: #583722 !important;
-    /* Adjust if needed to match projects-main-title var */
-    margin-bottom: 2.5rem !important;
+
+/* --- ABOUT PAGE: Editorial Redesign --- */
+.about-editorial-header {
+    padding: 15rem 5% 5rem;
+    background-color: #F2F0ED;
+    /* Sand background */
+    width: 100%;
+    position: relative;
 }
 
-
-
-
-/* Col 1: Title */
-.about-col-title {
-    padding-right: 2rem;
+.about-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 5%;
+    width: 100%;
+    max-width: 1400px;
 }
 
-/* Col 2: Bio */
-.about-col-bio {
-    padding-right: 5%;
+.about-intro-col {
+    flex: 0 0 60%;
+}
+
+.about-editorial-header h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--color-titles);
+    margin: 0 0 4rem 0;
 }
 
 .about-bio-text p {
@@ -3683,7 +3692,7 @@ nav a.active {
     color: var(--text-main);
     margin-bottom: 2rem;
     max-width: 700px;
-    /* Reading comfort column */
+    /* Optimal reading width */
 }
 
 .about-signature {
@@ -3692,147 +3701,9 @@ nav a.active {
     font-family: 'Reenie Beanie', cursive;
     font-size: 2rem;
     color: var(--color-accent);
+    /* Warm Clay accent */
     transform: rotate(-2deg);
     transform-origin: left center;
-}
-
-/* Col 3: Photo (Asymmetric) */
-.about-col-photo {
-    /* Negative margin to pull it up near the nav, creating asymmetry */
-    margin-top: -6rem;
-    text-align: right;
-}
-
-.about-col-photo img {
-    width: 100%;
-    height: auto;
-    max-width: 400px;
-    /* Constraint if needed */
-    display: block;
-    margin-left: auto;
-    /* Align right in the column */
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 900px) {
-    .about-asymmetric-wrapper {
-        display: flex;
-        flex-direction: column;
-        padding-top: 8rem;
-    }
-
-    .about-col-photo {
-        order: 1;
-        margin-top: 0;
-        margin-bottom: 3rem;
-        width: 100%;
-        text-align: center;
-    }
-
-    .about-col-photo img {
-        margin: 0 auto;
-        max-width: 80%;
-    }
-
-    .about-col-title {
-        order: 2;
-        margin-bottom: 2rem;
-        padding-right: 0;
-        text-align: center;
-    }
-
-    .about-col-bio {
-        order: 3;
-        padding-right: 0;
-    }
-}
-
-
-
-
-.about-col-title {
-    padding-right: 2rem;
-}
-
-.about-col-bio {
-    padding-right: 5%;
-}
-
-.about-bio-text {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #32302F;
-    text-align: left;
-}
-
-.about-signature {
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 2rem;
-    color: #583722;
-    margin-top: 3rem;
-    display: block;
-}
-
-.about-col-photo {
-    text-align: right;
-}
-
-.about-col-photo img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-@media (max-width: 900px) {
-    .about-asymmetric-wrapper {
-        display: flex;
-        flex-direction: column;
-        padding-top: 6rem;
-    }
-
-    .about-col-photo {
-        order: 1;
-        margin-bottom: 2rem;
-    }
-
-    .about-col-title {
-        order: 2;
-        margin-bottom: 1.5rem;
-        text-align: center;
-    }
-
-    .about-col-bio {
-        order: 3;
-    }
-}
-
-.reading-dog-footer {
-    text-align: right;
-    margin-top: 50px;
-    padding-right: 5%;
-}
-
-/* --- ABOUT PAGE: Mirroring Projects Layout --- */
-.about-editorial-header {
-    padding: 15rem 5% 5rem;
-    background-color: #FFFFFF;
-    width: 100%;
-}
-
-.about-header-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    /* Photos usually align top of line */
-    gap: 5%;
-    width: 100%;
-}
-
-.about-intro-col {
-    flex: 0 0 60%;
-    max-width: 650px;
 }
 
 .about-photo-col {
@@ -3846,32 +3717,24 @@ nav a.active {
     max-width: 350px;
     display: block;
     filter: grayscale(100%);
-    /* Black and White as requested */
-}
-
-.about-bio-text {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.15rem;
-    line-height: 1.7;
-    color: var(--text-main);
-    margin-top: 2.5rem;
-}
-
-.about-bio-text p {
-    margin-bottom: 1.8rem;
+    /* B&W editorial style */
 }
 
 @media (max-width: 900px) {
+    .about-editorial-header {
+        padding-top: 8rem;
+    }
+
     .about-header-container {
         flex-direction: column;
-        padding-top: 8rem;
+        gap: 3rem;
     }
 
     .about-photo-col {
         order: -1;
+        /* Photo first on mobile */
         width: 100%;
         text-align: center;
-        margin-bottom: 3rem;
     }
 
     .about-photo-col img {
@@ -3881,31 +3744,10 @@ nav a.active {
     .about-intro-col {
         width: 100%;
     }
-}
 
-/* --- RESPONSIVIDADE MOBILE --- */
-@media (max-width: 900px) {
-    .about-photo-col {
-        order: -1;
-        width: 100%;
-
-        .about-editorial-header {
-            padding-top: 8rem;
-        }
-
-        .about-header-container {
-            flex-direction: column;
-            gap: 3rem;
-        }
-
-        .about-intro-col {
-            width: 100%;
-        }
-
-        .about-signature {
-            transform: none;
-            margin-top: 3rem;
-        }
+    .about-signature {
+        transform: none;
+        margin-top: 3rem;
     }
 }
 
