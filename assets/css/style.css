@@ -4688,3 +4688,36 @@ nav a.active {
     color: #C58C71;
     transform: translateX(-5px);
 }
+
+/* Horizontal Split Footer Strategy */
+.split-footer-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    /* Aligned with Projects margins */
+    margin: 4rem auto 2rem;
+    padding: 0 5%;
+}
+
+.split-footer-group .back-to-projects-wrapper {
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+.split-footer-group footer {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .split-footer-group {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+}
