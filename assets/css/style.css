@@ -59,10 +59,7 @@ h1 {
     color: var(--color-titles);
 }
 
-h2 {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
+h2 {-transform: none;
     letter-spacing: 2px;
     color: var(--color-titles);
 }
@@ -3630,14 +3627,7 @@ nav a.active {
     font-weight: 400;
 }
 
-.reading-target {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #583722;
-    margin-bottom: 2rem;
-    display: block;
+.reading-target {-size: 11px;-transform: none;-weight: 700;-top: 2rem;
 }
 
 .learn-more-btn-simple {
@@ -4097,6 +4087,7 @@ nav a.active {
         top: 30px;
     }
 }
+
 
 
 
