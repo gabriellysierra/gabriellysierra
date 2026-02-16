@@ -191,6 +191,7 @@ main {
 
 /* Footer */
 footer {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -211,6 +212,26 @@ footer {
     display: flex;
     gap: 1.5rem;
     margin-left: auto;
+}
+
+.footer-illustration {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.footer-dog {
+    height: 30px;
+    width: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-dog:hover {
+    opacity: 1;
 }
 
 .social-icons i {
