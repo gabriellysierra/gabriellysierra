@@ -1416,36 +1416,7 @@ nav a.active {
     max-width: 500px;
 }
 
-.contact-info-block {
-    margin-bottom: 3rem;
-}
 
-.contact-link-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-    position: relative;
-    width: fit-content;
-}
-
-.contact-link {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 1.2rem;
-    color: var(--color-titles);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.contact-link:hover {
-    text-decoration: underline;
-}
-
-.location-text {
-    font-family: 'Source Sans 3', sans-serif;
-    color: #666;
-    margin-top: 0.5rem;
-}
 
 /* Handwritten Note Arrow */
 .handwritten-arrow {
@@ -1463,78 +1434,7 @@ nav a.active {
     margin-right: 5px;
 }
 
-/* Minimalist Form Styles */
-.minimal-form {
-    max-width: 500px;
-    width: 100%;
-}
 
-.form-group {
-    margin-bottom: 2rem;
-    position: relative;
-}
-
-.minimal-input {
-    width: 100%;
-    border: none;
-    /* Optional: border: 1px solid #BDD7DE; to be very subtle */
-    background-color: #BDD7DE !important;
-    /* Powder Blue */
-    padding: 12px 15px;
-    /* Comfortable padding */
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 1rem;
-    color: #32302F;
-    /* Graphite Text */
-    outline: none;
-    transition: all 0.3s ease;
-    border-radius: 15px;
-    /* Soft rounded corners */
-}
-
-.minimal-input:focus {
-    box-shadow: 0 0 0 2px rgba(50, 48, 47, 0.1);
-    /* Subtle focus ring */
-    transform: scale(1.01);
-    /* Tiny lift */
-}
-
-.minimal-input::placeholder {
-    color: #32302F;
-    opacity: 1;
-    /* Full Graphite */
-}
-
-.minimal-label {
-    display: block;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    color: #583722;
-    margin-bottom: 0.5rem;
-    letter-spacing: 1px;
-}
-
-/* Submit Button Override */
-.submit-btn {
-    background-color: #C58C71;
-    /* Warm Clay */
-    color: #FFFFFF;
-    border: none;
-    padding: 1rem 2.5rem;
-    border-radius: 8px;
-    font-family: 'Source Sans 3', sans-serif;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    margin-top: 1rem;
-}
-
-.submit-btn:hover {
-    background-color: #583722;
-    /* Dark Cocoa */
-    transform: translateY(-2px);
-}
 
 /* Responsive */
 @media (max-width: 900px) {
@@ -2023,83 +1923,7 @@ nav a.active {
     background-color: #a06e57;
 }
 
-/* Contact Page Refactor (Centered Layout) */
-.contact-centered-wrapper {
-    width: 100%;
-    /* Standardized margins to match About/Projects */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 6rem 5%;
 
-    min-height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FFFFFF;
-}
-
-.contact-content {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-    /* Ensure all children center */
-}
-
-.contact-title {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 2.5rem;
-    color: #583722;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
-
-.contact-intro {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 1.1rem;
-    color: #32302F;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-}
-
-.narrative-illustration {
-    display: block;
-    margin: 40px auto 0 auto;
-    max-width: 200px;
-    height: auto;
-    object-fit: contain;
-}
-
-/* Force Center Alignment as requested */
-.contact-centered-wrapper .contact-title,
-.contact-centered-wrapper .contact-intro,
-.contact-centered-wrapper .contact-info-block {
-    text-align: center;
-}
-
-/* Center the form container */
-.contact-centered-wrapper .minimal-form {
-    text-align: left;
-    /* Keep inputs readable */
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-}
-
-/* Ensure labels and inputs stay left aligned for UX */
-.contact-centered-wrapper .minimal-label,
-.contact-centered-wrapper .minimal-input {
-    text-align: left;
-}
-
-/* Center the contact info icons/text */
-.contact-centered-wrapper .contact-link-wrapper,
-.contact-centered-wrapper .location-text {
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-}
 
 /* --- ABOUT PAGE REDESIGN (Editorial Revision) --- */
 
