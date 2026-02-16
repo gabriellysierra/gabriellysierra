@@ -3362,7 +3362,7 @@ nav a.active {
 
 .projects-nav-item {
     font-family: 'Josefin Sans', sans-serif;
-    font-size:   11px;
+    font-size: 11px;
     /* Menor e discreto */
     font-weight: 700;
     text-transform: uppercase;
@@ -3554,44 +3554,18 @@ nav a.active {
 
 
 
-    .reading-content-container {
-        padding: 0 !important;
-    }
-
-    .reading-project-row,
-    .reading-project-row.reversed {
-        flex-direction: column;
-        min-height: auto;
-        padding-bottom: 8rem;
-    }
-
-    .reading-col-img,
-    .reading-col-text {
-        flex: 0 0 100%;
-        width: 100%;
-    }
-
-    .reading-project-img {
-        position: static;
-        height: 60vh;
-        /* Smaller height on mobile */
-    }
-
-    .reading-col-text {
-        padding: 4rem 5%;
-    }
-}
 /* --- READING PROJECTS (Editorial 3-Col Grid) --- */
 
 .reading-editorial-wrapper {
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 15rem; /* Match Projects.html exactly */
-    padding-bottom: 10rem;
-    background-color: #FFFFFF;
-    padding-left: 5%;
-    padding-right: 5%;
-    box-sizing: border-box;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding-top: 15rem !important;
+    /* Match Projects.html exactly */
+    padding-bottom: 10rem !important;
+    background-color: #FFFFFF !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    box-sizing: border-box !important;
 }
 
 .reading-project-row {
@@ -3599,7 +3573,8 @@ nav a.active {
     /* REDESIGN: Text gets more space, Image gets less (20% 55% 25%) */
     grid-template-columns: 20% 55% 25%;
     width: 100%;
-    padding: 3rem 0; /* Reduced vertical spacing */
+    padding: 3rem 0;
+    /* Reduced vertical spacing */
     border-bottom: 0.5px solid #E5E5E5;
     align-items: flex-start;
 }
@@ -3609,7 +3584,7 @@ nav a.active {
 
 /* COL 1: Title (20%) */
 .reading-col-title {
-    padding-right: 2rem; 
+    padding-right: 2rem;
 }
 
 .reading-project-title {
@@ -3625,14 +3600,16 @@ nav a.active {
 
 /* COL 2: Description (40%) */
 .reading-col-desc {
-    padding: 0 8% 0 5%; /* Good lateral breathing */
+    padding: 0 8% 0 5%;
+    /* Good lateral breathing */
 }
 
 .reading-project-desc {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.05rem;
     line-height: 1.7;
-    color: #32302F; /* Graphite */
+    color: #32302F;
+    /* Graphite */
     margin-bottom: 2rem;
     font-weight: 400;
 }
@@ -3673,7 +3650,8 @@ nav a.active {
 .reading-project-img {
     width: 100%;
     height: auto;
-    aspect-ratio: 4/5; /* Vertical hint from user 'Vertical ou Quadrada' */
+    aspect-ratio: 4/5;
+    /* Vertical hint from user 'Vertical ou Quadrada' */
     object-fit: cover;
     display: block;
     /* Aligned to right? styling ensures it fills the 40% col, effectively 'right' */
@@ -3682,14 +3660,15 @@ nav a.active {
 /* Mobile Responsiveness */
 @media (max-width: 900px) {
     .reading-project-row {
-    display: grid;
-    /* REDESIGN: Text gets more space, Image gets less (20% 55% 25%) */
-    grid-template-columns: 20% 55% 25%;
-    width: 100%;
-    padding: 3rem 0; /* Reduced vertical spacing */
-    border-bottom: 0.5px solid #E5E5E5;
-    align-items: flex-start;
-}
+        display: grid;
+        /* REDESIGN: Text gets more space, Image gets less (20% 55% 25%) */
+        grid-template-columns: 20% 55% 25%;
+        width: 100%;
+        padding: 3rem 0;
+        /* Reduced vertical spacing */
+        border-bottom: 0.5px solid #E5E5E5;
+        align-items: flex-start;
+    }
 
     /* Mobile Order: Title -> Image -> Text */
     .reading-col-title {
@@ -3699,14 +3678,15 @@ nav a.active {
     }
 
     .reading-col-img {
-    width: 100%;
-    text-align: right;
-    padding-left: 2rem;
-}
+        width: 100%;
+        text-align: right;
+        padding-left: 2rem;
+    }
 
     .reading-col-desc {
         order: 3;
-        padding: 0; /* Remove extra padding on mobile */
+        padding: 0;
+        /* Remove extra padding on mobile */
     }
 }
 
@@ -3724,7 +3704,8 @@ nav a.active {
     font-weight: 700 !important;
     letter-spacing: 4px !important;
     text-transform: uppercase !important;
-    color: #583722 !important; /* Adjust if needed to match projects-main-title var */
+    color: #583722 !important;
+    /* Adjust if needed to match projects-main-title var */
     margin-bottom: 2.5rem !important;
 }
 
@@ -3762,16 +3743,18 @@ nav a.active {
 /* Col 3: Photo (Asymmetric) */
 .about-col-photo {
     /* Negative margin to pull it up near the nav, creating asymmetry */
-    margin-top: -6rem; 
+    margin-top: -6rem;
     text-align: right;
 }
 
 .about-col-photo img {
     width: 100%;
     height: auto;
-    max-width: 400px; /* Constraint if needed */
+    max-width: 400px;
+    /* Constraint if needed */
     display: block;
-    margin-left: auto; /* Align right in the column */
+    margin-left: auto;
+    /* Align right in the column */
 }
 
 /* Mobile Responsiveness */
@@ -3789,7 +3772,7 @@ nav a.active {
         width: 100%;
         text-align: center;
     }
-    
+
     .about-col-photo img {
         margin: 0 auto;
         max-width: 80%;
@@ -3814,7 +3797,8 @@ nav a.active {
     width: 100%;
     max-width: 100%;
     margin: 0;
-    padding-top: 8rem; /* Align just below nav */
+    padding-top: 8rem;
+    /* Align just below nav */
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 8rem;
@@ -3823,11 +3807,17 @@ nav a.active {
     /* Grid 20% | 45% | 35% */
     grid-template-columns: 20% 45% 35%;
     align-items: start;
-    gap: 0; 
+    gap: 0;
 }
 
-.about-col-title { padding-right: 2rem; }
-.about-col-bio { padding-right: 5%; }
+.about-col-title {
+    padding-right: 2rem;
+}
+
+.about-col-bio {
+    padding-right: 5%;
+}
+
 .about-bio-text {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.1rem;
@@ -3835,6 +3825,7 @@ nav a.active {
     color: #32302F;
     text-align: left;
 }
+
 .about-signature {
     font-family: 'Reenie Beanie', cursive;
     font-size: 2rem;
@@ -3842,7 +3833,11 @@ nav a.active {
     margin-top: 3rem;
     display: block;
 }
-.about-col-photo { text-align: right; }
+
+.about-col-photo {
+    text-align: right;
+}
+
 .about-col-photo img {
     width: 100%;
     height: auto;
@@ -3855,17 +3850,29 @@ nav a.active {
         flex-direction: column;
         padding-top: 6rem;
     }
-    .about-col-photo { order: 1; margin-bottom: 2rem; }
-    .about-col-title { order: 2; margin-bottom: 1.5rem; text-align: center; }
-    .about-col-bio { order: 3; }
+
+    .about-col-photo {
+        order: 1;
+        margin-bottom: 2rem;
+    }
+
+    .about-col-title {
+        order: 2;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .about-col-bio {
+        order: 3;
+    }
 }
 
 .reading-dog-footer {
     text-align: right;
     margin-top: 50px;
 }
+
 .reading-dog-footer img {
     max-width: 150px;
     height: auto;
 }
-
