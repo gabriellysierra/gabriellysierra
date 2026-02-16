@@ -3589,7 +3589,6 @@ nav a.active {
     width: 100%;
     padding: 3rem 0;
     /* Reduced vertical spacing */
-    border-bottom: 0.5px solid #E5E5E5;
     align-items: flex-start;
 }
 
