@@ -3547,3 +3547,115 @@ nav a.active {
         padding-right: 5% !important;
     }
 }
+
+/* --- READING PROJECTS REDESIGN (Sticky Zig-Zag) --- */
+
+.reading-projects-wrapper {
+    background-color: #FFFFFF;
+    width: 100%;
+    margin: 0;
+    padding: 0; /* Margins handled by global rule where applicable, or inner containers */
+}
+
+.reading-header {
+    text-align: center;
+    padding: 6rem 5% 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Reusing .projects-main-title for consistency, but ensuring specific overrides if needed */
+.reading-header .projects-main-title {
+    margin-bottom: 0;
+}
+
+.reading-content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5% 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 200px; /* Generous vertical spacing requested */
+}
+
+.reading-project-row {
+    display: flex;
+    align-items: flex-start; /* Aligns top for sticky to work */
+    justify-content: space-between;
+    gap: 80px;
+    position: relative;
+}
+
+.reading-project-row.reversed {
+    flex-direction: row-reverse;
+}
+
+.reading-col-img {
+    flex: 1;
+    position: sticky;
+    top: 120px; /* Sticky effect requested */
+    height: fit-content;
+}
+
+.reading-project-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.reading-col-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 60vh; /* Ensures enough scroll for sticky effect */
+}
+
+.reading-project-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+    color: var(--color-titles);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.reading-project-desc {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #32302F;
+    margin-bottom: 2rem;
+}
+
+.reading-target {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .reading-content-container {
+        gap: 100px;
+    }
+
+    .reading-project-row,
+    .reading-project-row.reversed {
+        flex-direction: column; /* Stack: Image -> Text */
+        gap: 3rem;
+    }
+
+    .reading-col-img {
+        position: static; /* Disable sticky */
+        width: 100%;
+    }
+
+    .reading-col-text {
+        width: 100%;
+        min-height: auto;
+    }
+}
+
