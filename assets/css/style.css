@@ -4851,6 +4851,17 @@ nav a.active {
     outline: none !important;
 }
 
+/* Fix for Chrome/Edge Autofill Blue Background */
+.minimal-input:-webkit-autofill,
+.minimal-input:-webkit-autofill:hover,
+.minimal-input:-webkit-autofill:focus,
+.minimal-input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #F2F0ED inset !important;
+    /* Matches Areia background */
+    -webkit-text-fill-color: #32302F !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
 .minimal-input::placeholder {
     color: #999;
     font-style: italic;
