@@ -4885,8 +4885,8 @@ nav a.active {
 .editorial-blockquote-box {
     background-color: rgba(189, 215, 222, 0.25);
     /* Light Powder Blue */
-    border-left: 3px solid #BD7DDE;
-    /* Slightly darker blue/accent edge */
+    border-left: none;
+    /* Removed accent edge */
     padding: 2.5rem;
     margin: 4rem 0;
     color: #32302F !important;
