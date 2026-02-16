@@ -4603,4 +4603,87 @@ nav a.active {
         background: transparent;
         box-shadow: none;
     }
-}
+
+    /* --- TEXTOS ARCHIVE REDESIGN (Editorial Grid) --- */
+
+    .text-archive-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 Columns for elegance */
+        column-gap: 5%;
+        row-gap: 4rem;
+        width: 100%;
+        margin-bottom: 5rem;
+    }
+
+    .text-archive-item {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        padding-top: 1.5rem;
+        border-top: 1px solid #E0E0E0;
+        /* Thin dividing line */
+        transition: all 0.3s ease;
+        position: relative;
+        group: hover;
+    }
+
+    .text-archive-item:hover {
+        border-top-color: #583722;
+        /* Dark Cocoa on hover */
+        transform: translateY(-5px);
+    }
+
+    .text-archive-tag {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #C58C71;
+        /* Warm Clay */
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 0.8rem;
+    }
+
+    .text-archive-title {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1.8rem;
+        line-height: 1.3;
+        color: #583722;
+        /* Dark Cocoa */
+        margin: 0 0 1.5rem 0;
+        font-weight: 400;
+        transition: color 0.3s;
+    }
+
+    .text-archive-item:hover .text-archive-title {
+        color: #C58C71;
+        /* Warm Clay on hover */
+    }
+
+    .text-archive-arrow {
+        margin-top: auto;
+        /* Push to bottom if needed */
+        font-size: 1.2rem;
+        color: #E0E0E0;
+        transition: all 0.3s;
+        align-self: flex-start;
+    }
+
+    .text-archive-item:hover .text-archive-arrow {
+        color: #583722;
+        transform: translateX(10px);
+    }
+
+    /* Responsiveness for Text Archive */
+    @media (max-width: 900px) {
+        .text-archive-grid {
+            grid-template-columns: 1fr;
+            /* Single column on mobile */
+            row-gap: 3rem;
+        }
+
+        .text-archive-title {
+            font-size: 1.5rem;
+        }
+    }
