@@ -3303,6 +3303,11 @@ nav a.active {
     width: 100%;
 }
 
+.testimonials-slider-section {
+    background-color: #BDD7DE;
+    /* Powder Blue conforme solicitado */
+}
+
 .projects-editorial-header {
     padding-top: 15rem;
     padding-bottom: 5rem;
@@ -3439,8 +3444,10 @@ nav a.active {
 .slider-controls {
     display: flex;
     gap: 1.5rem;
-    margin-top: 1.5rem;
-    /* Mais "grudado" ao texto */
+    margin-top: 2rem;
+    /* Espaço aumentado conforme solicitado */
+    justify-content: center;
+    /* Setas centralizadas */
 }
 
 .slider-arrow {
