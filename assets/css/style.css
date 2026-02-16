@@ -4000,6 +4000,7 @@ nav a.active {
 }
 
 .reading-split-image-col {
+    position: relative;
     flex: 0 0 50%;
     position: sticky;
     top: 0;
@@ -4019,12 +4020,24 @@ nav a.active {
     font-weight: 400;
     letter-spacing: 4px;
     text-transform: uppercase;
-    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
     pointer-events: none;
 }
 
 /* On reversed rows, the overlay title might need adjustment or stay left depending on preference. 
    Usually, it follows its parent (the image). */
+
+.reading-split-image-col::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 40%);
+    pointer-events: none;
+    z-index: 5;
+}
 
 .reading-split-image-col img {
     width: 100%;
@@ -4061,6 +4074,7 @@ nav a.active {
 
 @media (max-width: 991px) {
     .reading-split-image-col {
+    position: relative;
         position: relative;
         flex: 0 0 100%;
         height: 60vh;
@@ -4082,6 +4096,7 @@ nav a.active {
         top: 30px;
     }
 }
+
 
 
 
