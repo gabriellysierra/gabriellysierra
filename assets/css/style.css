@@ -4658,7 +4658,8 @@ nav a.active {
     color: #583722;
     /* Dark Cocoa */
     margin: 0 0 1.5rem 0;
-    font-weight: 400;
+    font-weight: 300;
+    /* Light 300 as requested */
     transition: color 0.3s;
 }
 
