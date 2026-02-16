@@ -4597,7 +4597,12 @@ nav a.active {
     }
 
     /* Adjust close button for mobile */
-}
+    #modal-close {
+        top: 15px;
+        right: 15px;
+        background: transparent;
+        box-shadow: none;
+    }
 }
 
 /* --- TEXTOS ARCHIVE REDESIGN (Editorial Grid) --- */
