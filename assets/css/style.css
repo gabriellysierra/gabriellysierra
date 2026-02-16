@@ -3934,3 +3934,34 @@ nav a.active {
     }
 }
 
+
+/* --- READING GOALS LISTS --- */
+.reading-goals-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.reading-goals-list li {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: #32302F;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.reading-goals-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: #583722;
+}
+
+.reading-project-example {
+    font-style: italic;
+    margin: 2rem 0 1rem;
+    color: #444;
+}
+
