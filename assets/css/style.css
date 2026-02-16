@@ -3635,10 +3635,7 @@ nav a.active {
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #666;
-    margin-bottom: 2rem;
-    display: block;
-}
+    color: #583722;}
 
 .learn-more-btn-simple {
     width: fit-content;
@@ -4097,6 +4094,7 @@ nav a.active {
         top: 30px;
     }
 }
+
 
 
 
