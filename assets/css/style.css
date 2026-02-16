@@ -3965,3 +3965,83 @@ nav a.active {
     color: #444;
 }
 
+
+/* --- STUDIO DISENOS PROTOTYPE --- */
+.reading-split-row {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    border-bottom: 1px solid #EEE;
+}
+
+.reading-split-image-col {
+    flex: 0 0 50%;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #F9F9F9;
+}
+
+.reading-project-overlay-title {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 10;
+    color: #FFFFFF;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+    pointer-events: none;
+}
+
+.reading-split-image-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reading-split-content-col {
+    flex: 0 0 50%;
+    padding: 10% 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reading-split-content-col.dark {
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+}
+
+.reading-split-content-col.dark h2,
+.reading-split-content-col.dark p,
+.reading-split-content-col.dark li {
+    color: #FFFFFF !important;
+}
+
+.reading-split-content-col.dark .reading-goals-list li::before {
+    color: #BDD7DE;
+}
+
+.reading-split-content-col.dark .learn-more-btn-simple {
+    color: #BDD7DE;
+    border-bottom-color: #BDD7DE;
+}
+
+@media (max-width: 991px) {
+    .reading-split-image-col {
+        position: relative;
+        flex: 0 0 100%;
+        height: 60vh;
+        top: 0;
+    }
+    .reading-split-content-col {
+        flex: 0 0 100%;
+        padding: 4rem 5%;
+    }
+}
+
