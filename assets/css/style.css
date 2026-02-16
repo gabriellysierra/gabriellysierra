@@ -945,9 +945,74 @@ nav a.active {
     }
 }
 
-/* --- FORMACOES PAGE STYLES --- */
+/* --- FORMACOES: Bleed Right Layout --- */
+.formation-bleed-container {
+    display: flex;
+    width: 100%;
+    padding: 0 0 0 5%;
+    /* 5% margin on left, 0 on right for bleed */
+    gap: 100px;
+    /* Requested respiro */
+    margin-bottom: 120px;
+    align-items: flex-start;
+}
 
-/* Dark Content Block */
+.formation-info-col {
+    flex: 0 0 350px;
+    /* Fixed width for text */
+    padding-top: 2rem;
+}
+
+.formation-photos-col {
+    flex: 1;
+    /* Fills remaining space to the right */
+}
+
+/* Typography Standards for Refinements */
+.standard-body-text {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #32302F;
+}
+
+.standard-section-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #583722;
+    /* Dark Cocoa */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.formation-main-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #583722;
+    /* Dark Cocoa */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .formation-bleed-container {
+        flex-direction: column;
+        padding-right: 5%;
+        gap: 3rem;
+    }
+
+    .formation-info-col {
+        flex: none;
+        width: 100%;
+    }
+}
+
 .dark-content-block {
     background-color: #583722;
     /* Dark Cocoa */
@@ -3063,9 +3128,10 @@ nav a.active {
 }
 
 .testimonials-slider-section {
-    background-color: #BDD7DE;
-    /* Powder Blue conforme solicitado */
-    min-height: 60vh;
+    background-color: #FFFFFF;
+    /* Clean white background */
+    min-height: 40vh;
+    /* Adjusted for better fit */
     display: flex;
     flex-direction: column;
     justify-content: center;
