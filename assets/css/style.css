@@ -3648,29 +3648,47 @@ nav a.active {
     color: #583722;
 }
 
-.reading-target {-transform: uppercase;}
+.reading-target {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #583722;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 0.8rem;
+    display: block;
+}
+
+.reading-target span {
+    text-transform: none;
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: #32302F;
+    display: block;
+    margin-top: 0.5rem;
+}
 }
 
 .learn-more-btn-simple {
     width: fit-content;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: #BDD7DE;
-    /* Powder Blue */
+    color: #583722;
     text-decoration: none;
-    border-bottom: 2px solid #BDD7DE;
-    /* Slightly thicker and Blue */
-    padding-bottom: 3px;
-    transition: all 0.3s;
+    border-bottom: 0.5px solid #583722;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
     font-weight: 600;
+    display: inline-block;
+    margin-top: 1rem;
 }
 
 .learn-more-btn-simple:hover {
-    opacity: 0.7;
-    border-bottom-color: #583722;
-    /* Dark Cocoa on hover for contrast? or stay blue */
+    color: #C58C71;
+    border-bottom-color: #C58C71;
 }
 
 /* COL 3: Image (40%) */
@@ -4124,7 +4142,19 @@ nav a.active {
 }
 
 .reading-project-case-box .learn-more-btn-simple {
-    color: #583722 !important;
-    border-bottom-color: #583722 !important;
+    width: fit-content;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #583722;
+    text-decoration: none;
+    border-bottom: 0.5px solid #583722;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 1rem;
 }
+
 
