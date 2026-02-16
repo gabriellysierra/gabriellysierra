@@ -4605,13 +4605,18 @@ nav a.active {
     }
 }
 
+/* Page-Specific Background (Textos) */
+.body-textos main {
+    background-color: #F2F0ED;
+    /* Cor Areia - Full Width */
+}
+
 /* --- TEXTOS MAGAZINE LIST REDESIGN (Option C) --- */
 
 .text-list-container {
     width: 100%;
     margin-bottom: 5rem;
-    background-color: #F2F0ED;
-    /* Cor Areia */
+    /* Background moved to main wrapper */
     box-sizing: border-box;
     /* Optional: Remove internal padding if we want full bleed lines */
     padding: 2rem 0;
