@@ -4832,11 +4832,12 @@ nav a.active {
 .article-header-container {
     display: flex;
     flex-direction: column;
+    max-width: 1200px;
+    margin-left: 0;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1.5rem;
     padding-left: 5%;
-    max-width: 100%;
 }
 
 .article-title-col {
@@ -4872,6 +4873,7 @@ nav a.active {
 
 .article-reading-column {
     max-width: 700px;
+    margin-left: 0;
 }
 
 .article-reading-column p {
@@ -4883,8 +4885,8 @@ nav a.active {
 }
 
 .editorial-blockquote-box {
-    background-color: rgba(189, 215, 222, 0.25);
-    /* Light Powder Blue */
+    background-color: #F2F0ED;
+    /* Areia - same as header */
     border-left: none;
     /* Removed accent edge */
     padding: 2.5rem;
