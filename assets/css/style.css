@@ -4570,6 +4570,7 @@ nav a.active {
     justify-content: center;
     padding: 4rem 5%;
     width: 100%;
+    background-color: transparent !important;
 }
 
 .contact-content {
@@ -4577,6 +4578,7 @@ nav a.active {
     max-width: 600px;
     /* Optimal reading width */
     text-align: center;
+    background-color: transparent !important;
 }
 
 /* Titles & Text */
@@ -4652,7 +4654,7 @@ nav a.active {
 
 .minimal-input {
     width: 100%;
-    background-color: transparent;
+    background-color: transparent !important;
     border: none;
     border-bottom: 1px solid #D0CDC9;
     /* Subtle underline */
@@ -4665,7 +4667,7 @@ nav a.active {
     box-shadow: none !important;
     /* Force remove any shadow */
     transition: border-color 0.3s ease;
-    border-radius: 0;
+    border-radius: 0 !important;
     /* Removing default radius */
 }
 
