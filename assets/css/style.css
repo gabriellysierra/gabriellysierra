@@ -3516,7 +3516,9 @@ nav a.active {
     .testimonials-slider-container {
         max-width: 100%;
     }
-}/* Test write access */
+}
+
+/* Test write access */
 
 /* --- GOLDEN RULE: GLOBAL MARGIN STANDARDIZATION (FINAL OVERRIDE) --- */
 /* Padronização: 15rem topo, 5% laterais para consistência com Projetos/Sobre */
@@ -3537,6 +3539,7 @@ nav a.active {
 
 /* Ajuste Responsivo (Mobile) */
 @media (max-width: 900px) {
+
     .texts-page-wrapper,
     .contact-centered-wrapper,
     .atelie-page-wrapper,
@@ -3556,7 +3559,8 @@ nav a.active {
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll from full-width elements */
+    overflow-x: hidden;
+    /* Prevent horizontal scroll from full-width elements */
 }
 
 .reading-header {
@@ -3568,28 +3572,35 @@ nav a.active {
 
 .reading-header .projects-main-title {
     margin-bottom: 0;
-    font-weight: 300; /* Lighter weight for elegance */
+    font-weight: 300;
+    /* Lighter weight for elegance */
     letter-spacing: 4px;
 }
 
 /* Hybrid Container: Full Width for rows */
 .reading-content-container {
     width: 100%;
-    max-width: none !important; /* Force override */
-    padding: 0 !important;      /* Force override */
+    max-width: none !important;
+    /* Force override */
+    padding: 0 !important;
+    /* Force override */
     display: flex;
     flex-direction: column;
-    gap: 0; /* Removing gap, using padding in rows for continuous feel */
+    gap: 0;
+    /* Removing gap, using padding in rows for continuous feel */
 }
 
 .reading-project-row {
     display: flex;
-    align-items: stretch; /* Stretch to allow sticky constraint */
+    align-items: stretch;
+    /* Stretch to allow sticky constraint */
     justify-content: space-between;
     width: 100%;
-    min-height: 100vh; /* Each project claims full screen height importance */
+    min-height: 100vh;
+    /* Each project claims full screen height importance */
     position: relative;
-    padding-bottom: 15rem; /* Space between projects */
+    padding-bottom: 15rem;
+    /* Space between projects */
 }
 
 .reading-project-row.reversed {
@@ -3600,17 +3611,22 @@ nav a.active {
 .reading-col-img {
     flex: 0 0 50%;
     width: 50%;
-    position: relative; /* Context for sticky */
+    position: relative;
+    /* Context for sticky */
 }
 
 /* Sticky Image Logic */
 .reading-project-img {
     width: 100%;
-    height: 100vh; /* Full viewport height for impact */
+    height: auto;
+    /* Let height be natural or max-height limited if needed */
+    max-height: 80vh;
+    /* Optional constraint to ensure it fits in viewport */
     object-fit: cover;
     display: block;
     position: sticky;
-    top: 0;
+    top: 100px;
+    /* User requested offset */
 }
 
 /* Text Column: Constrained (50% width but with padding) */
@@ -3620,41 +3636,49 @@ nav a.active {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10rem 8%; /* Generous internal padding */
+    padding: 10rem 8%;
+    /* Generous internal padding */
     box-sizing: border-box;
     background-color: #FFFFFF;
 }
 
 /* Adjusting padding based on side to respect global visual axis */
 .reading-project-row:not(.reversed) .reading-col-text {
-    padding-right: 5%; /* Right margin constraint */
+    padding-right: 5%;
+    /* Right margin constraint */
     padding-left: 8%;
 }
 
 .reading-project-row.reversed .reading-col-text {
-    padding-left: 5%; /* Left margin constraint */
+    padding-left: 5%;
+    /* Left margin constraint */
     padding-right: 8%;
 }
 
 /* Typography Refinements */
 .reading-project-title {
     font-family: 'Josefin Sans', sans-serif;
-    font-weight: 300; /* Light */
-    font-size: 2.5rem;
-    color: #1a1a1a;
-    margin-bottom: 2rem;
-    line-height: 1.1;
+    font-size: 1.2rem;
+    /* Match .projects-main-title */
+    font-weight: 700;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    color: var(--color-titles);
+    /* Match variable */
+    margin-bottom: 2.5rem;
+    line-height: 1.2;
 }
 
 .reading-project-desc {
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.15rem;
-    line-height: 1.8;
-    color: #4a4a4a;
+    font-size: 1.1rem;
+    /* Match .projects-intro-text */
+    line-height: 1.7;
+    color: var(--text-main);
+    /* Match variable */
     margin-bottom: 4rem;
-    font-weight: 300;
+    font-weight: 400;
+    /* Normal weight */
     max-width: 550px;
 }
 
@@ -3722,11 +3746,11 @@ nav a.active {
 
     .reading-project-img {
         position: static;
-        height: 60vh; /* Smaller height on mobile */
+        height: 60vh;
+        /* Smaller height on mobile */
     }
 
     .reading-col-text {
         padding: 4rem 5%;
     }
 }
-
