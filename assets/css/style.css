@@ -3645,15 +3645,20 @@ nav a.active {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    color: #583722;
+    color: #BDD7DE;
+    /* Powder Blue */
     text-decoration: none;
-    border-bottom: 1px solid #583722;
+    border-bottom: 2px solid #BDD7DE;
+    /* Slightly thicker and Blue */
     padding-bottom: 3px;
-    transition: opacity 0.3s;
+    transition: all 0.3s;
+    font-weight: 600;
 }
 
 .learn-more-btn-simple:hover {
     opacity: 0.7;
+    border-bottom-color: #583722;
+    /* Dark Cocoa on hover for contrast? or stay blue */
 }
 
 /* COL 3: Image (40%) */
@@ -4029,9 +4034,8 @@ nav a.active {
 
 .reading-split-content-col {
     flex: 0 0 50%;
+    background-color: #FFFFFF; /* Standardizing to White */
     padding: 10% 5%;
-    /* Strict 5% margin on sides in the split context? 
-                        Wait, 5% of the WHOLE screen is 10% of the HALF screen. */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -4053,25 +4057,7 @@ nav a.active {
     /* 10% of half screen = 5% of full screen */
 }
 
-.reading-split-content-col.dark {
-    background-color: #1A1A1A;
-    color: #FFFFFF;
-}
 
-.reading-split-content-col.dark h2,
-.reading-split-content-col.dark p,
-.reading-split-content-col.dark li {
-    color: #FFFFFF !important;
-}
-
-.reading-split-content-col.dark .reading-goals-list li::before {
-    color: #BDD7DE;
-}
-
-.reading-split-content-col.dark .learn-more-btn-simple {
-    color: #BDD7DE;
-    border-bottom-color: #BDD7DE;
-}
 
 @media (max-width: 991px) {
     .reading-split-image-col {
