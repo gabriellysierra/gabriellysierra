@@ -4606,9 +4606,15 @@ nav a.active {
 }
 
 /* Page-Specific Background (Textos) */
-.body-textos main {
+/* Page-Specific Background (Textos) */
+.body-textos {
     background-color: #F2F0ED;
     /* Cor Areia - Full Width */
+}
+
+.body-textos header {
+    background-color: #FFFFFF;
+    /* Keep header white */
 }
 
 /* --- TEXTOS MAGAZINE LIST REDESIGN (Option C) --- */
