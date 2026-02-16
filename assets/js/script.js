@@ -1,3 +1,14 @@
+// --- PRELOADER LOGIC ---
+window.addEventListener('load', function () {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        // We add a tiny delay to ensure a smooth transition even on fast connections
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+        }, 300);
+    }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.carousel-slide');
     const nextBtn = document.querySelector('.next');
