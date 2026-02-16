@@ -120,31 +120,35 @@ A oficina propôs aos participantes um percurso de investigação sobre a materi
 
         <!-- Shared Modal -->
         <div class="modal-overlay" id="project-modal">
-            <div class="modal-content-wrapper">
+            <div class="modal-content-wrapper editorial-modal">
                 <span class="close-modal" id="modal-close"><i class="fa-solid fa-xmark"></i></span>
 
-                <div class="modal-header">
-                    <!-- Title injected here if layout needs it separate, but usually in body -->
-                    <h2 class="modal-title-dynamic" id="modal-title-text"></h2>
-                </div>
+                <div class="modal-split-container">
+                    <!-- Left Column: Narrative (Fixed/Independent Scroll) -->
+                    <div class="modal-col-left">
+                        <div class="modal-header">
+                            <h2 class="modal-title-dynamic" id="modal-title-text"></h2>
+                            <div class="modal-meta-line"></div> <!-- Decorative or for Date/Loc -->
+                        </div>
 
-                <div class="modal-body">
+                        <div class="modal-desc-body">
+                            <div class="modal-desc" id="modal-description">
+                                <!-- Dynamic Text -->
+                            </div>
 
-                    <!-- Gallery Container -->
-                    <div class="modal-gallery" id="modal-gallery-container">
-                        <!-- Dynamic Images -->
+                            <!-- Embeds moved here to be part of the narrative flow -->
+                            <div class="modal-embeds-grid" id="modal-embeds-container" style="display: none;">
+                                <!-- Dynamic Embeds -->
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Description -->
-                    <div class="modal-desc" id="modal-description">
-                        <!-- Dynamic Text -->
+                    <!-- Right Column: Visuals (Scrollable Gallery) -->
+                    <div class="modal-col-right">
+                        <div class="modal-gallery" id="modal-gallery-container">
+                            <!-- Dynamic Images -->
+                        </div>
                     </div>
-
-                    <!-- New Visual Embeds Container (Replaces old Actions) -->
-                    <div class="modal-embeds-grid" id="modal-embeds-container" style="display: none;">
-                        <!-- Dynamic Embeds -->
-                    </div>
-
                 </div>
             </div>
         </div>
