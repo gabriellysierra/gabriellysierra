@@ -4836,7 +4836,10 @@ nav a.active {
     font-family: 'Source Sans 3', sans-serif;
     font-size: 1.1rem;
     color: #32302F;
-    outline: none;
+    outline: none !important;
+    /* Force remove blue outline */
+    box-shadow: none !important;
+    /* Force remove any shadow */
     transition: border-color 0.3s ease;
     border-radius: 0;
     /* Removing default radius */
@@ -4845,6 +4848,7 @@ nav a.active {
 .minimal-input:focus {
     border-bottom-color: #583722;
     /* Highlight focus */
+    outline: none !important;
 }
 
 .minimal-input::placeholder {
@@ -4856,21 +4860,29 @@ nav a.active {
 /* Submit Button */
 .submit-btn {
     background-color: transparent;
-    border: 1px solid #583722;
+    border: none;
+    /* No border as requested */
     color: #583722;
-    padding: 12px 40px;
+    padding: 12px 0;
+    /* Adjusted padding since no border */
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    /* Slightly larger */
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 1rem;
+    position: relative;
 }
 
 .submit-btn:hover {
-    background-color: #583722;
-    color: #FFFFFF;
+    background-color: transparent;
+    /* No bg change */
+    color: #C58C71;
+    /* Warm Clay on hover */
+    transform: translateY(-2px);
+    /* Subtle lift */
 }
 
 /* Narrative Image Overlay fix */
