@@ -19,7 +19,7 @@
 
 body {
     background-color: var(--bg-body);
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-weight: 400;
     color: var(--text-main);
     overflow-x: hidden;
@@ -312,7 +312,7 @@ footer {
 }
 
 .about-text-content p {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 1rem;
     line-height: 1.8;
     color: #32302F;
@@ -663,7 +663,7 @@ nav a.active {
 }
 
 .feature-desc {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 0.95rem;
     /* Reduced size */
     color: #32302F;
@@ -725,7 +725,7 @@ nav a.active {
 }
 
 .project-desc {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 0.95rem;
     color: #32302F;
     line-height: 1.6;
@@ -735,7 +735,7 @@ nav a.active {
 /* Saiba Mais Button - CORRECTED STYLE */
 .learn-more-btn {
     display: inline-block;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 0.9rem;
     font-weight: 600;
     color: #FFFFFF;
@@ -782,7 +782,7 @@ nav a.active {
 }
 
 .testimonial-text {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 0.95rem;
     font-style: italic;
     /* Italic */
@@ -792,7 +792,7 @@ nav a.active {
 }
 
 .testimonial-author {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 0.9rem;
     font-weight: 700;
     /* Bold */
@@ -991,7 +991,7 @@ nav a.active {
 }
 
 .formation-desc {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 2rem;
@@ -999,7 +999,7 @@ nav a.active {
 }
 
 .target-audience {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 0.95rem;
     margin-bottom: 2rem;
     display: block;
@@ -1191,7 +1191,7 @@ nav a.active {
 }
 
 .overlay-desc {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 1.2rem;
     margin-bottom: 2rem;
     line-height: 1.6;
@@ -1408,7 +1408,7 @@ nav a.active {
 }
 
 .contact-intro {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 1.1rem;
     color: #32302F;
     margin-bottom: 3rem;
@@ -1430,7 +1430,7 @@ nav a.active {
 }
 
 .contact-link {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 1.2rem;
     color: var(--color-titles);
     text-decoration: none;
@@ -1442,7 +1442,7 @@ nav a.active {
 }
 
 .location-text {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     color: #666;
     margin-top: 0.5rem;
 }
@@ -1482,7 +1482,7 @@ nav a.active {
     /* Powder Blue */
     padding: 12px 15px;
     /* Comfortable padding */
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 1rem;
     color: #32302F;
     /* Graphite Text */
@@ -1523,7 +1523,7 @@ nav a.active {
     border: none;
     padding: 1rem 2.5rem;
     border-radius: 8px;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
@@ -1712,7 +1712,7 @@ nav a.active {
 }
 
 .art-text-desc {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
     opacity: 0.9;
@@ -2010,7 +2010,7 @@ nav a.active {
     background-color: #C58C71;
     /* Warm Clay */
     color: #FFFFFF;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-weight: 600;
     text-decoration: none;
     border-radius: 5px;
@@ -2055,7 +2055,7 @@ nav a.active {
 }
 
 .contact-intro {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 1.1rem;
     color: #32302F;
     margin-bottom: 2rem;
@@ -2139,7 +2139,7 @@ nav a.active {
 }
 
 .about-text-content p {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 1.1rem;
     line-height: 1.8;
     /* Texto leve conforme solicitado */
@@ -2264,7 +2264,7 @@ nav a.active {
 }
 
 .atelie-subtitle {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 1.1rem;
     color: #32302F;
     line-height: 1.6;
@@ -2322,7 +2322,7 @@ nav a.active {
 }
 
 .atelie-card-subtitle {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
     color: #32302F;
@@ -2332,7 +2332,7 @@ nav a.active {
 }
 
 .atelie-card-desc {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 1rem;
     color: #32302F;
     line-height: 1.8;
@@ -2342,7 +2342,7 @@ nav a.active {
 
 /* Highlight for Para Quem */
 .atelie-target {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 1rem;
     color: #32302F;
     background-color: #faf6f3;
@@ -2367,7 +2367,7 @@ nav a.active {
     background-color: #C58C71;
     /* Warm Clay */
     color: #FFFFFF;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-weight: 600;
     text-decoration: none;
     padding: 1rem 2rem;
@@ -2457,7 +2457,7 @@ nav a.active {
 }
 
 .events-subtitle {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 1.5rem;
     color: var(--text-main);
     /* Graphite */
