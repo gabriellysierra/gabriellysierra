@@ -3666,7 +3666,9 @@ nav a.active {
 .reading-target span {
     text-transform: none;
     font-weight: 400;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.05rem;
+    line-height: 1.7;
     color: #32302F;
     display: block;
     margin-top: 0.5rem;
