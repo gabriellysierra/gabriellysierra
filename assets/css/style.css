@@ -59,7 +59,10 @@ h1 {
     color: var(--color-titles);
 }
 
-h2 {-transform: none;
+h2 {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: none;
     letter-spacing: 2px;
     color: var(--color-titles);
 }
@@ -3627,7 +3630,16 @@ nav a.active {
     font-weight: 400;
 }
 
-.reading-target {-size: 11px;-transform: none;-weight: 700;-top: 2rem;
+.reading-target {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 11px;
+    text-transform: none;
+    letter-spacing: 2px;
+    color: #583722;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: block;
 }
 
 .learn-more-btn-simple {
@@ -4087,6 +4099,7 @@ nav a.active {
         top: 30px;
     }
 }
+
 
 
 
