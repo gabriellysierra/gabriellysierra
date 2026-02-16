@@ -40,14 +40,25 @@ body {
 }
 
 /* Headings Configuration */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
+    color: var(--color-titles);
+}
+
+h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--color-titles);
+}
+
+h2 {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     color: var(--color-titles);
 }
 
@@ -3691,12 +3702,7 @@ nav a.active {
 }
 
 
-/* --- ABOUT PAGE REFINEMENTS --- */
-.about-page-wrapper {
-    padding-left: 5% !important;
-    padding-right: 5% !important;
-    box-sizing: border-box;
-}
+
 
 .about-title {
     font-family: 'Josefin Sans', sans-serif !important;
@@ -3792,23 +3798,7 @@ nav a.active {
 }
 
 
-/* --- ABOUT PAGE ASYMMETRIC GRID V2 --- */
-.about-asymmetric-wrapper {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding-top: 8rem;
-    /* Align just below nav */
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 8rem;
-    box-sizing: border-box;
-    display: grid;
-    /* Grid 20% | 45% | 35% */
-    grid-template-columns: 20% 45% 35%;
-    align-items: start;
-    gap: 0;
-}
+
 
 .about-col-title {
     padding-right: 2rem;
@@ -3876,3 +3866,71 @@ nav a.active {
     max-width: 150px;
     height: auto;
 }
+/* --- ABOUT PAGE: Mirroring Projects Layout --- */
+.about-editorial-header {
+    padding: 15rem 5% 5rem;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+.about-header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; /* Photos usually align top of line */
+    gap: 5%;
+    width: 100%;
+}
+
+.about-intro-col {
+    flex: 0 0 60%;
+    max-width: 650px;
+}
+
+.about-photo-col {
+    flex: 0 0 30%;
+    text-align: right;
+}
+
+.about-photo-col img {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    display: block;
+    filter: grayscale(100%); /* Black and White as requested */
+}
+
+.about-bio-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--text-main);
+    margin-top: 2.5rem;
+}
+
+.about-bio-text p {
+    margin-bottom: 1.8rem;
+}
+
+@media (max-width: 900px) {
+    .about-header-container {
+        flex-direction: column;
+        padding-top: 8rem;
+    }
+    
+    .about-photo-col {
+        order: -1;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    
+    .about-photo-col img {
+        margin: 0 auto;
+    }
+    
+    .about-intro-col {
+        width: 100%;
+    }
+}
+
