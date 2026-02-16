@@ -40,7 +40,12 @@ body {
 }
 
 /* Headings Configuration */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
     color: var(--color-titles);
@@ -3860,12 +3865,9 @@ nav a.active {
 .reading-dog-footer {
     text-align: right;
     margin-top: 50px;
+    padding-right: 5%;
 }
 
-.reading-dog-footer img {
-    max-width: 150px;
-    height: auto;
-}
 /* --- ABOUT PAGE: Mirroring Projects Layout --- */
 .about-editorial-header {
     padding: 15rem 5% 5rem;
@@ -3877,7 +3879,8 @@ nav a.active {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start; /* Photos usually align top of line */
+    align-items: flex-start;
+    /* Photos usually align top of line */
     gap: 5%;
     width: 100%;
 }
@@ -3897,7 +3900,8 @@ nav a.active {
     height: auto;
     max-width: 350px;
     display: block;
-    filter: grayscale(100%); /* Black and White as requested */
+    filter: grayscale(100%);
+    /* Black and White as requested */
 }
 
 .about-bio-text {
@@ -3917,18 +3921,18 @@ nav a.active {
         flex-direction: column;
         padding-top: 8rem;
     }
-    
+
     .about-photo-col {
         order: -1;
         width: 100%;
         text-align: center;
         margin-bottom: 3rem;
     }
-    
+
     .about-photo-col img {
         margin: 0 auto;
     }
-    
+
     .about-intro-col {
         width: 100%;
     }
@@ -3966,12 +3970,28 @@ nav a.active {
 }
 
 
-/* --- STUDIO DISENOS PROTOTYPE --- */
+/* --- STUDIO DISENOS: FULL-WIDTH ZIG-ZAG --- */
+.reading-editorial-wrapper {
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.reading-editorial-header {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 .reading-split-row {
     display: flex;
     flex-wrap: wrap;
     min-height: 100vh;
     border-bottom: 1px solid #EEE;
+    width: 100%;
+}
+
+.reading-split-row.reversed {
+    flex-direction: row-reverse;
 }
 
 .reading-split-image-col {
@@ -3985,7 +4005,7 @@ nav a.active {
 
 .reading-project-overlay-title {
     position: absolute;
-    top: 5%;
+    top: 50px;
     left: 5%;
     z-index: 10;
     color: #FFFFFF;
@@ -3994,9 +4014,12 @@ nav a.active {
     font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
-    text-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
     pointer-events: none;
 }
+
+/* On reversed rows, the overlay title might need adjustment or stay left depending on preference. 
+   Usually, it follows its parent (the image). */
 
 .reading-split-image-col img {
     width: 100%;
@@ -4006,10 +4029,28 @@ nav a.active {
 
 .reading-split-content-col {
     flex: 0 0 50%;
-    padding: 10% 8%;
+    padding: 10% 5%;
+    /* Strict 5% margin on sides in the split context? 
+                        Wait, 5% of the WHOLE screen is 10% of the HALF screen. */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Fine-tuning margins to align with site's 5% global padding */
+.reading-split-row:not(.reversed) .reading-split-content-col {
+    padding-left: 8%;
+    /* Inner space */
+    padding-right: 10%;
+    /* 10% of half screen = 5% of full screen */
+}
+
+.reading-split-row.reversed .reading-split-content-col {
+    padding-right: 8%;
+    /* Inner space */
+    padding-left: 10%;
+    /* 10% of half screen = 5% of full screen */
 }
 
 .reading-split-content-col.dark {
@@ -4039,9 +4080,19 @@ nav a.active {
         height: 60vh;
         top: 0;
     }
+
     .reading-split-content-col {
         flex: 0 0 100%;
-        padding: 4rem 5%;
+        padding: 4rem 5% !important;
+    }
+
+    .reading-split-row.reversed {
+        flex-direction: column;
+        /* Force normal order on mobile */
+    }
+
+    .reading-project-overlay-title {
+        font-size: 1.2rem;
+        top: 30px;
     }
 }
-
