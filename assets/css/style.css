@@ -3306,6 +3306,10 @@ nav a.active {
 .testimonials-slider-section {
     background-color: #BDD7DE;
     /* Powder Blue conforme solicitado */
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .projects-editorial-header {
@@ -3379,7 +3383,8 @@ nav a.active {
 /* --- TESTIMONIALS SLIDER --- */
 .testimonials-slider-section {
     padding-top: 5rem;
-    padding-bottom: 15rem;
+    padding-bottom: 5rem;
+    /* Padding equilibrado, centralização via flexbox */
 }
 
 .testimonials-slider-container {
