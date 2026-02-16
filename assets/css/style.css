@@ -3586,7 +3586,7 @@ nav a.active {
 .reading-editorial-wrapper {
     width: 100%;
     margin: 0 auto;
-    padding-top: 5rem;
+    padding-top: 15rem; /* Match Projects.html exactly */
     padding-bottom: 10rem;
     background-color: #FFFFFF;
     padding-left: 5%;
@@ -3596,11 +3596,11 @@ nav a.active {
 
 .reading-project-row {
     display: grid;
-    /* Grid 20% | 40% | 40% as requested */
-    grid-template-columns: 20% 40% 40%;
+    /* REDESIGN: Text gets more space, Image gets less (20% 55% 25%) */
+    grid-template-columns: 20% 55% 25%;
     width: 100%;
-    padding: 6rem 0; /* Vertical breathing room */
-    border-bottom: 0.5px solid #E5E5E5; /* Fine separator */
+    padding: 3rem 0; /* Reduced vertical spacing */
+    border-bottom: 0.5px solid #E5E5E5;
     align-items: flex-start;
 }
 
@@ -3667,6 +3667,7 @@ nav a.active {
 .reading-col-img {
     width: 100%;
     text-align: right;
+    padding-left: 2rem;
 }
 
 .reading-project-img {
@@ -3681,10 +3682,14 @@ nav a.active {
 /* Mobile Responsiveness */
 @media (max-width: 900px) {
     .reading-project-row {
-        grid-template-columns: 1fr; /* Stack */
-        padding: 4rem 0;
-        gap: 2rem;
-    }
+    display: grid;
+    /* REDESIGN: Text gets more space, Image gets less (20% 55% 25%) */
+    grid-template-columns: 20% 55% 25%;
+    width: 100%;
+    padding: 3rem 0; /* Reduced vertical spacing */
+    border-bottom: 0.5px solid #E5E5E5;
+    align-items: flex-start;
+}
 
     /* Mobile Order: Title -> Image -> Text */
     .reading-col-title {
@@ -3694,9 +3699,10 @@ nav a.active {
     }
 
     .reading-col-img {
-        order: 2;
-        margin-bottom: 1.5rem;
-    }
+    width: 100%;
+    text-align: right;
+    padding-left: 2rem;
+}
 
     .reading-col-desc {
         order: 3;
@@ -3723,22 +3729,7 @@ nav a.active {
 }
 
 
-/* --- ABOUT PAGE ASYMMETRIC GRID --- */
-.about-asymmetric-wrapper {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding-top: 15rem; /* Match Projects */
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 8rem;
-    box-sizing: border-box;
-    display: grid;
-    /* Grid 20% | 45% | 35% */
-    grid-template-columns: 20% 45% 35%;
-    align-items: start;
-    gap: 0; 
-}
+
 
 /* Col 1: Title */
 .about-col-title {
@@ -3815,5 +3806,66 @@ nav a.active {
         order: 3;
         padding-right: 0;
     }
+}
+
+
+/* --- ABOUT PAGE ASYMMETRIC GRID V2 --- */
+.about-asymmetric-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding-top: 8rem; /* Align just below nav */
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 8rem;
+    box-sizing: border-box;
+    display: grid;
+    /* Grid 20% | 45% | 35% */
+    grid-template-columns: 20% 45% 35%;
+    align-items: start;
+    gap: 0; 
+}
+
+.about-col-title { padding-right: 2rem; }
+.about-col-bio { padding-right: 5%; }
+.about-bio-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #32302F;
+    text-align: left;
+}
+.about-signature {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 2rem;
+    color: #583722;
+    margin-top: 3rem;
+    display: block;
+}
+.about-col-photo { text-align: right; }
+.about-col-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .about-asymmetric-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-top: 6rem;
+    }
+    .about-col-photo { order: 1; margin-bottom: 2rem; }
+    .about-col-title { order: 2; margin-bottom: 1.5rem; text-align: center; }
+    .about-col-bio { order: 3; }
+}
+
+.reading-dog-footer {
+    text-align: right;
+    margin-top: 50px;
+}
+.reading-dog-footer img {
+    max-width: 150px;
+    height: auto;
 }
 
