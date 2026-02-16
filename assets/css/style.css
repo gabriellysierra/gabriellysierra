@@ -4129,6 +4129,7 @@ nav a.active {
         top: 30px;
     }
 }
+
 /* Case Box (Roger Mello) */
 .reading-project-case-box {
     background-color: #BDD7DE;
@@ -4156,9 +4157,5 @@ nav a.active {
     transition: all 0.3s ease;
     font-weight: 600;
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: 2.2rem;
 }
-
-
-
-
