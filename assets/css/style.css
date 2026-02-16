@@ -3362,7 +3362,7 @@ nav a.active {
 
 .projects-nav-item {
     font-family: 'Josefin Sans', sans-serif;
-    font-size:  1.1rem;
+    font-size:   11px;
     /* Menor e discreto */
     font-weight: 700;
     text-transform: uppercase;
@@ -3586,9 +3586,12 @@ nav a.active {
 .reading-editorial-wrapper {
     width: 100%;
     margin: 0 auto;
-    padding-top: 5rem; /* Space after header */
+    padding-top: 5rem;
     padding-bottom: 10rem;
     background-color: #FFFFFF;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
 }
 
 .reading-project-row {
@@ -3610,14 +3613,14 @@ nav a.active {
 }
 
 .reading-project-title {
-    font-family: 'Playfair Display', serif; /* User Requested Serif */
-    font-weight: 500;
-    font-size: 1.5rem;
-    color: #583722; /* Marrom */
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #583722;
     margin: 0;
     line-height: 1.2;
-    text-transform: none; /* Serif titles usually look better normal/capitalized, not full uppercase */
-    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 /* COL 2: Description (40%) */
@@ -3717,5 +3720,100 @@ nav a.active {
     text-transform: uppercase !important;
     color: #583722 !important; /* Adjust if needed to match projects-main-title var */
     margin-bottom: 2.5rem !important;
+}
+
+
+/* --- ABOUT PAGE ASYMMETRIC GRID --- */
+.about-asymmetric-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding-top: 15rem; /* Match Projects */
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 8rem;
+    box-sizing: border-box;
+    display: grid;
+    /* Grid 20% | 45% | 35% */
+    grid-template-columns: 20% 45% 35%;
+    align-items: start;
+    gap: 0; 
+}
+
+/* Col 1: Title */
+.about-col-title {
+    padding-right: 2rem;
+}
+
+/* Col 2: Bio */
+.about-col-bio {
+    padding-right: 5%;
+}
+
+.about-bio-text {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #32302F;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.about-signature {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 2rem;
+    color: #583722;
+    margin-top: 3rem;
+    display: block;
+    transform: rotate(-2deg);
+}
+
+/* Col 3: Photo (Asymmetric) */
+.about-col-photo {
+    /* Negative margin to pull it up near the nav, creating asymmetry */
+    margin-top: -6rem; 
+    text-align: right;
+}
+
+.about-col-photo img {
+    width: 100%;
+    height: auto;
+    max-width: 400px; /* Constraint if needed */
+    display: block;
+    margin-left: auto; /* Align right in the column */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .about-asymmetric-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-top: 8rem;
+    }
+
+    .about-col-photo {
+        order: 1;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .about-col-photo img {
+        margin: 0 auto;
+        max-width: 80%;
+    }
+
+    .about-col-title {
+        order: 2;
+        margin-bottom: 2rem;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .about-col-bio {
+        order: 3;
+        padding-right: 0;
+    }
 }
 
