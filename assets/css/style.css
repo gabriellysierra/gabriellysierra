@@ -59,10 +59,7 @@ h1 {
     color: var(--color-titles);
 }
 
-h2 {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: none;
+h2 {-transform: uppercase;
     letter-spacing: 2px;
     color: var(--color-titles);
 }
@@ -3653,16 +3650,7 @@ nav a.active {
     color: #583722;
 }
 
-.reading-target {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 11px;
-    text-transform: none;
-    letter-spacing: 2px;
-    color: #583722;
-    font-weight: 700;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    display: block;
+.reading-target {-transform: uppercase;}
 }
 
 .learn-more-btn-simple {
@@ -4122,4 +4110,22 @@ nav a.active {
         font-size: 1.2rem;
         top: 30px;
     }
+}
+/* Case Box (Roger Mello) */
+.reading-project-case-box {
+    background-color: #BDD7DE;
+    padding: 2.5rem;
+    border-radius: 12px;
+    margin: 3rem 0;
+}
+
+.reading-project-case-box .reading-project-example {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #32302F;
+}
+
+.reading-project-case-box .learn-more-btn-simple {
+    color: #583722 !important;
+    border-bottom-color: #583722 !important;
 }
