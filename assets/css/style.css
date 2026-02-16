@@ -4782,17 +4782,17 @@ nav a.active {
     align-items: center;
     gap: 10px;
     margin-bottom: 3rem;
-    padding: 10px 20px;
-    border: 1px solid #D0CDC9;
-    /* Subtle border */
-    border-radius: 50px;
-    /* Pill shape */
+    padding: 0;
+    /* Removed padding */
+    border: none;
+    /* Removed border */
+    background-color: transparent;
     transition: all 0.3s ease;
 }
 
 .contact-link-wrapper:hover {
-    border-color: #583722;
-    background-color: #FFFFFF;
+    transform: translateY(-2px);
+    /* Subtle lift instead of border/bg */
 }
 
 .contact-link {
