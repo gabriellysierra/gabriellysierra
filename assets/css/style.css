@@ -216,7 +216,7 @@ footer {
 
 .footer-illustration {
     position: absolute;
-    left: 0;
+    left: 5%;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -224,8 +224,9 @@ footer {
 }
 
 .footer-dog {
-    height: 30px;
-    width: auto;
+    width: 100px;
+    /* Aumentado para 100px */
+    height: auto;
     opacity: 0.8;
     transition: opacity 0.3s ease;
 }
@@ -4776,6 +4777,7 @@ nav a.active {
     color: #C58C71;
     transform: translateX(-5px);
 }
+
 /* --- GLOBAL PRELOADER --- */
 #preloader {
     position: fixed;
@@ -4804,6 +4806,13 @@ nav a.active {
 }
 
 @keyframes preloaderFadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
