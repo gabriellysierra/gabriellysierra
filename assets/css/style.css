@@ -3538,8 +3538,6 @@ nav a.active {
 
 .texts-page-wrapper,
 .contact-centered-wrapper,
-.atelie-page-wrapper,
-.events-page-wrapper,
 .gallery-page-wrapper {
     padding-top: 15rem !important;
     padding-left: 5% !important;
@@ -4129,3 +4127,4 @@ nav a.active {
     color: #583722 !important;
     border-bottom-color: #583722 !important;
 }
+
