@@ -3575,7 +3575,7 @@ nav a.active {
 .reading-editorial-wrapper {
     width: 100% !important;
     margin: 0 auto !important;
-    padding-top: 15rem !important;
+    /* Removed padding-top: 15rem to match Projects.html exactly via child header */
     /* Match Projects.html exactly */
     padding-bottom: 10rem !important;
     background-color: #FFFFFF !important;
@@ -4096,6 +4096,7 @@ nav a.active {
         top: 30px;
     }
 }
+
 
 
 
