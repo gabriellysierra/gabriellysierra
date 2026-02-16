@@ -2455,7 +2455,7 @@ nav a.active {
     font-size: 1.5rem;
     color: var(--text-main);
     /* Graphite */
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* Grid Layout */
@@ -4016,7 +4016,7 @@ nav a.active {
     color: #FFFFFF;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 4px;
     text-transform: uppercase;
     text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
@@ -4082,5 +4082,6 @@ nav a.active {
         top: 30px;
     }
 }
+
 
 
