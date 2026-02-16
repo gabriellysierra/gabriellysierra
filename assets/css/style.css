@@ -4608,7 +4608,7 @@ nav a.active {
 /* Page-Specific Background (Textos) */
 /* Page-Specific Background (Textos) */
 .body-textos {
-    background-color: #F2F0ED;
+    background-color: #F2F0ED !important;
     /* Cor Areia - Full Width */
 }
 
