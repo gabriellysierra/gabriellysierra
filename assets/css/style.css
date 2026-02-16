@@ -4212,6 +4212,12 @@ nav a.active {
     margin-top: 2.2rem;
 }
 
+.learn-more-btn-simple:hover {
+    color: #C58C71 !important;
+    border-bottom-color: #C58C71 !important;
+    opacity: 0.8;
+}
+
 /* --- FORMATIONS MOSAIC REDESIGN --- */
 
 .formation-mosaic-wrapper {
