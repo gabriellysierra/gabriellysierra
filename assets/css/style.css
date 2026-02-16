@@ -4405,3 +4405,202 @@ nav a.active {
     color: #000;
     transform: scale(1.1);
 }
+
+/* --- EDITORIAL MODAL REDESIGN (Studio Diseños Style) --- */
+
+/* Wrapper Override */
+.modal-content-wrapper.editorial-modal {
+    width: 90vw;
+    max-width: 1400px;
+    /* Large screens */
+    height: 90vh;
+    max-height: 90vh;
+    padding: 0;
+    overflow: hidden;
+    /* Prevent body scroll, handle inside cols */
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    /* Structure */
+}
+
+/* Split Container */
+.modal-split-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* LEFT COLUMN: Narrative */
+.modal-col-left {
+    flex: 0 0 40%;
+    height: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #F0F0F0;
+    position: relative;
+    z-index: 10;
+}
+
+/* Header (Fixed at top of left col) */
+.modal-col-left .modal-header {
+    padding: 3rem 3rem 1.5rem;
+    /* Generous padding */
+    background: #fff;
+    border-bottom: none;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    justify-content: flex-start;
+}
+
+.modal-col-left .modal-title-dynamic {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #583722;
+    /* Dark Cocoa */
+    margin: 0 0 1rem 0;
+    line-height: 1.1;
+}
+
+.modal-meta-line {
+    width: 50px;
+    height: 3px;
+    background-color: #C58C71;
+    /* Warm Clay */
+    margin-top: 0.5rem;
+}
+
+/* Body (Scrollable part of left col) */
+.modal-desc-body {
+    padding: 0 3rem 3rem;
+    overflow-y: auto;
+    flex-grow: 1;
+    /* Scrollbar styling could go here */
+}
+
+.modal-col-left .modal-desc {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #32302F;
+    margin-top: 1rem;
+}
+
+/* RIGHT COLUMN: Visuals */
+.modal-col-right {
+    flex: 0 0 60%;
+    height: 100%;
+    overflow-y: auto;
+    /* Scrollable Gallery */
+    background-color: #F9F9F9;
+    position: relative;
+    padding: 0;
+}
+
+/* Gallery Override */
+.modal-col-right .modal-gallery {
+    display: block;
+    /* Stack images */
+    padding: 0;
+    margin: 0;
+    grid-template-columns: none;
+    /* Reset grid */
+    gap: 0;
+}
+
+.modal-col-right .modal-gallery img {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    /* Start with auto height for editorial feel */
+    max-height: none;
+    /* Override previous restrictions */
+    object-fit: contain;
+    margin-bottom: 0;
+    border-radius: 0;
+    /* Sharp edges */
+}
+
+/* Close Button Positioning */
+#modal-close {
+    /* Override previous absolute positioning if needed inside relative container */
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    color: #32302F;
+    background: rgba(255, 255, 255, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+#modal-close:hover {
+    background: #583722;
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+/* Responsive Editorial Modal */
+@media (max-width: 900px) {
+    .modal-content-wrapper.editorial-modal {
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        border-radius: 0;
+        margin: 0;
+        transform: none;
+    }
+
+    .modal-split-container {
+        flex-direction: column;
+        overflow-y: auto;
+        /* Whole modal scrolls on mobile */
+    }
+
+    .modal-col-left {
+        flex: 0 0 auto;
+        /* Takes content height */
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        overflow: visible;
+    }
+
+    .modal-col-left .modal-header {
+        padding: 4rem 1.5rem 1rem;
+        /* Top padding for close button space */
+    }
+
+    .modal-desc-body {
+        padding: 0 1.5rem 2rem;
+        overflow: visible;
+        /* Let container scroll */
+    }
+
+    .modal-col-right {
+        flex: 0 0 auto;
+        height: auto;
+        overflow: visible;
+    }
+
+    /* Adjust close button for mobile */
+    #modal-close {
+        top: 15px;
+        right: 15px;
+        background: transparent;
+        box-shadow: none;
+    }
+}
