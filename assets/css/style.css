@@ -3181,8 +3181,8 @@ nav a.active {
 /* --- ABOUT PAGE REDESIGN (Editorial Revision) --- */
 
 .about-page-wrapper {
-    padding: 12rem 5% 0;
-    /* Margem editorial ajustada para 5% conforme solicitado */
+    padding: 15rem 5% 0;
+    /* Padding-top ajustado para 15rem (igual projetos) */
     max-width: 100%;
     margin: 0;
     min-height: auto;
@@ -3516,4 +3516,4 @@ nav a.active {
     .testimonials-slider-container {
         max-width: 100%;
     }
-}
+}/* Test write access */
