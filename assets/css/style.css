@@ -4732,3 +4732,31 @@ nav a.active {
     /* Integrate white bg of image with Areia */
     opacity: 0.9;
 }
+
+/* --- NAVIGATION: RETURN BUTTON --- */
+.back-to-projects-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 4rem auto 2rem;
+    padding: 0 5%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.back-to-projects {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: #32302F;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.back-to-projects:hover {
+    color: #C58C71;
+    transform: translateX(-5px);
+}
