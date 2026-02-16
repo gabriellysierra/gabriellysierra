@@ -3517,3 +3517,33 @@ nav a.active {
         max-width: 100%;
     }
 }/* Test write access */
+
+/* --- GOLDEN RULE: GLOBAL MARGIN STANDARDIZATION (FINAL OVERRIDE) --- */
+/* Padronização: 15rem topo, 5% laterais para consistência com Projetos/Sobre */
+
+.texts-page-wrapper,
+.contact-centered-wrapper,
+.atelie-page-wrapper,
+.events-page-wrapper,
+.gallery-page-wrapper {
+    padding-top: 15rem !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+}
+
+/* Ajuste Responsivo (Mobile) */
+@media (max-width: 900px) {
+    .texts-page-wrapper,
+    .contact-centered-wrapper,
+    .atelie-page-wrapper,
+    .events-page-wrapper,
+    .gallery-page-wrapper {
+        padding-top: 8rem !important;
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+}
