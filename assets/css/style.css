@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Reenie+Beanie&family=Source+Sans+Pro:wght@400;600&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Reenie+Beanie&family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
 
 :root {
     --bg-body: #FFFFFF;
@@ -3362,7 +3362,7 @@ nav a.active {
 
 .projects-nav-item {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 11px;
+    font-size:  1.1rem;
     /* Menor e discreto */
     font-weight: 700;
     text-transform: uppercase;
@@ -3552,180 +3552,7 @@ nav a.active {
 }
 
 
-/* --- READING PROJECTS REDESIGN (Hybrid: Editorial & Minimalist) --- */
 
-.reading-projects-wrapper {
-    background-color: #FFFFFF;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    /* Prevent horizontal scroll from full-width elements */
-}
-
-.reading-header {
-    text-align: center;
-    padding: 8rem 5% 6rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.reading-header .projects-main-title {
-    margin-bottom: 0;
-    font-weight: 300;
-    /* Lighter weight for elegance */
-    letter-spacing: 4px;
-}
-
-/* Hybrid Container: Full Width for rows */
-.reading-content-container {
-    width: 100%;
-    max-width: none !important;
-    /* Force override */
-    padding: 0 !important;
-    /* Force override */
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    /* Removing gap, using padding in rows for continuous feel */
-}
-
-.reading-project-row {
-    display: flex;
-    align-items: stretch;
-    /* Stretch to allow sticky constraint */
-    justify-content: space-between;
-    width: 100%;
-    min-height: 100vh;
-    /* Each project claims full screen height importance */
-    position: relative;
-    padding-bottom: 15rem;
-    /* Space between projects */
-}
-
-.reading-project-row.reversed {
-    flex-direction: row-reverse;
-}
-
-/* Image Column: Full Bleed (50% width, no padding) */
-.reading-col-img {
-    flex: 0 0 50%;
-    width: 50%;
-    position: relative;
-    /* Context for sticky */
-}
-
-/* Sticky Image Logic */
-.reading-project-img {
-    width: 100%;
-    height: auto;
-    /* Let height be natural or max-height limited if needed */
-    max-height: 80vh;
-    /* Optional constraint to ensure it fits in viewport */
-    object-fit: cover;
-    display: block;
-    position: sticky;
-    top: 100px;
-    /* User requested offset */
-}
-
-/* Text Column: Constrained (50% width but with padding) */
-.reading-col-text {
-    flex: 0 0 50%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10rem 8%;
-    /* Generous internal padding */
-    box-sizing: border-box;
-    background-color: #FFFFFF;
-}
-
-/* Adjusting padding based on side to respect global visual axis */
-.reading-project-row:not(.reversed) .reading-col-text {
-    padding-right: 5%;
-    /* Right margin constraint */
-    padding-left: 8%;
-}
-
-.reading-project-row.reversed .reading-col-text {
-    padding-left: 5%;
-    /* Left margin constraint */
-    padding-right: 8%;
-}
-
-/* Typography Refinements */
-.reading-project-title {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1.2rem;
-    /* Match .projects-main-title */
-    font-weight: 700;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--color-titles);
-    /* Match variable */
-    margin-bottom: 2.5rem;
-    line-height: 1.2;
-}
-
-.reading-project-desc {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.1rem;
-    /* Match .projects-intro-text */
-    line-height: 1.7;
-    color: var(--text-main);
-    /* Match variable */
-    margin-bottom: 4rem;
-    font-weight: 400;
-    /* Normal weight */
-    max-width: 550px;
-}
-
-/* Technical Spec Style (Ficha Técnica) */
-.reading-target {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.85rem;
-    color: #1a1a1a;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    padding-top: 1rem;
-    border-top: 1px solid #e5e5e5;
-    width: fit-content;
-}
-
-.reading-target strong {
-    font-weight: 600;
-    color: #000;
-}
-
-.learn-more-btn {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #000;
-    text-decoration: none;
-    border-bottom: 1px solid #000;
-    padding-bottom: 5px;
-    transition: all 0.3s ease;
-    align-self: flex-start;
-}
-
-.learn-more-btn:hover {
-    color: #666;
-    border-color: #666;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 900px) {
-    .reading-header {
-        padding: 6rem 5% 3rem;
-    }
 
     .reading-content-container {
         padding: 0 !important;
@@ -3754,3 +3581,141 @@ nav a.active {
         padding: 4rem 5%;
     }
 }
+/* --- READING PROJECTS (Editorial 3-Col Grid) --- */
+
+.reading-editorial-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 5rem; /* Space after header */
+    padding-bottom: 10rem;
+    background-color: #FFFFFF;
+}
+
+.reading-project-row {
+    display: grid;
+    /* Grid 20% | 40% | 40% as requested */
+    grid-template-columns: 20% 40% 40%;
+    width: 100%;
+    padding: 6rem 0; /* Vertical breathing room */
+    border-bottom: 0.5px solid #E5E5E5; /* Fine separator */
+    align-items: flex-start;
+}
+
+/* Make sure the last item also has a border or handle via last-child if preferred. 
+   User asked for 'Line between each project', usually implies a separator. */
+
+/* COL 1: Title (20%) */
+.reading-col-title {
+    padding-right: 2rem; 
+}
+
+.reading-project-title {
+    font-family: 'Playfair Display', serif; /* User Requested Serif */
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #583722; /* Marrom */
+    margin: 0;
+    line-height: 1.2;
+    text-transform: none; /* Serif titles usually look better normal/capitalized, not full uppercase */
+    letter-spacing: 0.5px;
+}
+
+/* COL 2: Description (40%) */
+.reading-col-desc {
+    padding: 0 8% 0 5%; /* Good lateral breathing */
+}
+
+.reading-project-desc {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #32302F; /* Graphite */
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.reading-target {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #666;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.learn-more-btn-simple {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #583722;
+    text-decoration: none;
+    border-bottom: 1px solid #583722;
+    padding-bottom: 3px;
+    transition: opacity 0.3s;
+}
+
+.learn-more-btn-simple:hover {
+    opacity: 0.7;
+}
+
+/* COL 3: Image (40%) */
+.reading-col-img {
+    width: 100%;
+    text-align: right;
+}
+
+.reading-project-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/5; /* Vertical hint from user 'Vertical ou Quadrada' */
+    object-fit: cover;
+    display: block;
+    /* Aligned to right? styling ensures it fills the 40% col, effectively 'right' */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .reading-project-row {
+        grid-template-columns: 1fr; /* Stack */
+        padding: 4rem 0;
+        gap: 2rem;
+    }
+
+    /* Mobile Order: Title -> Image -> Text */
+    .reading-col-title {
+        order: 1;
+        padding-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .reading-col-img {
+        order: 2;
+        margin-bottom: 1.5rem;
+    }
+
+    .reading-col-desc {
+        order: 3;
+        padding: 0; /* Remove extra padding on mobile */
+    }
+}
+
+
+/* --- ABOUT PAGE REFINEMENTS --- */
+.about-page-wrapper {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    box-sizing: border-box;
+}
+
+.about-title {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 4px !important;
+    text-transform: uppercase !important;
+    color: #583722 !important; /* Adjust if needed to match projects-main-title var */
+    margin-bottom: 2.5rem !important;
+}
+
