@@ -4517,11 +4517,11 @@ nav a.active {
 .modal-col-right .modal-gallery img {
     display: block;
     width: 100%;
-    height: auto !important;
-    /* Start with auto height for editorial feel */
-    max-height: none;
-    /* Override previous restrictions */
-    object-fit: contain;
+    min-height: 100%;
+    /* Force image to fill at least the container height */
+    height: auto;
+    object-fit: cover;
+    /* Crop to fill */
     margin-bottom: 0;
     border-radius: 0;
     /* Sharp edges */
