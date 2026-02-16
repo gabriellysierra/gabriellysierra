@@ -4824,6 +4824,9 @@ nav a.active {
     background-color: #F2F0ED;
     padding-left: 5%;
     padding-right: 5%;
+    position: relative !important;
+    /* Override global sticky header */
+    top: auto !important;
 }
 
 .article-header-container {
