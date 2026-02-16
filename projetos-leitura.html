@@ -28,39 +28,7 @@
 
     <main>
 
-        <!-- SEÇÃO 1: HERO VIDEO BANNER (Pontes Narrativas) -->
-        <section class="hero-video-banner">
-            <div class="video-wrapper" id="videoWrapper">
-                <!-- Capa e Overlay -->
-                <div class="video-cover" onclick="playVideo()"
-                    style="background-image: url('assets/img/video-cover.jpg'); background-size: cover; background-position: center;">
-                    <div class="video-overlay" style="background-color: rgba(88, 55, 34, 0.7);">
-                        <div class="overlay-content">
-                            <i class="fa-solid fa-play play-btn-icon"></i>
-                            <h1 class="overlay-title">Pontes Narrativas</h1>
-                            <p class="overlay-desc">
-                                Projeto de mediação literária realizado em biblioteca escolar comunitária com estudantes
-                                dos Anos Iniciais do Ensino Fundamental. Desenvolvendo experiências estéticas de
-                                leitura.<br>
-                                <strong>Público-alvo:</strong> crianças a partir dos 11 anos.
-                            </p>
-                            <a href="https://gabriellysierra.my.canva.site/pontes-narrativas-2025" target="_blank"
-                                class="learn-more-btn" onclick="event.stopPropagation()">Saiba mais</a>
-
-                            <div class="logo-area">
-                                <img src="assets/img/logos-apoio.png" alt="Apoio: Lei Paulo Gustavo e Governo Federal"
-                                    class="partner-logo">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- YouTube Iframe (Initially hidden or loaded on click logic) -->
-                <!-- We will inject the autoplay iframe on click to ensure smooth UX -->
-                <div id="videoContainer" style="height:100%; width:100%;"></div>
-            </div>
-        </section>
-
-        <!-- WRAPPER GLOBAL (Sticky Zig-Zag) -->
+        <!-- WRAPPER GLOBAL (Hybrid: Full-Bleed Images, Constrained Text) -->
         <div class="reading-projects-wrapper">
 
             <!-- TÍTULO DA PÁGINA (Padronizado) -->
@@ -71,27 +39,29 @@
             <!-- CONTEÚDO DOS PROJETOS -->
             <div class="reading-content-container">
 
-                <!-- PROJETO 1: Leitura e processos de criação (IMAGEM ESQUERDA / TEXTO DIREITA) -->
+                <!-- PROJETO 1: Mediação e Criação (IMAGEM ESQUERDA) -->
                 <div class="reading-project-row">
                     <div class="reading-col-img">
-                        <img src="assets/img/projeto1-img.jpg" alt="Leitura e processos de criação"
-                            class="reading-project-img">
+                        <img src="assets/img/projeto1-img.jpg" alt="Mediação e Criação" class="reading-project-img">
                     </div>
                     <div class="reading-col-text">
-                        <h2 class="reading-project-title">Leitura e processos de criação</h2>
+                        <h2 class="reading-project-title">Mediação e Criação: Percursos Literários & Processos Criativos
+                        </h2>
                         <p class="reading-project-desc">
                             O projeto propõe um percurso formativo, unindo mediação literária e práticas experimentais
                             de criação artística, a partir de obras literárias ilustradas. Visando incentivar a leitura
                             e a criatividade, tem como objetivo valorizar os processos criativos e atuar na difusão da
                             leitura, do livro e da literatura infantojuvenil brasileira.
                         </p>
-                        <span class="reading-target"><strong>Público-alvo:</strong> infâncias a partir de 7 anos</span>
+                        <div class="reading-target">
+                            <strong>Público-alvo:</strong> <span>INFÂNCIAS A PARTIR DE 7 ANOS</span>
+                        </div>
                         <a href="https://sites.google.com/view/projeto-rogermello" target="_blank"
                             class="learn-more-btn">Saiba mais</a>
                     </div>
                 </div>
 
-                <!-- PROJETO 2: Literatura, tempo e memória (TEXTO ESQUERDA / IMAGEM DIREITA -> REVERSED) -->
+                <!-- PROJETO 2: Literatura, tempo e memória (REVERSED) -->
                 <div class="reading-project-row reversed">
                     <div class="reading-col-img">
                         <img src="assets/img/c.jpg" alt="Literatura, tempo e memória" class="reading-project-img">
@@ -104,13 +74,34 @@
                             socialização e a participação ativa em espaços públicos. Após a leitura compartilhada,
                             discutimos sobre as narrativas e realizamos atividades de criação artística.
                         </p>
-                        <span class="reading-target"><strong>Público-alvo:</strong> 60+</span>
+                        <div class="reading-target">
+                            <strong>Público-alvo:</strong> <span>60+</span>
+                        </div>
                         <a href="galeria-memoria.html" class="learn-more-btn">Ver galeria das edições</a>
                     </div>
                 </div>
 
-                <!-- PROJETO 3: Clube de leitura (IMAGEM ESQUERDA / TEXTO DIREITA) -->
+                <!-- PROJETO 3: Pontes Narrativas (IMAGEM ESQUERDA - NOVO) -->
                 <div class="reading-project-row">
+                    <div class="reading-col-img">
+                        <img src="assets/img/video-cover.jpg" alt="Pontes Narrativas" class="reading-project-img">
+                    </div>
+                    <div class="reading-col-text">
+                        <h2 class="reading-project-title">Pontes Narrativas</h2>
+                        <p class="reading-project-desc">
+                            Projeto de mediação literária realizado em biblioteca escolar comunitária com estudantes dos
+                            Anos Iniciais do Ensino Fundamental. Desenvolvendo experiências estéticas de leitura.
+                        </p>
+                        <div class="reading-target">
+                            <strong>Público-alvo:</strong> <span>CRIANÇAS A PARTIR DOS 11 ANOS</span>
+                        </div>
+                        <a href="https://gabriellysierra.my.canva.site/pontes-narrativas-2025" target="_blank"
+                            class="learn-more-btn">Saiba mais</a>
+                    </div>
+                </div>
+
+                <!-- PROJETO 4: Clube de leitura (REVERSED) -->
+                <div class="reading-project-row reversed">
                     <div class="reading-col-img">
                         <img src="assets/img/projeto3-img.jpg" alt="Clube de leitura" class="reading-project-img">
                     </div>
@@ -122,8 +113,9 @@
                             acesso à literatura com qualidade estética e literária. Os encontros têm como propósito
                             ampliar o repertório cultural e linguístico dos participantes.
                         </p>
-                        <span class="reading-target"><strong>Público-alvo:</strong> professores, famílias e
-                            interessados</span>
+                        <div class="reading-target">
+                            <strong>Público-alvo:</strong> <span>PROFESSORES, FAMÍLIAS E INTERESSADOS</span>
+                        </div>
                         <a href="mailto:contato@gabriellysierra.com.br" class="learn-more-btn">Tenho interesse</a>
                     </div>
                 </div>
@@ -151,19 +143,6 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
-    <script>
-        // Hero Video Control
-        function playVideo() {
-            var wrapper = document.getElementById('videoWrapper');
-            var container = document.getElementById('videoContainer');
-
-            // Add class to hide cover
-            wrapper.classList.add('active');
-
-            // Inject iframe with autoplay
-            container.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/TzQrT2k7wY4?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-        }
-    </script>
 </body>
 
 </html>
