@@ -3686,8 +3686,8 @@ nav a.active {
     padding-bottom: 2px;
     transition: all 0.3s ease;
     font-weight: 600;
-    display: inline-block;
-    margin-top: 1rem;
+    display: block;
+    margin: 2.5rem auto 0;
 }
 
 .learn-more-btn-simple:hover {
