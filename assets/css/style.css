@@ -4882,3 +4882,14 @@ nav a.active {
         /* Hide illustrative elements on mobile to keep focus on text */
     }
 }
+
+.formation-audience {
+    font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    /* Sem negrito */
+    text-transform: none;
+    /* Caixa baixa / sentence case */
+    font-size: 1.05rem;
+    color: var(--text-main);
+    line-height: 1.6;
+}
