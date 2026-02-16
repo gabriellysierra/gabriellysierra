@@ -4726,3 +4726,160 @@ nav a.active {
         font-size: 1.5rem;
     }
 }
+
+/* --- CONTACT PAGE REDESIGN --- */
+
+/* Page Background */
+.body-contact {
+    background-color: #F2F0ED !important;
+    /* Areia */
+    min-height: 100vh;
+}
+
+.body-contact header {
+    background-color: #FFFFFF;
+}
+
+/* Container */
+.contact-centered-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 4rem 5%;
+    width: 100%;
+}
+
+.contact-content {
+    width: 100%;
+    max-width: 600px;
+    /* Optimal reading width */
+    text-align: center;
+}
+
+/* Titles & Text */
+.contact-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    /* Light */
+    color: #583722;
+    /* Dark Cocoa */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact-intro {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.1rem;
+    color: #32302F;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+/* Contact Link (Email) - Clean update */
+.contact-link-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 3rem;
+    padding: 10px 20px;
+    border: 1px solid #D0CDC9;
+    /* Subtle border */
+    border-radius: 50px;
+    /* Pill shape */
+    transition: all 0.3s ease;
+}
+
+.contact-link-wrapper:hover {
+    border-color: #583722;
+    background-color: #FFFFFF;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #583722;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Minimalist Form */
+.minimal-form {
+    text-align: left;
+    margin-bottom: 4rem;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.minimal-label {
+    display: block;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.85rem;
+    color: #C58C71;
+    /* Warm Clay */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.minimal-input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #D0CDC9;
+    /* Subtle underline */
+    padding: 10px 0;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.1rem;
+    color: #32302F;
+    outline: none;
+    transition: border-color 0.3s ease;
+    border-radius: 0;
+    /* Removing default radius */
+}
+
+.minimal-input:focus {
+    border-bottom-color: #583722;
+    /* Highlight focus */
+}
+
+.minimal-input::placeholder {
+    color: #999;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: transparent;
+    border: 1px solid #583722;
+    color: #583722;
+    padding: 12px 40px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #583722;
+    color: #FFFFFF;
+}
+
+/* Narrative Image Overlay fix */
+.narrative-illustration {
+    max-width: 100%;
+    height: auto;
+    width: 200px;
+    /* Contain width */
+    mix-blend-mode: multiply;
+    /* Integrate white bg of image with Areia */
+    opacity: 0.9;
+}
