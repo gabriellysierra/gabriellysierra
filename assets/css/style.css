@@ -4625,7 +4625,7 @@ nav a.active {
         /* Thin dividing line */
         transition: all 0.3s ease;
         position: relative;
-        group: hover;
+        /* group: hover; - Removed unknown property */
     }
 
     .text-archive-item:hover {
