@@ -3568,53 +3568,94 @@ nav a.active {
 
 
 
-/* --- READING PROJECTS (Editorial 3-Col Grid) --- */
+/* --- READING PROJECTS (Zig-Zag 50/50 Split) --- */
 
 .reading-editorial-wrapper {
-    width: 100% !important;
-    margin: 0 auto !important;
-    /* Removed padding-top: 15rem to match Projects.html exactly via child header */
-    /* Match Projects.html exactly */
-    padding-bottom: 10rem !important;
-    background-color: #FFFFFF !important;
-    padding-left: 5% !important;
-    padding-right: 5% !important;
-    box-sizing: border-box !important;
-}
-
-.reading-project-row {
-    display: grid;
-    /* REDESIGN: Text gets more space, Image gets less (20% 55% 25%) */
-    grid-template-columns: 20% 55% 25%;
     width: 100%;
-    padding: 3rem 0;
-    /* Reduced vertical spacing */
-    align-items: flex-start;
-}
-
-/* Make sure the last item also has a border or handle via last-child if preferred. 
-   User asked for 'Line between each project', usually implies a separator. */
-
-/* COL 1: Title (20%) */
-.reading-col-title {
-    padding-right: 2rem;
-}
-
-.reading-project-title {
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: #583722;
     margin: 0;
-    line-height: 1.2;
-    text-transform: uppercase;
-    letter-spacing: 4px;
 }
 
-/* COL 2: Description (40%) */
-.reading-col-desc {
-    padding: 0 8% 0 5%;
-    /* Good lateral breathing */
+.reading-split-row {
+    display: flex;
+    width: 100%;
+    min-height: 80vh;
+    background-color: #FFFFFF;
+}
+
+.reading-split-row.reversed {
+    flex-direction: row-reverse;
+}
+
+.reading-split-image-col {
+    flex: 0 0 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.reading-split-image-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reading-project-overlay-title {
+    position: absolute;
+    top: 50px;
+    left: 10%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 200;
+    color: #583722;
+    z-index: 10;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 1.2;
+}
+
+.reversed .reading-project-overlay-title {
+    left: auto;
+    right: 10%;
+    text-align: right;
+}
+
+.reading-split-content-col {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 2rem 5%;
+}
+
+.reading-split-row:not(.reversed) .reading-split-content-col {
+    padding-left: 8%;
+    padding-right: 10%;
+}
+
+.reading-split-row.reversed .reading-split-content-col {
+    padding-right: 8%;
+    padding-left: 10%;
+}
+
+/* Mobile Responsiveness for Split Row */
+@media (max-width: 991px) {
+    .reading-split-row {
+        flex-direction: column !important;
+    }
+
+    .reading-split-row.reversed {
+        flex-direction: column !important;
+    }
+
+    .reading-split-image-col {
+        flex: 0 0 auto;
+        height: 60vh;
+    }
+
+    .reading-split-content-col {
+        flex: 0 0 auto;
+        padding: 4rem 5% !important;
+    }
 }
 
 .reading-project-desc {
