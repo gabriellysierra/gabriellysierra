@@ -3641,6 +3641,7 @@ nav a.active {
 }
 
 .learn-more-btn-simple {
+    width: fit-content;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 0.85rem;
     text-transform: uppercase;
@@ -4096,6 +4097,7 @@ nav a.active {
         top: 30px;
     }
 }
+
 
 
 
