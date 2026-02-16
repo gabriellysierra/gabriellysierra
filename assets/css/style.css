@@ -1367,96 +1367,6 @@ nav a.active {
 
 /* --- CONTACT PAGE STYLES --- */
 
-/* Split Screen Layout */
-.contact-split-section {
-    display: flex;
-    min-height: 100vh;
-    /* Full viewport height */
-    width: 100%;
-}
-
-.contact-visual-col {
-    flex: 1;
-    position: relative;
-    background-color: #f0f0f0;
-}
-
-.contact-bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.contact-form-col {
-    flex: 1;
-    padding: 6rem 8%;
-    /* Generous padding */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #FFFFFF;
-}
-
-/* Typography & Content */
-.contact-title {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 3rem;
-    color: var(--color-titles);
-    /* Dark Cocoa */
-    margin-bottom: 1.5rem;
-}
-
-.contact-intro {
-    font-family: 'Source Sans 3', sans-serif;
-    font-size: 1.1rem;
-    color: #32302F;
-    margin-bottom: 3rem;
-    line-height: 1.6;
-    max-width: 500px;
-}
-
-
-
-/* Handwritten Note Arrow */
-.handwritten-arrow {
-    font-family: 'Reenie Beanie', cursive;
-    color: var(--color-titles);
-    font-size: 1.8rem;
-    position: absolute;
-    right: -140px;
-    top: -5px;
-    transform: rotate(-10deg);
-}
-
-.handwritten-arrow i {
-    font-size: 1.2rem;
-    margin-right: 5px;
-}
-
-
-
-/* Responsive */
-@media (max-width: 900px) {
-    .contact-split-section {
-        flex-direction: column;
-    }
-
-    .contact-visual-col {
-        height: 40vh;
-        /* Image on top */
-        flex: none;
-    }
-
-    .contact-form-col {
-        padding: 4rem 5%;
-    }
-
-    .handwritten-arrow {
-        display: none;
-        /* Hide on mobile to avoid overflow */
-    }
-}
 
 /* --- VISUAL SIGNATURE (ABOUT PAGE) --- */
 .visual-signature-container {
@@ -4568,8 +4478,9 @@ nav a.active {
 .contact-split-section {
     width: 100%;
     max-width: 1200px;
-    margin: 4rem auto 2rem;
-    padding: 0 5%;
+    margin: 0 auto 2rem;
+    padding: 15rem 5% 4rem;
+    /* Aligned with Projects title height */
 }
 
 .contact-split-container {
