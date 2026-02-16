@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body style="background-color: #F2F0ED;">
 
     <header>
         <a href="index.html" class="logo-link">
@@ -19,7 +19,7 @@
         <nav>
             <ul>
                 <li><a href="about.html">sobre</a></li>
-                <li><a href="projetos.html" class="active">projetos</a></li> <!-- Kept active for context -->
+                <li><a href="projetos.html" class="active">projetos</a></li>
                 <li><a href="textos.html">textos</a></li>
                 <li><a href="contato.html">contato</a></li>
             </ul>
@@ -46,101 +46,138 @@
         </div>
     </header>
 
-    
+    <main class="formation-mosaic-wrapper">
 
-    <main>
+        <!-- BLOCO 1: FORMAÇÃO DOCENTE (Texto Esquerda, Galeria Direita) -->
+        <section class="formation-mosaic-row">
+            <div class="formation-mosaic-content-col">
+                <span class="formation-tag">FORMAÇÃO DOCENTE</span>
+                <h2 class="formation-title">Leitura, escrita e literatura na Educação Infantil</h2>
+                
+                <p class="formation-desc">
+                    A formação é voltada a educadores e mediadores que buscam aprofundar as relações entre a
+                    alfabetização e o letramento literário. Através de uma abordagem que valoriza a escuta das
+                    infâncias, discutimos como a literatura pode ser o eixo central de projetos pedagógicos,
+                    integrando a leitura, a escrita e a literatura.
+                </p>
 
-        <!-- BLOCO 1: FORMAÇÃO DOCENTE -->
-        <section class="dark-content-block">
-            <div class="dark-block-container">
-                <div class="dark-block-text">
-                    <span class="formation-tag">FORMAÇÃO DOCENTE</span>
-                    <h2 class="formation-title">Leitura, escrita e literatura na Educação Infantil</h2>
+                <div class="reading-target">
+                    <strong>PÚBLICO</strong><br>
+                    <span>Professores da educação infantil, coordenadores pedagógicos e estudantes de pedagogia.</span>
                 </div>
-                <div class="dark-block-text">
-                    <p class="formation-desc">
-                        A formação é voltada a educadores e mediadores que buscam aprofundar as relações entre a
-                        alfabetização e o letramento literário. Através de uma abordagem que valoriza a escuta das
-                        infâncias, discutimos como a literatura pode ser o eixo central de projetos pedagógicos,
-                        integrando a leitura, a escrita e a literatura.
-                    </p>
-                    <span class="target-audience"><strong>PÚBLICO</strong><br> Professores da educação infantil,
-                        coordenadores pedagógicos e estudantes de pedagogia.</span>
-                    <a href="contato.html" class="learn-more-btn">Solicitar proposta para minha instituição</a>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="contato.html" class="learn-more-btn-simple" style="display: block; width: fit-content; margin: 0 auto;">SOLICITAR PROPOSTA PARA MINHA INSTITUIÇÃO</a>
                 </div>
+            </div>
+
+            <div class="formation-mosaic-gallery-col">
+                <div class="gallery-grid-new">
+                    <img src="assets/img/formacao1-img1.jpg" alt="Formação Docente 1" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao1-img2.jpg" alt="Formação Docente 2" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao1-img3.jpg" alt="Formação Docente 3" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao1-img4.jpg" alt="Formação Docente 4" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao1-img5.jpg" alt="Formação Docente 5" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao1-img6.jpg" alt="Formação Docente 6" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao1-img1.jpg" alt="Formação Docente 7" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao1-img2.jpg" alt="Formação Docente 8" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao1-img3.jpg" alt="Formação Docente 9" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao1-img4.jpg" alt="Formação Docente 10" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao1-img5.jpg" alt="Formação Docente 11" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao1-img6.jpg" alt="Formação Docente 12" onclick="openLightbox(this.src)">
+                </div>
+                <p class="gallery-caption-small">
+                    Registro da formação realizada com professoras da educação infantil da rede pública de São Carlos (2025). Fotos: Dyovana Tancredi dos Santos.
+                </p>
             </div>
         </section>
 
-        <!-- GALERIA 1 -->
-        <section class="gallery-section">
-            <div class="gallery-grid">
-                <img src="assets/img/formacao1-img1.jpg" alt="Formação Docente 1" class="gallery-img">
-                <img src="assets/img/formacao1-img2.jpg" alt="Formação Docente 2" class="gallery-img">
-                <img src="assets/img/formacao1-img3.jpg" alt="Formação Docente 3" class="gallery-img">
-                <img src="assets/img/formacao1-img4.jpg" alt="Formação Docente 4" class="gallery-img">
-                <img src="assets/img/formacao1-img5.jpg" alt="Formação Docente 5" class="gallery-img">
-                <img src="assets/img/formacao1-img6.jpg" alt="Formação Docente 6" class="gallery-img">
-            </div>
-            <p class="gallery-caption handwritten">
-                Registro da formação realizada com professoras da educação infantil da rede pública de São Carlos
-                (2025). Fotografias: Dyovana Tancredi dos Santos.
-            </p>
-        </section>
+        <!-- BLOCO 2: FORMAÇÃO CULTURAL (Texto Direita, Galeria Esquerda - REVERSED) -->
+        <section class="formation-mosaic-row reversed">
+            <div class="formation-mosaic-content-col">
+                <span class="formation-tag">FORMAÇÃO CULTURAL</span>
+                <h2 class="formation-title">Livro ilustrado - leitura e mediação</h2>
+                
+                <p class="formation-desc">
+                    A formação explora como o diálogo entre texto e imagem constrói sentidos complexos e como mediar
+                    essa leitura para diversos públicos. Analisamos obras contemporâneas nacionais e internacionais,
+                    focando na educação estética e no desenvolvimento da percepção visual do leitor.
+                </p>
 
-        <!-- BLOCO 2: FORMAÇÃO CULTURAL -->
-        <section class="dark-content-block">
-            <div class="dark-block-container">
-                <div class="dark-block-text">
-                    <span class="formation-tag">FORMAÇÃO CULTURAL</span>
-                    <h2 class="formation-title">Livro ilustrado - leitura e mediação</h2>
+                <div class="reading-target">
+                    <strong>PÚBLICO</strong><br>
+                    <span>Educadores, bibliotecários, mediadores de leitura, pais e interessados em literatura, livro ilustrado e mediação.</span>
                 </div>
-                <div class="dark-block-text">
-                    <p class="formation-desc">
-                        A formação explora como o diálogo entre texto e imagem constrói sentidos complexos e como mediar
-                        essa leitura para diversos públicos. Analisamos obras contemporâneas nacionais e internacionais,
-                        focando na educação estética e no desenvolvimento da percepção visual do leitor.
-                    </p>
-                    <span class="target-audience"><strong>PÚBLICO</strong><br> Educadores, bibliotecários, mediadores
-                        de leitura, pais e interessados em literatura, livro ilustrado e mediação.</span>
-                    <a href="contato.html" class="learn-more-btn">Solicitar proposta para minha instituição</a>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="contato.html" class="learn-more-btn-simple" style="display: block; width: fit-content; margin: 0 auto;">SOLICITAR PROPOSTA PARA MINHA INSTITUIÇÃO</a>
                 </div>
             </div>
-        </section>
 
-        <!-- GALERIA 2 -->
-        <section class="gallery-section">
-            <div class="gallery-grid">
-                <img src="assets/img/formacao2-img1.jpg" alt="Formação Cultural 1" class="gallery-img">
-                <img src="assets/img/formacao2-img2.jpg" alt="Formação Cultural 2" class="gallery-img">
-                <img src="assets/img/formacao2-img3.jpg" alt="Formação Cultural 3" class="gallery-img">
-                <img src="assets/img/formacao2-img4.jpg" alt="Formação Cultural 4" class="gallery-img">
-                <img src="assets/img/formacao2-img5.jpg" alt="Formação Cultural 5" class="gallery-img">
-                <img src="assets/img/formacao2-img6.jpg" alt="Formação Cultural 6" class="gallery-img">
+            <div class="formation-mosaic-gallery-col">
+                <div class="gallery-grid-new">
+                    <img src="assets/img/formacao2-img1.jpg" alt="Formação Cultural 1" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao2-img2.jpg" alt="Formação Cultural 2" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao2-img3.jpg" alt="Formação Cultural 3" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao2-img4.jpg" alt="Formação Cultural 4" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao2-img5.jpg" alt="Formação Cultural 5" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao2-img6.jpg" alt="Formação Cultural 6" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao2-img1.jpg" alt="Formação Cultural 7" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao2-img2.jpg" alt="Formação Cultural 8" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao2-img3.jpg" alt="Formação Cultural 9" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao2-img4.jpg" alt="Formação Cultural 10" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao2-img5.jpg" alt="Formação Cultural 11" onclick="openLightbox(this.src)">
+                    <img src="assets/img/formacao2-img6.jpg" alt="Formação Cultural 12" onclick="openLightbox(this.src)">
+                </div>
+                <p class="gallery-caption-small">
+                    Registro da formação realizada com as bibliotecárias do SIBiSC (São Carlos, 2025). Fotos: Dyovana Tancredi dos Santos.
+                </p>
             </div>
-            <p class="gallery-caption handwritten">
-                Registro da formação realizada com as bibliotecárias do SIBiSC (São Carlos, 2025). Fotos: Dyovana
-                Tancredi dos Santos.
-            </p>
         </section>
 
         <!-- Narrative Image: Correndo -->
-        <div style="text-align: center; margin: 60px 0;">
-            <img src="assets/img/narrativa/formacoes-correndo.jpg" alt="Ilustração narrativa"
-                style="max-width: 200px; height: auto;">
+        <div style="text-align: center; padding: 100px 0;">
+            <img src="assets/img/narrativa/formacoes-correndo.jpg" alt="Ilustração narrativa" style="max-width: 180px; height: auto; opacity: 0.8;">
         </div>
 
     </main>
 
     <footer>
         <div class="social-icons">
-            <a href="https://www.instagram.com/gabriellysierra/?hl=pt" target="_blank"><i
-                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/gabriellysierra/?hl=pt" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.tiktok.com/@gabrielly.sierra" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
             <a href="https://www.youtube.com/@gabriellysierra" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.linkedin.com/in/gabriellysierra/" target="_blank"><i
-                    class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/in/gabriellysierra/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
     </footer>
+
+    <!-- Lighbox Modal Core -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script>
+        const modal = document.getElementById("lightbox-modal");
+        const modalImg = document.getElementById("lightbox-img");
+
+        function openLightbox(src) {
+            modal.style.display = "flex";
+            modalImg.src = src;
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeLightbox() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        modal.onclick = function (e) {
+            if (e.target === modal) {
+                closeLightbox();
+            }
+        }
+    </script>
 
     <script src="assets/js/script.js"></script>
 </body>
