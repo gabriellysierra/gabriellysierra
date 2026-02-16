@@ -4615,6 +4615,11 @@ nav a.active {
     row-gap: 4rem;
     width: 100%;
     margin-bottom: 5rem;
+    background-color: #F2F0ED;
+    /* Cor Areia */
+    padding: 4rem 5%;
+    /* Add internal padding matches usage */
+    box-sizing: border-box;
 }
 
 .text-archive-item {
