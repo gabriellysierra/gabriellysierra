@@ -2238,10 +2238,10 @@ nav a.active {
 /* --- ATELIÃŠ TEXT COLUMNS REFACTOR --- */
 .atelie-text-columns {
     display: flex;
-    justify-content: center;
-    gap: 4rem;
-    /* Space between columns */
-    align-items: flex-start;
+    flex-direction: column;
+    /* Stack vertically */
+    gap: 0;
+    /* Remove gap, rely on row margins */
     margin-bottom: 4rem;
 }
 
