@@ -48,3 +48,18 @@
 .atelie-split-image-row + .atelie-content-section {
     margin-top: 2rem; /* Additional breathing room if needed beyond padding */
 }
+
+/* --- ATELIÊ LAYOUT REFINEMENTS (STRETCHED) --- */
+.atelie-content-section {
+    padding: 5rem 5% !important; /* Force 5% side padding */
+    max-width: none !important; /* Allow full stretch */
+    width: 100% !important;
+    margin: 0;
+}
+
+.atelie-service-row.four-cols {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Harmonious equal columns */
+    gap: 4rem; /* Generous breathing room */
+}
