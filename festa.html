@@ -4,332 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Livro é uma Festa | Ateliê da Gabi</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Reenie+Beanie&family=Source+Sans+3:wght@300;400&display=swap"
-        rel="stylesheet">
-    <style>
-        /* CSS Variables */
-        :root {
-            --bg-page: #FAF9F6;
-            --bg-card: #FFFFFF;
-            --text-primary: #583722;
-            /* Dark Cocoa */
-            --text-secondary: #32302F;
-            /* Graphite */
-            --accent: #C58C71;
-            /* Warm Clay */
-            --detail: #BDD7DE;
-            /* Powder Blue */
-        }
-
-        /* Reset & Base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: var(--bg-page);
-            font-family: 'Source Sans 3', sans-serif;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
-        }
-
-        /* Main Container - Digital Invitation Card */
-        .card-container {
-            background-color: var(--bg-card);
-            width: 100%;
-            max-width: 600px;
-            padding: 60px 40px;
-            box-shadow: 0 15px 40px rgba(88, 55, 34, 0.05);
-            text-align: center;
-            position: relative;
-        }
-
-        /* Typography */
-        h1,
-        h2,
-        h3,
-        .btn-text {
-            font-family: 'Josefin Sans', sans-serif;
-            color: var(--text-primary);
-        }
-
-        .handwritten {
-            font-family: 'Reenie Beanie', cursive;
-            color: var(--accent);
-        }
-
-        /* Header */
-        header {
-            margin-bottom: 50px;
-        }
-
-        .profile-wrapper {
-            position: relative;
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 20px;
-        }
-
-        .profile-img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 1px solid var(--detail);
-            padding: 4px;
-            /* Space for border */
-            background: #fff;
-        }
-
-        .brand-name {
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 0px;
-            font-weight: 600;
-        }
-
-        .brand-role {
-            font-size: 1.8rem;
-            transform: rotate(-2deg);
-            display: inline-block;
-        }
-
-        /* Hero */
-        .hero {
-            margin-bottom: 60px;
-        }
-
-        .main-title {
-            font-size: 2.5rem;
-            font-weight: 400;
-            line-height: 1.2;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            color: var(--accent);
-            position: relative;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-
-        .subtitle::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40px;
-            height: 1px;
-            background-color: var(--accent);
-        }
-
-        /* Image Frame */
-        .image-frame {
-            margin: 40px auto;
-            position: relative;
-            width: 100%;
-            max-width: 400px;
-            aspect-ratio: 4/3;
-        }
-
-        .feature-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Offset Border Effect */
-        .image-frame::after {
-            content: '';
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            width: 100%;
-            height: 100%;
-            border: 1px solid var(--accent);
-            z-index: 1;
-        }
-
-        /* Narrative Body */
-        .narrative {
-            text-align: left;
-            max-width: 480px;
-            margin: 0 auto 60px;
-        }
-
-        .narrative p {
-            margin-bottom: 25px;
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-        }
-
-        /* Stylized List */
-        .method-list {
-            list-style: none;
-            margin-top: 40px;
-        }
-
-        .method-item {
-            display: flex;
-            align-items: baseline;
-            margin-bottom: 20px;
-        }
-
-        .method-num {
-            font-family: 'Josefin Sans', sans-serif;
-            color: var(--accent);
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-right: 15px;
-            min-width: 25px;
-        }
-
-        .method-text strong {
-            font-family: 'Josefin Sans', sans-serif;
-            color: var(--text-primary);
-            font-weight: 600;
-            display: block;
-            margin-bottom: 4px;
-            font-size: 1.1rem;
-        }
-
-        .method-text span {
-            font-size: 0.95rem;
-        }
-
-        /* Footer */
-        footer {
-            border-top: none;
-            padding-top: 40px;
-            padding-bottom: 0;
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .price-tag {
-            font-size: 2rem;
-            color: var(--text-primary);
-            font-family: 'Josefin Sans', sans-serif;
-            margin-bottom: 5px;
-        }
-
-        .price-details {
-            font-size: 0.9rem;
-            color: #888;
-            margin-bottom: 35px;
-            display: block;
-        }
-
-        .cta-link {
-            display: inline-block;
-            text-decoration: none;
-            color: var(--text-primary);
-            border: 1px solid var(--detail);
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-family: 'Josefin Sans', sans-serif;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-        }
-
-        .cta-link:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            background-color: rgba(197, 140, 113, 0.05);
-        }
-
-        /* New Footer Elements */
-        .footer-separator {
-            border: 0;
-            border-top: 1px solid var(--text-primary);
-            margin: 0 0 40px;
-            opacity: 0.2;
-        }
-
-        .footer-bottom {
-            background-color: var(--detail);
-            padding: 40px;
-            margin-left: -40px;
-            margin-right: -40px;
-            margin-bottom: -60px;
-            margin-top: 60px;
-        }
-
-        .footer-mascot {
-            width: 90px;
-            margin: 0 auto 20px;
-            display: block;
-            opacity: 0.9;
-        }
-
-        .footer-social {
-            margin-top: 30px;
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        .social-link {
-            color: var(--text-primary);
-            font-size: 1.2rem;
-            transition: color 0.3s ease;
-            text-decoration: none;
-        }
-
-        .social-link:hover {
-            color: var(--accent);
-        }
-
-        /* Responsive */
-        @media (max-width: 480px) {
-            body {
-                padding: 0;
-                background-color: #fff;
-            }
-
-            .card-container {
-                box-shadow: none;
-                padding: 40px 20px;
-            }
-
-            .main-title {
-                font-size: 2rem;
-            }
-
-            .image-frame::after {
-                top: 10px;
-                left: 10px;
-            }
-
-            .footer-bottom {
-                margin-left: -20px;
-                margin-right: -20px;
-                margin-bottom: -40px;
-            }
-        }
-    </style>
+    <title>Lab. em Festa | GABRIELLY SIERRA</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=2">
 </head>
 
 <body>
@@ -338,103 +16,121 @@
         <img src="assets/img/preloader-icon.png" alt="Carregando..." class="preloader-icon">
     </div>
 
-    <div class="card-container">
-        <header>
-            <div class="profile-wrapper">
-                <img src="assets/img/perfil.jpg" alt="Gabrielly Sierra" class="profile-img">
-            </div>
-            <div class="brand-name">Gabrielly Sierra</div>
-            <div class="brand-subtitle"
-                style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-primary); margin-bottom: 10px;">
-                LITERATURA, ARTE E EDUCAÇÃO</div>
-        </header>
-
-        <div class="hero">
-            <span
-                style="font-size: 0.9rem; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 0px; font-family: 'Josefin Sans', sans-serif;">Ateliê
-                Itinerante</span>
-            <h1 class="main-title"
-                style="font-size: 3.5rem; font-weight: 300; margin-top: 0; line-height: 1.1; color: var(--text-primary); text-transform: none;">
-                O livro é uma festa</h1>
-
-            <div class="image-frame">
-                <img src="assets/img/oficina.jpg" alt="Crianças criando arte" class="feature-img"
-                    onerror="this.src='https://via.placeholder.com/400x500/F0F0F0/CCCCCC?text=oficina.jpg'">
-            </div>
-        </div>
-
-        <div class="narrative">
-            <p style="text-align: center;">Levo até o seu evento um Ateliê de Leitura e Criação pensado a partir de uma
-                curadoria personalizada que contempla qualidade estética e literária, criando um espaço onde as pessoas
-                possam
-                desacelerar e imaginar.</p>
-
-            <ul class="method-list">
-                <li class="method-item">
-                    <span class="method-num">01</span>
-                    <div class="method-text">
-                        <strong>Mediação Literária</strong>
-                        <span>Uma sessão de mediação de leitura que desperta a escuta e o encantamento, selecionada
-                            especialmente para o perfil da celebração.</span>
-                    </div>
-                </li>
-                <li class="method-item">
-                    <span class="method-num">02</span>
-                    <div class="method-text">
-                        <strong>Ateliê Criativo</strong>
-                        <span>Uma oficina de arte com materiais que convidam para a investigação livre de texturas,
-                            efeitos e cores.</span>
-                    </div>
-                </li>
-                <li class="method-item">
-                    <span class="method-num">03</span>
-                    <div class="method-text">
-                        <strong>Memória</strong>
-                        <span>A produção artística de cada participante se torna uma lembrança única para levar para
-                            casa.</span>
-                    </div>
-                </li>
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="assets/img/logo.png" alt="Gabrielly Sierra" class="main-logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="about.html">sobre</a></li>
+                <li><a href="projetos.html">projetos</a></li>
+                <li><a href="textos.html">textos</a></li>
+                <li><a href="contato.html">contato</a></li>
             </ul>
-        </div>
+        </nav>
+    </header>
 
-        <footer>
-            <hr class="footer-separator">
-            <div class="price-tag">R$ 850</div>
-            <span class="price-details">Todo material incluso • Curadoria Personalizada • 1h30 de duração</span>
-
-            <a href="https://wa.me/5516992283345" target="_blank" class="cta-link">
-                Consultar Disponibilidade &rarr;
-            </a>
-
-            <!-- Mascot & Contacts -->
-            <div class="footer-bottom">
-                <div class="footer-illustration" style="position: absolute; left: 5%; bottom: 40px;">
-                    <img src="assets/img/dog-footer.png" alt="Ilustração" class="footer-dog">
-                </div>
-                <img src="assets/img/03.png" alt="Mascote" class="footer-mascot">
-
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/gabriellysierra/?hl=pt" target="_blank" class="social-link"
-                        title="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@gabrielly.sierra" target="_blank" class="social-link"
-                        title="TikTok">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                    <a href="mailto:contato@gabriellysierra.com.br" class="social-link" title="Email">
-                        <i class="far fa-envelope"></i>
-                    </a>
-                    <a href="index.html" class="social-link" title="Visitar Site">
-                        <i class="fas fa-globe"></i>
-                    </a>
-                </div>
+    <header class="projects-editorial-header">
+        <div class="projects-header-container">
+            <!-- Conteúdo Intro -->
+            <div class="projects-intro-col">
+                <h1 class="projects-main-title">Ateliê</h1>
+                <p class="projects-intro-text">
+                    Um espaço de mediação onde a literatura para as infâncias encontra as artes visuais. Atendimentos
+                    exclusivos para famílias que desejam cultivar a sensibilidade estética e o pensamento crítico.
+                </p>
             </div>
-        </footer>
+
+            <!-- Menu de Navegação (Links) -->
+            <nav class="projects-nav-col">
+                <a href="projetos-leitura.html" class="projects-nav-item">leitura</a>
+                <a href="formacoes.html" class="projects-nav-item">formação</a>
+                <a href="projetos-mediacao.html" class="projects-nav-item">encontros</a>
+                <a href="atelie.html" class="projects-nav-item active">ateliê</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="atelie-page-wrapper">
+
+            <!-- Zig-Zag Services Section -->
+            <div class="atelie-services">
+
+                <!-- Text Columns Container -->
+                <div class="atelie-text-columns">
+
+                    <!-- Row 1: Lab. em Festa (4 Columns) -->
+                    <div class="atelie-service-row four-cols">
+                        <!-- Col 1: Title -->
+                        <div class="atelie-service-title-col">
+                            <h2>LAB. EM FESTA</h2>
+                            <!-- No subtitle requested -->
+                        </div>
+
+                        <!-- Col 2: Description -->
+                        <div class="atelie-service-content-col">
+                            <p class="atelie-card-desc"
+                                style="font-family: 'Source Sans 3', sans-serif; font-weight: 400;">
+                                A proposta do Lab. em Festa é levar a invenção e criatividade do Ateliê para eventos,
+                                festas e demais celebrações, proporcionando um espaço onde todas as infâncias podem
+                                dialogar e existir. Nossas oficinas convidam pessoas de todas as idades a investigarem
+                                materiais e narrativas, transformando o momento da festa em memórias literárias e
+                                táteis.
+                            </p>
+                        </div>
+
+                        <!-- Col 3: Como funciona -->
+                        <div class="atelie-service-content-col">
+                            <h3 class="atelie-card-subtitle">Como funciona?</h3>
+                            <ul class="atelie-topic-list">
+                                <li class="atelie-topic-item">Oficinas que unem mediação literária e processos
+                                    criativos, explorando a materialidade do livro e das artes visuais.</li>
+                                <li class="atelie-topic-item">Cada oficina tem até 01 hora de duração.</li>
+                                <li class="atelie-topic-item">Todos os materiais, incluindo os livros, estão inclusos.
+                                </li>
+                                <li class="atelie-topic-item">Tudo que é produzido no Lab. em Festa é levado para a casa
+                                    como uma recordação única e autoral do evento.</li>
+                                <li class="atelie-topic-item">O Lab. em Festa é para todas as idades! Nossa proposta é
+                                    multigeracional, acolhendo desde os pequenos até os adultos.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Col 4: Agenda & Call to Action -->
+                        <div class="atelie-service-content-col">
+                            <h3 class="atelie-card-subtitle">Agenda e valores:</h3>
+                            <p class="atelie-agenda-text">
+                                Entre em contato para consultar a disponibilidade e receber uma proposta personalizada.
+                            </p>
+                            <a href="contato.html" class="atelie-btn-simple">Solicitar Orçamento</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <div class="back-to-projects-wrapper">
+        <a href="atelie.html" class="back-to-projects">← voltar para ateliê</a>
     </div>
 
-    <!-- Load FontAwesome late to ensure icons render -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <footer>
+        <div class="footer-illustration">
+            <img src="assets/img/dog-footer.png" alt="Ilustração" class="footer-dog">
+        </div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/gabriellysierra/?hl=pt" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@gabrielly.sierra" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@gabriellysierra" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/in/gabriellysierra/" target="_blank"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
     <script src="assets/js/script.js"></script>
 </body>
 
