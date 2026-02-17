@@ -17,6 +17,18 @@
     padding: 0;
 }
 
+/* --- IMAGE PROTECTION --- */
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: auto;
+}
+
 body {
     background-color: var(--bg-body);
     font-family: 'Source Sans 3', sans-serif;
