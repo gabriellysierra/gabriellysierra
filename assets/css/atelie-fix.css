@@ -1,0 +1,33 @@
+/* --- ATELIÊ SPLIT IMAGE ROWS (Fix for locked style.css) --- */
+.atelie-split-image-row {
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    /* Large height for impact */
+    margin: 0;
+}
+
+.atelie-image-half {
+    flex: 0 0 50%;
+    width: 50%;
+    height: 100%;
+    background-color: #E5E5E5;
+    /* Placeholder Gray */
+    position: relative;
+    /* Future: background-image: url(...); background-size: cover; */
+}
+
+/* Mobile: Stack Images */
+@media (max-width: 768px) {
+    .atelie-split-image-row {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .atelie-image-half {
+        flex: 0 0 100%;
+        width: 100%;
+        height: 50vh;
+        /* Half screen height each */
+    }
+}
