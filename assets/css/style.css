@@ -5076,13 +5076,15 @@ nav a.active {
 
 .atelie-subtopic-item {
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 0.9rem;
-    color: #555;
+    font-size: 0.95rem;
+    /* Match topic item size */
+    color: #32302F;
+    /* Match topic item color */
     margin-bottom: 0.5rem;
     margin-left: 1rem;
-    /* Indent subtopics */
-    line-height: 1.4;
-    font-style: italic;
+    line-height: 1.5;
+    font-style: normal;
+    /* Remove italics */
 }
 
 .atelie-agenda-text {
@@ -5091,6 +5093,29 @@ nav a.active {
     color: #32302F;
     line-height: 1.6;
     margin-bottom: 2rem;
+}
+
+/* Simple Button Style (Underlined) */
+.atelie-btn-simple {
+    width: fit-content;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #583722;
+    text-decoration: none;
+    border-bottom: 0.5px solid #583722;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: block;
+    margin-top: 1rem;
+    /* Adjust margin for left alignment in column */
+}
+
+.atelie-btn-simple:hover {
+    color: #C58C71;
+    border-bottom-color: #C58C71;
 }
 
 /* Responsive 4-Cols */
@@ -5107,4 +5132,17 @@ nav a.active {
         grid-template-columns: 1fr;
         /* Stack on mobile */
     }
+}
+
+/* --- FORMAÇÕES CAPTION ALIGNMENT --- */
+.formation-photos-col .gallery-caption {
+    width: 100%;
+    text-align: right;
+    display: block;
+    padding-right: 5%;
+    margin-top: 1rem;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #666;
 }
