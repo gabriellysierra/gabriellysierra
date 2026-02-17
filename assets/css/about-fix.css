@@ -56,3 +56,10 @@
         margin-top: 2rem;
     }
 }
+/* Right align text in the left column */
+.about-text-col {
+    text-align: right;
+}
+.about-text-col h1, .about-text-col h2, .about-text-col p {
+    text-align: right;
+}
