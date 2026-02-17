@@ -1,0 +1,58 @@
+/* --- ABOUT PAGE SPLIT LAYOUT FIX --- */
+
+/* Wrapper to replace centered container */
+.about-split-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    gap: 4rem;
+}
+
+/* Columns */
+.about-text-col {
+    flex: 1;
+    /* Takes remaining space */
+}
+
+.about-image-col {
+    flex: 0 0 450px;
+    /* Fixed width for image column to maintain balance */
+    /* Ensure image doesn't shrink */
+}
+
+.about-ref-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    /* Optional: border-radius if consistent with other pages */
+}
+
+/* Typography matching .formation-desc (Project Descriptions) */
+.about-bio-text p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #32302F;
+    /* Graphite */
+    margin-bottom: 1.5rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .about-split-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image-col {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 500px;
+        margin-top: 2rem;
+    }
+}
