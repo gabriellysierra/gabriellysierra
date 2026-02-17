@@ -31,3 +31,20 @@
         /* Half screen height each */
     }
 }
+/* --- ATELIÊ LAYOUT REFINEMENTS --- */
+.atelie-content-section {
+    padding: 5rem 5% !important; /* Force 5% side padding and top spacing */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.atelie-service-row.four-cols {
+    width: 100%;
+    margin: 0 auto;
+    /* Ensure grid gap handles internal spacing */
+}
+
+/* Adjust spacing between Split Images and Text Content */
+.atelie-split-image-row + .atelie-content-section {
+    margin-top: 2rem; /* Additional breathing room if needed beyond padding */
+}
