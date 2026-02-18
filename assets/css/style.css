@@ -5150,14 +5150,84 @@ nav a.active {
 }
 
 /* --- FORMAÇÕES CAPTION ALIGNMENT --- */
+/* --- FORMATION LAYOUT FIXES --- */
+.formation-bleed-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 6rem;
+    gap: 4rem;
+}
+
+.formation-info-col {
+    flex: 0 0 32%;
+    /* Ajustado para deixar mais espaço para as fotos */
+    padding-left: 5%;
+    /* Alinhado à esquerda global */
+    max-width: 400px;
+}
+
+.formation-photos-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* Alinha tudo à direita */
+    max-width: 100%;
+}
+
+.formation-photos-col .gallery-grid-new {
+    width: 100%;
+    padding-right: 5%;
+    /* Garante alinhamento com a margem direita */
+}
+
+/* Alinhamento da Legenda */
 .formation-photos-col .gallery-caption {
     width: 100%;
     text-align: right;
     display: block;
     padding-right: 5%;
+    /* Alinhado com a margem global */
     margin-top: 1rem;
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 400;
     font-size: 0.8rem;
     color: #666;
+    box-sizing: border-box;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .formation-bleed-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .formation-info-col {
+        flex: 1;
+        padding-left: 5%;
+        padding-right: 5%;
+        max-width: 100%;
+    }
+
+    .formation-photos-col {
+        width: 100%;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .formation-photos-col .gallery-grid-new {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .formation-photos-col .gallery-caption {
+        text-align: right;
+        /* Mantendo right como solicitado */
+        padding-right: 5%;
+        padding-left: 5%;
+    }
 }
