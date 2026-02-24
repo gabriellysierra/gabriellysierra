@@ -47,9 +47,14 @@
 
             <!-- Right Column: Form -->
             <div class="contact-form-col">
+                <!-- Hidden Iframe to handle redirection on Zoho Free Plan -->
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                    onload="if(submitted) {window.location='obrigado.html';}"></iframe>
+
                 <form id="contactForm"
                     action="https://forms.zohopublic.com/contatogabriel1/form/Contato/formperma/GMJWGpYTgYKd6KwMUtGMZUM0oCB4-adWJ6voo-BhVJY/htmlRecords/submit"
-                    method="POST" accept-charset='UTF-8' enctype='multipart/form-data' class="minimal-form">
+                    method="POST" accept-charset='UTF-8' enctype='multipart/form-data' class="minimal-form"
+                    target="hidden_iframe" onsubmit="submitted=true;">
                     <input type="hidden" name="zf_referrer_name" value="">
                     <input type="hidden" name="zf_redirect_url" value="https://gabriellysierra.com.br/obrigado.html">
                     <input type="hidden" name="zc_gad" value="">
@@ -95,8 +100,9 @@
         </div>
     </footer>
 
-    <!-- No extra JS needed for Zoho Forms, as it handles redirection via hidden fields -->
-
+    <script>
+        var submitted = false;
+    </script>
     <script src="assets/js/script.js"></script>
 </body>
 
