@@ -123,4 +123,57 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+    /* --- ATELIÊ CAROUSEL LOGIC --- */
+    function initAtelieCarousel(containerId) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        const wrapper = container.querySelector('.atelie-carousel-wrapper');
+        const slides = container.querySelectorAll('.atelie-carousel-slide');
+        const prevBtn = container.querySelector('.prev');
+        const nextBtn = container.querySelector('.next');
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            const isMobile = window.innerWidth <= 768;
+            const slidesToMove = isMobile ? 1 : 2;
+            const maxIndex = Math.max(0, slides.length - slidesToMove);
+
+            if (currentIndex > maxIndex) currentIndex = maxIndex;
+            if (currentIndex < 0) currentIndex = 0;
+
+            const slideWidth = 100 / slidesToMove;
+            wrapper.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+
+            // Disable buttons if at ends
+            if (prevBtn) prevBtn.style.opacity = currentIndex === 0 ? '0.3' : '1';
+            if (nextBtn) nextBtn.style.opacity = currentIndex >= maxIndex ? '0.3' : '1';
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                const isMobile = window.innerWidth <= 768;
+                const step = isMobile ? 1 : 2;
+                if (currentIndex < slides.length - (isMobile ? 1 : 2)) {
+                    currentIndex++;
+                    updateCarousel();
+                }
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateCarousel();
+                }
+            });
+        }
+
+        window.addEventListener('resize', updateCarousel);
+        updateCarousel(); // Initial call
+    }
+
+    initAtelieCarousel('lab-carousel');
+    initAtelieCarousel('curadoria-carousel');
 });
