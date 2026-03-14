@@ -1915,8 +1915,6 @@ nav a.active {
     /* LegÃ­vel e estilo bilhete */
     color: #583722;
     margin: 0 0 40px 0;
-    transform: rotate(-2deg);
-    /* Leve inclinaÃ§Ã£o para charme */
 }
 
 .error-btn-link {
