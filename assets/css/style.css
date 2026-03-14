@@ -5231,3 +5231,43 @@ nav a.active {
         padding-left: 5%;
     }
 }
+
+/* ==========================================================================
+   ERROR 404 PAGE CONFIGURATION
+   ========================================================================== */
+
+.error-page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: 2rem 5%;
+    background-color: #FAFAFA;
+}
+
+.error-content {
+    text-align: center;
+    max-width: 600px;
+}
+
+.error-mascot {
+    max-width: 150px;
+    margin-bottom: 2rem;
+}
+
+.error-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 5rem;
+    font-weight: 300;
+    color: #222;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.error-message {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
