@@ -6292,3 +6292,22 @@ footer {
     height: 2px !important;
     background-color: #a86c47 !important;
 }
+
+/* --- FIX GALLERY GRID HEIGHT AND FINAL IMAGE --- */
+.project-relato-gallery,
+.project-relato-gallery-grid,
+.project-relato-gallery-stacked {
+    align-self: start !important;
+}
+
+.project-final-image-container {
+    overflow: hidden !important;
+}
+
+.project-final-image-container img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    object-position: center 30% !important;
+}
