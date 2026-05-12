@@ -6069,3 +6069,25 @@ nav a.active {
 .project-relato-text {
     padding-left: 5% !important;
 }
+
+.project-final-image-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 8rem;
+}
+
+.project-final-image-container {
+    width: 60%;
+    aspect-ratio: 16/9;
+    background-color: #f5f5f5;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end !important;
+    padding: 4rem 5% !important;
+}
+
+.social-icons {
+    gap: 1.5rem;
+}
