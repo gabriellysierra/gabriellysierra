@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitura e criação / Roger Mello | GABRIELLY SIERRA</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600;700&family=Source+Sans+3:wght@300;400;600&family=Reenie+Beanie&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <img src="assets/img/preloader-icon.png" alt="Carregando..." class="preloader-icon">
+    </div>
+
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="assets/img/logo.png" alt="Gabrielly Sierra" class="main-logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="about.html">sobre</a></li>
+                <li><a href="formacoes.html">formação</a></li>
+                <li><a href="projetos-leitura.html">projetos de leitura</a></li>
+                <li><a href="curadoria.html">curadoria</a></li>
+                <li><a href="textos.html">textos</a></li>
+                <li><a href="contato.html">contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <header class="projects-editorial-header">
+            <div class="projects-header-container">
+                <div class="projects-intro-col" style="flex: 0 0 100%; max-width: 100%;">
+                    <h1 class="projects-main-title">LEITURA E CRIAÇÃO: ROGER MELLO</h1>
+                    <p class="projects-intro-text">
+                        Exploração estética a partir das obras de Roger Mello.
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <div class="gallery-page-wrapper" style="padding-top: 2rem; background-color: #FFFFFF;">
+            <div class="formation-bleed-container">
+                <aside class="formation-info-col">
+                    <h1 class="formation-main-title">A PROPOSTA</h1>
+                    <p class="standard-body-text" style="margin: 1.5rem 0;">
+                        O projeto une mediação literária e atividades de expressão explorando diferentes técnicas e materiais por meio da literatura e da educação estética. Nos encontros os participantes são incentivados a interpretar as narrativas de forma sensível e a vivenciar processos criativos com o uso de diferentes linguagens artísticas, transformando suas percepções literárias em criações individuais, inspiradas pela obra de Roger Mello.
+                    </p>
+                    <div class="reading-target" style="margin: 2rem 0;">
+                        <strong class="standard-section-title">PÚBLICO</strong>
+                        <p class="standard-body-text" style="margin-top: 0.5rem;">Crianças de 8 a 12 anos.</p>
+                    </div>
+                </aside>
+
+                <section class="formation-photos-col">
+                    <div class="gallery-grid-new">
+                        <img src="assets/img/GabiCentroCulturalUSP-014.jpg" alt="Leitura e criação" onclick="openLightbox(this.src)">
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div class="back-to-projects-wrapper" style="margin-bottom: 5rem;">
+        <a href="projetos-leitura.html" class="back-to-projects">← voltar para projetos de leitura</a>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <footer>
+        <div class="footer-illustration">
+            <img src="assets/img/dog-footer.png" alt="Ilustração" class="footer-dog">
+        </div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/gabriellysierra/?hl=pt" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@gabrielly.sierra" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@gabriellysierra" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/in/gabriellysierra/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        const modal = document.getElementById("lightbox-modal");
+        const modalImg = document.getElementById("lightbox-img");
+
+        function openLightbox(src) {
+            modal.style.display = "flex";
+            modalImg.src = src;
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeLightbox() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        modal.onclick = function (e) {
+            if (e.target === modal) closeLightbox();
+        }
+    </script>
+</body>
+
+</html>
