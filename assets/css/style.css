@@ -32,7 +32,7 @@ img {
 
 body {
     background-color: var(--bg-body);
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-weight: 400;
     color: var(--text-main);
     overflow-x: hidden;
@@ -352,7 +352,7 @@ footer {
 }
 
 .about-text-content p {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1rem;
     line-height: 1.8;
     color: #32302F;
@@ -703,7 +703,7 @@ nav a.active {
 }
 
 .feature-desc {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
     /* Reduced size */
     color: #32302F;
@@ -765,7 +765,7 @@ nav a.active {
 }
 
 .project-desc {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
     color: #32302F;
     line-height: 1.6;
@@ -775,7 +775,7 @@ nav a.active {
 /* Saiba Mais Button - CORRECTED STYLE */
 .learn-more-btn {
     display: inline-block;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 0.9rem;
     font-weight: 600;
     color: #FFFFFF;
@@ -822,7 +822,7 @@ nav a.active {
 }
 
 .testimonial-text {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
     font-style: italic;
     /* Italic */
@@ -832,7 +832,7 @@ nav a.active {
 }
 
 .testimonial-author {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 0.9rem;
     font-weight: 700;
     /* Bold */
@@ -1009,7 +1009,7 @@ nav a.active {
 
 /* Typography Standards for Refinements */
 .standard-body-text {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1rem;
     line-height: 1.7;
     color: #32302F;
@@ -1096,7 +1096,7 @@ nav a.active {
 }
 
 .formation-desc {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 2rem;
@@ -1104,7 +1104,7 @@ nav a.active {
 }
 
 .target-audience {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
     margin-bottom: 2rem;
     display: block;
@@ -1296,7 +1296,7 @@ nav a.active {
 }
 
 .overlay-desc {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1.2rem;
     margin-bottom: 2rem;
     line-height: 1.6;
@@ -1627,7 +1627,7 @@ nav a.active {
 }
 
 .art-text-desc {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1rem;
     line-height: 1.6;
     opacity: 0.9;
@@ -1923,7 +1923,7 @@ nav a.active {
     background-color: #C58C71;
     /* Warm Clay */
     color: #FFFFFF;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-weight: 600;
     text-decoration: none;
     border-radius: 5px;
@@ -1976,7 +1976,7 @@ nav a.active {
 }
 
 .about-text-content p {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1.1rem;
     line-height: 1.8;
     /* Texto leve conforme solicitado */
@@ -2101,7 +2101,7 @@ nav a.active {
 }
 
 .atelie-subtitle {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1.1rem;
     color: #32302F;
     line-height: 1.6;
@@ -2159,7 +2159,7 @@ nav a.active {
 }
 
 .atelie-card-subtitle {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
     color: #32302F;
@@ -2169,7 +2169,7 @@ nav a.active {
 }
 
 .atelie-card-desc {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1rem;
     color: #32302F;
     line-height: 1.8;
@@ -2179,7 +2179,7 @@ nav a.active {
 
 /* Highlight for Para Quem */
 .atelie-target {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1rem;
     color: #32302F;
     background-color: #faf6f3;
@@ -2204,7 +2204,7 @@ nav a.active {
     background-color: #C58C71;
     /* Warm Clay */
     color: #FFFFFF;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-weight: 600;
     text-decoration: none;
     padding: 1rem 2rem;
@@ -2294,7 +2294,7 @@ nav a.active {
 }
 
 .events-subtitle {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1.5rem;
     color: var(--text-main);
     /* Graphite */
@@ -2597,7 +2597,7 @@ nav a.active {
 }
 
 .formation-audience {
-    font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+    font-family: 'aileron', 'Source Sans Pro', sans-serif;
     font-weight: 400;
     /* Sem negrito */
     text-transform: none;
@@ -3754,7 +3754,7 @@ nav a.active {
 }
 
 .about-bio-text p {
-    font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+    font-family: 'aileron', 'Source Sans Pro', sans-serif;
     font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-main);
@@ -4157,7 +4157,7 @@ nav a.active {
 }
 
 .minimal-desc {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
     color: #666;
     line-height: 1.6;
@@ -4277,7 +4277,7 @@ nav a.active {
 }
 
 .modal-col-left .modal-desc {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1.05rem;
     line-height: 1.8;
     color: #32302F;
@@ -4645,7 +4645,7 @@ nav a.active {
     border-bottom: 1px solid #D0CDC9;
     /* Subtle underline */
     padding: 10px 0;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1.1rem;
     color: #32302F;
     outline: none !important;
@@ -4845,7 +4845,7 @@ nav a.active {
 }
 
 .article-reading-column p {
-    font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+    font-family: 'aileron', 'Source Sans Pro', sans-serif;
     font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-main);
@@ -4952,7 +4952,7 @@ nav a.active {
 }
 
 .formation-audience {
-    font-family: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+    font-family: 'aileron', 'Source Sans Pro', sans-serif;
     font-weight: 400;
     /* Sem negrito */
     text-transform: none;
@@ -5009,7 +5009,7 @@ nav a.active {
 }
 
 .atelie-service-content-col .atelie-card-desc {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1.05rem;
     line-height: 1.8;
     color: #32302F;
@@ -5018,7 +5018,7 @@ nav a.active {
 }
 
 .atelie-service-content-col .atelie-target {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1rem;
     color: #555;
     margin-bottom: 2rem;
@@ -5071,7 +5071,7 @@ nav a.active {
 }
 
 .atelie-topic-item {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
     color: #32302F;
     margin-bottom: 0.8rem;
@@ -5088,7 +5088,7 @@ nav a.active {
 }
 
 .atelie-subtopic-item {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
     /* Match topic item size */
     color: #32302F;
@@ -5101,7 +5101,7 @@ nav a.active {
 }
 
 .atelie-agenda-text {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
     color: #32302F;
     line-height: 1.6;
@@ -5190,7 +5190,7 @@ nav a.active {
     padding-right: 5%;
     /* Alinhado com a margem global */
     margin-top: 1rem;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-weight: 400;
     font-size: 0.8rem;
     color: #666;
@@ -5278,7 +5278,7 @@ nav a.active {
 }
 
 .error-message {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1.2rem;
     color: #555;
     margin-bottom: 3rem;
@@ -5326,7 +5326,7 @@ nav a.active {
 }
 
 .editorial-intro-text {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1.15rem;
     line-height: 1.7;
     color: #32302F;
@@ -5478,7 +5478,7 @@ nav a.active {
 }
 
 .hero-main-description {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1rem;
     line-height: 1.8;
     color: #32302F;
@@ -5535,7 +5535,7 @@ nav a.active {
 .meta-item {
     display: flex;
     justify-content: space-between;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 0.9rem;
     color: #666;
     border-bottom: 1px solid #f5f5f5;
@@ -5629,7 +5629,7 @@ nav a.active {
 }
 
 .magazine-text-block {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 1.1rem;
     line-height: 1.8;
     color: #32302F;
@@ -5752,7 +5752,7 @@ nav a.active {
 }
 
 .editorial-description {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
     line-height: 1.6;
     color: #32302F;
@@ -5877,7 +5877,7 @@ nav a.active {
 }
 
 .project-hero-desc {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
     line-height: 1.6;
     color: #32302F;
@@ -5886,7 +5886,7 @@ nav a.active {
 }
 
 .project-hero-meta {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 0.85rem;
     color: #999;
     text-align: right;
@@ -5924,7 +5924,7 @@ nav a.active {
 }
 
 .relato-content {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
     line-height: 1.8;
     color: #32302F;
@@ -5993,7 +5993,7 @@ nav a.active {
 /* Subtitles */
 .relato-subtitle, 
 .editorial-main-subtitle {
-    font-family: 'Source Sans 3', sans-serif !important;
+    font-family: 'aileron', sans-serif !important;
     font-weight: 400 !important;
     font-size: 10px !important;
     text-transform: lowercase !important;
@@ -6010,7 +6010,7 @@ nav a.active {
 .magazine-text-block, 
 .magazine-text-block p,
 .project-hero-meta {
-    font-family: 'Source Sans 3', sans-serif !important;
+    font-family: 'aileron', sans-serif !important;
     font-weight: 400 !important;
     font-size: 11px !important;
     color: #583722 !important;
