@@ -6321,3 +6321,29 @@ footer {
     justify-content: flex-end !important;
     padding-bottom: 0 !important;
 }
+
+/* --- USER REQUESTED FIXES --- */
+.relato-subtitle::after, 
+.editorial-main-subtitle::after {
+    display: none !important;
+}
+
+.relato-subtitle, 
+.editorial-main-subtitle {
+    padding-bottom: 0 !important;
+    position: static !important;
+}
+
+.project-hero-image, 
+.project-hero-image img {
+    background-color: transparent !important;
+    background: none !important;
+}
+
+/* Ajuste da imagem principal para não ficar desproporcional se for vertical */
+.project-hero-image img {
+    aspect-ratio: auto !important;
+    max-height: 70vh !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
