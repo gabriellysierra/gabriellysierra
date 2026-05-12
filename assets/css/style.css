@@ -6091,3 +6091,12 @@ footer {
 .social-icons {
     gap: 1.5rem;
 }
+
+/* --- FONT SIZE ADJUSTMENT --- */
+.project-hero-title, .relato-title, .editorial-main-title, .editorial-grid-title-v2 {
+    font-size: 28px !important;
+}
+
+.project-hero-desc, .relato-content, .relato-content p, .editorial-description, .editorial-description p, .magazine-text-block, .magazine-text-block p, .project-hero-meta, .meta-label, .meta-value {
+    font-size: 14px !important;
+}
