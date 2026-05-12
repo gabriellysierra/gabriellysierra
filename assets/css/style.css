@@ -5425,20 +5425,6 @@ nav a.active {
 
 .editorial-project-link:hover .editorial-project-title {
     color: var(--color-accent);
-}
-
-/* --- SPLIT HERO LAYOUT (Project Pages) --- */
-.split-hero-container {
-    display: flex;
-    width: 100%;
-    min-height: 90vh; /* Altura generosa para o hero */
-    background-color: #FFFFFF;
-}
-
-.split-hero-image-col {
-    flex: 1;
-    background-color: #f5f5f5; /* Placeholder para imagem de fundo */
-    position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -5572,4 +5558,24 @@ nav a.active {
     .hero-project-title {
         font-size: 1.8rem;
     }
+}
+
+/* --- SPLIT HERO LAYOUT (RE-ADDED) --- */
+.split-hero-container {
+    display: flex;
+    width: 100%;
+    min-height: 90vh;
+    background-color: #FFFFFF;
+    gap: 2rem;
+}
+
+.split-hero-image-col {
+    flex: 1;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.split-hero-text-col {
+    padding-left: 1.5rem !important;
 }
