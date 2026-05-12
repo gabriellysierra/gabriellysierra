@@ -6131,3 +6131,32 @@ footer {
     color: #583722 !important;
     font-size: 13px !important;
 }
+
+/* --- FULL BLEED PROJECT GRID --- */
+.editorial-page-main {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: none !important;
+}
+
+.editorial-intro-row {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+}
+
+.editorial-grid-v2 {
+    gap: 5px !important;
+    padding: 0 5px !important;
+}
+
+.editorial-grid-title-v2 {
+    font-size: 14px !important;
+    margin-bottom: 1rem !important;
+    padding: 0 1rem !important;
+    min-height: auto !important;
+}
+
+.editorial-grid-image-v2 {
+    aspect-ratio: 3/4.5 !important;
+    height: auto !important;
+}
