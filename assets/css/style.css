@@ -6244,3 +6244,24 @@ footer {
     object-fit: cover !important;
     display: block !important;
 }
+
+/* --- FIX ALL PROJECT GALLERY SIZES --- */
+.project-relato-gallery,
+.project-relato-gallery-grid {
+    flex: 0.8 !important;
+}
+
+.gallery-tall,
+.gallery-small,
+.gallery-grid-item {
+    overflow: hidden;
+}
+
+.gallery-tall img,
+.gallery-small img,
+.gallery-grid-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
