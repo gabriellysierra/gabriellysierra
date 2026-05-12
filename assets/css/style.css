@@ -6179,3 +6179,12 @@ footer {
 .project-detail-main, .editorial-page-main {
     padding-top: 12rem !important;
 }
+
+/* --- LOGO RESTORATION --- */
+.editorial-text-logo {
+    font-family: 'ff-providence-sans-web-pro', 'aileron', sans-serif !important;
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
+    font-size: 1.1rem !important;
+    letter-spacing: 2px !important;
+}
