@@ -6166,3 +6166,11 @@ footer {
     font-size: 14px !important;
     letter-spacing: 0.5px !important;
 }
+
+/* --- GRID ALIGNMENT FIX --- */
+.editorial-grid-title-v2 {
+    min-height: 6rem !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    margin-bottom: 1.5rem !important;
+}
