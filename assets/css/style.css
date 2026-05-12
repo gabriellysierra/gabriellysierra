@@ -6188,3 +6188,17 @@ footer {
     font-size: 1.1rem !important;
     letter-spacing: 2px !important;
 }
+
+/* --- STACKED GALLERY LAYOUT --- */
+.project-relato-gallery-stacked {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.gallery-stacked-item {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: #f5f5f5;
+}
