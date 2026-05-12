@@ -5579,3 +5579,14 @@ nav a.active {
 .split-hero-text-col {
     padding-left: 1.5rem !important;
 }
+
+.split-hero-text-col {
+    justify-content: space-between !important;
+    padding-bottom: 3rem !important;
+    padding-top: 6rem !important;
+}
+
+.hero-project-meta {
+    margin-top: auto !important;
+    padding-bottom: 0;
+}
