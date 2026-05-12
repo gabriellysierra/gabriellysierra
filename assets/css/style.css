@@ -5590,3 +5590,13 @@ nav a.active {
     margin-top: auto !important;
     padding-bottom: 0;
 }
+
+.split-hero-text-col {
+    justify-content: flex-end !important;
+    padding-top: 2rem !important;
+    padding-bottom: 4rem !important;
+}
+
+.hero-main-description {
+    margin-bottom: 4rem !important;
+}
