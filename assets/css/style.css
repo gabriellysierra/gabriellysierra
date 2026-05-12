@@ -5426,3 +5426,90 @@ nav a.active {
 .editorial-project-link:hover .editorial-project-title {
     color: var(--color-accent);
 }
+
+/* --- SPLIT HERO LAYOUT (Project Pages) --- */
+.split-hero-container {
+    display: flex;
+    width: 100%;
+    min-height: 90vh; /* Altura generosa para o hero */
+    background-color: #FFFFFF;
+}
+
+.split-hero-image-col {
+    flex: 1;
+    background-color: #f5f5f5; /* Placeholder para imagem de fundo */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-placeholder {
+    width: 250px;
+    height: 350px;
+    background-color: #e0e0e0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.split-hero-text-col {
+    width: 35%;
+    min-width: 400px;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
+
+.hero-subtitle-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 3rem;
+}
+
+.hero-subtitle-item {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.hero-subtitle-item.active {
+    color: #32302F;
+    font-weight: 600;
+}
+
+.hero-main-description {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #32302F;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .split-hero-container {
+        flex-direction: column;
+    }
+    .split-hero-image-col {
+        height: 60vh;
+    }
+    .split-hero-text-col {
+        width: 100%;
+        min-width: auto;
+        padding: 3rem 5%;
+    }
+}
