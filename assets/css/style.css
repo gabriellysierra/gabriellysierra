@@ -5243,6 +5243,21 @@ nav a.active {
     background-color: #FAFAFA;
 }
 
+.editorial-project-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    min-height: 3.5rem;
+    color: #32302F;
+    transition: color 0.3s ease;
+}
+
+.editorial-project-card:hover .editorial-project-title {
+    color: var(--color-accent);
+}
+
 .error-content {
     text-align: center;
     max-width: 600px;
