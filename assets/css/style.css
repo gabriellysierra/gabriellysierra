@@ -6100,3 +6100,34 @@ footer {
 .project-hero-desc, .relato-content, .relato-content p, .editorial-description, .editorial-description p, .magazine-text-block, .magazine-text-block p, .project-hero-meta, .meta-label, .meta-value {
     font-size: 14px !important;
 }
+
+/* --- PRETTIER FICHA TÉCNICA --- */
+.project-hero-meta {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.8rem !important;
+    border-top: 1px solid #eee !important;
+    padding-top: 1.5rem !important;
+    margin-top: 3rem !important;
+}
+
+.meta-item {
+    display: flex !important;
+    justify-content: space-between !important;
+    border-bottom: 1px solid #fafafa !important;
+    padding-bottom: 0.4rem !important;
+    text-align: right !important;
+}
+
+.meta-label {
+    color: #bbb !important;
+    font-size: 10px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    font-weight: 600 !important;
+}
+
+.meta-value {
+    color: #583722 !important;
+    font-size: 13px !important;
+}
