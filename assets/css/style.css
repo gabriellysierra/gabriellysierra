@@ -5976,3 +5976,49 @@ nav a.active {
         min-height: auto;
     }
 }
+
+/* --- TYPOGRAPHY UPDATE (As per user request) --- */
+/* Titles */
+.project-hero-title, 
+.relato-title, 
+.editorial-main-title, 
+.editorial-grid-title-v2 {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 24px !important;
+    text-transform: uppercase !important;
+    color: #583722 !important;
+}
+
+/* Subtitles */
+.relato-subtitle, 
+.editorial-main-subtitle {
+    font-family: 'Source Sans 3', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 10px !important;
+    text-transform: lowercase !important;
+    color: #583722 !important;
+    letter-spacing: 1px;
+}
+
+/* Body Text */
+.project-hero-desc, 
+.relato-content, 
+.relato-content p,
+.editorial-description, 
+.editorial-description p,
+.magazine-text-block, 
+.magazine-text-block p,
+.project-hero-meta {
+    font-family: 'Source Sans 3', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 11px !important;
+    color: #583722 !important;
+    line-height: 1.6 !important;
+}
+
+.meta-label, 
+.meta-value {
+    font-size: 11px !important;
+    color: #583722 !important;
+}
