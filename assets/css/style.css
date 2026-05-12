@@ -6160,3 +6160,9 @@ footer {
     aspect-ratio: 3/4.5 !important;
     height: auto !important;
 }
+
+/* --- SUBTITLE READABILITY --- */
+.editorial-main-subtitle, .relato-subtitle {
+    font-size: 14px !important;
+    letter-spacing: 0.5px !important;
+}
