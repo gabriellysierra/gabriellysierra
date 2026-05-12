@@ -6228,3 +6228,19 @@ footer {
     text-transform: uppercase !important;
     font-weight: normal !important;
 }
+
+/* --- FIX STACKED GALLERY IMAGES --- */
+.project-relato-gallery-stacked {
+    flex: 0.8 !important;
+}
+
+.gallery-stacked-item {
+    overflow: hidden;
+}
+
+.gallery-stacked-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+}
