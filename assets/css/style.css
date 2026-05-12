@@ -6216,3 +6216,15 @@ footer {
     aspect-ratio: 1/1;
     background-color: #f5f5f5;
 }
+
+/* --- LOGO FONT FIX (FINAL) --- */
+@font-face {
+    font-family: 'Providence Sans';
+    src: local('FF Providence Sans Regular'), local('FFProvidenceSans-Regular');
+}
+
+.editorial-text-logo {
+    font-family: 'Providence Sans', 'aileron', sans-serif !important;
+    text-transform: uppercase !important;
+    font-weight: normal !important;
+}
