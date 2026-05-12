@@ -6311,3 +6311,13 @@ footer {
     display: block !important;
     object-position: center 30% !important;
 }
+
+/* --- FIX HERO TEXT ALIGNMENT TO MATCH MODEL --- */
+.project-hero-row {
+    align-items: stretch !important;
+}
+
+.project-hero-text {
+    justify-content: flex-end !important;
+    padding-bottom: 0 !important;
+}
