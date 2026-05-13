@@ -12,6 +12,8 @@
 .textos-intro {
     margin-bottom: 0;
     padding-bottom: 5rem;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .textos-intro .editorial-intro-left {

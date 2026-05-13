@@ -68,6 +68,11 @@
     max-width: none !important;
 }
 
+.about-intro-row {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 .about-main {
     max-width: 1400px;
     margin: 0 auto;
