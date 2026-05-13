@@ -6669,3 +6669,55 @@ footer {
 .texts-archive-container {
     width: 100% !important;
 }
+
+/* --- REFINING FORMAÇÕES REALIZADAS (DELICATE VERSION) --- */
+.editorial-list-section {
+    padding: 10rem 5% !important;
+    text-align: center !important;
+}
+
+.editorial-list-title {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-size: 1.4rem !important;
+    font-weight: 400 !important;
+    color: #583722 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 4px !important;
+    margin-bottom: 3rem !important;
+}
+
+.editorial-list-section p {
+    font-family: 'aileron', sans-serif !important;
+    font-size: 13px !important;
+    color: #583722 !important;
+    max-width: 600px !important;
+    margin: 0 auto 2.5rem !important;
+    line-height: 1.6 !important;
+}
+
+.editorial-bullet-list {
+    display: inline-block !important;
+    text-align: left !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+}
+
+.editorial-bullet-list li {
+    font-family: 'aileron', sans-serif !important;
+    font-size: 13px !important;
+    color: #583722 !important;
+    margin-bottom: 0.7rem !important;
+    padding-left: 1.2rem !important;
+    position: relative !important;
+    line-height: 1.4 !important;
+}
+
+.editorial-bullet-list li::before {
+    content: '•' !important;
+    position: absolute !important;
+    left: 0 !important;
+    color: #583722 !important;
+    font-size: 0.9rem !important;
+    top: -1px !important;
+}
