@@ -1,0 +1,20 @@
+/* =========================================
+   FORMAÇÕES PAGE — IMAGE HOVER EFFECTS
+   ========================================= */
+
+.magazine-image-col img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%);
+    transition: filter 0.6s ease;
+}
+
+.magazine-image-col:hover img {
+    filter: grayscale(0%);
+}
+
+/* Garante que o container da imagem tenha uma transição suave */
+.magazine-image-col {
+    overflow: hidden;
+}

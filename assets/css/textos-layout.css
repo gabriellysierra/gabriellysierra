@@ -2,6 +2,10 @@
    TEXTOS PAGE — NUMBERED ARCHIVE LAYOUT
    ========================================= */
 
+.page-textos .project-detail-main {
+    padding-left: 8%; /* Extra respiro na esquerda */
+}
+
 /* Intro: sem subtítulo, só título + parágrafo */
 .textos-intro {
     margin-bottom: 0;

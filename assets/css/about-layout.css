@@ -62,6 +62,16 @@
     overflow: hidden;
 }
 
+.page-about .project-detail-main,
+.page-textos .project-detail-main {
+    padding-left: 8%; /* Extra respiro na esquerda */
+}
+
+.about-main {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 .about-stack-photo {
     width: 100%;
     height: auto;
