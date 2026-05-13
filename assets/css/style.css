@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Reenie+Beanie&family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Reenie+Beanie&family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
 
 :root {
     --bg-body: #FFFFFF;
-    --text-main: #32302F;
+    --text-main: #583722;
     --color-titles: #583722;
     /* Dark Cocoa */
     --color-accent: #C58C71;
@@ -150,7 +150,7 @@ main {
     position: relative;
     overflow: hidden;
     margin-bottom: 0;
-    /* Colado no rodapÃ© */
+    /* Colado no rodapÃƒÂ© */
 }
 
 .carousel-slide {
@@ -201,7 +201,7 @@ main {
 }
 
 .carousel-control i {
-    color: #222;
+    color: #583722;
     font-size: 30px;
     /* Adjusted for Font Awesome */
 }
@@ -255,7 +255,7 @@ footer {
 .social-icons i {
     font-size: 1.3rem;
     /* Tamanho visual padronizado */
-    color: #32302F;
+    color: #583722;
     transition: opacity 0.2s;
     /* Remove properties specific to Lucide/SVG if not needed for FA */
 }
@@ -300,14 +300,14 @@ footer {
 
 .about-container {
     max-width: 1000px;
-    /* MandatÃ³rio: 1000px */
+    /* MandatÃƒÂ³rio: 1000px */
     width: 100%;
     margin: 0 auto;
     padding: 0 40px;
     /* Respiro lateral */
     display: flex;
     gap: 60px;
-    /* EspaÃ§o amplo solicitado (entre 50px e 60px) */
+    /* EspaÃƒÂ§o amplo solicitado (entre 50px e 60px) */
     align-items: flex-start;
     /* Top aligned */
 }
@@ -315,7 +315,7 @@ footer {
 /* Coluna Imagem */
 .about-image-col {
     flex: 0 0 350px;
-    /* Largura controlada para equilÃ­brio */
+    /* Largura controlada para equilÃƒÂ­brio */
     margin-top: 0;
     /* Removing top margin to align strictly with container, title alignment handled by line-height usually */
 }
@@ -326,14 +326,14 @@ footer {
     /* Safety for production */
     height: auto;
     display: block;
-    /* Manter proporÃ§Ã£o original, sem filtros artificiais se nÃ£o solicitado, mas prompt diz 'fidelidade ao print' que era B&W? O texto diz 'perfil.jpg manter proporÃ§Ãµes'. Vou assumir grayscale pois Ã© a identidade atÃ© agora. */
+    /* Manter proporÃƒÂ§ÃƒÂ£o original, sem filtros artificiais se nÃƒÂ£o solicitado, mas prompt diz 'fidelidade ao print' que era B&W? O texto diz 'perfil.jpg manter proporÃƒÂ§ÃƒÂµes'. Vou assumir grayscale pois ÃƒÂ© a identidade atÃƒÂ© agora. */
     filter: grayscale(100%);
 }
 
 /* Coluna Texto */
 .about-text-col {
     flex: 1;
-    color: #32302F;
+    color: #583722;
     /* Removed max-width: 600px to allow inner content (image) to expand if needed, 
        text width is now controlled on p tags */
 }
@@ -342,7 +342,7 @@ footer {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
-    color: #32302F;
+    color: #583722;
     margin-bottom: 2rem;
     line-height: 1.2;
     margin-top: -6px;
@@ -355,11 +355,11 @@ footer {
     font-family: 'aileron', sans-serif;
     font-size: 1rem;
     line-height: 1.8;
-    color: #32302F;
+    color: #583722;
     margin-bottom: 2rem;
     text-align: left;
     max-width: 600px;
-    /* MantÃ©m a leitura confortÃ¡vel */
+    /* MantÃƒÂ©m a leitura confortÃƒÂ¡vel */
 }
 
 /* Responsividade */
@@ -386,7 +386,7 @@ footer {
     /* Mobile Title Alignment */
     .about-title {
         text-align: left;
-        /* Ou center se preferir no mobile, mas left Ã© mais seguro */
+        /* Ou center se preferir no mobile, mas left ÃƒÂ© mais seguro */
     }
 
 
@@ -441,7 +441,7 @@ nav a.active {
     font-size: 1.1rem;
     font-weight: 500;
     margin-top: 0.5rem;
-    color: #000;
+    color: #583722;
     text-align: left;
 }
 
@@ -485,7 +485,7 @@ nav a.active {
 
 /* Color Palette Utilities */
 .bg-graphite {
-    background-color: #32302F;
+    background-color: #583722;
 }
 
 .bg-dark-cocoa {
@@ -510,7 +510,7 @@ nav a.active {
 .text-graphite,
 .text-graphite .texto-title,
 .text-graphite .texto-tag {
-    color: #32302F;
+    color: #583722;
 }
 
 .text-dark-cocoa,
@@ -596,7 +596,7 @@ nav a.active {
     font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
-    color: #000;
+    color: #583722;
 }
 
 .contact-form {
@@ -614,7 +614,7 @@ nav a.active {
 .form-group label {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 0.9rem;
-    color: #333;
+    color: #583722;
     font-weight: 500;
 }
 
@@ -630,12 +630,12 @@ nav a.active {
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #000;
+    border-color: #583722;
     outline: none;
 }
 
 .submit-btn {
-    background-color: #000;
+    background-color: #583722;
     color: #fff;
     border: none;
     padding: 1rem 2rem;
@@ -648,7 +648,7 @@ nav a.active {
 }
 
 .submit-btn:hover {
-    background-color: #333;
+    background-color: #583722;
 }
 
 /* --- NEW PROJECTS PAGE STRUCTURE (Zig-Zag) --- */
@@ -706,7 +706,7 @@ nav a.active {
     font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
     /* Reduced size */
-    color: #32302F;
+    color: #583722;
     line-height: 1.8;
     margin-bottom: 2rem;
 }
@@ -767,7 +767,7 @@ nav a.active {
 .project-desc {
     font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
-    color: #32302F;
+    color: #583722;
     line-height: 1.6;
     margin-bottom: 0.5rem;
 }
@@ -826,7 +826,7 @@ nav a.active {
     font-size: 0.95rem;
     font-style: italic;
     /* Italic */
-    color: #32302F;
+    color: #583722;
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
@@ -836,7 +836,7 @@ nav a.active {
     font-size: 0.9rem;
     font-weight: 700;
     /* Bold */
-    color: #32302F;
+    color: #583722;
     margin-top: 1rem;
 }
 
@@ -861,11 +861,11 @@ nav a.active {
     }
 }
 
-/* --- GALERIA MEMÃ“RIA (Reorganized Split-Screen) --- */
+/* --- GALERIA MEMÃƒâ€œRIA (Reorganized Split-Screen) --- */
 
 .gallery-page-wrapper {
     background-color: #F2F0ED;
-    /* Cor areia claro da referÃªncia */
+    /* Cor areia claro da referÃƒÂªncia */
     min-height: 100vh;
     padding: 6rem 0;
     width: 100%;
@@ -879,7 +879,7 @@ nav a.active {
     padding: 0 40px;
     display: flex;
     gap: 80px;
-    /* EspaÃ§o amplo entre texto e foto */
+    /* EspaÃƒÂ§o amplo entre texto e foto */
     align-items: flex-start;
 }
 
@@ -912,7 +912,7 @@ nav a.active {
 .gallery-info-col .gallery-caption {
     font-size: 1.3rem;
     line-height: 1.4;
-    color: #32302F;
+    color: #583722;
     text-align: left;
     margin: 0;
 }
@@ -924,9 +924,9 @@ nav a.active {
 .gallery-grid-new {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* 4 colunas como na referÃªncia */
+    /* 4 colunas como na referÃƒÂªncia */
     gap: 15px;
-    /* EspaÃ§amento fino e geomÃ©trico */
+    /* EspaÃƒÂ§amento fino e geomÃƒÂ©trico */
 }
 
 .gallery-grid-new img {
@@ -1012,7 +1012,7 @@ nav a.active {
     font-family: 'aileron', sans-serif;
     font-size: 1rem;
     line-height: 1.7;
-    color: #32302F;
+    color: #583722;
 }
 
 .standard-section-title {
@@ -1212,7 +1212,7 @@ nav a.active {
     height: 85vh;
     /* Large impact */
     min-height: 600px;
-    background-color: #000;
+    background-color: #583722;
     overflow: hidden;
 }
 
@@ -1385,7 +1385,7 @@ nav a.active {
 /* Light Row Styles */
 .project-row.light .project-col-text {
     background-color: #FFFFFF;
-    color: #32302F;
+    color: #583722;
 }
 
 .project-row.light .formation-title {
@@ -1393,7 +1393,7 @@ nav a.active {
 }
 
 .project-row.light .formation-desc {
-    color: #32302F;
+    color: #583722;
 }
 
 /* Responsive ZigZag */
@@ -1589,7 +1589,7 @@ nav a.active {
 }
 
 .bg-graphite {
-    background-color: #32302F;
+    background-color: #583722;
 }
 
 /* Text Utilities */
@@ -1602,7 +1602,7 @@ nav a.active {
 }
 
 .text-graphite {
-    color: #32302F !important;
+    color: #583722 !important;
 }
 
 /* Interactive Text Blocks */
@@ -1759,14 +1759,14 @@ nav a.active {
     margin-top: 50px !important;
     /* Ajuste solicitado */
     margin-left: auto;
-    /* Alinha todo o bloco Ã  direita */
+    /* Alinha todo o bloco ÃƒÂ  direita */
     margin-right: 0;
 }
 
 .about-signature-img {
     display: block;
     width: 100%;
-    /* Ocupa 100% do bloco pai (que Ã© 65%) */
+    /* Ocupa 100% do bloco pai (que ÃƒÂ© 65%) */
     height: auto;
     /* Sem sombras, bordas ou fundo branco */
     box-shadow: none;
@@ -1783,7 +1783,7 @@ nav a.active {
     margin-top: 40px;
     /* Descolar da bio */
     margin-bottom: 20px;
-    /* EspaÃ§o para a poltrona */
+    /* EspaÃƒÂ§o para a poltrona */
 
     width: 100%;
     text-align: center;
@@ -1793,7 +1793,7 @@ nav a.active {
     color: #583722;
     /* Dark Cocoa */
     transform: rotate(-5deg);
-    /* Sentido anti-horÃ¡rio */
+    /* Sentido anti-horÃƒÂ¡rio */
     z-index: 10;
     line-height: 0.9;
     pointer-events: none;
@@ -1838,14 +1838,14 @@ nav a.active {
     /* Restaurado para zero (sem margem negativa) */
 }
 
-/* Projects Page Header Icon (BibliomÃ³vel) */
+/* Projects Page Header Icon (BibliomÃƒÂ³vel) */
 .projects-header-icon {
     display: block;
     width: 200px;
-    /* MantÃ©m o tamanho (180-200px) */
+    /* MantÃƒÂ©m o tamanho (180-200px) */
     max-width: 100%;
     margin: 0 auto;
-    /* CentralizaÃ§Ã£o simples, margin-bottom controlada pelo container */
+    /* CentralizaÃƒÂ§ÃƒÂ£o simples, margin-bottom controlada pelo container */
     height: auto;
     object-fit: contain;
     background: transparent;
@@ -1877,7 +1877,7 @@ nav a.active {
 /* 404 Error Page Styles */
 .error-page-wrapper {
     min-height: 60vh;
-    /* Garante que o footer fique lÃ¡ embaixo em telas grandes */
+    /* Garante que o footer fique lÃƒÂ¡ embaixo em telas grandes */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1912,7 +1912,7 @@ nav a.active {
 .error-message {
     font-family: 'Reenie Beanie', cursive;
     font-size: 2.2rem;
-    /* LegÃ­vel e estilo bilhete */
+    /* LegÃƒÂ­vel e estilo bilhete */
     color: #583722;
     margin: 0 0 40px 0;
 }
@@ -1953,7 +1953,7 @@ nav a.active {
     display: flex;
     flex-direction: row;
     gap: 8rem;
-    /* EspaÃ§amento generoso entre colunas */
+    /* EspaÃƒÂ§amento generoso entre colunas */
     align-items: flex-start;
 }
 
@@ -1982,14 +1982,14 @@ nav a.active {
     /* Texto leve conforme solicitado */
     color: var(--text-main);
     margin-bottom: 2.5rem;
-    /* Mais espaÃ§o entre parÃ¡grafos */
+    /* Mais espaÃƒÂ§o entre parÃƒÂ¡grafos */
 }
 
 /* Coluna da Direita (Foto) */
 .about-image-col {
     flex: 1;
     margin-top: 10rem;
-    /* Assimetria: ComeÃ§a mais para baixo */
+    /* Assimetria: ComeÃƒÂ§a mais para baixo */
 }
 
 .about-image-col img {
@@ -2016,7 +2016,7 @@ nav a.active {
     width: fit-content;
 }
 
-/* Fechamento SimpÃ¡tico (Poltrona) */
+/* Fechamento SimpÃƒÂ¡tico (Poltrona) */
 .about-footer-illustration {
     width: 100%;
     display: flex;
@@ -2075,7 +2075,7 @@ nav a.active {
 }
 
 
-/* --- ATELIÃŠ PAGE STYLES --- */
+/* --- ATELIÃƒÅ  PAGE STYLES --- */
 .atelie-page-wrapper {
     padding: 6rem 5%;
     max-width: 100%;
@@ -2103,7 +2103,7 @@ nav a.active {
 .atelie-subtitle {
     font-family: 'aileron', sans-serif;
     font-size: 1.1rem;
-    color: #32302F;
+    color: #583722;
     line-height: 1.6;
 }
 
@@ -2162,7 +2162,7 @@ nav a.active {
     font-family: 'aileron', sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
-    color: #32302F;
+    color: #583722;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 1.5rem;
@@ -2171,7 +2171,7 @@ nav a.active {
 .atelie-card-desc {
     font-family: 'aileron', sans-serif;
     font-size: 1rem;
-    color: #32302F;
+    color: #583722;
     line-height: 1.8;
     margin-bottom: 2rem;
     max-width: 95%;
@@ -2181,7 +2181,7 @@ nav a.active {
 .atelie-target {
     font-family: 'aileron', sans-serif;
     font-size: 1rem;
-    color: #32302F;
+    color: #583722;
     background-color: #faf6f3;
     /* Highlight Background */
     padding: 1.5rem;
@@ -2250,7 +2250,7 @@ nav a.active {
     }
 }
 
-/* --- ATELIÃŠ TEXT COLUMNS REFACTOR --- */
+/* --- ATELIÃƒÅ  TEXT COLUMNS REFACTOR --- */
 .atelie-text-columns {
     display: flex;
     flex-direction: column;
@@ -2379,7 +2379,7 @@ nav a.active {
 }
 
 .tag-palestra {
-    background-color: #32302F;
+    background-color: #583722;
     /* Graphite */
     color: #FFFFFF;
 }
@@ -2554,7 +2554,7 @@ nav a.active {
     line-height: 1.6;
 }
 
-/* --- Added for Galeria Memória & Consistency --- */
+/* --- Added for Galeria MemÃ³ria & Consistency --- */
 .gallery-grid-new {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -2587,7 +2587,7 @@ nav a.active {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #32302F;
+    color: #583722;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -2745,13 +2745,13 @@ nav a.active {
 }
 
 .btn-article {
-    background-color: #32302F;
+    background-color: #583722;
     /* Graphite */
     color: #FFFFFF;
 }
 
 .btn-article:hover {
-    background-color: #000000;
+    background-color: #583722000;
     transform: translateY(-2px);
 }
 
@@ -2873,7 +2873,7 @@ nav a.active {
     width: 100%;
     height: 140px;
     object-fit: cover;
-    background-color: #32302F;
+    background-color: #583722;
 }
 
 .link-card-content {
@@ -2984,7 +2984,7 @@ nav a.active {
 /* --- Projects Page: Full-Bleed Zig-Zag (Hero Style) --- */
 .project-row.white-theme {
     background-color: #FFFFFF !important;
-    color: #32302F !important;
+    color: #583722 !important;
     margin-bottom: 0 !important;
     /* Continuous flow */
     padding: 0;
@@ -3085,7 +3085,7 @@ nav a.active {
 }
 
 .project-row .formation-desc {
-    color: #32302F !important;
+    color: #583722 !important;
     /* Graphite */
     font-size: 1rem;
     line-height: 1.8;
@@ -3120,7 +3120,7 @@ nav a.active {
 
 .project-row.white-theme .formation-desc,
 .project-row.white-theme p {
-    color: #32302F !important;
+    color: #583722 !important;
 }
 
 /* --- ABOUT PAGE REDESIGN (Editorial Revision) --- */
@@ -3139,7 +3139,7 @@ nav a.active {
     gap: 8rem;
     align-items: flex-start;
     width: 100%;
-    /* ConsistÃªncia com projetos */
+    /* ConsistÃƒÂªncia com projetos */
 }
 
 .about-text-col {
@@ -3170,7 +3170,7 @@ nav a.active {
 .about-image-col {
     flex: 1;
     margin-top: 15rem;
-    /* Assimetria chique: Foto comeÃ§a bem abaixo do tÃ­tulo */
+    /* Assimetria chique: Foto comeÃƒÂ§a bem abaixo do tÃƒÂ­tulo */
 }
 
 .about-image-col img {
@@ -3191,7 +3191,7 @@ nav a.active {
     margin-top: 40px;
     /* Respiro do texto principal */
     margin-left: 0;
-    /* Alinhado Ã  esquerda seguindo a bio */
+    /* Alinhado ÃƒÂ  esquerda seguindo a bio */
     display: block;
     width: fit-content;
 }
@@ -3277,7 +3277,7 @@ nav a.active {
     align-items: flex-end;
     gap: 4rem;
     width: 100%;
-    /* Garante que ocupe todo o espaÃ§o entre as margens de 5% */
+    /* Garante que ocupe todo o espaÃƒÂ§o entre as margens de 5% */
 }
 
 .projects-intro-col {
@@ -3304,7 +3304,7 @@ nav a.active {
 .projects-nav-col {
     display: flex;
     flex-direction: row;
-    /* Horizontal como na referÃªncia */
+    /* Horizontal como na referÃƒÂªncia */
     gap: 3rem;
     padding-bottom: 0.5rem;
     /* Ajuste fino de base */
@@ -3334,7 +3334,7 @@ nav a.active {
 .testimonials-slider-section {
     padding-top: 5rem;
     padding-bottom: 5rem;
-    /* Padding equilibrado, centralizaÃ§Ã£o via flexbox */
+    /* Padding equilibrado, centralizaÃƒÂ§ÃƒÂ£o via flexbox */
 }
 
 .testimonials-slider-container {
@@ -3346,7 +3346,7 @@ nav a.active {
 .testimonials-label {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 11px;
-    /* RÃ³tulo tÃ©cnico e discreto */
+    /* RÃƒÂ³tulo tÃƒÂ©cnico e discreto */
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -3395,12 +3395,12 @@ nav a.active {
     color: var(--color-titles);
 }
 
-/* Slider Controls (Setas Menores e PrÃ³ximas) */
+/* Slider Controls (Setas Menores e PrÃƒÂ³ximas) */
 .slider-controls {
     display: flex;
     gap: 1.5rem;
     margin-top: 2rem;
-    /* EspaÃ§o aumentado conforme solicitado */
+    /* EspaÃƒÂ§o aumentado conforme solicitado */
     justify-content: center;
     /* Setas centralizadas */
 }
@@ -3471,7 +3471,7 @@ nav a.active {
 /* Test write access */
 
 /* --- GOLDEN RULE: GLOBAL MARGIN STANDARDIZATION (FINAL OVERRIDE) --- */
-/* Padronização: 15rem topo, 5% laterais para consistência com Projetos/Sobre */
+/* PadronizaÃ§Ã£o: 15rem topo, 5% laterais para consistÃªncia com Projetos/Sobre */
 
 .contact-centered-wrapper,
 .gallery-page-wrapper {
@@ -3594,7 +3594,7 @@ nav a.active {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.05rem;
     line-height: 1.7;
-    color: #32302F;
+    color: #583722;
     /* Graphite */
     margin-bottom: 2rem;
     font-weight: 400;
@@ -3610,14 +3610,14 @@ nav a.active {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.05rem;
     line-height: 1.6;
-    color: #32302F;
+    color: #583722;
     margin-bottom: 0.8rem;
     position: relative;
     padding-left: 1.5rem;
 }
 
 .reading-goals-list li::before {
-    content: '→';
+    content: 'â†’';
     position: absolute;
     left: 0;
     color: #583722;
@@ -3641,7 +3641,7 @@ nav a.active {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.05rem;
     line-height: 1.7;
-    color: #32302F;
+    color: #583722;
     display: block;
     margin-top: 0.5rem;
 }
@@ -3831,14 +3831,14 @@ nav a.active {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.05rem;
     line-height: 1.5;
-    color: #32302F;
+    color: #583722;
     margin-bottom: 0.8rem;
     padding-left: 1.5rem;
     position: relative;
 }
 
 .reading-goals-list li::before {
-    content: '—';
+    content: 'â€”';
     position: absolute;
     left: 0;
     color: #583722;
@@ -3985,7 +3985,7 @@ nav a.active {
 .reading-project-case-box .reading-project-example {
     margin-bottom: 2rem;
     font-size: 1.1rem;
-    color: #32302F;
+    color: #583722;
 }
 
 .reading-project-case-box .learn-more-btn-simple {
@@ -4059,7 +4059,7 @@ nav a.active {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.05rem;
     line-height: 1.7;
-    color: #32302F;
+    color: #583722;
     margin: 2rem 0;
 }
 
@@ -4189,16 +4189,16 @@ nav a.active {
     /* Reset custom floats */
     cursor: pointer;
     font-size: 1.5rem;
-    color: #333;
+    color: #583722;
     z-index: 100;
 }
 
 #modal-close:hover {
-    color: #000;
+    color: #583722;
     transform: scale(1.1);
 }
 
-/* --- EDITORIAL MODAL REDESIGN (Studio Diseños Style) --- */
+/* --- EDITORIAL MODAL REDESIGN (Studio DiseÃ±os Style) --- */
 
 /* Wrapper Override */
 .modal-content-wrapper.editorial-modal {
@@ -4280,7 +4280,7 @@ nav a.active {
     font-family: 'aileron', sans-serif;
     font-size: 1.05rem;
     line-height: 1.8;
-    color: #32302F;
+    color: #583722;
     margin-top: 1rem;
 }
 
@@ -4325,7 +4325,7 @@ nav a.active {
     position: absolute;
     top: 25px;
     right: 30px;
-    color: #32302F;
+    color: #583722;
     background: rgba(255, 255, 255, 0.8);
     width: 40px;
     height: 40px;
@@ -4470,7 +4470,7 @@ nav a.active {
     font-size: 1.8rem;
     /* Big */
     line-height: 1.2;
-    color: #32302F;
+    color: #583722;
     /* Graphite */
     margin: 0;
     font-weight: 300;
@@ -4647,7 +4647,7 @@ nav a.active {
     padding: 10px 0;
     font-family: 'aileron', sans-serif;
     font-size: 1.1rem;
-    color: #32302F;
+    color: #583722;
     outline: none !important;
     /* Force remove blue outline */
     box-shadow: none !important;
@@ -4670,7 +4670,7 @@ nav a.active {
 .minimal-input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px #F2F0ED inset !important;
     /* Matches Areia background */
-    -webkit-text-fill-color: #32302F !important;
+    -webkit-text-fill-color: #583722 !important;
     transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -4733,7 +4733,7 @@ nav a.active {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 0.95rem;
     font-weight: 300;
-    color: #32302F;
+    color: #583722;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -4859,7 +4859,7 @@ nav a.active {
     /* Removed accent edge */
     padding: 2.5rem;
     margin: 4rem 0;
-    color: #32302F !important;
+    color: #583722 !important;
     /* Graphite text */
 }
 
@@ -4962,7 +4962,7 @@ nav a.active {
     line-height: 1.6;
 }
 
-/* --- ATELIÊ REDESIGN (Editorial Columns) --- */
+/* --- ATELIÃŠ REDESIGN (Editorial Columns) --- */
 .atelie-service-row {
     display: grid;
     grid-template-columns: 35% 65%;
@@ -5012,7 +5012,7 @@ nav a.active {
     font-family: 'aileron', sans-serif;
     font-size: 1.05rem;
     line-height: 1.8;
-    color: #32302F;
+    color: #583722;
     margin-bottom: 1.5rem;
     max-width: 100%;
 }
@@ -5039,7 +5039,7 @@ nav a.active {
     }
 }
 
-/* --- ATELIÊ 4-COLUMN REFACTOR (Laboratório) --- */
+/* --- ATELIÃŠ 4-COLUMN REFACTOR (LaboratÃ³rio) --- */
 .atelie-service-row.four-cols {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
@@ -5073,7 +5073,7 @@ nav a.active {
 .atelie-topic-item {
     font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
-    color: #32302F;
+    color: #583722;
     margin-bottom: 0.8rem;
     line-height: 1.5;
     position: relative;
@@ -5081,7 +5081,7 @@ nav a.active {
 }
 
 .atelie-topic-item::before {
-    content: "•";
+    content: "â€¢";
     position: absolute;
     left: 0;
     color: var(--color-accent);
@@ -5091,7 +5091,7 @@ nav a.active {
     font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
     /* Match topic item size */
-    color: #32302F;
+    color: #583722;
     /* Match topic item color */
     margin-bottom: 0.5rem;
     margin-left: 1rem;
@@ -5103,7 +5103,7 @@ nav a.active {
 .atelie-agenda-text {
     font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
-    color: #32302F;
+    color: #583722;
     line-height: 1.6;
     margin-bottom: 2rem;
 }
@@ -5147,7 +5147,7 @@ nav a.active {
     }
 }
 
-/* --- FORMAÇÕES CAPTION ALIGNMENT --- */
+/* --- FORMAÃ‡Ã•ES CAPTION ALIGNMENT --- */
 /* --- FORMATION LAYOUT FIXES --- */
 .formation-bleed-container {
     display: flex;
@@ -5161,9 +5161,9 @@ nav a.active {
 
 .formation-info-col {
     flex: 0 0 32%;
-    /* Ajustado para deixar mais espaço para as fotos */
+    /* Ajustado para deixar mais espaÃ§o para as fotos */
     padding-left: 5%;
-    /* Alinhado à esquerda global */
+    /* Alinhado Ã  esquerda global */
     max-width: 400px;
 }
 
@@ -5172,7 +5172,7 @@ nav a.active {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    /* Alinha tudo à direita */
+    /* Alinha tudo Ã  direita */
     max-width: 100%;
 }
 
@@ -5250,7 +5250,7 @@ nav a.active {
     line-height: 1.2;
     margin-bottom: 1.5rem;
     min-height: 3.5rem;
-    color: #32302F;
+    color: #583722;
     transition: color 0.3s ease;
 }
 
@@ -5272,7 +5272,7 @@ nav a.active {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 5rem;
     font-weight: 300;
-    color: #222;
+    color: #583722;
     margin-bottom: 1rem;
     letter-spacing: -1px;
 }
@@ -5309,7 +5309,7 @@ nav a.active {
     font-size: 0.75rem;
     text-transform: lowercase;
     letter-spacing: 0.5px;
-    color: #32302F;
+    color: #583722;
     margin-bottom: 1rem;
     display: block;
     opacity: 0.7;
@@ -5329,7 +5329,7 @@ nav a.active {
     font-family: 'aileron', sans-serif;
     font-size: 1.15rem;
     line-height: 1.7;
-    color: #32302F;
+    color: #583722;
     max-width: 850px;
 }
 
@@ -5367,7 +5367,7 @@ nav a.active {
     line-height: 1.2;
     margin-bottom: 1.5rem;
     min-height: 3.5rem;
-    color: #32302F;
+    color: #583722;
     transition: color 0.3s ease;
 }
 
@@ -5473,7 +5473,7 @@ nav a.active {
 }
 
 .hero-subtitle-item.active {
-    color: #32302F;
+    color: #583722;
     font-weight: 600;
 }
 
@@ -5481,7 +5481,7 @@ nav a.active {
     font-family: 'aileron', sans-serif;
     font-size: 1rem;
     line-height: 1.8;
-    color: #32302F;
+    color: #583722;
     text-align: center;
     margin-top: 2rem;
 }
@@ -5507,7 +5507,7 @@ nav a.active {
     font-weight: 300;
     line-height: 1.1;
     margin-bottom: 2rem;
-    color: #32302F;
+    color: #583722;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: left;
@@ -5551,7 +5551,7 @@ nav a.active {
 }
 
 .meta-value {
-    color: #32302F;
+    color: #583722;
 }
 
 @media (max-width: 768px) {
@@ -5632,7 +5632,7 @@ nav a.active {
     font-family: 'aileron', sans-serif;
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #32302F;
+    color: #583722;
     margin-bottom: 2rem;
 }
 
@@ -5755,7 +5755,7 @@ nav a.active {
     font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
     line-height: 1.6;
-    color: #32302F;
+    color: #583722;
 }
 
 .editorial-description p {
@@ -5880,7 +5880,7 @@ nav a.active {
     font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
     line-height: 1.6;
-    color: #32302F;
+    color: #583722;
     text-align: right;
     margin-bottom: 2rem;
 }
@@ -5927,7 +5927,7 @@ nav a.active {
     font-family: 'aileron', sans-serif;
     font-size: 0.95rem;
     line-height: 1.8;
-    color: #32302F;
+    color: #583722;
 }
 
 .relato-content p {
@@ -6101,7 +6101,7 @@ footer {
     font-size: 14px !important;
 }
 
-/* --- PRETTIER FICHA T�CNICA --- */
+/* --- PRETTIER FICHA TÉCNICA --- */
 .project-hero-meta {
     display: flex !important;
     flex-direction: column !important;
@@ -6340,7 +6340,7 @@ footer {
     background: none !important;
 }
 
-/* Ajuste da imagem principal para n�o ficar desproporcional se for vertical */
+/* Ajuste da imagem principal para não ficar desproporcional se for vertical */
 .project-hero-image img {
     aspect-ratio: auto !important;
     max-height: 70vh !important;
@@ -6348,7 +6348,7 @@ footer {
     object-fit: contain !important;
 }
 
-/* --- MAGAZINE ALTERNATING ROWS (FORMA��ES) --- */
+/* --- MAGAZINE ALTERNATING ROWS (FORMAÇÕES) --- */
 .editorial-magazine-row {
     display: flex;
     gap: 6rem;
@@ -6433,7 +6433,7 @@ footer {
 }
 
 .editorial-bullet-list li::before {
-    content: '�';
+    content: '•';
     position: absolute;
     left: 0;
     color: #a86c47;
@@ -6462,7 +6462,7 @@ footer {
     margin-bottom: 1.5rem;
 }
 
-/* Responsiveness for Forma��es */
+/* Responsiveness for Formações */
 @media (max-width: 992px) {
     .editorial-intro-row, .editorial-magazine-row {
         flex-direction: column !important;
@@ -6581,7 +6581,7 @@ footer {
 
 /* --- REFINING EDITORIAL LAYOUTS --- */
 
-/* Fix Alternation and Alignment in Forma��es */
+/* Fix Alternation and Alignment in Formações */
 .editorial-magazine-row {
     align-items: stretch !important; /* Forces columns to match height */
 }
@@ -6590,7 +6590,7 @@ footer {
     justify-content: flex-end !important; /* Pushes text to bottom */
 }
 
-/* Centering Forma��es Realizadas */
+/* Centering Formações Realizadas */
 .editorial-list-section {
     text-align: center !important;
 }
@@ -6648,7 +6648,7 @@ footer {
     padding-right: 5% !important;
 }
 
-/* Reduzir o espa�o entre a imagem e o texto para ficarem mais "pr�ximos" visualmente */
+/* Reduzir o espaço entre a imagem e o texto para ficarem mais "próximos" visualmente */
 .curadoria-three-col-row {
     margin-top: 1.5rem !important;
 }
@@ -6665,12 +6665,12 @@ footer {
     box-sizing: border-box !important;
 }
 
-/* Ajuste espec�fico para o grid de textos n�o ficar colado nas bordas */
+/* Ajuste específico para o grid de textos não ficar colado nas bordas */
 .texts-archive-container {
     width: 100% !important;
 }
 
-/* --- REFINING FORMA��ES REALIZADAS (DELICATE VERSION) --- */
+/* --- REFINING FORMAÇÕES REALIZADAS (DELICATE VERSION) --- */
 .editorial-list-section {
     padding: 10rem 5% !important;
     text-align: center !important;
@@ -6714,7 +6714,7 @@ footer {
 }
 
 .editorial-bullet-list li::before {
-    content: '�' !important;
+    content: '•' !important;
     position: absolute !important;
     left: 0 !important;
     color: #583722 !important;
@@ -6722,7 +6722,7 @@ footer {
     top: -1px !important;
 }
 
-/* --- FORMA��ES: IMAGENS SANGRAM, TEXTO COM RESPIRO --- */
+/* --- FORMAÇÕES: IMAGENS SANGRAM, TEXTO COM RESPIRO --- */
 /* Remove padding from the overall rows so images go edge-to-edge */
 .editorial-magazine-row {
     padding-left: 0 !important;
@@ -6781,7 +6781,7 @@ footer {
     font-family: 'aileron', sans-serif !important;
 }
 
-/* Curadoria Fam�lias: imagem em preto e branco */
+/* Curadoria Famílias: imagem em preto e branco */
 .curadoria-full-block:first-child .magazine-image-col img {
     filter: grayscale(100%);
 }
@@ -6854,7 +6854,7 @@ footer {
 
 /* --- ABOUT PAGE EDITORIAL LAYOUT --- */
 
-/* Intro row: sem subt�tulo abaixo do t�tulo, s� o tagline */
+/* Intro row: sem subtítulo abaixo do título, só o tagline */
 .about-intro-row {
     margin-bottom: 0 !important;
     padding-bottom: 5rem !important;
@@ -6866,7 +6866,7 @@ footer {
     padding-bottom: 0.4rem !important;
 }
 
-/* Body: foto sangra � esquerda, texto � direita com respiro */
+/* Body: foto sangra à esquerda, texto à direita com respiro */
 .about-body-row {
     display: flex;
     align-items: flex-start;
