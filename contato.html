@@ -5,21 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato | GABRIELLY SIERRA</title>
-    <!-- Font Awesome 6 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=27">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600;700&family=Source+Sans+3:wght@300;400;600&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://use.typekit.net/sjh3ian.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/contato-layout.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
-<body class="body-contact">
+<body>
     <!-- Preloader -->
     <div id="preloader">
         <img src="assets/img/preloader-icon.png" alt="Carregando..." class="preloader-icon">
     </div>
 
     <header>
-        <a href="index.html" class="logo-link">
-            <img src="assets/img/logo.png" alt="Gabrielly Sierra" class="main-logo">
-        </a>
+        <a href="index.html" class="editorial-text-logo">GABRIELLY SIERRA</a>
         <nav>
             <ul>
                 <li><a href="about.html">sobre</a></li>
@@ -32,60 +37,55 @@
         </nav>
     </header>
 
-    <main class="contact-split-section">
-        <div class="contact-split-container">
-            <!-- Left Column: Info -->
-            <div class="contact-info-col">
-                <h1 class="projects-main-title">Vamos conversar?</h1>
-                <p class="projects-intro-text">
-                    Tem um projeto em mente ou quer levar uma formação para sua instituição?<br>
-                    Preencha o formulário ou envie um e-mail.
-                </p>
-                <div class="contact-email-block">
-                    <a href="mailto:contato@gabriellysierra.com.br"
-                        class="contact-link-minimal">contato@gabriellysierra.com.br</a>
+    <main class="project-detail-main">
+        <!-- INTRO SECTION -->
+        <section class="editorial-intro-row">
+            <div class="editorial-intro-left">
+                <h1 class="editorial-main-title">CONTATO</h1>
+            </div>
+            <div class="editorial-intro-right">
+                <p>Formações, projetos de leitura, curadoria literária e percursos em torno da literatura para as infâncias.</p>
+                <p>Para conversas e propostas, entre em contato.</p>
+            </div>
+        </section>
+
+        <!-- FORM SECTION -->
+        <section class="contact-form-section">
+            <!-- Hidden Iframe to handle redirection -->
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+                onload="if(submitted) {window.location='obrigado.html';}"></iframe>
+
+            <form id="contactForm"
+                action="https://forms.zohopublic.com/contatogabriel1/form/Contato/formperma/GMJWGpYTgYKd6KwMUtGMZUM0oCB4-adWJ6voo-BhVJY/htmlRecords/submit"
+                method="POST" accept-charset='UTF-8' enctype='multipart/form-data' class="minimal-form"
+                target="hidden_iframe" onsubmit="submitted=true;">
+                <input type="hidden" name="zf_referrer_name" value="">
+                <input type="hidden" name="zf_redirect_url" value="https://gabriellysierra.com.br/obrigado.html">
+                <input type="hidden" name="zc_gad" value="">
+
+                <div class="form-group">
+                    <label for="name" class="minimal-label">Nome</label>
+                    <input type="text" id="name" name="Name_First" class="minimal-input" required>
                 </div>
-            </div>
 
-            <!-- Right Column: Form -->
-            <div class="contact-form-col">
-                <!-- Hidden Iframe to handle redirection on Zoho Free Plan -->
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
-                    onload="if(submitted) {window.location='obrigado.html';}"></iframe>
+                <div class="form-group">
+                    <label for="email" class="minimal-label">E-mail</label>
+                    <input type="email" id="email" name="Email" class="minimal-input" required>
+                </div>
 
-                <form id="contactForm"
-                    action="https://forms.zohopublic.com/contatogabriel1/form/Contato/formperma/GMJWGpYTgYKd6KwMUtGMZUM0oCB4-adWJ6voo-BhVJY/htmlRecords/submit"
-                    method="POST" accept-charset='UTF-8' enctype='multipart/form-data' class="minimal-form"
-                    target="hidden_iframe" onsubmit="submitted=true;">
-                    <input type="hidden" name="zf_referrer_name" value="">
-                    <input type="hidden" name="zf_redirect_url" value="https://gabriellysierra.com.br/obrigado.html">
-                    <input type="hidden" name="zc_gad" value="">
+                <div class="form-group">
+                    <label for="subject" class="minimal-label">Assunto</label>
+                    <input type="text" id="subject" name="SingleLine" class="minimal-input" required>
+                </div>
 
-                    <div class="form-group">
-                        <label for="name" class="minimal-label">Nome</label>
-                        <input type="text" id="name" name="Name_First" class="minimal-input" required>
-                    </div>
+                <div class="form-group">
+                    <label for="message" class="minimal-label">Mensagem</label>
+                    <textarea id="message" name="MultiLine" rows="4" class="minimal-input" required></textarea>
+                </div>
 
-                    <div class="form-group">
-                        <label for="email" class="minimal-label">E-mail</label>
-                        <input type="email" id="email" name="Email" class="minimal-input" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject" class="minimal-label">Assunto</label>
-                        <input type="text" id="subject" name="SingleLine" class="minimal-input" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message" class="minimal-label">Mensagem</label>
-                        <textarea id="message" name="MultiLine" rows="4" class="minimal-input" required></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">ENVIAR MENSAGEM</button>
-                </form>
-            </div>
-        </div>
-
+                <button type="submit" class="submit-btn">ENVIAR MENSAGEM</button>
+            </form>
+        </section>
     </main>
 
     <footer>
@@ -93,12 +93,10 @@
             <img src="assets/img/dog-footer.png" alt="Ilustração" class="footer-dog">
         </div>
         <div class="social-icons">
-            <a href="https://www.instagram.com/gabriellysierra/?hl=pt" target="_blank"><i
-                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/gabriellysierra/?hl=pt" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.tiktok.com/@gabrielly.sierra" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
             <a href="https://www.youtube.com/@gabriellysierra" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.linkedin.com/in/gabriellysierra/" target="_blank"><i
-                    class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/in/gabriellysierra/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
     </footer>
 

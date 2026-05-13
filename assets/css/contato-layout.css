@@ -1,0 +1,85 @@
+/* =========================================
+   CONTACT PAGE — EDITORIAL LAYOUT
+   ========================================= */
+
+.contact-form-section {
+    padding: 2rem 0 8rem 0;
+    max-width: 700px; /* Formulário centralizado e com largura controlada */
+}
+
+/* --- FORM STYLING --- */
+
+.minimal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.minimal-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #583722;
+}
+
+.minimal-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #D0CDC9;
+    padding: 0.8rem 0;
+    font-family: 'aileron', sans-serif;
+    font-size: 14px;
+    color: #583722;
+    transition: border-color 0.3s ease;
+    border-radius: 0;
+}
+
+.minimal-input:focus {
+    outline: none;
+    border-bottom-color: #583722;
+}
+
+textarea.minimal-input {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.submit-btn {
+    align-self: flex-start;
+    background-color: #583722;
+    color: #FFFFFF;
+    border: none;
+    padding: 1rem 3rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #C58C71; /* Warm Clay hover */
+    transform: translateY(-2px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contact-form-section {
+        padding: 0 0 6rem 0;
+    }
+    
+    .submit-btn {
+        width: 100%;
+    }
+}
