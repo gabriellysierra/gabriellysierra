@@ -6652,3 +6652,20 @@ footer {
 .curadoria-three-col-row {
     margin-top: 1.5rem !important;
 }
+
+/* --- GLOBAL EDITORIAL MARGINS (Fix "suffocated" text) --- */
+.editorial-intro-row, 
+.curadoria-three-col-row,
+.editorial-magazine-row,
+.editorial-texts-archive,
+.editorial-list-section {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Ajuste específico para o grid de textos não ficar colado nas bordas */
+.texts-archive-container {
+    width: 100% !important;
+}
