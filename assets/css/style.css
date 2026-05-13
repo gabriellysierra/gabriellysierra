@@ -6780,3 +6780,8 @@ footer {
     color: #a86c47 !important;
     font-family: 'aileron', sans-serif !important;
 }
+
+/* Curadoria Famílias: imagem em preto e branco */
+.curadoria-full-block:first-child .magazine-image-col img {
+    filter: grayscale(100%);
+}
