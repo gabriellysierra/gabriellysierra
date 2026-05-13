@@ -6851,3 +6851,76 @@ footer {
 .project-final-image-container:hover img {
     filter: grayscale(0%);
 }
+
+/* --- ABOUT PAGE EDITORIAL LAYOUT --- */
+
+/* Intro row: sem subtítulo abaixo do título, só o tagline */
+.about-intro-row {
+    margin-bottom: 0 !important;
+    padding-bottom: 5rem !important;
+}
+
+.about-intro-row .editorial-intro-right {
+    display: flex !important;
+    align-items: flex-end !important;
+    padding-bottom: 0.4rem !important;
+}
+
+/* Body: foto sangra à esquerda, texto à direita com respiro */
+.about-body-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    margin-bottom: 10rem;
+}
+
+.about-photo-col {
+    flex: 1.2;
+    overflow: hidden;
+}
+
+.about-editorial-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%);
+    transition: filter 0.7s ease;
+}
+
+.about-photo-col:hover .about-editorial-photo {
+    filter: grayscale(0%);
+}
+
+.about-bio-col {
+    flex: 1;
+    padding: 3rem 5% 3rem 6%;
+    font-family: 'aileron', sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+    color: #583722 !important;
+}
+
+.about-bio-col p {
+    margin-bottom: 1.5rem !important;
+}
+
+.about-poem {
+    font-style: italic !important;
+    margin-top: 2rem !important;
+    line-height: 2 !important;
+    color: #a86c47 !important;
+}
+
+@media (max-width: 992px) {
+    .about-body-row {
+        flex-direction: column !important;
+    }
+    .about-photo-col {
+        width: 100% !important;
+        max-height: 60vw;
+    }
+    .about-bio-col {
+        padding: 3rem 5% !important;
+    }
+}
