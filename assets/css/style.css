@@ -6578,3 +6578,65 @@ footer {
         gap: 0 !important;
     }
 }
+
+/* --- REFINING EDITORIAL LAYOUTS --- */
+
+/* Fix Alternation and Alignment in Formações */
+.editorial-magazine-row {
+    align-items: stretch !important; /* Forces columns to match height */
+}
+
+.magazine-text-col {
+    justify-content: flex-end !important; /* Pushes text to bottom */
+}
+
+/* Centering Formações Realizadas */
+.editorial-list-section {
+    text-align: center !important;
+}
+
+.editorial-list-title {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.editorial-bullet-list {
+    display: inline-block !important;
+    text-align: left !important;
+    max-width: 600px !important;
+}
+
+/* Formatting Curadoria Columns */
+.curadoria-three-col-row {
+    margin-top: 2rem !important;
+    gap: 6rem !important; /* Increase gap for more editorial look */
+}
+
+.curadoria-col-title .magazine-title {
+    margin-bottom: 0 !important; /* Keep it aligned with text top */
+}
+
+.curadoria-col-text {
+    text-align: justify !important;
+}
+
+/* Ensure the reverse class works as expected */
+.editorial-magazine-row.reverse {
+    flex-direction: row-reverse !important;
+}
+
+
+/* Precise column widths for Curadoria to ensure editorial balance */
+.curadoria-col-title {
+    flex: 0 0 33% !important;
+}
+
+.curadoria-col-text {
+    flex: 1 !important;
+}
+
+@media (max-width: 992px) {
+    .curadoria-col-title, .curadoria-col-text {
+        flex: 0 0 100% !important;
+    }
+}
