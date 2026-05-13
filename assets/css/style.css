@@ -6514,3 +6514,67 @@ footer {
         gap: 2rem !important;
     }
 }
+
+/* --- TEXTS ARCHIVE LAYOUT (DESIGN EDITORIAL) --- */
+.editorial-texts-archive {
+    margin-bottom: 10rem;
+}
+
+.texts-archive-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 6rem;
+}
+
+.archive-item {
+    display: block;
+    text-decoration: none;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.archive-item:hover {
+    border-bottom-color: #a86c47;
+}
+
+.archive-meta {
+    display: block;
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-size: 0.7rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    color: #a86c47 !important;
+    margin-bottom: 1rem !important;
+    font-weight: 600 !important;
+}
+
+.archive-title {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-size: 1.3rem !important;
+    font-weight: 400 !important;
+    color: #583722 !important;
+    line-height: 1.4 !important;
+    margin-bottom: 1.5rem !important;
+    transition: color 0.3s ease;
+}
+
+.archive-item:hover .archive-title {
+    color: #a86c47;
+}
+
+.archive-link-text {
+    font-family: 'aileron', sans-serif !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    color: #999 !important;
+    font-weight: 600 !important;
+}
+
+@media (max-width: 768px) {
+    .texts-archive-container {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+    }
+}

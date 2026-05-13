@@ -5,20 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Textos | GABRIELLY SIERRA</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?v=21">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600;700&family=Source+Sans+3:wght@300;400;600&family=Reenie+Beanie&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://use.typekit.net/sjh3ian.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
-<body class="body-textos">
+<body>
     <!-- Preloader -->
     <div id="preloader">
         <img src="assets/img/preloader-icon.png" alt="Carregando..." class="preloader-icon">
     </div>
 
     <header>
-        <a href="index.html" class="logo-link">
-            <img src="assets/img/logo.png" alt="Gabrielly Sierra" class="main-logo">
-        </a>
+        <a href="index.html" class="editorial-text-logo">GABRIELLY SIERRA</a>
         <nav>
             <ul>
                 <li><a href="about.html">sobre</a></li>
@@ -31,96 +38,80 @@
         </nav>
     </header>
 
-    <main>
-        <section class="texts-page-wrapper" style="display: block; width: 100%;">
-            <!-- NEW: Magazine List Archive (Option C) -->
-            <div class="text-list-container">
+    <main class="project-detail-main">
+        <!-- INTRO SECTION -->
+        <section class="editorial-intro-row">
+            <div class="editorial-intro-left">
+                <h1 class="editorial-main-title">TEXTOS</h1>
+                <span class="editorial-main-subtitle">pesquisas, artigos e reflexões</span>
+            </div>
+            <div class="editorial-intro-right">
+                <p>Reunião de produções acadêmicas, artigos e reflexões sobre literatura para as infâncias, mediação de leitura e formação leitora desenvolvidas ao longo de minha trajetória como pesquisadora e educadora.</p>
+                <p>Os textos aqui compartilhados buscam refletir sobre a potência da literatura e as complexidades do ato de ler, propondo diálogos entre a teoria e a prática mediadora.</p>
+            </div>
+        </section>
 
-                <!-- Header Row (Optional for structure) -->
+        <!-- TEXTS LIST -->
+        <section class="editorial-texts-archive">
+            <div class="texts-archive-container">
+                
                 <!-- Item 1 -->
-                <a href="https://seer.fundarte.rs.gov.br/index.php/RevistadaFundarte/article/view/1210" target="_blank"
-                    rel="noopener noreferrer" class="text-list-row">
-                    <div class="text-list-meta">ARTIGO</div>
-                    <div class="text-list-content">
-                        <h3 class="text-list-title">Mediação de leitura como processo de educação intercultural na
-                            primeira infância</h3>
-                    </div>
-                    <div class="text-list-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <a href="https://seer.fundarte.rs.gov.br/index.php/RevistadaFundarte/article/view/1210" target="_blank" rel="noopener noreferrer" class="archive-item">
+                    <span class="archive-meta">Artigo</span>
+                    <h3 class="archive-title">Mediação de leitura como processo de educação intercultural na primeira infância</h3>
+                    <span class="archive-link-text">Ler texto →</span>
                 </a>
 
                 <!-- Item 2 -->
-                <a href="https://periodicos.ufpb.br/index.php/graphos/article/view/71027" target="_blank"
-                    rel="noopener noreferrer" class="text-list-row">
-                    <div class="text-list-meta">ARTIGO</div>
-                    <div class="text-list-content">
-                        <h3 class="text-list-title">O narrador como mediador simbólico na literatura para a infância
-                        </h3>
-                    </div>
-                    <div class="text-list-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <a href="https://periodicos.ufpb.br/index.php/graphos/article/view/71027" target="_blank" rel="noopener noreferrer" class="archive-item">
+                    <span class="archive-meta">Artigo</span>
+                    <h3 class="archive-title">O narrador como mediador simbólico na literatura para a infância</h3>
+                    <span class="archive-link-text">Ler texto →</span>
                 </a>
 
                 <!-- Item 3 -->
-                <a href="https://issuu.com/gabriellysierra/docs/antologia_po_tica" target="_blank"
-                    rel="noopener noreferrer" class="text-list-row">
-                    <div class="text-list-meta">ANTOLOGIA</div>
-                    <div class="text-list-content">
-                        <h3 class="text-list-title">Poético na literatura infantil e juvenil</h3>
-                    </div>
-                    <div class="text-list-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <a href="https://issuu.com/gabriellysierra/docs/antologia_po_tica" target="_blank" rel="noopener noreferrer" class="archive-item">
+                    <span class="archive-meta">Antologia</span>
+                    <h3 class="archive-title">Poético na literatura infantil e juvenil</h3>
+                    <span class="archive-link-text">Acessar antologia →</span>
                 </a>
 
                 <!-- Item 4 -->
-                <a href="carta-conselhos.html" class="text-list-row">
-                    <div class="text-list-meta">CARTA</div>
-                    <div class="text-list-content">
-                        <h3 class="text-list-title">3 conselhos para a pessoa adulta "Ler e Com-Viver" com a literatura
-                            na primeira infância</h3>
-                    </div>
-                    <div class="text-list-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <a href="carta-conselhos.html" class="archive-item">
+                    <span class="archive-meta">Carta</span>
+                    <h3 class="archive-title">3 conselhos para a pessoa adulta "Ler e Com-Viver" com a literatura na primeira infância</h3>
+                    <span class="archive-link-text">Ler carta →</span>
                 </a>
 
                 <!-- Item 5 -->
-                <a href="https://issuu.com/gabriellysierra/docs/antologia-envelhecimento-lij-gabrielly_sierra-2024"
-                    target="_blank" rel="noopener noreferrer" class="text-list-row">
-                    <div class="text-list-meta">ANTOLOGIA</div>
-                    <div class="text-list-content">
-                        <h3 class="text-list-title">Literatura infantojuvenil e envelhecimento</h3>
-                    </div>
-                    <div class="text-list-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <a href="https://issuu.com/gabriellysierra/docs/antologia-envelhecimento-lij-gabrielly_sierra-2024" target="_blank" rel="noopener noreferrer" class="archive-item">
+                    <span class="archive-meta">Antologia</span>
+                    <h3 class="archive-title">Literatura infantojuvenil e envelhecimento</h3>
+                    <span class="archive-link-text">Acessar antologia →</span>
                 </a>
 
                 <!-- Item 6 -->
-                <a href="https://www.youtube.com/watch?v=zMPw60nEFVs" target="_blank" rel="noopener noreferrer"
-                    class="text-list-row">
-                    <div class="text-list-meta">COMUNICAÇÃO</div>
-                    <div class="text-list-content">
-                        <h3 class="text-list-title">A exposição "Mundo Zira" - Ziraldo Interativo</h3>
-                    </div>
-                    <div class="text-list-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <a href="https://www.youtube.com/watch?v=zMPw60nEFVs" target="_blank" rel="noopener noreferrer" class="archive-item">
+                    <span class="archive-meta">Comunicação</span>
+                    <h3 class="archive-title">A exposição "Mundo Zira" - Ziraldo Interativo</h3>
+                    <span class="archive-link-text">Ver vídeo →</span>
                 </a>
 
                 <!-- Item 7 -->
-                <a href="https://ria.ua.pt/handle/10773/34601" target="_blank" rel="noopener noreferrer"
-                    class="text-list-row">
-                    <div class="text-list-meta">RESUMO</div>
-                    <div class="text-list-content">
-                        <h3 class="text-list-title">A diversidade cultural representada nos livros ilustrados</h3>
-                    </div>
-                    <div class="text-list-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <a href="https://ria.ua.pt/handle/10773/34601" target="_blank" rel="noopener noreferrer" class="archive-item">
+                    <span class="archive-meta">Resumo</span>
+                    <h3 class="archive-title">A diversidade cultural representada nos livros ilustrados</h3>
+                    <span class="archive-link-text">Ler resumo →</span>
                 </a>
 
                 <!-- Item 8 -->
-                <a href="https://periodicoseletronicos.ufma.br/index.php/bibliomar/article/view/23378" target="_blank"
-                    rel="noopener noreferrer" class="text-list-row">
-                    <div class="text-list-meta">ARTIGO</div>
-                    <div class="text-list-content">
-                        <h3 class="text-list-title">Mediação de leitura: a importância da reflexão sobre a prática</h3>
-                    </div>
-                    <div class="text-list-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                <a href="https://periodicoseletronicos.ufma.br/index.php/bibliomar/article/view/23378" target="_blank" rel="noopener noreferrer" class="archive-item">
+                    <span class="archive-meta">Artigo</span>
+                    <h3 class="archive-title">Mediação de leitura: a importância da reflexão sobre a prática</h3>
+                    <span class="archive-link-text">Ler artigo →</span>
                 </a>
 
             </div>
-
         </section>
     </main>
 
@@ -129,12 +120,10 @@
             <img src="assets/img/dog-footer.png" alt="Ilustração" class="footer-dog">
         </div>
         <div class="social-icons">
-            <a href="https://www.instagram.com/gabriellysierra/?hl=pt" target="_blank"><i
-                    class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/gabriellysierra/?hl=pt" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.tiktok.com/@gabrielly.sierra" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
             <a href="https://www.youtube.com/@gabriellysierra" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.linkedin.com/in/gabriellysierra/" target="_blank"><i
-                    class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/in/gabriellysierra/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
     </footer>
 
