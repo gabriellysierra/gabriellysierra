@@ -1,0 +1,108 @@
+/* =========================================
+   TEXTOS PAGE — NUMBERED ARCHIVE LAYOUT
+   ========================================= */
+
+/* Intro: sem subtítulo, só título + parágrafo */
+.textos-intro {
+    margin-bottom: 0;
+    padding-bottom: 5rem;
+}
+
+.textos-intro .editorial-intro-left {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* ---- GRID 2 COLUNAS ---- */
+
+.textos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 8%;
+    padding-bottom: 8rem;
+}
+
+/* ---- LABEL DE CATEGORIA ---- */
+
+.textos-category-label {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #8a6245;
+    margin: 0 0 1.8rem 0;
+    padding-bottom: 0.6rem;
+}
+
+.textos-category-label--spaced {
+    margin-top: 4rem;
+}
+
+/* ---- LISTA NUMERADA ---- */
+
+.textos-numbered-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.textos-numbered-list li {
+    margin-bottom: 1.6rem;
+}
+
+/* ---- ITEM LINK ---- */
+
+.textos-item-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+a.textos-item-link:hover {
+    opacity: 0.6;
+}
+
+/* ---- NÚMERO ---- */
+
+.textos-num {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 700;
+    color: #583722;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 2.2rem;
+    padding-top: 0.05em;
+}
+
+/* ---- TÍTULO DO TEXTO ---- */
+
+.textos-title {
+    font-family: 'aileron', sans-serif;
+    font-size: 13px;
+    line-height: 1.65;
+    color: #3a2211;
+    flex: 1;
+}
+
+/* ---- RESPONSIVO ---- */
+
+@media (max-width: 768px) {
+    .textos-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem 0;
+    }
+
+    .textos-category-label--spaced {
+        margin-top: 2.5rem;
+    }
+
+    .textos-num {
+        font-size: 1.2rem;
+        width: 2rem;
+    }
+}
