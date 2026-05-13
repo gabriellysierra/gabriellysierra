@@ -63,8 +63,9 @@
 }
 
 .page-about .project-detail-main {
-    padding-left: 5%; /* Alinhado com o header */
-    max-width: none;
+    padding-left: 5% !important; /* Alinhado com o header */
+    padding-right: 5% !important;
+    max-width: none !important;
 }
 
 .about-main {
