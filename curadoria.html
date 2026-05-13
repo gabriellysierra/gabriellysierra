@@ -14,6 +14,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://use.typekit.net/sjh3ian.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/curadoria-layout.css">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
@@ -38,12 +39,13 @@
         </nav>
     </header>
 
-    <main class="project-detail-main">
+    <main class="curadoria-main">
+
         <!-- INTRO SECTION -->
-        <section class="editorial-intro-row">
+        <section class="editorial-intro-row curadoria-intro">
             <div class="editorial-intro-left">
                 <h1 class="editorial-main-title">CURADORIA</h1>
-                <span class="editorial-main-subtitle">literatura, acervo e bibliodiversidade</span>
+                <span class="editorial-main-subtitle">literatura, acervo e<br>bibliodiversidade</span>
             </div>
             <div class="editorial-intro-right">
                 <p>A curadoria para as infâncias é uma prática de construção de acervos sensíveis e coerentes com os contextos de leitura de cada família ou instituição. Parte da compreensão de que os livros são experiências estéticas que ampliam repertórios, provocam deslocamentos e instauram formas de leitura do mundo.</p>
@@ -51,46 +53,30 @@
             </div>
         </section>
 
-        <!-- CURADORIA BLOCKS -->
-        <section class="editorial-curadoria-blocks">
-            
-            <!-- BLOCK 1: FAMÍLIAS -->
-            <div class="curadoria-full-block">
-                <div class="magazine-image-col full-width">
-                    <img src="assets/img/curadoria-familias.jpg" alt="Curadoria para Famílias">
-                </div>
-                <div class="curadoria-three-col-row">
-                    <div class="curadoria-col-title">
-                        <h2 class="magazine-title">CURADORIA PARA FAMÍLIAS</h2>
-                    </div>
-                    <div class="curadoria-col-text">
-                        <p>Construção de percursos de leitura e acervos literários voltados a famílias interessadas na formação leitora das crianças e na ampliação de repertórios estéticos e culturais dentro do ambiente familiar.</p>
-                    </div>
-                    <div class="curadoria-col-text">
-                        <p>A curadoria privilegia a bibliodiversidade, o livro ilustrado e obras que possibilitem experiências estéticas, críticas e criativas de leitura.</p>
-                    </div>
-                </div>
+        <!-- BLOCO 1: ESCOLAS E INSTITUIÇÕES — imagem sangra à esquerda, texto à direita -->
+        <section class="curadoria-bleed-row bleed-left">
+            <div class="curadoria-bleed-image">
+                <img src="assets/img/curadoria-escolas.jpg" alt="Curadoria para Escolas e Instituições" class="curadoria-bleed-img">
             </div>
-
-            <!-- BLOCK 2: ESCOLAS -->
-            <div class="curadoria-full-block">
-                <div class="magazine-image-col full-width">
-                    <img src="assets/img/curadoria-escolas.jpg" alt="Curadoria para Escolas e Instituições">
-                </div>
-                <div class="curadoria-three-col-row">
-                    <div class="curadoria-col-title">
-                        <h2 class="magazine-title">CURADORIA PARA ESCOLAS E INSTITUIÇÕES</h2>
-                    </div>
-                    <div class="curadoria-col-text">
-                        <p>Seleção e organização de acervos para escolas, bibliotecas e projetos culturais, considerando contextos pedagógicos, diversidade de leitores e ampliação de repertórios literários e visuais.</p>
-                    </div>
-                    <div class="curadoria-col-text">
-                        <p>As propostas articulam literatura, formação leitora e experiência estética, buscando construir acervos vivos e coerentes com cada espaço.</p>
-                    </div>
-                </div>
+            <div class="curadoria-bleed-text">
+                <h2 class="curadoria-section-title">CURADORIA PARA<br>ESCOLAS E<br>INSTITUIÇÕES</h2>
+                <p>Seleção e organização de acervos para escolas, bibliotecas e projetos culturais, considerando contextos pedagógicos, diversidade de leitores e ampliação de repertórios literários e visuais.</p>
+                <p>As propostas articulam literatura, formação leitora e experiência estética, buscando construir acervos vivos e coerentes com cada espaço.</p>
             </div>
-
         </section>
+
+        <!-- BLOCO 2: FAMÍLIAS — texto à esquerda, imagem sangra à direita -->
+        <section class="curadoria-bleed-row bleed-right">
+            <div class="curadoria-bleed-text">
+                <h2 class="curadoria-section-title">CURADORIA PARA<br>FAMÍLIAS</h2>
+                <p>Construção de percursos de leitura e acervos literários voltados a famílias interessadas na formação leitora das crianças e na ampliação de repertórios estéticos e culturais dentro do ambiente familiar.</p>
+                <p>A curadoria privilegia a bibliodiversidade, o livro ilustrado e obras que possibilitem experiências estéticas, críticas e criativas de leitura.</p>
+            </div>
+            <div class="curadoria-bleed-image">
+                <img src="assets/img/curadoria-familias.jpg" alt="Curadoria para Famílias" class="curadoria-bleed-img">
+            </div>
+        </section>
+
     </main>
 
     <footer>

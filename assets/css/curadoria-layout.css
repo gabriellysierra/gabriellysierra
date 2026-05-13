@@ -1,0 +1,149 @@
+/* =========================================
+   CURADORIA PAGE — EDITORIAL BLEED LAYOUT
+   ========================================= */
+
+.curadoria-main {
+    overflow-x: hidden;
+    padding: 6rem 5% 10rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Intro: mantém o padrão editorial do site */
+.curadoria-intro {
+    margin-bottom: 0;
+    padding-bottom: 5rem;
+}
+
+/* ---- BLEED ROWS ---- */
+
+.curadoria-bleed-row {
+    display: flex;
+    align-items: stretch;
+    min-height: 52vh;
+}
+
+.curadoria-bleed-row.bleed-left {
+    flex-direction: row;
+    margin-bottom: 6rem;
+    /* Expande para além do padding esquerdo da página */
+    margin-left: -5vw;
+}
+
+.curadoria-bleed-row.bleed-right {
+    flex-direction: row;
+    margin-bottom: 8rem;
+    /* Expande para além do padding direito da página */
+    margin-right: -5vw;
+}
+
+/* ---- IMAGEM ---- */
+
+.curadoria-bleed-image {
+    flex: 0 0 60%;
+    overflow: hidden;
+    position: relative;
+}
+
+.curadoria-bleed-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(100%);
+    transition: filter 0.7s ease;
+    min-height: 420px;
+}
+
+.curadoria-bleed-image:hover .curadoria-bleed-img {
+    filter: grayscale(0%);
+}
+
+/* ---- TEXTO ---- */
+
+.curadoria-bleed-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'aileron', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.85;
+    color: #3a2211;
+}
+
+/* Texto à direita (bleed-left) */
+.bleed-left .curadoria-bleed-text {
+    padding: 3rem 2% 3rem 6%;
+}
+
+/* Texto à esquerda (bleed-right) */
+.bleed-right .curadoria-bleed-text {
+    padding: 3rem 6% 3rem 2%;
+}
+
+.curadoria-section-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.15rem, 1.8vw, 1.6rem);
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    color: #2c1a0e;
+    text-transform: uppercase;
+    margin: 0 0 1.8rem 0;
+}
+
+.curadoria-bleed-text p {
+    margin-bottom: 1.2rem;
+}
+
+.curadoria-bleed-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* ---- RESPONSIVO ---- */
+
+@media (max-width: 900px) {
+    .curadoria-bleed-row,
+    .curadoria-bleed-row.bleed-left,
+    .curadoria-bleed-row.bleed-right {
+        flex-direction: column !important;
+        margin-left: -5% !important;
+        margin-right: -5% !important;
+        min-height: auto;
+    }
+
+    /* Em mobile, escolas fica: imagem em cima, texto embaixo */
+    .bleed-left .curadoria-bleed-image {
+        order: 1;
+    }
+    .bleed-left .curadoria-bleed-text {
+        order: 2;
+    }
+
+    /* Em mobile, famílias fica: texto em cima, imagem embaixo */
+    .bleed-right .curadoria-bleed-text {
+        order: 1;
+    }
+    .bleed-right .curadoria-bleed-image {
+        order: 2;
+    }
+
+    .curadoria-bleed-image {
+        flex: none;
+        width: 100%;
+        height: 65vw;
+    }
+
+    .curadoria-bleed-img {
+        min-height: unset;
+    }
+
+    .curadoria-bleed-text {
+        padding: 2.5rem 5% !important;
+    }
+
+    .curadoria-section-title {
+        font-size: clamp(1.1rem, 4vw, 1.5rem);
+    }
+}
