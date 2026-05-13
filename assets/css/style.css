@@ -6785,3 +6785,69 @@ footer {
 .curadoria-full-block:first-child .magazine-image-col img {
     filter: grayscale(100%);
 }
+
+/* --- PROJECT PAGES: GRAYSCALE ? COLOR ON HOVER --- */
+
+/* Hero image */
+.project-hero-image img {
+    filter: grayscale(100%);
+    transition: filter 0.6s ease;
+}
+.project-hero-image:hover img {
+    filter: grayscale(0%);
+}
+
+/* Gallery images inside project pages */
+.gallery-grid img,
+.gallery-grid-new img,
+.projeto-gallery img,
+.project-gallery img {
+    filter: grayscale(100%);
+    transition: filter 0.6s ease;
+}
+.gallery-grid img:hover,
+.gallery-grid-new img:hover,
+.projeto-gallery img:hover,
+.project-gallery img:hover {
+    filter: grayscale(0%);
+}
+
+/* --- PROJECT PAGES: GRAYSCALE ? COLOR ON HOVER (refined) --- */
+
+/* Hero image */
+.project-hero-image img {
+    filter: grayscale(100%);
+    transition: filter 0.7s ease;
+}
+.project-hero-image:hover img {
+    filter: grayscale(0%);
+}
+
+/* Gallery grid items (2x2 side grid) */
+.gallery-grid-item img {
+    filter: grayscale(100%);
+    transition: filter 0.7s ease;
+    display: block;
+    width: 100%;
+}
+.gallery-grid-item:hover img {
+    filter: grayscale(0%);
+}
+
+/* Pontes-style numbered images */
+.relato-image-block img {
+    filter: grayscale(100%);
+    transition: filter 0.7s ease;
+}
+.relato-image-block:hover img {
+    filter: grayscale(0%);
+}
+
+/* Final image row */
+.project-final-image-container img {
+    filter: grayscale(100%);
+    transition: filter 0.7s ease;
+}
+.project-final-image-container:hover img {
+    filter: grayscale(0%);
+}
