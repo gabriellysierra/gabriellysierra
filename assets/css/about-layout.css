@@ -1,0 +1,107 @@
+
+/* --- ABOUT PAGE NEW 3-COLUMN EDITORIAL LAYOUT --- */
+
+.about-editorial-grid {
+    display: grid;
+    grid-template-columns: 20% 1fr 32%;
+    gap: 0;
+    align-items: start;
+    padding: 6rem 0 8rem 0;
+    min-height: 80vh;
+}
+
+/* Coluna 1: Título grande */
+.about-title-col {
+    padding: 0 4% 0 0;
+    position: sticky;
+    top: 120px;
+}
+
+.about-big-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.05rem, 1.55vw, 1.4rem);
+    line-height: 1.35;
+    letter-spacing: 0.04em;
+    color: #2c1a0e;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Coluna 2: Texto biográfico */
+.about-text-col {
+    padding: 0 6% 0 2%;
+    font-family: 'aileron', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.85;
+    color: #3a2211;
+}
+
+.about-text-col p {
+    margin-bottom: 1.6rem;
+}
+
+.about-text-col .about-poem {
+    font-style: normal;
+    margin-top: 2.5rem;
+    line-height: 2.2;
+    color: #3a2211;
+    margin-bottom: 0;
+}
+
+/* Coluna 3: Fotos empilhadas */
+.about-photos-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 0;
+}
+
+.about-photo-item {
+    width: 100%;
+    overflow: hidden;
+}
+
+.about-stack-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.7s ease;
+}
+
+.about-photo-item:hover .about-stack-photo {
+    filter: grayscale(0%);
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+    .about-editorial-grid {
+        grid-template-columns: 22% 1fr 35%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-editorial-grid {
+        grid-template-columns: 1fr;
+        padding: 4rem 5% 6rem 5%;
+    }
+    .about-title-col {
+        position: static;
+        padding: 0 0 2.5rem 0;
+    }
+    .about-big-title {
+        font-size: clamp(1.3rem, 5vw, 2rem);
+    }
+    .about-text-col {
+        padding: 0 0 2.5rem 0;
+    }
+    .about-photos-col {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    .about-photo-item {
+        flex: 1;
+    }
+}
