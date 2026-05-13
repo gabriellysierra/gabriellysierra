@@ -3,11 +3,20 @@
    ========================================= */
 
 .contact-info-section {
-    padding: 2rem 0 10rem 0;
+    padding: 2rem 0 2rem 0;
     font-family: 'aileron', sans-serif;
     font-size: 14px;
     line-height: 1.85;
     color: #583722;
+}
+
+/* Reduz o espaço entre a intro e o rodapé especificamente no contato */
+.contato-page .editorial-intro-row {
+    margin-bottom: 3rem !important;
+}
+
+.contato-page .project-detail-main {
+    padding-bottom: 4rem !important;
 }
 
 .contact-info-section p {
