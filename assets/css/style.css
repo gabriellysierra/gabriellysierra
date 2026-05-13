@@ -6347,3 +6347,134 @@ footer {
     width: auto !important;
     object-fit: contain !important;
 }
+
+/* --- MAGAZINE ALTERNATING ROWS (FORMAÇÕES) --- */
+.editorial-magazine-row {
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    margin-bottom: 10rem;
+}
+
+.editorial-magazine-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.magazine-image-col {
+    flex: 1.5;
+    aspect-ratio: 16/10;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.magazine-image-col img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.magazine-text-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.magazine-title {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+    color: #583722 !important;
+    text-transform: uppercase !important;
+    margin-bottom: 2rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: 1px !important;
+}
+
+.magazine-description {
+    font-family: 'aileron', sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #583722 !important;
+}
+
+.magazine-description p {
+    margin-bottom: 1.5rem !important;
+}
+
+.editorial-list-section {
+    margin: 8rem 0;
+    padding-top: 4rem;
+    border-top: 1px solid #eee;
+}
+
+.editorial-list-title {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    color: #583722 !important;
+    text-transform: uppercase !important;
+    margin-bottom: 2rem !important;
+    letter-spacing: 2px !important;
+}
+
+.editorial-bullet-list {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.editorial-bullet-list li {
+    font-family: 'aileron', sans-serif !important;
+    font-size: 14px !important;
+    color: #583722 !important;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.editorial-bullet-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #a86c47;
+}
+
+.editorial-intro-row {
+    display: flex;
+    gap: 6rem;
+    margin-bottom: 10rem;
+    align-items: flex-start;
+}
+
+.editorial-intro-left {
+    flex: 1;
+}
+
+.editorial-intro-right {
+    flex: 1.5;
+    font-family: 'aileron', sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #583722 !important;
+}
+
+.editorial-intro-right p {
+    margin-bottom: 1.5rem;
+}
+
+/* Responsiveness for Formações */
+@media (max-width: 992px) {
+    .editorial-intro-row, .editorial-magazine-row {
+        flex-direction: column !important;
+        gap: 3rem !important;
+    }
+    
+    .magazine-image-col {
+        width: 100%;
+    }
+    
+    .magazine-text-col, .editorial-intro-left, .editorial-intro-right {
+        width: 100%;
+        text-align: left !important;
+    }
+}
