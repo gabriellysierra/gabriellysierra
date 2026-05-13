@@ -6640,3 +6640,15 @@ footer {
         flex: 0 0 100% !important;
     }
 }
+
+/* --- ALIGNING CURADORIA TEXTS WITH SITE MARGINS --- */
+.editorial-intro-row, 
+.curadoria-three-col-row {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+}
+
+/* Reduzir o espaço entre a imagem e o texto para ficarem mais "próximos" visualmente */
+.curadoria-three-col-row {
+    margin-top: 1.5rem !important;
+}
