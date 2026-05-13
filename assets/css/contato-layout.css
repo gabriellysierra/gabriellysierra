@@ -1,85 +1,46 @@
 /* =========================================
-   CONTACT PAGE — EDITORIAL LAYOUT
+   CONTACT PAGE — MINIMAL INFO LAYOUT
    ========================================= */
 
-.contact-form-section {
-    padding: 2rem 0 8rem 0;
-    max-width: 700px; /* Formulário centralizado e com largura controlada */
-}
-
-/* --- FORM STYLING --- */
-
-.minimal-form {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-.minimal-label {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: #583722;
-}
-
-.minimal-input {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #D0CDC9;
-    padding: 0.8rem 0;
+.contact-info-section {
+    padding: 2rem 0 10rem 0;
     font-family: 'aileron', sans-serif;
     font-size: 14px;
+    line-height: 1.85;
     color: #583722;
-    transition: border-color 0.3s ease;
-    border-radius: 0;
 }
 
-.minimal-input:focus {
-    outline: none;
-    border-bottom-color: #583722;
+.contact-info-section p {
+    margin-bottom: 1.2rem;
 }
 
-textarea.minimal-input {
-    min-height: 120px;
-    resize: vertical;
+.contact-email {
+    margin-top: 2rem;
 }
 
-.submit-btn {
-    align-self: flex-start;
-    background-color: #583722;
-    color: #FFFFFF;
-    border: none;
-    padding: 1rem 3rem;
+.contact-email a {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    cursor: pointer;
+    color: #583722;
+    text-decoration: none;
+    border-bottom: 1px solid #C58C71;
+    padding-bottom: 2px;
     transition: all 0.3s ease;
-    margin-top: 1rem;
 }
 
-.submit-btn:hover {
-    background-color: #C58C71; /* Warm Clay hover */
-    transform: translateY(-2px);
+.contact-email a:hover {
+    color: #C58C71;
+    border-bottom-color: #583722;
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-    .contact-form-section {
+    .contact-info-section {
         padding: 0 0 6rem 0;
     }
     
-    .submit-btn {
-        width: 100%;
+    .contact-email a {
+        font-size: 16px;
     }
 }
