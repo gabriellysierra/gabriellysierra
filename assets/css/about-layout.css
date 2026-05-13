@@ -62,9 +62,9 @@
     overflow: hidden;
 }
 
-.page-about .project-detail-main,
-.page-textos .project-detail-main {
-    padding-left: 8%; /* Extra respiro na esquerda */
+.page-about .project-detail-main {
+    padding-left: 5%; /* Alinhado com o header */
+    max-width: none;
 }
 
 .about-main {

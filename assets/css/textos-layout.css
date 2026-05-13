@@ -3,7 +3,8 @@
    ========================================= */
 
 .page-textos .project-detail-main {
-    padding-left: 8%; /* Extra respiro na esquerda */
+    padding-left: 5%; /* Alinhado com o header */
+    max-width: none;
 }
 
 /* Intro: sem subtítulo, só título + parágrafo */
