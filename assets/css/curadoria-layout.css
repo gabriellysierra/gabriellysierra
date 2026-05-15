@@ -131,12 +131,16 @@
 
     .curadoria-bleed-image {
         flex: none;
-        width: 100%;
-        height: 65vw;
+        width: 100% !important;
+        height: auto !important; /* Deixa a imagem fluir */
+        aspect-ratio: auto !important;
     }
 
     .curadoria-bleed-img {
         min-height: unset;
+        width: 100% !important;
+        height: auto !important;
+        display: block;
     }
 
     .curadoria-bleed-text {

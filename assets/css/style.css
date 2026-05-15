@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Reenie+Beanie&family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Reenie+Beanie&family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
 
 :root {
     --bg-body: #FFFFFF;
@@ -40,6 +40,10 @@ body {
 
 .body-textos {
     background-color: var(--bg-sand);
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 /* Typography Helpers */
@@ -131,7 +135,36 @@ nav a:hover {
     color: #DBDBDB;
     text-decoration: none;
     opacity: 1;
-    /* Reset opacity change */
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-titles);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Open state for toggle */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Main Content Area */
@@ -267,13 +300,43 @@ footer {
 @media (max-width: 768px) {
     header {
         padding: 1.5rem 5%;
-        flex-direction: column;
-        gap: 1.5rem;
+        flex-direction: row; /* Mantém logo e menu na mesma linha */
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+    }
+
+    .main-logo {
+        height: 40px; /* Reduzir um pouco no mobile */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.4s ease;
+        z-index: 1000;
+    }
+
+    nav.active {
+        right: 0;
     }
 
     nav ul {
-        gap: 1.5rem;
-        font-size: 0.95rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        font-size: 1.2rem;
     }
 
     .carousel-container {
@@ -282,9 +345,21 @@ footer {
     }
 
     footer {
-        flex-direction: column;
-        gap: 2.5rem;
+        flex-direction: column-reverse; /* Dog em cima, ícones embaixo no mobile? Ou vice versa */
+        gap: 2rem;
         text-align: center;
+        padding: 3rem 5%;
+    }
+
+    .footer-illustration {
+        position: static;
+        transform: none;
+        margin-bottom: 1rem;
+    }
+
+    .social-icons {
+        margin-left: 0;
+        justify-content: center;
     }
 }
 
@@ -6470,7 +6545,14 @@ footer {
     }
     
     .magazine-image-col {
-        width: 100%;
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: auto !important; /* Permite que a imagem dite a altura */
+    }
+
+    .magazine-image-col img {
+        height: auto !important;
+        max-height: 70vh;
     }
     
     .magazine-text-col, .editorial-intro-left, .editorial-intro-right {

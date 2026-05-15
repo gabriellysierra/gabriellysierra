@@ -176,4 +176,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initAtelieCarousel('lab-carousel');
     initAtelieCarousel('curadoria-carousel');
+
+    /* --- MOBILE MENU LOGIC --- */
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    if (menuToggle && nav) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            nav.classList.toggle('active');
+            document.body.classList.toggle('no-scroll'); // Optional: prevent scrolling when menu is open
+        });
+
+        // Close menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                nav.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            });
+        });
+    }
 });
