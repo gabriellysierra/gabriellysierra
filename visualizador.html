@@ -45,8 +45,10 @@
 
         <!-- Contêiner de renderização -->
         <div id="canvas-container" class="canvas-container">
-            <div id="book" class="book-viewport">
-                <!-- Páginas injetadas dinamicamente -->
+            <div id="zoom-wrapper">
+                <div id="book" class="book-viewport">
+                    <!-- Páginas injetadas dinamicamente -->
+                </div>
             </div>
         </div>
 
@@ -58,7 +60,10 @@
 
     <!-- BARRA DE CONTROLES INFERIOR -->
     <footer class="visualizador-footer">
-        <div class="controls-wrapper">
+        <div class="footer-left">
+            <!-- Espaço para balanceamento -->
+        </div>
+        <div class="footer-center">
             <button id="btn-prev" class="control-btn" aria-label="Página anterior">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
@@ -66,6 +71,17 @@
             <button id="btn-next" class="control-btn" aria-label="Próxima página">
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
+        </div>
+        <div class="footer-right">
+            <div class="zoom-controls">
+                <button id="btn-zoom-out" class="control-btn" aria-label="Diminuir zoom">
+                    <i class="fa-solid fa-magnifying-glass-minus"></i>
+                </button>
+                <span id="zoom-val" class="zoom-indicator">100%</span>
+                <button id="btn-zoom-in" class="control-btn" aria-label="Aumentar zoom">
+                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                </button>
+            </div>
         </div>
     </footer>
 
@@ -111,6 +127,12 @@
         let pageFlip = null;
         let pdfDoc = null;
         let pageAspectRatio = 1.414; // A4 padrão por padrão (sqrt(2))
+
+        // Estados do Zoom
+        let zoomLevel = 1.0;
+        const zoomStep = 0.25;
+        const minZoom = 1.0;
+        const maxZoom = 2.5;
 
         async function initViewer() {
             if (!pdfUrl) {
@@ -229,6 +251,27 @@
             navPrev.addEventListener('click', prevActions);
             navNext.addEventListener('click', nextActions);
 
+            // Controles de zoom
+            const btnZoomIn = document.getElementById('btn-zoom-in');
+            const btnZoomOut = document.getElementById('btn-zoom-out');
+            
+            btnZoomIn.addEventListener('click', () => {
+                if (zoomLevel < maxZoom) {
+                    zoomLevel += zoomStep;
+                    applyZoom();
+                }
+            });
+            
+            btnZoomOut.addEventListener('click', () => {
+                if (zoomLevel > minZoom) {
+                    zoomLevel -= zoomStep;
+                    applyZoom();
+                }
+            });
+
+            // Vincular evento de clicar e arrastar (panning) quando estiver com zoom
+            setupDragToScroll();
+
             // Suporte a teclado (setas esquerda e direita)
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'ArrowLeft') {
@@ -252,8 +295,9 @@
             const bookRatio = isMobile ? pageAspectRatio : (2 * pageAspectRatio);
             
             const container = document.getElementById('canvas-container');
-            const maxW = container.clientWidth;
-            const maxH = container.clientHeight;
+            // Reservar 40px para margem interna
+            const maxW = container.clientWidth - 40;
+            const maxH = container.clientHeight - 40;
             
             let width, height;
             
@@ -268,9 +312,99 @@
                 height = width / bookRatio;
             }
 
-            // Aplicar tamanho calculado ao contêiner do livro
-            bookElement.style.width = Math.round(width) + 'px';
-            bookElement.style.height = Math.round(height) + 'px';
+            // Aplicar tamanho calculado ao contêiner do livro e salvar dimensões base
+            bookElement.dataset.baseWidth = Math.round(width);
+            bookElement.dataset.baseHeight = Math.round(height);
+
+            applyZoom();
+        }
+
+        function applyZoom() {
+            const baseW = parseInt(bookElement.dataset.baseWidth);
+            const baseH = parseInt(bookElement.dataset.baseHeight);
+            if (!baseW || !baseH) return;
+
+            const zoomWrapper = document.getElementById('zoom-wrapper');
+            const canvasContainer = document.getElementById('canvas-container');
+            const zoomVal = document.getElementById('zoom-val');
+            
+            const zoomW = Math.round(baseW * zoomLevel);
+            const zoomH = Math.round(baseH * zoomLevel);
+            
+            zoomVal.innerText = `${Math.round(zoomLevel * 100)}%`;
+            
+            if (zoomLevel === 1.0) {
+                // Modo normal: resetar estilos e desabilitar scroll
+                zoomWrapper.style.width = 'auto';
+                zoomWrapper.style.height = 'auto';
+                bookElement.style.width = baseW + 'px';
+                bookElement.style.height = baseH + 'px';
+                bookElement.style.transform = 'none';
+                canvasContainer.style.overflow = 'hidden';
+                canvasContainer.classList.remove('zoomed');
+            } else {
+                // Modo Zoom: aplicar escala e permitir rolagem
+                zoomWrapper.style.width = zoomW + 'px';
+                zoomWrapper.style.height = zoomH + 'px';
+                
+                bookElement.style.width = baseW + 'px';
+                bookElement.style.height = baseH + 'px';
+                bookElement.style.transform = `scale(${zoomLevel})`;
+                bookElement.style.transformOrigin = '0 0';
+                
+                canvasContainer.style.overflow = 'auto';
+                canvasContainer.classList.add('zoomed');
+            }
+
+            // Habilitar/Desabilitar botões
+            document.getElementById('btn-zoom-in').disabled = (zoomLevel >= maxZoom);
+            document.getElementById('btn-zoom-out').disabled = (zoomLevel <= minZoom);
+        }
+
+        // Função de clique e arraste para navegar pelo PDF com zoom (panning)
+        function setupDragToScroll() {
+            const container = document.getElementById('canvas-container');
+            let isDragging = false;
+            let startX, startY;
+            let scrollLeft, scrollTop;
+
+            container.addEventListener('mousedown', (e) => {
+                if (zoomLevel === 1.0) return; // Só arrasta se houver zoom
+                if (e.button !== 0) return; // Apenas clique esquerdo
+                
+                isDragging = true;
+                container.classList.add('grabbing');
+                
+                startX = e.pageX - container.offsetLeft;
+                startY = e.pageY - container.offsetTop;
+                scrollLeft = container.scrollLeft;
+                scrollTop = container.scrollTop;
+            });
+
+            container.addEventListener('mouseleave', () => {
+                isDragging = false;
+                container.classList.remove('grabbing');
+            });
+
+            container.addEventListener('mouseup', () => {
+                isDragging = false;
+                container.classList.remove('grabbing');
+            });
+
+            container.addEventListener('mousemove', (e) => {
+                if (!isDragging || zoomLevel === 1.0) return;
+                
+                e.preventDefault();
+                e.stopPropagation(); // Evita ativar gestos de flip do livro ao arrastar para ler
+                
+                const x = e.pageX - container.offsetLeft;
+                const y = e.pageY - container.offsetTop;
+                const walkX = (x - startX) * 1.5; // Velocidade do arraste
+                const walkY = (y - startY) * 1.5;
+                
+                container.scrollLeft = scrollLeft - walkX;
+                container.scrollTop = scrollTop - walkY;
+            });
         }
 
         function updateUIState(currentPageIndex) {

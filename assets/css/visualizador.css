@@ -128,8 +128,41 @@ body.page-visualizador {
     width: 100%;
     height: 100%;
     display: flex;
+    overflow: hidden;
+}
+
+#zoom-wrapper {
+    position: relative;
+    margin: auto;
+    display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Customização de Scrollbar para o Visualizador Zoomado */
+.canvas-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.canvas-container::-webkit-scrollbar-track {
+    background: var(--bg-warm-light);
+}
+.canvas-container::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+.canvas-container::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+.canvas-container.zoomed {
+    cursor: grab;
+    cursor: -webkit-grab;
+}
+
+.canvas-container.zoomed.grabbing {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
 }
 
 /* Elemento do Flipbook */
@@ -196,11 +229,49 @@ body.page-visualizador {
     height: 64px;
     border-top: 1px solid var(--border-color);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 2rem;
     background-color: var(--bg-warm-light);
     z-index: 10;
     box-sizing: border-box;
+}
+
+.visualizador-footer .footer-left,
+.visualizador-footer .footer-right {
+    flex: 1;
+}
+
+.visualizador-footer .footer-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.visualizador-footer .footer-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.visualizador-footer .footer-center {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.zoom-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.zoom-indicator {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+    min-width: 45px;
+    text-align: center;
 }
 
 .controls-wrapper {
@@ -318,5 +389,39 @@ body.page-visualizador {
     .page-indicator {
         font-size: 11px;
         min-width: 110px;
+    }
+
+    .visualizador-footer {
+        padding: 0 1rem;
+        gap: 0.5rem;
+    }
+    
+    .visualizador-footer .footer-left {
+        display: none;
+    }
+    
+    .visualizador-footer .footer-center {
+        flex: 2;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+    
+    .visualizador-footer .footer-right {
+        flex: 1;
+        justify-content: flex-end;
+    }
+    
+    .zoom-controls {
+        gap: 0.5rem;
+    }
+    
+    .zoom-indicator {
+        min-width: 35px;
+        font-size: 10px;
+    }
+    
+    .control-btn {
+        width: 32px;
+        height: 32px;
     }
 }
