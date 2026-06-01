@@ -1,0 +1,319 @@
+/* ==========================================================================
+   VISUALIZADOR REVISTA (FLIPBOOK) — STYLE SHEET
+   ========================================================================== */
+
+/* Cores do Sistema de Design */
+:root {
+    --bg-warm-light: #f7f4ee;       /* Creme suave para fundo, reduz cansaço visual */
+    --text-primary: #583722;        /* Tom marrom escuro característico do site */
+    --text-secondary: #8a6245;      /* Marrom médio */
+    --border-color: rgba(88, 55, 34, 0.12); /* Divisórias discretas */
+    --btn-hover-bg: rgba(88, 55, 34, 0.05); /* Efeito hover nos botões */
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Reset e Estrutura Principal */
+body.page-visualizador {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-warm-light);
+    color: var(--text-primary);
+    font-family: 'Source Sans 3', sans-serif;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* 1. BARRA DE CONTROLE SUPERIOR */
+.visualizador-header {
+    height: 64px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: var(--bg-warm-light);
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.visualizador-header .header-left,
+.visualizador-header .header-right {
+    flex: 1;
+}
+
+.visualizador-header .header-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.visualizador-header .header-center {
+    flex: 2;
+    text-align: center;
+}
+
+/* Título do Documento */
+.doc-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 450px;
+    display: inline-block;
+}
+
+/* Botão Voltar e Fechar */
+.btn-back, .btn-close {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 38px;
+    padding: 0 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.btn-back i {
+    font-size: 12px;
+}
+
+.btn-close {
+    padding: 0;
+    width: 38px;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.btn-close i {
+    font-size: 18px;
+}
+
+.btn-back:hover, .btn-close:hover {
+    background-color: var(--btn-hover-bg);
+}
+
+/* 2. ÁREA CENTRAL DO LIVRO */
+.visualizador-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Contêiner de Renderização do Livro */
+.canvas-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Elemento do Flipbook */
+.book-viewport {
+    box-shadow: var(--shadow-soft);
+    background-color: #fff;
+    transition: opacity 0.3s ease;
+}
+
+/* Embrulho da página */
+.page-wrapper {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Canvas da página do PDF */
+.page-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Botões Flutuantes de Navegação Lateral (Desktop) */
+.floating-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: rgba(247, 244, 238, 0.9);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    z-index: 5;
+}
+
+.floating-nav-btn.prev {
+    left: 40px;
+}
+
+.floating-nav-btn.next {
+    right: 40px;
+}
+
+.floating-nav-btn:hover {
+    background-color: var(--text-primary);
+    color: var(--bg-warm-light);
+    border-color: var(--text-primary);
+}
+
+/* 3. BARRA DE CONTROLES INFERIOR */
+.visualizador-footer {
+    height: 64px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-warm-light);
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.controls-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.control-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
+
+.control-btn:hover:not(:disabled) {
+    background-color: var(--text-primary);
+    border-color: var(--text-primary);
+    color: var(--bg-warm-light);
+}
+
+.control-btn:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+}
+
+.page-indicator {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    min-width: 140px;
+    text-align: center;
+}
+
+/* 4. TELA DE CARREGAMENTO (LOADER) */
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-warm-light);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.4s ease;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.spinner {
+    width: 44px;
+    height: 44px;
+    border: 3px solid rgba(88, 55, 34, 0.1);
+    border-top: 3px solid var(--text-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1.5rem auto;
+}
+
+.loader-text {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 5. AJUSTES RESPONSIVOS (MOBILE/TABLET) */
+@media (max-width: 900px) {
+    .floating-nav-btn {
+        display: none; /* Esconder botões flutuantes laterais em telas menores */
+    }
+}
+
+@media (max-width: 600px) {
+    .visualizador-header {
+        padding: 0 1rem;
+    }
+    
+    .doc-title {
+        font-size: 11px;
+        max-width: 180px;
+    }
+    
+    .btn-back {
+        padding: 0 0.5rem;
+        font-size: 10px;
+    }
+    
+    .visualizador-main {
+        padding: 10px;
+    }
+    
+    .page-indicator {
+        font-size: 11px;
+        min-width: 110px;
+    }
+}

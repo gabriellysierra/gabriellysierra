@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador Revista | GABRIELLY SIERRA</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600;700&family=Source+Sans+3:wght@300;400;600&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/sjh3ian.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/visualizador.css">
+</head>
+<body class="page-visualizador">
+
+    <!-- BARRA DE CONTROLE SUPERIOR -->
+    <header class="visualizador-header">
+        <div class="header-left">
+            <a href="textos.html" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Voltar para textos
+            </a>
+        </div>
+        <div class="header-center">
+            <h1 id="doc-title" class="doc-title">Carregando documento...</h1>
+        </div>
+        <div class="header-right">
+            <a href="textos.html" class="btn-close" aria-label="Fechar visualizador">
+                <i class="fa-solid fa-xmark"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- ÁREA CENTRAL DO LIVRO -->
+    <main class="visualizador-main">
+        <!-- Navegação Flutuante Anterior (Desktop) -->
+        <button id="nav-prev" class="floating-nav-btn prev" aria-label="Página anterior">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Contêiner de renderização -->
+        <div id="canvas-container" class="canvas-container">
+            <div id="book" class="book-viewport">
+                <!-- Páginas injetadas dinamicamente -->
+            </div>
+        </div>
+
+        <!-- Navegação Flutuante Próxima (Desktop) -->
+        <button id="nav-next" class="floating-nav-btn next" aria-label="Próxima página">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </main>
+
+    <!-- BARRA DE CONTROLES INFERIOR -->
+    <footer class="visualizador-footer">
+        <div class="controls-wrapper">
+            <button id="btn-prev" class="control-btn" aria-label="Página anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <span id="page-num" class="page-indicator">0 / 0</span>
+            <button id="btn-next" class="control-btn" aria-label="Próxima página">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- LOADER / TELA DE CARREGAMENTO -->
+    <div id="loader" class="loader-overlay">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <p id="loader-text" class="loader-text">Inicializando visualizador...</p>
+        </div>
+    </div>
+
+    <!-- Bibliotecas Necessárias (PDF.js e StPageFlip) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+
+    <!-- Script de Configuração e Renderização -->
+    <script>
+        // Configurações do Worker do PDF.js
+        const pdfjsLib = window['pdfjs-dist/build/pdf'];
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        // Parâmetros da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const pdfUrl = urlParams.get('pdf');
+        const docTitle = urlParams.get('title') || 'Visualizador';
+
+        // Atualizar título na barra
+        document.getElementById('doc-title').innerText = docTitle;
+        document.title = `${docTitle} | GABRIELLY SIERRA`;
+
+        // Referências dos Elementos
+        const bookElement = document.getElementById('book');
+        const loader = document.getElementById('loader');
+        const loaderText = document.getElementById('loader-text');
+        const pageIndicator = document.getElementById('page-num');
+
+        // Botões de Navegação
+        const btnPrev = document.getElementById('btn-prev');
+        const btnNext = document.getElementById('btn-next');
+        const navPrev = document.getElementById('nav-prev');
+        const navNext = document.getElementById('nav-next');
+
+        let pageFlip = null;
+        let pdfDoc = null;
+        let pageAspectRatio = 1.414; // A4 padrão por padrão (sqrt(2))
+
+        async function initViewer() {
+            if (!pdfUrl) {
+                loaderText.innerText = "Erro: Nenhum arquivo PDF foi especificado.";
+                loader.querySelector('.spinner').style.display = 'none';
+                return;
+            }
+
+            try {
+                loaderText.innerText = "Conectando ao arquivo PDF...";
+                const loadingTask = pdfjsLib.getDocument(pdfUrl);
+                
+                // Monitoramento de progresso de download
+                loadingTask.onProgress = function(progress) {
+                    if (progress.total > 0) {
+                        const percent = Math.round((progress.loaded / progress.total) * 100);
+                        loaderText.innerText = `Baixando documento: ${percent}%`;
+                    }
+                };
+
+                pdfDoc = await loadingTask.promise;
+                const totalPages = pdfDoc.numPages;
+
+                // Obter a primeira página para ler o tamanho e aspect ratio
+                loaderText.innerText = "Processando layout das páginas...";
+                const firstPage = await pdfDoc.getPage(1);
+                const originalViewport = firstPage.getViewport({ scale: 1.0 });
+                pageAspectRatio = originalViewport.width / originalViewport.height;
+
+                // Renderizar todas as páginas em canvases de alta resolução sequencialmente
+                for (let i = 1; i <= totalPages; i++) {
+                    loaderText.innerText = `Renderizando página ${i} de ${totalPages}...`;
+                    
+                    const page = await pdfDoc.getPage(i);
+                    const scale = window.devicePixelRatio || 2.0; // Renderização super nítida
+                    const viewport = page.getViewport({ scale: scale });
+
+                    // Criar container da página
+                    const pageDiv = document.createElement('div');
+                    pageDiv.className = 'page-wrapper';
+                    
+                    // Criar Canvas
+                    const canvas = document.createElement('canvas');
+                    canvas.className = 'page-canvas';
+                    const context = canvas.getContext('2d');
+                    canvas.width = viewport.width;
+                    canvas.height = viewport.height;
+                    
+                    // Renderizar página no canvas
+                    const renderContext = {
+                        canvasContext: context,
+                        viewport: viewport
+                    };
+                    await page.render(renderContext).promise;
+                    
+                    pageDiv.appendChild(canvas);
+                    bookElement.appendChild(pageDiv);
+                }
+
+                // Esconder tela de carregamento
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 400);
+
+                // Inicializar o Flipbook
+                setupFlipbook(originalViewport.width, originalViewport.height);
+
+            } catch (error) {
+                console.error("Erro ao inicializar o leitor de PDF:", error);
+                loaderText.innerHTML = `Erro ao carregar o documento.<br><small>${error.message}</small>`;
+                loader.querySelector('.spinner').style.display = 'none';
+            }
+        }
+
+        function setupFlipbook(baseWidth, baseHeight) {
+            // Ajustar o contêiner #book baseado nas dimensões reais das páginas e tela
+            resizeBookContainer();
+
+            // Configurações do StPageFlip
+            pageFlip = new St.PageFlip(bookElement, {
+                width: baseWidth, 
+                height: baseHeight,
+                size: "stretch",
+                minWidth: 250,
+                maxWidth: 1200,
+                minHeight: 350,
+                maxHeight: 1600,
+                drawShadow: true,
+                showCover: true,
+                usePortrait: true,
+                flippingTime: 800,
+                swipeDistance: 30,
+                showPageCorners: true
+            });
+
+            // Carregar páginas a partir do HTML injetado
+            pageFlip.loadFromHTML(document.querySelectorAll('.page-wrapper'));
+
+            // Registrar os eventos do Flipbook para atualizar botões e indicadores
+            pageFlip.on('flip', (e) => {
+                updateUIState(e.data);
+            });
+
+            pageFlip.on('changeOrientation', (e) => {
+                resizeBookContainer();
+                updateUIState(pageFlip.getCurrentPageIndex());
+            });
+
+            // Vincular ações aos botões
+            const prevActions = () => pageFlip.flipPrev();
+            const nextActions = () => pageFlip.flipNext();
+
+            btnPrev.addEventListener('click', prevActions);
+            btnNext.addEventListener('click', nextActions);
+            navPrev.addEventListener('click', prevActions);
+            navNext.addEventListener('click', nextActions);
+
+            // Suporte a teclado (setas esquerda e direita)
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    pageFlip.flipPrev();
+                } else if (e.key === 'ArrowRight') {
+                    pageFlip.flipNext();
+                }
+            });
+
+            // Inicializar estado dos botões
+            updateUIState(0);
+        }
+
+        function resizeBookContainer() {
+            if (!pdfDoc) return;
+            
+            const isMobile = window.innerWidth <= 768;
+            
+            // Em telas largas, o livro aberto tem duas páginas (largura = 2 * página única)
+            // Em mobile/retrato, o livro é exibido como página única (largura = 1 * página única)
+            const bookRatio = isMobile ? pageAspectRatio : (2 * pageAspectRatio);
+            
+            const container = document.getElementById('canvas-container');
+            const maxW = container.clientWidth;
+            const maxH = container.clientHeight;
+            
+            let width, height;
+            
+            // Calcular o maior retângulo que cabe mantendo a proporção (aspect ratio)
+            if (maxW / maxH > bookRatio) {
+                // Limitado pela altura
+                height = maxH;
+                width = height * bookRatio;
+            } else {
+                // Limitado pela largura
+                width = maxW;
+                height = width / bookRatio;
+            }
+
+            // Aplicar tamanho calculado ao contêiner do livro
+            bookElement.style.width = Math.round(width) + 'px';
+            bookElement.style.height = Math.round(height) + 'px';
+        }
+
+        function updateUIState(currentPageIndex) {
+            if (!pageFlip) return;
+
+            const totalPages = pageFlip.getPageCount();
+            const orientation = pageFlip.getOrientation();
+
+            // Atualizar o indicador de páginas (1-indexed para o usuário)
+            if (orientation === 'landscape' && currentPageIndex > 0 && currentPageIndex < totalPages - 1) {
+                // Exibição de página dupla (ex: "2 - 3 de 24")
+                pageIndicator.innerText = `Pág. ${currentPageIndex} - ${currentPageIndex + 1} de ${totalPages}`;
+            } else if (currentPageIndex === 0) {
+                pageIndicator.innerText = `Capa (1 de ${totalPages})`;
+            } else if (currentPageIndex === totalPages - 1) {
+                pageIndicator.innerText = `Contracapa (${totalPages} de ${totalPages})`;
+            } else {
+                // Página única (Mobile ou Capas)
+                pageIndicator.innerText = `Pág. ${currentPageIndex + 1} de ${totalPages}`;
+            }
+
+            // Habilitar/Desabilitar botões dependendo da página
+            const isFirst = currentPageIndex === 0;
+            const isLast = currentPageIndex === totalPages - 1;
+
+            btnPrev.disabled = isFirst;
+            navPrev.disabled = isFirst;
+            navPrev.style.opacity = isFirst ? '0' : '1';
+            navPrev.style.pointerEvents = isFirst ? 'none' : 'auto';
+
+            btnNext.disabled = isLast;
+            navNext.disabled = isLast;
+            navNext.style.opacity = isLast ? '0' : '1';
+            navNext.style.pointerEvents = isLast ? 'none' : 'auto';
+        }
+
+        // Listener de redimensionamento de janela
+        window.addEventListener('resize', () => {
+            if (pageFlip) {
+                resizeBookContainer();
+            }
+        });
+
+        // Iniciar
+        window.addEventListener('DOMContentLoaded', initViewer);
+    </script>
+</body>
+</html>
