@@ -112,6 +112,9 @@ body.page-visualizador {
 /* 2. ÁREA CENTRAL DO LIVRO */
 .visualizador-main {
     flex: 1;
+    height: calc(100vh - 128px);
+    min-height: 0;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
