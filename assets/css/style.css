@@ -7020,3 +7020,81 @@ footer {
 .gallery-stacked-item:hover img {
     filter: grayscale(0%);
 }
+
+/* Series layout */
+.series-section {
+    display: flex;
+    align-items: center;
+    padding: 4rem 5%;
+    gap: 4rem;
+}
+
+.series-title-col {
+    flex: 0 0 25%;
+}
+
+.series-title-col h2 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.series-cards-col {
+    flex: 1;
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.series-card {
+    position: relative;
+    flex: 0 0 calc(25% - 1.125rem);
+    aspect-ratio: 9/16;
+    background-color: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.series-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.series-card-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.6) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+}
+
+.series-card:hover img {
+    transform: scale(1.05);
+}
+
+.series-card-top {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.series-card-bottom {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
