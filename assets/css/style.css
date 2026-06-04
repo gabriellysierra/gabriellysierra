@@ -7006,3 +7006,17 @@ footer {
         padding: 3rem 5% !important;
     }
 }
+
+/* Memoria gallery images grayscale and hover effect */
+.gallery-tall img,
+.gallery-small img,
+.gallery-stacked-item img {
+    filter: grayscale(100%);
+    transition: filter 0.7s ease;
+}
+
+.gallery-tall:hover img,
+.gallery-small:hover img,
+.gallery-stacked-item:hover img {
+    filter: grayscale(0%);
+}
