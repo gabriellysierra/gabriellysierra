@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.carousel-slide');
     const nextBtn = document.querySelector('.next');
     const prevBtn = document.querySelector('.prev');
-    const intervalTime = 2000; // 2 seconds
+    const intervalTime = 4000; // 4 seconds
     let currentSlide = 0;
     let slideInterval;
 
