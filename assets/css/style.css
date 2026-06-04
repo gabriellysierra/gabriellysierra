@@ -7098,3 +7098,13 @@ footer {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+/* --- CURADORIA: GRAYSCALE EFFECT --- */
+.page-curadoria .magazine-image-col img {
+    filter: grayscale(100%);
+    transition: filter 0.7s ease;
+}
+
+.page-curadoria .magazine-image-col:hover img {
+    filter: grayscale(0%);
+}
