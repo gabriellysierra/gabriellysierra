@@ -174,9 +174,47 @@
                 const originalViewport = firstPage.getViewport({ scale: 1.0 });
                 pageAspectRatio = originalViewport.width / originalViewport.height;
 
-                // Renderizar todas as páginas em canvases de alta resolução sequencialmente
-                for (let i = 1; i <= totalPages; i++) {
-                    loaderText.innerText = `Renderizando página ${i} de ${totalPages}...`;
+                // Determinar a ordem das páginas
+                const pageOrderParam = urlParams.get('pageOrder');
+                let pagesToRender = [];
+                if (pageOrderParam) {
+                    const parts = pageOrderParam.split(',');
+                    for (const part of parts) {
+                        const trimmedPart = part.trim();
+                        if (trimmedPart.includes('-')) {
+                            const rangeParts = trimmedPart.split('-');
+                            const start = parseInt(rangeParts[0]);
+                            const end = rangeParts[1].trim() === 'end' ? totalPages : parseInt(rangeParts[1]);
+                            if (!isNaN(start) && !isNaN(end)) {
+                                if (start <= end) {
+                                    for (let p = start; p <= end; p++) {
+                                        pagesToRender.push(p);
+                                    }
+                                } else {
+                                    for (let p = start; p >= end; p--) {
+                                        pagesToRender.push(p);
+                                    }
+                                }
+                            }
+                        } else {
+                            const p = parseInt(trimmedPart);
+                            if (!isNaN(p)) {
+                                pagesToRender.push(p);
+                            }
+                        }
+                    }
+                } else {
+                    for (let i = 1; i <= totalPages; i++) {
+                        pagesToRender.push(i);
+                    }
+                }
+
+                // Renderizar as páginas na ordem definida sequencialmente
+                for (let idx = 0; idx < pagesToRender.length; idx++) {
+                    const i = pagesToRender[idx];
+                    if (i < 1 || i > totalPages) continue; // Pular índices inválidos
+                    
+                    loaderText.innerText = `Renderizando página ${idx + 1} de ${pagesToRender.length}...`;
                     
                     const page = await pdfDoc.getPage(i);
                     const scale = window.devicePixelRatio || 2.0; // Renderização super nítida
