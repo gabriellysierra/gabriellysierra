@@ -108,6 +108,21 @@
         document.getElementById('doc-title').innerText = docTitle;
         document.title = `${docTitle} | GABRIELLY SIERRA`;
 
+        // Configurar botões de voltar dinamicamente
+        const backUrl = urlParams.get('back');
+        if (backUrl) {
+            const backBtn = document.querySelector('.btn-back');
+            const closeBtn = document.querySelector('.btn-close');
+            const backLabel = urlParams.get('backLabel') || 'Voltar';
+            if (backBtn) {
+                backBtn.href = backUrl;
+                backBtn.innerHTML = `<i class="fa-solid fa-arrow-left"></i> ${backLabel}`;
+            }
+            if (closeBtn) {
+                closeBtn.href = backUrl;
+            }
+        }
+
         // Referências dos Elementos
         const bookElement = document.getElementById('book');
         const bookScaler = document.getElementById('book-scaler');
