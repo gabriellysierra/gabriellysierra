@@ -16,7 +16,8 @@
 }
 
 /* "CARTA" label styled like "Relato de experiência" in projeto-memoria.html */
-.testimonials-label {
+/* Scoped selector for higher specificity over style.css global rule */
+.article-editorial-header .article-header-container .testimonials-label {
     font-family: 'aileron', sans-serif !important;
     font-weight: 400 !important;
     font-size: 14px !important;
@@ -26,6 +27,7 @@
     display: block;
     margin-bottom: 0.5rem;
 }
+
 
 .article-title {
     font-family: 'Josefin Sans', sans-serif !important;
