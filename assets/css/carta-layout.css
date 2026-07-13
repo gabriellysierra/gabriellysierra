@@ -1,5 +1,48 @@
 /* --- CARTA CONSELHOS LAYOUT --- */
 
+/* Replicating typography from project-memoria.html (centered container, left-aligned paragraph text) */
+
+.article-editorial-header {
+    text-align: center;
+}
+
+.article-header-container {
+    max-width: 750px !important;
+    margin: 0 auto !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.testimonials-label {
+    font-family: 'aileron', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    text-transform: lowercase !important;
+    color: #583722 !important;
+    letter-spacing: 0.5px !important;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.article-title {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 28px !important;
+    text-transform: uppercase !important;
+    color: #583722 !important;
+    line-height: 1.2;
+}
+
+.article-reading-column p {
+    font-family: 'aileron', sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    color: #583722 !important;
+    text-align: left !important;
+    margin-bottom: 1.5rem !important;
+}
+
 /* Centralização da coluna de leitura */
 .article-reading-wrapper {
     display: flex;
