@@ -15,28 +15,39 @@
     text-align: left !important;
 }
 
-/* "CARTA" label styled like "Relato de experiência" in projeto-memoria.html */
-/* Scoped selector for higher specificity over style.css global rule */
+/* Category label — ENSAIO: accent color, uppercase, bold (like reference image) */
 .article-editorial-header .article-header-container .testimonials-label {
-    font-family: 'aileron', sans-serif !important;
-    font-weight: 400 !important;
-    font-size: 14px !important;
-    text-transform: lowercase !important;
-    color: #583722 !important;
-    letter-spacing: 0.5px !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 12px !important;
+    text-transform: uppercase !important;
+    color: var(--color-accent) !important; /* #C58C71 */
+    letter-spacing: 2px !important;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
 }
 
+/* Author/date line — accent color, uppercase, bold */
+.article-editorial-header .article-header-container .article-author-date {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--color-accent); /* #C58C71 */
+    letter-spacing: 1.5px;
+    display: block;
+    margin-top: 1rem;
+}
 
 .article-title {
     font-family: 'Josefin Sans', sans-serif !important;
-    font-weight: 600 !important;
-    font-size: 28px !important;
-    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    font-size: 30px !important;
+    text-transform: none !important;
     color: #583722 !important;
-    line-height: 1.2;
+    line-height: 1.25;
     text-align: left !important;
+    margin: 0 !important;
 }
 
 .article-reading-column p {
